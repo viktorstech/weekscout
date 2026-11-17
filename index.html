@@ -115,9 +115,10 @@ h1{font:700 clamp(24px,3.2vw,34px)/1.1 var(--display);margin:0;text-wrap:balance
 .navbtn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .navbtn .ico{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.22);font-size:16px;line-height:1}
 .navbtn small{font-weight:500;opacity:.85;font-size:12.5px}
-.btn.back{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border-color:var(--accent);padding:8px 16px;font-size:14px;cursor:pointer;font-family:inherit}
+.btn.back{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border-color:var(--accent);padding:7px 14px;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
 .btn.back:hover{filter:brightness(1.08)}
 .tlhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.tlhead-l{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .tlhead h2{margin:0}
 .btn.sm{padding:5px 12px;font-size:13px;background:transparent;cursor:pointer;font-family:inherit}
 @media (min-width:701px){
@@ -166,7 +167,7 @@ h1{font:700 clamp(24px,3.2vw,34px)/1.1 var(--display);margin:0;text-wrap:balance
 .tlsort select{font:500 13px var(--body);padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);cursor:pointer}
 .tlsort select:focus-visible,.tlbtn:focus-visible,.fitbtn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .listh{padding:12px 12px 0}
-.tlgrid{position:relative;overflow:auto;max-height:calc(100vh - var(--tl-top, 24px) - 160px);min-height:240px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.tlgrid{position:relative;overflow:auto;max-height:calc(100vh - var(--tl-top, 24px) - 120px);min-height:240px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
 .tlinner{min-width:660px;position:relative}
 .tlsticky{position:sticky;top:0;z-index:8;background:var(--surface);border-bottom:1px solid var(--line);padding:6px 0 2px}
 .months{display:grid;grid-template-columns:260px 1fr;font-size:12px;font-weight:600;color:var(--muted)}
@@ -286,11 +287,11 @@ body.mini .clu .clbl{display:none!important}
 .loading{position:absolute;inset:0;display:grid;place-items:center;z-index:700;color:var(--muted);font:600 15px var(--body);pointer-events:none}
 
 /* Dvě obrazovky bez posouvání stránky: mapa a časová osa, přepínané jedním tlačítkem */
-.tlview{position:fixed;inset:0;z-index:840;overflow-y:auto;background:var(--paper);max-width:none;margin:0;padding:16px 16px 96px}
+.tlview{position:fixed;inset:0;z-index:840;overflow-y:auto;background:var(--paper);max-width:none;margin:0;padding:16px 16px 28px}
 .tlview[hidden]{display:none}
 .tlview > *{max-width:1280px;width:100%;margin-left:auto;margin-right:auto}
 #viewbtn{z-index:870}
-body.view-tl .legend{display:none}
+body.view-tl .legend, body.view-tl #viewbtn{display:none}
 @media (min-width:701px){
   body.view-tl .ov.top{z-index:880}
 }
@@ -364,7 +365,10 @@ body.view-tl .legend{display:none}
 <div class="wrap tlview" id="tlview" hidden>
   <section class="panel tl" id="casova-osa">
     <div class="tlhead">
-      <h2>Časová osa <span class="cnt" id="tlcount"></span></h2>
+      <div class="tlhead-l">
+        <button type="button" class="btn back" id="backbtn">← Zpět na mapu</button>
+        <h2>Časová osa <span class="cnt" id="tlcount"></span></h2>
+      </div>
       <div class="tlsort"><label for="tl-sort">Řadit:</label><select id="tl-sort"><option value="start">Podle termínu</option><option value="deadline">Nejbližší uzávěrka</option><option value="country">Podle země</option></select></div>
     </div>
     <div class="tlgrid"><div class="tlinner" id="tl"></div></div>
@@ -948,6 +952,7 @@ function setView(v, fromHash){
   if (!fromHash) { try { history.pushState(null, "", tl ? "#casova-osa" : location.pathname + location.search); } catch (e) {} }
 }
 $("viewbtn").addEventListener("click", () => setView(view === "tl" ? "map" : "tl"));
+$("backbtn").addEventListener("click", () => setView("map"));
 window.addEventListener("popstate", () => setView(location.hash === "#casova-osa" ? "tl" : "map", true));
 document.addEventListener("keydown", ev => { if (ev.key === "Escape" && view === "tl" && !$("dlg").open) setView("map"); });
 

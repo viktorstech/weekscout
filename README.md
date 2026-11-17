@@ -2,7 +2,7 @@
 
 Interaktivní mapa a časová osa Erasmus+ International Weeks, Staff Weeks, Teaching Weeks a BIP (Blended Intensive Programmes) na evropských vysokých školách v akademickém roce **2026/2027** (projekt týmu 17).
 
-- **Aktuální rozsah dat (k 2026-11-17):** **127 akcí** z **98 institucí** ve **26 zemích** (`93 ověřeno`, `30 částečně`, `4 neověřeno`), termíny **2026-12-01 až 2027-08-31**.
+- **Aktuální rozsah dat (k 2026-11-17):** **129 akcí** ze **100 institucí** ve **26 zemích** (`94 ověřeno`, `31 částečně`, `4 neověřeno`), termíny **2026-12-01 až 2027-08-31**.
 - **Web bez build procesu (GitHub Pages):** čistý HTML/CSS/vanilla JS v `index.html` + `data.json` (Leaflet 1.9.4 + leaflet.markercluster 1.5.3 z CDN).
 
 ## Funkce aplikace

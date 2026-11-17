@@ -1,7 +1,7 @@
 {
   "meta": {
     "updated": "2026-11-17",
-    "count": 127
+    "count": 129
   },
   "events": [
     {
@@ -549,6 +549,75 @@
       "verify": {
         "status": "neověřeno",
         "note": "Termín (11.–15. 1. 2027) je uveden pouze jako jednořádková položka bez odkazu na partnerském webu Universidad de Jaén (EN/ES); oficiální stránku pořadatele Université Savoie Mont Blanc, uzávěrku ani další detaily se nepodařilo dohledat.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "vse-fis-iweek-2027-01",
+      "uni": "Prague University of Economics and Business (VŠE) – Faculty of Informatics and Statistics",
+      "uni_short": "VŠE FIS Praha",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Praha",
+      "lat": 50.0842,
+      "lng": 14.4411,
+      "erasmus_code": null,
+      "event_name": "FIS International Week 2027 (I-Week)",
+      "start": "2027-01-18",
+      "end": "2027-01-21",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-06",
+      "deadline_note": "registrace studentů 21. 9.–6. 12. 2026 (nebo do naplnění kapacity)",
+      "mobility": [
+        "teaching",
+        "studying"
+      ],
+      "fields": [
+        "it",
+        "ekon"
+      ],
+      "topic": "Intenzivní čtyřdenní týden 11 kurzů v angličtině (3 ECTS) vyučovaných hostujícími zahraničními profesory na Fakultě informatiky a statistiky VŠE.",
+      "audience": [
+        "Studenti (výběr z 11 intenzivních kurzů za 3 ECTS)",
+        "Hostující zahraniční akademici a profesoři"
+      ],
+      "program": [
+        "11 intenzivních interaktivních kurzů v angličtině (18.–21. 1. 2027)"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": "https://fis.vse.cz/english/faculty-2/events/iweek/",
+      "registration_url2": null,
+      "event_url": "https://fis.vse.cz/english/faculty-2/events/iweek/",
+      "source_urls": [
+        "https://fis.vse.cz/english/faculty-2/events/iweek/",
+        "https://fis.vse.cz/english/news/international-week-2027-course-offerings-announced/",
+        "https://fis.vse.cz/english/news/international-week-courses-registration-opens-on-monday-21-september/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Tereza Krajíčková",
+          "role": "FIS VŠE",
+          "email": "tereza.krajickova@vse.cz",
+          "phone": null,
+          "source": "https://fis.vse.cz/english/faculty-2/events/iweek/"
+        },
+        {
+          "name": "Student Affairs Office FIS",
+          "role": "studijní oddělení FIS VŠE",
+          "email": "fisbachelor@vse.cz; fismasters@vse.cz",
+          "phone": "+420 224 095 464",
+          "source": "https://fis.vse.cz/english/faculty-2/events/iweek/"
+        }
+      ],
+      "notes": null,
+      "verify": {
+        "status": "ověřeno",
+        "note": "Termín 18.–21. 1. 2027, registrace 21. 9.–6. 12. 2026, nabídka 11 kurzů v angličtině (3 ECTS) i kontakty potvrzeny přímo na oficiálním webu FIS VŠE.",
         "checked": "2026-11-17"
       }
     },
@@ -5291,6 +5360,65 @@
       "verify": {
         "status": "ověřeno",
         "note": "Detail na IMOTION vložený přímo knihovnou University of Valladolid (@uva.es) potvrzuje 3. ročník akce 17.–21. 5. 2027, poplatek 550 € (včetně ubytování a elektrokol) a kapacitu 10 osob. Drobný rozpor v uzávěrce: hlavička IMOTION uvádí 31. 3. 2027, text pozvánky 30. 4. 2027.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "vse-ozs-staff-week-2027-05",
+      "uni": "Prague University of Economics and Business (VŠE)",
+      "uni_short": "VŠE Praha (OZS)",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Praha",
+      "lat": 50.0842,
+      "lng": 14.4411,
+      "erasmus_code": null,
+      "event_name": "15th Prague International Staff Week",
+      "start": "2027-05-17",
+      "end": "2027-05-21",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": "zatím neuvedena na oficiální stránce OZS VŠE",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl",
+        "ekon"
+      ],
+      "topic": "Každoroční mezinárodní školicí týden Oddělení zahraničních styků VŠE pro pracovníky zahraničních oddělení partnerských univerzit.",
+      "audience": [
+        "Pracovníci mezinárodních oddělení a koordinátoři partnerských univerzit"
+      ],
+      "program": [
+        "Workshopy, prezentace a sdílení dobré praxe v oblasti studentských a zaměstnaneckých mobilit",
+        "Networking a společenský program v Praze"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://ozs.vse.cz/english/prague-international-week/",
+      "source_urls": [
+        "https://ozs.vse.cz/english/prague-international-week/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Oddělení zahraničních styků (OZS VŠE)",
+          "role": "International Office",
+          "email": "ozs@vse.cz",
+          "phone": null,
+          "source": "https://ozs.vse.cz/english/prague-international-week/"
+        }
+      ],
+      "notes": "Na oficiální stránce OZS VŠE je potvrzen termín 15. ročníku (17.–21. 5. 2027); podrobný program, poplatek a uzávěrka přihlášek budou doplněny.",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 15th Prague International Staff Week (17.–21. 5. 2027) je potvrzen přímo na oficiálním webu OZS VŠE; uzávěrka a poplatek pro ročník 2027 zatím nejsou zveřejněny.",
         "checked": "2026-11-17"
       }
     },
