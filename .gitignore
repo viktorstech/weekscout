@@ -1,0 +1,18 @@
+# Tajné klíče (NIKDY necommitovat!)
+.env
+.env.*
+!.env.example
+
+# Lokální cache Exa API a dočasné soubory
+data/cache/
+data/verify_batches/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

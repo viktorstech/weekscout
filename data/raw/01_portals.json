@@ -1,0 +1,476 @@
+{
+  "events": [
+    {
+      "id": "uvt-timisoara-2027-06",
+      "uni": "West University of Timișoara",
+      "uni_short": "WUT Timișoara",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Timișoara",
+      "lat": 45.7475,
+      "lng": 21.2316,
+      "erasmus_code": null,
+      "event_name": "Erasmus International Staff Training Week - 14-18 June 2027",
+      "start": "2027-06-14",
+      "end": "2027-06-18",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-31",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl"
+      ],
+      "topic": "Sedmnáctý ročník mezinárodního týdne zaměřeného na trendy v internacionalizaci vysokých škol, program Erasmus+ a spolupráci v rámci aliance UNITA.",
+      "audience": [
+        "Administrativní pracovníci z partnerských univerzit West University of Timișoara se zájmem o mezinárodní vztahy a internacionalizaci vysokého školství."
+      ],
+      "program": [
+        "Prezentace West University of Timișoara a evropské univerzitní aliance UNITA",
+        "Workshop vzájemného učení k aktuálním trendům a výzvám v internacionalizaci vysokých škol",
+        "World Café k dilematům v oblasti mezinárodních vztahů",
+        "Úvodní kurz vzájemného porozumění mezi románskými jazyky",
+        "Job shadowing na pracovištích univerzity",
+        "Prohlídka města, networking a společné obědy i večeře"
+      ],
+      "language": "angličtina",
+      "fee_eur": 80,
+      "fee_text": "80 € (včetně materiálů, uvítacího oběda, uvítací a rozlučkové večeře a přestávek na kávu)",
+      "capacity": "60 účastníků",
+      "registration_url": "https://forms.gle/Df667x9wgFF6AmQw9",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/erasmus-international-staff-training-1",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/erasmus-international-staff-training-1"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Erasmus Staff Team (jméno neuvedeno)",
+          "role": "kontakt pro Staff Week",
+          "email": "erasmus.staff@e-uvt.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/erasmus-international-staff-training-1"
+        }
+      ],
+      "notes": "Ubytování pořadatel nezajišťuje.",
+      "verify": null
+    },
+    {
+      "id": "stuba-2027-04",
+      "uni": "Slovak University of Technology in Bratislava",
+      "uni_short": "STU Bratislava",
+      "country_iso": "SK",
+      "country": "Slovensko",
+      "city": "Bratislava",
+      "lat": 48.1518,
+      "lng": 17.114,
+      "erasmus_code": null,
+      "event_name": "INTERNATIONAL RELATIONS & ERASMUS+ STAFF WEEK 2027 – Marketing, Networking & Future Skills for International Offices",
+      "start": "2027-04-26",
+      "end": "2027-04-30",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-31",
+      "deadline_note": "výsledky výběru budou oznámeny v únoru 2027",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl"
+      ],
+      "topic": "Týden pro pracovníky zahraničních oddělení vysokých škol zaměřený na marketing, budování sítí, budoucí dovednosti a mezinárodní spolupráci v programu Erasmus+.",
+      "audience": [
+        "Výhradně pracovníci zahraničních oddělení, koordinátoři programu Erasmus+ a specialisté na mezinárodní spolupráci vysokých škol."
+      ],
+      "program": [
+        "Pětidenní odborný program zaměřený na marketing, networking a dovednosti budoucnosti pro zahraniční oddělení",
+        "Výměna dobré praxe a praktických nástrojů pro řízení mezinárodní spolupráce",
+        "Komentované prohlídky a exkurze v Bratislavě a Trnavě",
+        "Společný oběd, večeře s ochutnávkou slovenských vín a celotýdenní občerstvení"
+      ],
+      "language": "angličtina",
+      "fee_eur": 290,
+      "fee_text": "290 € (včetně odborného programu, jednoho oběda, večeře s ochutnávkou vín, občerstvení, exkurzí v Bratislavě a Trnavě a uvítacích dárků)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/international-relations-erasmus-staff",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-relations-erasmus-staff"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Mgr. Dominika Repko",
+          "role": null,
+          "email": "dominika.repko@stuba.sk",
+          "phone": "+421 917 669 200",
+          "source": "http://staffmobility.eu/staffweek/international-relations-erasmus-staff"
+        }
+      ],
+      "notes": "Ubytování pořadatel nezajišťuje. Doprovodné osoby se nesmějí účastnit oficiálního programu; konání je podmíněno dosažením minimálního počtu účastníků.",
+      "verify": null
+    },
+    {
+      "id": "vilniustech-2027-05",
+      "uni": "Vilnius Gediminas Technical University (VILNIUS TECH)",
+      "uni_short": "VILNIUS TECH",
+      "country_iso": "LT",
+      "country": "Litva",
+      "city": "Vilnius",
+      "lat": 54.7224,
+      "lng": 25.3378,
+      "erasmus_code": null,
+      "event_name": "9th Erasmus+ International Staff Exchange Week \"Making Learning Closer to Reality\"",
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-02-28",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "ekon",
+        "pedag"
+      ],
+      "topic": "Mezinárodní týden Fakulty podnikového managementu VILNIUS TECH zaměřený na propojení vzdělávání s praxí, výzkum a účast na 17. vědecké konferenci Business and Management 2027.",
+      "audience": [
+        "Zaměstnanci partnerských vysokých škol se zájmem o oblast podnikání a managementu, výzkum a sdílení zkušeností ze současného vzdělávání."
+      ],
+      "program": [
+        "Seznámení s výzkumnými oblastmi univerzity VILNIUS TECH a Fakulty podnikového managementu",
+        "Účast na 17. mezinárodní vědecké konferenci Business and Management 2027 (jako posluchač nebo s vlastním příspěvkem)",
+        "Diskuse o výzvách současného vzdělávání a sdílení dobré praxe",
+        "Společné obědy, přestávky na kávu a slavnostní gala večeře"
+      ],
+      "language": "angličtina",
+      "fee_eur": 300,
+      "fee_text": "300 € účastnický poplatek (zahrnuje program týdne, obědy, gala večeři a účast na konferenci jako posluchač); pro prezentující s příspěvkem snížený konferenční poplatek 100 €",
+      "capacity": "20 účastníků",
+      "registration_url": "https://forms.gle/p1ByydmMy8Jj4VRc6",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/9th-erasmus-international-staff-exchange",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/9th-erasmus-international-staff-exchange"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Dr Alma Mačiulytė-Šniukienė",
+          "role": "kontakt pro Staff Week",
+          "email": "a.maciulyte-sniukiene@vilniustech.lt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/9th-erasmus-international-staff-exchange"
+        },
+        {
+          "name": "Dr Paulius Šūmakaris",
+          "role": "kontakt pro vědeckou konferenci Business and Management 2027",
+          "email": "paulius.sumakaris@vilniustech.lt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/9th-erasmus-international-staff-exchange"
+        }
+      ],
+      "notes": "Akci pořádá Fakulta podnikového managementu (Faculty of Business Management). Ubytování pořadatel nezajišťuje.",
+      "verify": null
+    },
+    {
+      "id": "ubm-bordeaux-2027-06",
+      "uni": "Bordeaux Montaigne University",
+      "uni_short": "Bordeaux Montaigne",
+      "country_iso": "FR",
+      "country": "Francie",
+      "city": "Bordeaux",
+      "lat": 44.7955,
+      "lng": -0.6197,
+      "erasmus_code": null,
+      "event_name": "International Staff Week 2027",
+      "start": "2027-06-07",
+      "end": "2027-06-11",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-31",
+      "deadline_note": "vybraní uchazeči budou kontaktováni v únoru 2027",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl",
+        "zdravi",
+        "human"
+      ],
+      "topic": "Třetí ročník mezinárodního týdne zaměstnanců zaměřený na duševní zdraví, diverzitu a inkluzi v univerzitním prostředí a výměnu dobré praxe.",
+      "audience": [
+        "Zaměstnanci vysokých škol se zájmem o diverzitu, duševní zdraví a inkluzi (nejvýše 2 účastníci z jedné instituce)."
+      ],
+      "program": [
+        "Prezentace univerzity a prohlídka kampusu",
+        "Tematické bloky o duševním zdraví, diverzitě a inkluzi na vysokých školách",
+        "Workshopy, pracovní skupiny a networking účastníků",
+        "Komentovaná prohlídka Bordeaux a výlet do Saint-Émilion včetně návštěvy katakomb"
+      ],
+      "language": "angličtina",
+      "fee_eur": 300,
+      "fee_text": "300 € (včetně 4 obědů, 4 přestávek na kávu, uvítací večeře, prohlídky Bordeaux, výletu do Saint-Émilion a místní dopravy)",
+      "capacity": "20 účastníků (max. 2 z jedné instituce)",
+      "registration_url": "https://framaforms.org/ubm-international-staff-week-2027-1791882115",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/international-staff-week-2027",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-staff-week-2027"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Staff Mobility Team (jméno neuvedeno)",
+          "role": "kontakt pro Staff Week",
+          "email": "staff-mobility@u-bordeaux-montaigne.fr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-staff-week-2027"
+        }
+      ],
+      "notes": "Ubytování pořadatel nezajišťuje.",
+      "verify": null
+    },
+    {
+      "id": "bme-budapest-2027-05",
+      "uni": "Budapest University of Technology and Economics",
+      "uni_short": "BME Budapest",
+      "country_iso": "HU",
+      "country": "Maďarsko",
+      "city": "Budapest",
+      "lat": 47.4813,
+      "lng": 19.0556,
+      "erasmus_code": null,
+      "event_name": "Beyond Mobility & Exchange - 3rd International Staff Week of BME",
+      "start": "2027-05-03",
+      "end": "2027-05-07",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-02-01",
+      "deadline_note": "přednost mají uchazeči z univerzit aliance EELISA",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl",
+        "tech"
+      ],
+      "topic": "Třetí ročník mezinárodního týdne BME zaměřený na udržitelné technologie a management, aktivity aliance EELISA, interkulturní kompetence a internacionalizaci vysokých škol.",
+      "audience": [
+        "Administrativní a akademičtí pracovníci partnerských univerzit BME (zejména pracovníci zabývající se mezinárodními studenty); prioritu mají členové aliance EELISA."
+      ],
+      "program": [
+        "Udržitelné technologie a management a představení komunit aliance EELISA na BME",
+        "Interkulturní kompetence a sdílení dobré praxe v internacionalizaci",
+        "Erasmus Without Paper a nábor zahraničních studentů",
+        "Komentovaná prohlídka architektonického dědictví Budapešti"
+      ],
+      "language": "angličtina",
+      "fee_eur": 300,
+      "fee_text": "300 € (včetně uvítacího balíčku, denního programu, přestávek na kávu, obědů a komentované procházky Budapeští)",
+      "capacity": "max. 30 účastníků (min. 15 pro konání akce, přednostně 1 z instituce)",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/beyond-mobility-exchange-3rd",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/beyond-mobility-exchange-3rd"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Susana Jászai",
+          "role": null,
+          "email": "erasmus_staffweek@bme.hu",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-mobility-exchange-3rd"
+        }
+      ],
+      "notes": "Ubytování pořadatel nezajišťuje. Případné slevy či prominutí poplatku zatím nejsou upřesněny (TBD).",
+      "verify": null
+    },
+    {
+      "id": "metu-ankara-2027-06",
+      "uni": "Middle East Technical University (METU)",
+      "uni_short": "METU Ankara",
+      "country_iso": "TR",
+      "country": "Turecko",
+      "city": "Ankara",
+      "lat": 39.8914,
+      "lng": 32.7847,
+      "erasmus_code": null,
+      "event_name": "11th METU Erasmus+ International Staff Training Week – Beyond Mobility: Green, Inclusive and Responsible Internationalization (BIP)",
+      "start": "2027-06-14",
+      "end": "2027-06-18",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-03-15",
+      "deadline_note": "uvedeno v tabulce IMOTION, v textu anotace však stojí TO BE ANNOUNCED",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl",
+        "prir"
+      ],
+      "topic": "Jedenáctý ročník školícího týdne METU ve formátu BIP zaměřený na zelenou transformaci, inkluzi, udržitelnost kampusu a odpovědnou internacionalizaci vysokých škol.",
+      "audience": [
+        "Pracovníci zahraničních oddělení, akademičtí i administrativní zaměstnanci věnující se mobilitě, udržitelnosti, inkluzi a internacionalizaci."
+      ],
+      "program": [
+        "Povinná online část před příjezdem (formát Blended Intensive Programme)",
+        "Interaktivní workshopy, peer-learning a výměna dobré praxe v zelené a inkluzivní mobilitě",
+        "Aktivity v kampusu METU zaměřené na udržitelnost, přístupnost a inkluzi",
+        "Volitelný kulturní výlet do Kappadokie (placený zvlášť)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "zdarma (volitelný kulturní výlet do Kappadokie za samostatný poplatek, výše bude upřesněna)",
+      "capacity": null,
+      "registration_url": "https://forms.gle/yyfjK8QSsBZXtc6M7",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/11th-metu-erasmus-international-staff",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/11th-metu-erasmus-international-staff"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "METU International Cooperation Office – KA131 (jméno neuvedeno)",
+          "role": "kontakt pro programové země (KA131)",
+          "email": "europeanmobility@metu.edu.tr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/11th-metu-erasmus-international-staff"
+        },
+        {
+          "name": "METU International Cooperation Office – KA171 (jméno neuvedeno)",
+          "role": "kontakt pro partnerské země (KA171)",
+          "email": "icm@metu.edu.tr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/11th-metu-erasmus-international-staff"
+        }
+      ],
+      "notes": "Formát Blended Intensive Programme (BIP) vyžaduje účast na povinné online složce před fyzickým týdnem v Ankaře. Ubytování pořadatel nezajišťuje. V tabulce IMOTION je uvedena uzávěrka 15. 3. 2027 a v textu je odkaz na Google Forms, níže v textu však zároveň stojí Application Form / Application Deadline: TO BE ANNOUNCED.",
+      "verify": null
+    },
+    {
+      "id": "unifg-2027-06",
+      "uni": "University of Foggia",
+      "uni_short": "University of Foggia",
+      "country_iso": "IT",
+      "country": "Itálie",
+      "city": "Foggia",
+      "lat": 41.4622,
+      "lng": 15.5446,
+      "erasmus_code": null,
+      "event_name": "INTERNATIONAL WEEK 2027: Edition 2 – The Interconnected Future: Scaling Reach Through Global Alliances",
+      "start": "2027-06-21",
+      "end": "2027-06-25",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-03-01",
+      "deadline_note": "předběžná registrace",
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fields": [
+        "intl"
+      ],
+      "topic": "Druhý ročník mezinárodního týdne Univerzity ve Foggii zaměřený na globální univerzitní aliance, výuku, profesní rozvoj a akademický networking.",
+      "audience": [
+        "Akademičtí a administrativní pracovníci vysokých škol (univerzita potvrzuje dohody o výuce i školení v rámci Erasmus+)."
+      ],
+      "program": [
+        "Výukové bloky, profesní rozvoj a sdílení odborných zkušeností",
+        "Akademický networking zaměřený na rozvoj globálních aliancí",
+        "Organizovaná exkurze a kulturní zážitky v přímořské lokalitě",
+        "Společenský večer s večeří a tancem (podrobný program bude upřesněn)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 250,
+      "fee_text": "250 € předběžně (zahrnuje uvítací balíček, organizovanou exkurzi, konferenční sál a společenský večer s večeří)",
+      "capacity": "300 účastníků",
+      "registration_url": "https://forms.gle/icUiqrR4CKVmSrYNA",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/international-week-2027-edition-2",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-week-2027-edition-2"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "International Week Team (jméno neuvedeno)",
+          "role": "kontakt pro International Week",
+          "email": "internationalweek@unifg.it",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-week-2027-edition-2"
+        }
+      ],
+      "notes": "Přesné místo konání v přímořské lokalitě bude upřesněno (VENUE: To be confirmed). Příjezd je plánován na 20. 6. a odjezd na 26. 6. 2027. Poplatek 250 € je předběžný; ubytování pořadatel nezajišťuje.",
+      "verify": null
+    },
+    {
+      "id": "unibo-una-europa-baes-2027-02",
+      "uni": "Alma Mater Studiorum – University of Bologna",
+      "uni_short": "University of Bologna",
+      "country_iso": "IT",
+      "country": "Itálie",
+      "city": "Bologna",
+      "lat": 44.4926,
+      "lng": 11.3511,
+      "erasmus_code": null,
+      "event_name": "Una Europa / BAES Winter School 2027 – The EU between War and Peace",
+      "start": "2027-02-08",
+      "end": "2027-02-12",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-11-23",
+      "deadline_note": "do 12:00 pro studenty se startovní univerzitou UNIBO; studenti partnerských univerzit se hlásí přes domovskou VŠ",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "human",
+        "ekon"
+      ],
+      "topic": "Zimní škola aliance Una Europa ve formátu Erasmus+ BIP zkoumající roli Evropské unie v současných ozbrojených a obchodních konfliktech, multilateralismu a bezpečnostní politice (3 ECTS).",
+      "audience": [
+        "Pouze studenti programu Bachelor of European Studies (BAES) na Univerzitě v Bologni a partnerských univerzitách (Paris 1, UCM Madrid, Helsinki, KU Leuven, Jagellonská univerzita v Krakově, UZH)."
+      ],
+      "program": [
+        "Povinná online část dne 5. 2. 2027",
+        "Prezenční intenzivní týden 8.–12. 2. 2027 v Palazzo Hercolani v Bologni (přednášky, panely, multidisciplinární diskuse)",
+        "Simulace rozhodování v instituci EU nad hypotetickým zahraničněpolitickým scénářem",
+        "Rozvoj analytických, kritických a prezentačních dovedností (ohodnoceno 3 ECTS, vyžadována min. 90 % účast)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "zdarma (účastníci hradí pouze pojištění; studenti partnerských VŠ mohou čerpat grant Erasmus+ BIP přes domovskou univerzitu)",
+      "capacity": "cca 50–60 studentů (max. 40 z partnerských VŠ, 20–25 z UNIBO)",
+      "registration_url": "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace",
+      "registration_url2": null,
+      "event_url": "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace",
+      "source_urls": [
+        "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace",
+        "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace/call-for-applications/@@download/file/Rep.282_CALL%20for%20Applications_BAES_Winter%20School_REV%20del%2021.10.pdf"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Carmelo Danisi",
+          "role": "předseda organizačního výboru (Organizing Committee Chair)",
+          "email": null,
+          "phone": null,
+          "source": "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace"
+        }
+      ],
+      "notes": "Povinná online část BIP probíhá 5. 2. 2027, prezenční výukový týden 8.–12. 2. 2027. Web uvádí přibližně 50 studentů, zatímco oficiální PDF výzva uvádí max. 60 studentů (max. 40 z partnerských univerzit a 20–25 z UNIBO). Určeno výhradně studentům programu BAES.",
+      "verify": null
+    }
+  ]
+}
