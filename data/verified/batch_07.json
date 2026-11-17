@@ -1,0 +1,129 @@
+[
+  {
+    "id": "ubo-brest-hispanic-2027-01",
+    "status": "částečně",
+    "note": "Termín 11.–15. 1. 2027 na UBO Brest potvrzen na portálu aliance SEA-EU, u partnerské Uni Kiel i v oznámení SEA-EU UNIST. Uni Kiel a UNIST doplňují uzávěrku 9. 11. 2026 (již po termínu), výukový charakter akce (8 hodin pro hostující vyučující z aliance SEA-EU) a jazyk (španělština, pro překladatelské semináře i francouzština). Přímá stránka akce na doméně univ-brest.fr nebyla v důkazech nalezena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2026-11-09",
+      "deadline_note": "pro vyučující a výzkumníky z partnerských univerzit aliance SEA-EU (přihláška přímo na UBO se souhlasem nadřízeného)",
+      "mobility": [
+        "teaching"
+      ],
+      "language": "španělština (francouzština pro překladatelské semináře)",
+      "source_urls": [
+        "https://sea-eu.org/staff-mobilities/",
+        "https://www.uni-kiel.de/en/international/sea-eu/details/news/international-week-in-hispanic-studies-at-the-university-of-brest-1"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "nord-bodo-climate-bip-2027-03",
+    "status": "částečně",
+    "note": "Fyzický termín 8.–13. 3. 2027 v Bodø (Nord University, Norsko) i online část 3. 2.–17. 3. 2027 (55 hodin, 5 ECTS, angličtina min. B2) potvrzeny na portálu SEA-EU i u spolupořádajících univerzit (University of Malta, Kiel University). Uzávěrka 2026-11-17 z dávky nebyla v důkazech doložena: na portálu SEA-EU je uvedena nominace 01.12.2027 a přihláška 15.12.2027 (zřejmý překlep v roce místo prosince 2026) a interní uzávěrky jednotlivých univerzit SEA-EU se liší (např. UM měla 12. 11. 2026). Přímá stránka na doméně nord.no nebyla nalezena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": null,
+      "deadline_note": "nominace přes zahraniční/SEA-EU oddělení domovské univerzity (interní uzávěrky se liší, např. Univ. of Malta 2026-11-12; na portálu SEA-EU uvedena nominace 01.12.2027 a přihláška 15.12.2027 – zřejmý překlep v roce místo prosince 2026)",
+      "language": "angličtina (min. B2)",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-narratives-for-action-translating-climate-goals-into-personal-and-collective-engagement/",
+      "source_urls": [
+        "https://sea-eu.org/opportunity-browser/bip-narratives-for-action-translating-climate-goals-into-personal-and-collective-engagement/",
+        "https://sea-eu.org/bips/",
+        "https://www.um.edu.mt/about/sea-eu/opportunities/availablebipopportunities2026/",
+        "https://www.uni-kiel.de/en/international/sea-eu/details/news/bip-narratives-for-action"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "tamk-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 5.–9. 4. 2027, poplatek 250 € (pro max. 2 účastníky z každé univerzity aliance UNINOVIS zdarma), kontakt eyeontamk@tuni.fi i uzávěrka Call for Papers 9. 11. 2026 (místo 31. 10. 2026 v dávce; obecná registrace účastníků se otevírá v prosinci 2026) jsou potvrzeny přímo na detailu IMOTION vloženém pořadatelem (TAMK), v registračním formuláři TAMK na Lyyti i na webu aliance UNINOVIS. Akce je určena akademickým i neakademickým pracovníkům.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-09",
+      "deadline": "2026-11-09",
+      "deadline_note": "uzávěrka Call for Papers pro prezentující (již uzavřena); oficiální registrace účastníků se otevírá v prosinci 2026",
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fee_eur": 250,
+      "fee_text": "250 € (seminář, akademické sekce a doprovodný program; platí i pro prezentující; max. 2 účastníci z každé univerzity aliance UNINOVIS zdarma)",
+      "event_url": "http://staffmobility.eu/staffweek/eye-tamk-2027-creative-collaboration",
+      "registration_url": "https://www.lyyti.fi/reg/EyeOnTAMK2027",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/eye-tamk-2027-creative-collaboration",
+        "https://www.lyyti.fi/reg/EyeOnTAMK2027",
+        "https://uninovis.eu/news/call-for-papers-eye-on-tamk-2027/"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "Organizační tým Eye on TAMK",
+          "email": "eyeontamk@tuni.fi",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/eye-tamk-2027-creative-collaboration"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "powislanska-health-2027-05",
+    "status": "částečně",
+    "note": "Termín 19.–23. 5. 2027, poplatek 80 € (bez ubytování), kontakt Mateusz Grądzki (erasmus@powislanska.edu.pl) a přihlašovací formulář jsou potvrzeny na detailu IMOTION vloženém pořadatelem (Powiślańska Academy of Applied Sciences). Akce je určena studentům, akademikům, výzkumníkům i odborníkům. Uzávěrka na IMOTION je však uvedena jako 23. 2. 2026 (pravděpodobně překlep v roce za 2027-02-23) a samostatnou stránku akce na doméně powislanska.edu.pl se nepodařilo v důkazech ověřit, proto uzávěrku ponecháváme jako null s poznámkou.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-23",
+      "deadline": null,
+      "deadline_note": "v IMOTION je uvedeno 2026-02-23 (pravděpodobně překlep v roce za 2027-02-23; na webu VŠ neověřeno)",
+      "mobility": [
+        "teaching",
+        "training",
+        "studying"
+      ],
+      "fee_eur": 80,
+      "fee_text": "80 € (ubytování není zahrnuto)",
+      "event_url": "http://staffmobility.eu/staffweek/1st-international-health-week",
+      "registration_url": "https://forms.office.com/e/wNMjaxgTYM",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/1st-international-health-week"
+      ],
+      "contacts": [
+        {
+          "name": "Mateusz Grądzki",
+          "role": "Erasmus+ / kontakt akce",
+          "email": "erasmus@powislanska.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/1st-international-health-week"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-freiburg-2027-06-theatre",
+    "status": "částečně",
+    "note": "Červnové termíny 7.–11. 6. 2027 a 21.–25. 6. 2027 (v letáku jsou i další termíny téhož kurzu v únoru a červenci 2027), poplatek 400 € a kontakt staffweek@sli.uni-freiburg.de jsou potvrzeny v oficiálním letáku SLI 2027 na IMOTION; existenci programu 2027 nezávisle potvrzují CercleS a Univ. of Catania. Oficiální stránka uni-freiburg.de potvrzuje tematický kurz i registraci e-mailem, ale webová tabulka zatím zobrazuje jen termíny 2026 a pevná uzávěrka přihlášek není nikde uvedena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "language": "angličtina",
+      "source_type": "official",
+      "event_url": "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+      "source_urls": [
+        "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf",
+        "https://cercles.org/2026/08/12/universitat-freiburg-university-of-freiburg-sli-staff-week-2026-and-2027-programmes/"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  }
+]

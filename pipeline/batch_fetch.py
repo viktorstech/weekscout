@@ -123,6 +123,27 @@ FULL_EXTRA_QUERIES: dict[str, list[dict[str, Any]]] = {
 }
 
 
+GAPS_QUERIES: dict[str, tuple[int, list[dict[str, Any]]]] = {
+    "04_gaps": (
+        2,
+        [
+            {
+                "query": '"International Staff Week" OR "International Week" OR "Staff Training Week" 2027 university Sweden OR Norway OR Iceland',
+                "numResults": 12,
+            },
+            {
+                "query": '"International Staff Week" OR "International Week" OR "BIP" 2027 university Malta OR Luxembourg OR Estonia',
+                "numResults": 12,
+            },
+            {
+                "query": '"International Staff Week" OR "International Week" OR "Staff Training Week" 2027 university Serbia OR "North Macedonia" OR Belgrade OR Skopje',
+                "numResults": 12,
+            },
+        ],
+    ),
+}
+
+
 def _cost(resp: dict[str, Any]) -> float:
     cd = resp.get("costDollars")
     if isinstance(cd, dict):
@@ -134,7 +155,8 @@ def _cost(resp: dict[str, Any]) -> float:
 
 def cmd_collect(args: argparse.Namespace) -> int:
     total_cost = 0.0
-    for agent_name, (key_slot, base_queries) in PILOT_QUERIES.items():
+    source_map = GAPS_QUERIES if args.mode == "gaps" else PILOT_QUERIES
+    for agent_name, (key_slot, base_queries) in source_map.items():
         queries = list(base_queries)
         if args.mode == "full":
             queries.extend(FULL_EXTRA_QUERIES.get(agent_name, []))
@@ -381,7 +403,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     cl = sub.add_parser("collect", help="Stáhne vyhledávání pro Agenty 1–3 přes klíče #1, #2, #3.")
-    cl.add_argument("--mode", default="pilot", choices=["pilot", "full"], help="pilot = malá dávka, full = plný sběr.")
+    cl.add_argument("--mode", default="pilot", choices=["pilot", "full", "gaps"], help="pilot = malá dávka, full = plný sběr, gaps = chybějící země.")
     cl.add_argument("--max-chars", type=int, default=4500, help="Max znaků textu na stránku.")
     cl.add_argument("--no-cache", action="store_true")
     cl.set_defaults(func=cmd_collect)

@@ -1,0 +1,285 @@
+[
+  {
+    "id": "uca-cadiz-gender-2026-12",
+    "status": "částečně",
+    "note": "Termín 14.–16. 12. 2026 a hostitel University of Cádiz (ES) jsou potvrzeny na portálu aliance SEA-EU (sea-eu.org/staff-mobilities/). Detailní stránka akce na doméně pořadatele (uca.es), konkrétní uzávěrka, poplatek, jazyk ani kontakty nebyly v důkazech nalezeny; přihlášky probíhají přes zahraniční oddělení členských VŠ SEA-EU.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "um-malta-microcredential-bip-2026-12",
+    "status": "částečně",
+    "note": "Termín 14.–18. 12. 2026 (University of Malta, MT; přípravná online sekce 25. 11. 2026), jazyk (angličtina B1+), kapacita i kontakty UM jsou potvrzeny na detailu aliance SEA-EU. Pozor: jde o staff BIP pro akademické pracovníky a tvůrce kurikula, nikoli pro studenty (oprava mobility ze studying na training). V textu jsou dvě data uzávěrky (registrace 11. 9. 2026, nominace 25. 9. 2026; akce je již uzavřená) a chybí přímá stránka na um.edu.mt.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2026-09-25",
+      "deadline_note": "nominační uzávěrka univerzit aliance SEA-EU do 25. 9. 2026 (v textu uvedena i registrace do 11. 9. 2026); přihlášky přes domovskou univerzitu, nyní uzavřeno",
+      "mobility": [
+        "training"
+      ],
+      "language": "English",
+      "capacity": "max. 4 akademičtí pracovníci z každé univerzity aliance SEA-EU",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/",
+      "source_urls": [
+        "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/",
+        "https://sea-eu.org/bips/"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "SEA-EU Office (University of Malta)",
+          "email": "sea-eu@um.edu.mt",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/"
+        },
+        {
+          "name": null,
+          "role": "Erasmus Nominations and Registrations (University of Malta)",
+          "email": "erasmus@um.edu.mt",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "parthenope-naples-leadership-bip-2027-02",
+    "status": "částečně",
+    "note": "Termín 15.–19. 2. 2027 v Neapoli (online 27. 1. a 3. 2. 2027), nominační uzávěrka 30. 12. 2026, Erasmus kód I NAPOLI 03, kapacita 10–24 studentů i kontakty pořadatele Parthenope University of Naples jsou potvrzeny v programovém PDF na portálu SEA-EU a na webu partnerské UBO (interní uzávěrka UBO 17. 12. 2026). Chybí samostatná stránka na doméně uniparthenope.it a údaj o poplatku.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2026-12-30",
+      "deadline_note": "nominační uzávěrka univerzit aliance SEA-EU (30. 12. 2026); studenti podávají přihlášku dříve přes domovskou univerzitu (např. UBO do 17. 12. 2026)",
+      "erasmus_code": "I NAPOLI 03",
+      "capacity": "10–24 studentů (standardně 3 na partnerskou univerzitu)",
+      "event_url": "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf",
+      "source_urls": [
+        "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf",
+        "https://sea-eu.org/bips/",
+        "https://www.univ-brest.fr/sea-eu/index.php/fr/actualite/bip-sea-eu-naples-leadership-and-soft-skills-modern-organizations"
+      ],
+      "contacts": [
+        {
+          "name": "Prof. Filomena Buonocore",
+          "role": "BIP Coordinator / Organisational Aspects (UPN)",
+          "email": "seaeu.upn@uniparthenope.it",
+          "phone": null,
+          "source": "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf"
+        },
+        {
+          "name": null,
+          "role": "Erasmus BIP Nominations (UPN)",
+          "email": "erasmus.bip@uniparthenope.it",
+          "phone": null,
+          "source": "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "lund-uva-2027-04",
+    "status": "částečně",
+    "note": "Termín 12.–16. 4. 2027, poplatek cca 500 € (zdarma pro partnery U21 a EUGLOH), limit 2 účastníci na univerzitu i společné pořadatelství University of Amsterdam (NL) a Lund University (SE) jsou plně potvrzeny na oficiálním webu UvA. Přihlášky a uzávěrka dosud nebyly zveřejněny (k dispozici jen mailing list). Poznámka pro kurátora: společná akce v NL a SE může být duplicitní se záznamem uva-lund-2027-04.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "nord-bodo-phd-bip-2027-04",
+    "status": "částečně",
+    "note": "Termín 26.–30. 4. 2027 na Nord University v Bodø (NO; online 8. 4. a 13. 5. 2027), jazyk angličtina (min. B2) a kontakt na Nord University jsou potvrzeny na detailu aliance SEA-EU a na webech Kiel University a University of Malta. Chybí obecná uzávěrka (každá členská VŠ má vlastní interní termín, např. Kiel 6. 12. 2026), poplatek i samostatná stránka na doméně nord.no.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "language": "English",
+      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU (např. interní uzávěrka Kiel University je 6. 12. 2026)",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-teaching-and-learning-in-higher-education-for-phd-students-a-european-perspective/",
+      "source_urls": [
+        "https://sea-eu.org/opportunity-browser/bip-teaching-and-learning-in-higher-education-for-phd-students-a-european-perspective/",
+        "https://sea-eu.org/bips/",
+        "https://www.uni-kiel.de/en/international/sea-eu/details/news/bip-teaching-and-learning-in-higher-education-1"
+      ],
+      "contacts": [
+        {
+          "name": "Anna CohenMiller",
+          "role": "BIP Contact (Nord University)",
+          "email": "anna.cohenmiller@nord.no",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-teaching-and-learning-in-higher-education-for-phd-students-a-european-perspective/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upv-etseamn-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 26.–28. 4. 2027, uzávěrka 5. 4. 2027, poplatek 500 €, kapacita 20 účastníků, jazyk angličtina i kontakty UPV ETSEAMN jsou potvrzeny v záznamu vloženém přímo pořadatelem na IMOTION, v přehledu 2026/2027 a v živém přihlašovacím formuláři UPV.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2027-04-05",
+      "fee_eur": 500,
+      "fee_text": "500 € (ubytování není zahrnuto; slevy se neposkytují)",
+      "capacity": "max. 20 účastníků",
+      "language": "English",
+      "event_url": "http://staffmobility.eu/staffweek/9th-ufm-valencia",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/9th-ufm-valencia",
+        "http://staffmobility.eu/sites/default/files/staffweek/stws_2627_0.pdf",
+        "https://forms.gle/mqbP3B5maVjs4CUL8"
+      ],
+      "contacts": [
+        {
+          "name": "Claudio Benavent",
+          "role": "International Officer ETSEAMN",
+          "email": "cbenavent@upvnet.upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/9th-ufm-valencia"
+        },
+        {
+          "name": null,
+          "role": "International Relations Office ETSEAMN",
+          "email": "interagr@upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/9th-ufm-valencia"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upv-etseamn-2027-05-sss",
+    "status": "ověřeno",
+    "note": "Termín 3.–7. 5. 2027, uzávěrka 12. 4. 2027 (platba do 19. 4. 2027), poplatek 500 €, kapacita 40 účastníků, jazyk angličtina, Erasmus kód E VALENCI02 i kontakty jsou potvrzeny na IMOTION (vloženém pořadatelem), v oficiálním PDF programu 13th SSS Valencia, v přihlašovacím formuláři UPV i v partnerské pozvánce UP Lublin.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2027-04-12",
+      "deadline_note": "uzávěrka platby poplatku 19. 4. 2027",
+      "fee_eur": 500,
+      "fee_text": "500 € (zahrnuje výuku, materiály, občerstvení, uvítací paellu a závěrečný oběd; bez ubytování)",
+      "capacity": "max. 40 účastníků",
+      "language": "English",
+      "erasmus_code": "E VALENCI02",
+      "event_url": "http://staffmobility.eu/staffweek/13th-sss-valencia",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/13th-sss-valencia",
+        "http://staffmobility.eu/sites/default/files/staffweek/13th_sss_valencia.pdf",
+        "http://staffmobility.eu/sites/default/files/staffweek/stws_2627_0.pdf",
+        "https://forms.gle/mqbP3B5maVjs4CUL8",
+        "https://up.lublin.pl/blog/zaproszenie-do-udzialu-w-mobilnosci-szkoleniowej-stt-do-universitat-politecnica-de-valencia-hiszpania-2026-27/"
+      ],
+      "contacts": [
+        {
+          "name": "Claudio Benavent",
+          "role": "International Officer ETSEAMN",
+          "email": "cbenavent@upvnet.upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/13th-sss-valencia"
+        },
+        {
+          "name": null,
+          "role": "International Relations Office ETSEAMN",
+          "email": "interagr@upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/13th-sss-valencia"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "nord-bodo-arctic-leaders-bip-2027-06",
+    "status": "částečně",
+    "note": "Termín 14.–18. 6. 2027 na Nord University v Bodø (NO; online 12. 4.–14. 5. 2027), kvóty pro vysílající VŠ i kontakt na Nord University jsou potvrzeny na detailu aliance SEA-EU. Obecná uzávěrka není uvedena (původně zapsaná interní uzávěrka University of Malta 17. 11. 2026 nebyla ve zkráceném výpisu stránky UM zachycena a neplatí obecně pro všechny univerzity), chybí také poplatek a samostatná stránka na nord.no.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": null,
+      "deadline_note": "přihlášky podávají studenti přes domovskou univerzitu aliance SEA-EU (interní uzávěrky stanovuje každá vysílající univerzita zvlášť)",
+      "capacity": "1 student z každé univerzity SEA-EU (UCA a Uni Udine až 5 studentů)",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-leaders-for-digital-and-sustainable-futures-gaining-experience-in-arctic-norway/",
+      "source_urls": [
+        "https://sea-eu.org/opportunity-browser/bip-leaders-for-digital-and-sustainable-futures-gaining-experience-in-arctic-norway/",
+        "https://sea-eu.org/bips/",
+        "https://www.um.edu.mt/about/sea-eu/opportunities/availablebipopportunities2026/"
+      ],
+      "contacts": [
+        {
+          "name": "Sandra Wiik",
+          "role": "BIP Contact (Nord University)",
+          "email": "sandra.wiik@nord.no",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-leaders-for-digital-and-sustainable-futures-gaining-experience-in-arctic-norway/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upv-etseamn-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 14.–18. 6. 2027, uzávěrka 24. 5. 2027 (platba do 31. 5. 2027), poplatek 500 €, kapacita 20 na kurz / 140 celkem, jazyky angličtina a španělština, Erasmus kód E VALENCI02 i kontakty jsou potvrzeny na IMOTION (vloženém pořadatelem), v oficiálním PDF programu 33rd STP Valencia, v přihlašovacím formuláři UPV i v partnerské pozvánce UP Lublin.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2027-05-24",
+      "deadline_note": "uzávěrka platby poplatku 31. 5. 2027",
+      "fee_eur": 500,
+      "fee_text": "500 € (zahrnuje výuku, materiály, občerstvení, uvítací paellu a závěrečný oběd; bez ubytování)",
+      "capacity": "max. 20 účastníků na kurz (140 celkem v 7 paralelních kurzech)",
+      "language": "English, Spanish",
+      "erasmus_code": "E VALENCI02",
+      "event_url": "http://staffmobility.eu/staffweek/33rd-stp-valencia-languages-it-training",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/33rd-stp-valencia-languages-it-training",
+        "http://staffmobility.eu/sites/default/files/staffweek/33rd_stp_valencia.pdf",
+        "http://staffmobility.eu/sites/default/files/staffweek/stws_2627_0.pdf",
+        "https://forms.gle/mqbP3B5maVjs4CUL8",
+        "https://up.lublin.pl/blog/zaproszenie-do-udzialu-w-mobilnosci-szkoleniowej-stt-do-universitat-politecnica-de-valencia-hiszpania-2026-27/"
+      ],
+      "contacts": [
+        {
+          "name": "Claudio Benavent",
+          "role": "International Officer ETSEAMN",
+          "email": "cbenavent@upvnet.upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/33rd-stp-valencia-languages-it-training"
+        },
+        {
+          "name": null,
+          "role": "International Relations Office ETSEAMN",
+          "email": "interagr@upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/33rd-stp-valencia-languages-it-training"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-freiburg-2027-07-theatre",
+    "status": "částečně",
+    "note": "Oba červencové termíny 2027 (5.–9. 7. a 19.–23. 7. 2027), poplatek 400 €, jazyk angličtina a kontakt staffweek@sli.uni-freiburg.de jsou potvrzeny v letáku SLI 2027 na IMOTION a vydání programu 2027 potvrzují i CercleS a UniCT. Oficiální stránka uni-freiburg.de potvrzuje program SLI Staff Week, kurz Theatre Techniques i registrační postup e-mailem, v dostupném výpisu však zobrazuje jen termíny 2026 a uzávěrka přihlášek není uvedena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_type": "official",
+      "event_url": "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+      "source_urls": [
+        "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf",
+        "https://cercles.org/2026/08/12/universitat-freiburg-university-of-freiburg-sli-staff-week-2026-and-2027-programmes/"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  }
+]

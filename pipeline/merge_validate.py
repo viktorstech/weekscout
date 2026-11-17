@@ -218,7 +218,7 @@ def cmd_merge(args: argparse.Namespace) -> int:
     merged_dups = 0
 
     by_key: dict[tuple[str, str, str], dict[str, Any]] = {}
-    url_to_key: dict[str, tuple[str, str, str]] = {}
+    url_to_key: dict[tuple[str, str, str], tuple[str, str, str]] = {}
 
     for ev in all_raw:
         ev = {k: v for k, v in ev.items() if k in EVENT_SCHEMA_FIELDS}
@@ -250,17 +250,18 @@ def cmd_merge(args: argparse.Namespace) -> int:
 
         dk = _dedup_key(ev)
         ev_url = (ev.get("event_url") or "").strip().rstrip("/")
+        uk = (ev_url, dk[0], dk[2]) if ev_url else None
         if dk in by_key:
             by_key[dk] = _merge_two(by_key[dk], ev)
             merged_dups += 1
-        elif ev_url and ev_url in url_to_key:
-            existing_k = url_to_key[ev_url]
+        elif uk and uk in url_to_key:
+            existing_k = url_to_key[uk]
             by_key[existing_k] = _merge_two(by_key[existing_k], ev)
             merged_dups += 1
         else:
             by_key[dk] = ev
-            if ev_url:
-                url_to_key[ev_url] = dk
+            if uk:
+                url_to_key[uk] = dk
 
     # Unikátní slugy pro id
     used_ids: set[str] = set()
@@ -312,6 +313,18 @@ def cmd_batches(args: argparse.Namespace) -> int:
         return 1
 
     events = _load_events_file(in_path)
+    start_num = 1
+    if getattr(args, "unverified_only", False):
+        seen_rep: set[str] = set()
+        for vf in sorted(VERIFIED_DIR.glob("*.json")):
+            data = json.loads(vf.read_text(encoding="utf-8"))
+            items = data if isinstance(data, list) else data.get("results", [])
+            for rep in items:
+                if isinstance(rep, dict) and rep.get("id"):
+                    seen_rep.add(str(rep["id"]))
+        events = [e for e in events if str(e.get("id")) not in seen_rep]
+        start_num = len(list(VERIFIED_DIR.glob("batch_*.json"))) + 1
+
     BATCHES_DIR.mkdir(parents=True, exist_ok=True)
     for old in BATCHES_DIR.glob("batch_*.json"):
         old.unlink()
@@ -328,12 +341,13 @@ def cmd_batches(args: argparse.Namespace) -> int:
 
     total_batches = 0
     for idx in range(0, len(events), size):
+        bnum = start_num + total_batches
         total_batches += 1
         chunk = [{k: ev.get(k) for k in blind_fields if k in ev} for ev in events[idx : idx + size]]
-        bpath = BATCHES_DIR / f"batch_{total_batches:02d}.json"
+        bpath = BATCHES_DIR / f"batch_{bnum:02d}.json"
         bpath.write_text(json.dumps(chunk, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"Vytvořeno {total_batches} nezávislých dávek po max {size} akcích v {BATCHES_DIR}")
+    print(f"Vytvořeno {total_batches} nezávislých dávek ({len(events)} akcí, po max {size}) v {BATCHES_DIR}")
     return 0
 
 
@@ -554,6 +568,7 @@ def build_parser() -> argparse.ArgumentParser:
     bt = sub.add_parser("batches", help="Rozdělí data/candidates.json do nezávislých dávek pro Agenta 4.")
     bt.add_argument("--input", default=str(CANDIDATES_PATH), help="Vstupní soubor s kandidáty.")
     bt.add_argument("--size", type=int, default=20, help="Počet akcí na dávku (výchozí 20).")
+    bt.add_argument("--unverified-only", action="store_true", help="Zahrnout jen kandidáty bez reportu v data/verified/.")
     bt.set_defaults(func=cmd_batches)
 
     ap = sub.add_parser("apply", help="Aplikuje reporty z data/verified/*.json na data/candidates.json.")
