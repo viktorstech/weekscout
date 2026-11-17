@@ -12,3 +12,9 @@ Data pocházejí z oficiálních stránek univerzit a databáze IMOTION (staffmo
 Mapové podklady: © OpenStreetMap contributors, Esri World Imagery, Esri Light/Dark Gray Canvas.
 
 Volitelně: do konstanty `CARTO_KEY` v `index.html` lze vložit bezplatný klíč z https://carto.com/basemaps/apikey (omezený na doménu webu). Světlá a Tmavá mapa pak použijí podklady CARTO Positron / Dark Matter.
+
+## Struktura
+- `index.html`: aplikace (mapa, časová osa, filtry, detail akce)
+- `data.json`: data akcí (`events`), každá akce má zdroje a stav ověření
+
+Mapa a časová osa jsou dvě obrazovky přepínané tlačítkem dole; časová osa má i vlastní adresu `#casova-osa`.

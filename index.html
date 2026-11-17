@@ -5,17 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f4f6f9">
 <title>Erasmus International Weeks 2027</title>
+<meta name="description" content="Mapa Erasmus+ International Weeks, Staff Weeks a BIP na evropských vysokých školách v akademickém roce 2026/2027.">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* Layout: mapa vlevo + seznam akcí vpravo, pod tím časová osa listopad 2026 – červen 2027 */
+
+/* Layout: mapa přes celou obrazovku, karta s filtry vlevo nahoře, seznam jako panel, pod mapou časová osa */
 :root{
   --paper:#f4f6f9; --surface:#ffffff; --ink:#152033; --muted:#5b6678; --line:#d9dfe8;
   --accent:#1f4fd1; --land:#e3e8ef; --land-edge:#c4ccd8; --sea:#f4f6f9;
   --warn:#c2410c; --ok:#15803d; --part:#a16207;
-  --m2:#0f766e; --m3:#1f4fd1; --m4:#7c3aed; --m5:#c2410c; --m6:#b91c1c;
+  --m12:#0e7490; --m1:#4d7c0f; --m2:#0f766e; --m3:#1f4fd1; --m4:#7c3aed; --m5:#c2410c; --m6:#b91c1c; --m7:#a16207; --m8:#be185d; --m9:#475569; --m10:#475569; --m11:#475569;
   --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -25,7 +28,7 @@
     --paper:#0e1420; --surface:#151d2c; --ink:#e7ecf4; --muted:#9aa6b8; --line:#2a3548;
     --accent:#7aa2ff; --land:#1f2a3c; --land-edge:#33415a; --sea:#0e1420;
     --warn:#fb923c; --ok:#4ade80; --part:#facc15;
-    --m2:#2dd4bf; --m3:#7aa2ff; --m4:#c4a1ff; --m5:#fb923c; --m6:#f87171;
+    --m12:#22d3ee; --m1:#a3e635; --m2:#2dd4bf; --m3:#7aa2ff; --m4:#c4a1ff; --m5:#fb923c; --m6:#f87171; --m7:#facc15; --m8:#f472b6; --m9:#94a3b8; --m10:#94a3b8; --m11:#94a3b8;
     color-scheme: dark;
   }
 }
@@ -33,11 +36,11 @@
   --paper:#0e1420; --surface:#151d2c; --ink:#e7ecf4; --muted:#9aa6b8; --line:#2a3548;
   --accent:#7aa2ff; --land:#1f2a3c; --land-edge:#33415a; --sea:#0e1420;
   --warn:#fb923c; --ok:#4ade80; --part:#facc15;
-  --m2:#2dd4bf; --m3:#7aa2ff; --m4:#c4a1ff; --m5:#fb923c; --m6:#f87171;
+  --m12:#22d3ee; --m1:#a3e635; --m2:#2dd4bf; --m3:#7aa2ff; --m4:#c4a1ff; --m5:#fb923c; --m6:#f87171; --m7:#facc15; --m8:#f472b6; --m9:#94a3b8; --m10:#94a3b8; --m11:#94a3b8;
   color-scheme: dark;
 }
 *{box-sizing:border-box}
-html,body{margin:0}
+html,body{margin:0;height:100%;overflow:hidden}
 body{background:var(--paper);color:var(--ink);font:15px/1.5 var(--body)}
 .wrap{max-width:1280px;margin:0 auto;padding:24px 20px 40px;display:grid;gap:20px}
 header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;justify-content:space-between}
@@ -49,7 +52,7 @@ h1{font:700 clamp(24px,3.2vw,34px)/1.1 var(--display);margin:0;text-wrap:balance
 .chip:focus-visible,.ev:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:20px}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:12px}
-.hero{position:relative;height:100vh;height:100dvh;min-height:520px}
+.hero{position:absolute;inset:0} /* bez z-indexu: nevytváří vrstvu, karta a minimapa tak mohou ležet nad časovou osou */
 .hero .leaflet-top{top:calc(env(safe-area-inset-top, 0px) + 28px)}
 #map{position:absolute;inset:0}
 .ov{position:absolute;z-index:800;pointer-events:none}
@@ -102,8 +105,7 @@ h1{font:700 clamp(24px,3.2vw,34px)/1.1 var(--display);margin:0;text-wrap:balance
   .fab{display:none!important}
   body.mini #map{position:fixed;inset:calc(env(safe-area-inset-top, 0px) + 16px) 16px auto auto;width:min(460px,40vw);height:320px;z-index:860;border-radius:12px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.3);overflow:hidden}
   body.mini .basesel, body.mini .leaflet-control-scale{display:none}
-  body.mini .mlabel:not(.sel){display:none}
-}
+  body.mini }
 .listbtn{justify-self:start;font:600 14px var(--body);background:var(--accent);color:var(--surface);border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
 .listbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .listpanel{position:fixed;z-index:900;left:12px;top:200px;bottom:16px;width:400px;max-width:calc(100% - 24px);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
@@ -154,9 +156,6 @@ h1{font:700 clamp(24px,3.2vw,34px)/1.1 var(--display);margin:0;text-wrap:balance
 .tlleg i{display:inline-block;vertical-align:middle;margin-right:6px}
 footer{color:var(--muted);font-size:12.5px;max-width:90ch}
 .dlg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-.mlabel span{opacity:.55;transition:opacity .15s;display:inline-block;white-space:nowrap;font:600 12px var(--body);background:#fff;color:#152033;border:1px solid #c4ccd8;border-left-width:4px;border-radius:4px;padding:1px 6px;box-shadow:0 1px 3px rgba(0,0,0,.25);cursor:pointer}
-.mlabel.sel span{opacity:1;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.35)}
-.mlabel:hover span{opacity:.9}
 .leaflet-container{font-family:var(--body);background:var(--land)}
 .legend{z-index:800}
 dialog.dlg{z-index:2000}
@@ -188,16 +187,53 @@ dialog.dlg::backdrop{background:rgba(10,15,25,.55)}
 .hide{display:none!important}
 @media (max-width:700px){.fab{top:auto;bottom:16px}.tomap{left:auto;right:16px;transform:none}.tomap:hover{transform:translateY(-2px)}.navbtn{padding:10px 16px 10px 12px;font-size:14px}.navbtn small{display:none}.ov.top{right:12px}.titlecard{max-width:none}.legend{display:none}.listpanel{left:8px;right:8px;width:auto;top:auto;bottom:56px;height:60%}.scrollhint{bottom:14px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.evm{background:none;border:0}
+.evm .pin{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--c);border:2px solid #fff;opacity:.45;box-shadow:0 1px 3px rgba(0,0,0,.35);transition:opacity .15s}
+.evm:hover .pin{opacity:.85}
+.evm.sel .pin{left:-12px;top:-12px;width:24px;height:24px;opacity:1;border-width:3px;box-shadow:0 2px 10px rgba(0,0,0,.45)}
+.evm .plbl{position:absolute;left:12px;top:-11px;white-space:nowrap;font:600 12px var(--body);background:#fff;color:#152033;border:1px solid #c4ccd8;border-left:4px solid var(--c);border-radius:4px;padding:1px 6px;box-shadow:0 1px 3px rgba(0,0,0,.25);opacity:.55;cursor:pointer}
+.evm.sel .plbl{left:16px;opacity:1;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.lbls-off .evm:not(.sel) .plbl{display:none}
+.evm.sel{z-index:1000!important}
+.clu{background:none}
+.clu div{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font:700 14px var(--body);border:3px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.35);opacity:.85}
+.clu.big div{width:48px;height:48px;font-size:15px}
+.clu.has-sel div{opacity:1;outline:3px solid var(--warn);outline-offset:1px}
+.row{min-height:26px}
+.track{height:26px}
+.bar{top:7px;height:12px}
+.dlm{top:7px;width:11px;height:11px}
+.tlwrap{max-height:none}
+.cnt{color:var(--muted);font-weight:500;font-size:13px;margin-left:6px}
+.loading{position:absolute;inset:0;display:grid;place-items:center;z-index:700;color:var(--muted);font:600 15px var(--body);pointer-events:none}
+
+/* Dvě obrazovky bez posouvání stránky: mapa a časová osa, přepínané jedním tlačítkem */
+.tlview{position:fixed;inset:0;z-index:840;overflow-y:auto;background:var(--paper);max-width:none;margin:0;padding:16px 16px 96px}
+.tlview[hidden]{display:none}
+.tlview > *{max-width:1280px;width:100%;margin-left:auto;margin-right:auto}
+#viewbtn{z-index:870}
+body.view-tl .legend{display:none}
+@media (min-width:701px){
+  body.view-tl .ov.top{z-index:880}
+}
+@media (max-width:700px){
+  .ov.top{position:fixed}
+  body.view-tl .ov.top, body.view-tl .listpanel{display:none}
+  #viewbtn{left:50%;right:auto;transform:translateX(-50%)}
+}
+
 </style>
 </head>
 <body>
 <section class="hero" aria-label="Mapa akcí">
-  <div id="map" role="img" aria-label="Mapa Evropy s univerzitami"></div>
+  <div id="map" role="region" aria-label="Mapa Evropy s akcemi"></div>
+  <div class="loading" id="loading">Načítám akce…</div>
 
   <div class="ov top">
     <div class="titlecard">
       <h1>Erasmus International Weeks 2027</h1>
-      <p class="sub">10 univerzit, 10 zemí · údaje k 13. 11. 2026</p>
+      <p class="sub" id="subline">Načítám…</p>
       <div class="chips" role="group" aria-label="Filtr podle typu mobility">
         <button class="chip" id="f-all" data-f="all" aria-pressed="true">Vše</button>
         <button class="chip" id="f-teaching" data-f="teaching" aria-pressed="false">Chci učit</button>
@@ -228,422 +264,351 @@ dialog.dlg::backdrop{background:rgba(10,15,25,.55)}
   </aside>
 
   <div class="legend" id="legend"></div>
-  <button type="button" class="navbtn scrollhint" id="scrollhint"><span class="ico" aria-hidden="true">↓</span>Časová osa <small>kdy se co koná</small></button>
 </section>
-<button type="button" class="fab" id="fab" hidden aria-controls="listpanel">☰ Seznam akcí</button>
-<button type="button" class="navbtn tomap" id="tomap" hidden><span class="ico" aria-hidden="true">↑</span>Zpět na mapu</button>
+<button type="button" class="navbtn" id="viewbtn" aria-controls="casova-osa"><span class="ico" aria-hidden="true">→</span><span id="viewlbl">Časová osa</span> <small id="viewsub">kdy se co koná</small></button>
 
-<div class="wrap">
+<div class="wrap tlview" id="tlview" hidden>
   <section class="panel tl" id="casova-osa">
-    <div class="tlhead"><h2>Časová osa</h2><button type="button" class="btn back" id="tomap2"><span aria-hidden="true">↑</span> Zpět na mapu</button></div>
+    <div class="tlhead"><h2>Časová osa <span class="cnt" id="tlcount"></span></h2></div>
     <div class="tlgrid"><div class="tlinner" id="tl"></div></div>
     <div class="tlleg"><span><i class="dot" style="background:var(--muted);border-radius:3px;width:18px;height:10px"></i>termín akce</span><span><i style="width:10px;height:10px;border:2px solid var(--muted);transform:rotate(45deg)"></i>uzávěrka přihlášek</span><span><i style="width:0;height:12px;border-left:2px solid var(--warn)"></i>dnes</span></div>
   </section>
 
-  <dialog class="dlg" id="dlg" aria-labelledby="dlg-title"><div id="dlg-body"></div></dialog>
 
-  <footer>Mapové podklady: OpenStreetMap, Esri (World Imagery, Light/Dark Gray Canvas). Zdroje dat: oficiální stránky univerzit a databáze IMOTION (staffmobility.eu); detail a ověření ke každé akci je ve vaultu „Erasmus International Weeks“. „Částečně ověřeno“ znamená, že část údajů pochází z IMOTION nebo ze stránky partnerské univerzity. Souřadnice jsou přibližné. Před přihlášením si uzávěrku vždy ověřte u pořadatele.</footer>
+  <footer>Mapové podklady: OpenStreetMap, Esri. Zdroje dat: oficiální stránky vysokých škol, databáze IMOTION (staffmobility.eu) a stránky partnerských univerzit; ke každé akci je v detailu uveden zdroj a stav ověření. „Částečně ověřeno“ znamená, že část údajů pochází z IMOTION nebo ze stránky partnera. Souřadnice jsou přibližné. Před přihlášením si uzávěrku vždy ověřte u pořadatele.</footer>
 </div>
 
+<dialog class="dlg" id="dlg" aria-labelledby="dlg-title"><div id="dlg-body"></div></dialog>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
-const TODAY = "2026-11-13";
-const EV = [
- {id:"hamk",uni:"HAMK Häme UAS",city:"Hämeenlinna",cc:"Finsko",lat:61.011,lng:24.489,name:"Wellbeing International Week – The Human Factor",od:"2027-02-22",do:"2027-02-26",dl:"2026-10-25",dlNote:"lektoři; studenti od listopadu",mob:["teaching","studying"],obor:"zdravotnictví, sociální služby",fee:"150 € lektor / 75 € student",st:"ověřeno",url:"https://www.hamk.fi/en/about-hamk/internationality/wellbeing-international-week/"},
- {id:"via",uni:"VIA University College",city:"Aarhus",cc:"Dánsko",lat:56.1194,lng:10.159,name:"International Staff Week – Meeting the Other",od:"2027-03-01",do:"2027-03-03",dl:"2026-11-27",mob:["teaching"],obor:"pedagogika",fee:"zdarma",st:"částečně",url:"https://www.tilmeld.dk/internationalstaffweek2027-meetingtheother"},
- {id:"fhj",uni:"FH JOANNEUM",city:"Graz",cc:"Rakousko",lat:47.069,lng:15.408,name:"International Design Week – LINE",od:"2027-03-08",do:"2027-03-12",dl:"2026-11-30",mob:["teaching","studying"],obor:"design, média",fee:"neuvedeno",st:"ověřeno",url:"https://internationaldesignweek27.fh-joanneum.design/"},
- {id:"uma",uni:"Universidad de Málaga",city:"Málaga",cc:"Španělsko",lat:36.716,lng:-4.472,name:"XVI International Staff Weeks (jarní edice; letní 10.–14. 5.)",od:"2027-03-08",do:"2027-03-12",od2:"2027-05-10",do2:"2027-05-14",dl:"2027-01-15",mob:["training"],obor:"všeobecná",fee:"250 €",st:"částečně",url:"https://u.uma.es/iuR/"},
- {id:"ug",uni:"University of Gdańsk",city:"Gdańsk",cc:"Polsko",lat:54.396,lng:18.573,name:"Staff Week – Africa of Tomorrow (+ studentský BIP)",od:"2027-03-15",do:"2027-03-19",dl:"2027-02-10",mob:["training","studying"],obor:"všeobecná, právo, ekonomie",fee:"350 €",st:"částečně",url:"http://staffmobility.eu/staffweek/africa-tomorrow-sustainable-partnerships"},
- {id:"vmu",uni:"Vytautas Magnus University",city:"Kaunas",cc:"Litva",lat:54.899,lng:23.913,name:"International Staff Week (Teaching + Training)",od:"2027-04-26",do:"2027-04-30",dl:"2026-11-29",dlNote:"výuka; školení do 6. 12.",mob:["teaching","training"],obor:"humanitní a sociální vědy",fee:"školení 200 €",st:"částečně",url:"https://www.vdu.lt/en/international-cooperation/for-professors-staff/international-staff-week-2027/"},
- {id:"hsel",uni:"Hochschule Emden/Leer",city:"Emden",cc:"Německo",lat:53.368,lng:7.181,name:"Staff Training Week – New Horizons and Challenges",od:"2027-04-26",do:"2027-04-30",dl:"2026-11-25",mob:["training"],obor:"technika, ekonomie",fee:"zdarma",st:"částečně",url:"https://www.hs-emden-leer.de/einrichtungen/international-office/internationalisierung-an-der-hochschule/staff-week"},
- {id:"kdg",uni:"KdG Antwerpen",city:"Antverpy",cc:"Belgie",lat:51.2,lng:4.392,name:"Crossing Borders International Week",od:"2027-05-18",do:"2027-05-20",dl:"2026-12-14",mob:["teaching"],obor:"sociální práce, zdravotnictví",fee:"zdarma",st:"ověřeno",url:"https://www.kdg.be/en/international-partners/crossing-borders-international-week"},
- {id:"ips",uni:"Santarém Polytechnic",city:"Santarém",cc:"Portugalsko",lat:39.242,lng:-8.685,name:"XVI International Week",od:"2027-05-31",do:"2027-06-04",dl:"2027-01-29",mob:["training"],obor:"polytechnika",fee:"150 €",st:"částečně",url:"https://www.ipsantarem.pt/internacionalizacao/semana-internacional/"},
- {id:"ubm",uni:"Université Bordeaux Montaigne",city:"Bordeaux",cc:"Francie",lat:44.8,lng:-0.617,name:"International Staff Week – duševní zdraví a inkluze",od:"2027-06-07",do:"2027-06-11",dl:"2027-01-31",mob:["training"],obor:"humanitní obory",fee:"300 €",st:"ověřeno",url:"http://staffmobility.eu/staffweek/international-staff-week-2027"}
-];
-const DET = {
- hamk:{tema:"Empatie, přítomnost a kulturní citlivost při práci s různorodými klienty ve zdravotnictví, sociálních službách a vzdělávání.",
-  kdo:["Lektoři: 2 workshopy a 1 přednáška a facilitace studentských týmů (splňuje požadavek Erasmus+ na počet hodin výuky).","Studenti: přihlašování od listopadu 2026, přednost mají studenti ze škol, které vysílají i lektory."],
-  prog:["Workshopy a přednášky hostujících lektorů","Týmová práce studentů po celý týden","Večerní program: finská zima a aktivity venku (doprava a občerstvení v ceně)"],
-  jazyk:"angličtina",kap:"neuvedeno",reg:"https://www.hamk.fi/en/about-hamk/internationality/wellbeing-international-week/",
-  kont:[{j:"Tuija Jurvanen",r:"Senior Lecturer",e:"tuija.jurvanen@hamk.fi",t:"+358 50 574 5547"}],
-  ov:"Vše ověřeno na oficiální stránce HAMK. Uzávěrka pro lektory (25. 10. 2026) už prošla, studenti se mohou hlásit.",
-  src:["https://www.hamk.fi/en/about-hamk/internationality/wellbeing-international-week/"]},
- via:{tema:"Profesní autorita, komunikace a sebereflexe v rozmanitých komunitách. Workshopy se studenty dánské pedagogiky a sociální pedagogiky.",
-  kdo:["Učitelé z partnerských škol, kteří připraví 90minutový workshop v angličtině na téma „Meeting the Other“."],
-  prog:["3 dny workshopů se studenty","Networking s kolegy z VIA","Návštěvy škol a institucí v Aarhusu (návštěva školky či školy volitelně)"],
-  jazyk:"angličtina",kap:"neuvedeno",reg:"https://www.tilmeld.dk/internationalstaffweek2027-meetingtheother",
-  kont:[{j:"Tým Staff Week (jméno neuvedeno)",r:"organizátoři",e:"loul@via.dk; ci@via.dk",t:"neuvedeno"}],
-  ov:"Termín ověřen v oficiální registraci. Uzávěrka, poplatek a kontakty jsou jen ze stránky partnera (h_da). Oficiální stránku na via.dk jsem nenašel.",
-  src:["https://www.tilmeld.dk/internationalstaffweek2027-meetingtheother","https://international.h-da.de/wege-ins-ausland/mitarbeitenden-lehrenden/staff-weeks"]},
- fhj:{tema:"Téma LINE: 3,5denní cross-mediální workshopy spojující grafiku, zvuk, video, ilustraci, 3D, hry a web.",
-  kdo:["Lektoři designu: návrh 3,5denního workshopu přes online formulář, financování přes Erasmus+ STA.","Studenti: bakaláři a magistři FH JOANNEUM a partnerských škol, 9–14 na workshop."],
-  prog:["Po 8. 3.: 9–14 h networking lektorů; 14 h kick-off se studenty; 15–17 h start workshopů","Út–Čt 9.–11. 3.: 9–17 h workshopy","Pá 12. 3.: 9–13 h závěrečné prezentace; 13–16 h rozloučení"],
-  jazyk:"angličtina",kap:"9–14 studentů na workshop",reg:"https://fhj.to/InternationalDesignWeek2027-Call",
-  kont:[{j:"Andrea Schlacher",r:"kontakt pro dotazy (role neuvedena)",e:"andrea.schlacher@fh-joanneum.at",t:"neuvedeno"}],
-  ov:"Ověřeno v oficiální výzvě FH JOANNEUM (PDF).",
-  src:["https://internationaldesignweek27.fh-joanneum.design/","https://internationaldesignweek27.fh-joanneum.design/assets/IDW27_Call.pdf"]},
- uma:{tema:"Profesní rozvoj, poznání služeb UMA, networking a kulturní program. Dvě stejné edice.",
-  kdo:["Akademičtí i administrativní pracovníci VŠ (Erasmus+ KA131, KA171, TransfrontEU, UNINOVIS).","Pro výukovou mobilitu kontaktujte fakultního koordinátora (u.uma.es/iiu/)."],
-  prog:["Prezentace a návštěvy útvarů: mezinárodní vztahy, Smart Campus, knihovna, sport, podpora výzkumu","Recepce na radnici, prohlídka centra, Alcazaby a Centre Pompidou","Kurz španělské kuchyně a flamenca, International Food Fair","Pátek: individuální schůzky s vybranými útvary"],
-  jazyk:"angličtina",kap:"omezená (počet neuveden)",reg:"https://u.uma.es/iui/",reg2:"https://u.uma.es/iuj/",
-  kont:[{j:"UMA International HUB (tým)",r:"organizátor Staff Weeks",e:"internationalhub@uma.es",t:"+34 952 13 13 13 (ústředna)"}],
-  ov:"Termíny ověřeny na UMA. Uzávěrka 15. 1. 2027 je jen ze stránky Univerzity Pasov; MENDELU uvádí 30. 11. 2026 (nejspíš svůj interní termín). Před podáním ověřte.",
-  src:["https://u.uma.es/iuR/","https://www.uni-passau.de/en/international/going-abroad-as-academics-or-university-staff/current-calls-staff-weeks"]},
- ug:{tema:"Strategický nábor a partnerství s Afrikou. Souběžně studentský BIP „Future Skills for Emerging Markets“ a sympozium Global Bridges 2027.",
-  kdo:["Mezinárodní koordinátoři, děkani, akademičtí i administrativní pracovníci.","Studenti: souběžný BIP; podmínky přihlášení jsem nenašel."],
-  prog:["Po 15. 3.: registrace, ice-breaker, workshop o náboru z Afriky","Út 16. 3.: administrativa a granty pro spolupráci s globálním Jihem","St 17. 3.: sympozium Global Bridges 2027","Čt 18. 3.: kulatý stůl o společných studijních programech","Pá 19. 3.: shrnutí, další kroky, certifikáty"],
-  jazyk:"angličtina",kap:"30",reg:"https://forms.office.com/e/g7jnyYJjQb",
-  kont:[{j:"Staff Week team (tým)",r:"organizátor",e:"staffweek@ug.edu.pl",t:"neuvedeno"}],
-  ov:"Téma a měsíc potvrzuje web UG Welcome Centre. Poplatek, kapacita a uzávěrka jsou z IMOTION.",
-  src:["http://staffmobility.eu/staffweek/africa-tomorrow-sustainable-partnerships","https://welcomecentre.ug.edu.pl/choose/other/"]},
- vmu:{tema:"Výuka hostujících učitelů (Teaching Week) a školení personálu „Belonging Beyond Borders“ o inkluzi a wellbeingu zahraničních studentů.",
-  kdo:["Teaching: přednášky pro studenty VMU, min. 8 h výuky; přihláška do 29. 11. 2026, výsledky 8. 12.","Training: 200 €, 30 míst, max. 2 osoby z jedné instituce; přihláška do 6. 12. 2026"],
-  prog:["Zahájení: úvod do litevštiny, folklor, food fair","Workshopy o duševním zdraví mobilních studentů, mentoringu a odolnosti","Prohlídka Kaunasu, botanická zahrada VMU","Celodenní výlet do Vilniusu (Seimas a město)"],
-  jazyk:"angličtina",kap:"training 30",reg:"https://forms.cloud.microsoft/e/0JvtZ3DMhd",
-  kont:[{j:"Konstantinas Kurževas",r:"Head of Erasmus+ Mobility and Partnerships Unit",e:"konstantinas.kurzevas@vdu.lt",t:"+370 37 788135"},{j:"International Cooperation Department (tým)",r:"Erasmus+ incoming",e:"erasmus@vdu.lt",t:"neuvedeno"}],
-  ov:"Termín a obě linie ověřeny na webu VMU. Uzávěrky a poplatek pocházejí z IMOTION a stránek partnerů (BOKU, UP Lublin).",
-  src:["https://www.vdu.lt/en/international-cooperation/for-professors-staff/international-staff-week-2027/","http://staffmobility.eu/staffweek/belonging-beyond-borders-inclusion-and"]},
- hsel:{tema:"„New Horizons and Challenges in University Life“: workshopy v zájmových skupinách a job shadowing.",
-  kdo:["Personál partnerských škol z programu Erasmus+: fakulty, IT, knihovna, Career Service, International Office, transfer technologií."],
-  prog:["Obecné bloky a individuální workshopy po skupinách","Job shadowing","Čajový obřad na radnici v Emdenu","Exkurze do loděnice Meyer Werft","Celodenní výlet po Východním Frísku"],
-  jazyk:"angličtina",kap:"25",reg:"https://www.hs-emden-leer.de/einrichtungen/international-office/internationalisierung-an-der-hochschule/staff-week",
-  kont:[{j:"Andrea Meyenburg",r:"vedoucí International Office",e:"andrea.meyenburg@hs-emden-leer.de",t:"+49 4921 807 1375"},{j:"Katja Hakkarainen",r:"zástupkyně vedoucí",e:"katja.hakkarainen@hs-emden-leer.de",t:"+49 4921 807 1379"}],
-  ov:"Termín, program a kontakty ověřeny na oficiálním webu. Uzávěrka, kapacita a nulový poplatek jsou z IMOTION.",
-  src:["https://www.hs-emden-leer.de/einrichtungen/international-office/internationalisierung-an-der-hochschule/staff-week","http://staffmobility.eu/staffweek/international-staff-training-week-new-0"]},
- kdg:{tema:"Diverzita v sociální práci, zdravotnictví a HR: kultura, gender, předsudky, nerovnost, postižení, komunikace.",
-  kdo:["Lektoři partnerských škol: návrh 1,5h workshopu nebo přednášky (pravděpodobně 2× za týden).","Publikum: studenti sociální práce, ošetřovatelství, porodní asistence, HR a předškolní pedagogiky."],
-  prog:["Út 18. 5.: uvítání, úvodní přednáška, workshopy, společenský program","St 19. 5.: workshopy, International Exchange Fair, terénní návštěvy, mezinárodní večeře","Čt 20. 5.: workshopy, networking, závěr a hodnocení"],
-  jazyk:"angličtina",kap:"30",reg:"https://www.kdg.be/en/international-partners/crossing-borders-international-week",
-  kont:[{j:"Crossing Borders team (tým)",r:"organizátor",e:"crossingborders.iw2027@kdg.be",t:"+32 3 613 18 00 (Campus Zuid)"}],
-  ov:"Vše ověřeno na oficiální stránce KdG. Erasmus kód B ANTWERP59. Výběr oznámí nejpozději 8. 1. 2027.",
-  src:["https://www.kdg.be/en/international-partners/crossing-borders-international-week"]},
- ips:{tema:"Internacionalizace VŠ, příprava projektů Erasmus+, projektové řízení a partnerství.",
-  kdo:["Akademici, výzkumníci a pracovníci mezinárodních oddělení partnerských institucí."],
-  prog:["Workshopy, strategické panely, networking, tematické bloky","Kulturní návštěvy (út–čt)","Výběr oznámí 1.–12. 2.; poplatek do 28. 2.; Mobility Agreement 22.–26. 3."],
-  jazyk:"angličtina",kap:"30",reg:"https://www.ipsantarem.pt/internacionalizacao/semana-internacional/",
-  kont:[{j:"GMCI (tým)",r:"kontakt pro International Week",e:"gmci@ipsantarem.pt",t:"+351 243 309 520 (ústředna)"}],
-  ov:"Uzávěrka ověřena na oficiálním webu. Poplatek, kapacita a kontakt pocházejí z IMOTION.",
-  src:["https://www.ipsantarem.pt/internacionalizacao/semana-internacional/","http://staffmobility.eu/staffweek/xvi-international-week"]},
- ubm:{tema:"Duševní zdraví, diverzita a inkluze na univerzitě (3. ročník).",
-  kdo:["Akademičtí i administrativní pracovníci se zájmem o duševní zdraví a inkluzi."],
-  prog:["Představení univerzity, workshopy a pracovní skupiny k dobré praxi","Networking, prohlídka kampusu","V ceně: 4 obědy, prohlídka Bordeaux, výlet do Saint-Émilionu, uvítací večeře","Výsledky výběru v únoru 2027"],
-  jazyk:"angličtina",kap:"20",reg:"https://framaforms.org/ubm-international-staff-week-2027-1791882115",
-  kont:[{j:"Staff Mobility team (tým)",r:"Direction des Relations Internationales",e:"staff-mobility@u-bordeaux-montaigne.fr",t:"neuvedeno"}],
-  ov:"Univerzita na svém webu uvádí IMOTION jako oficiální kanál pro Staff Week. Údaje odpovídají.",
-  src:["http://staffmobility.eu/staffweek/international-staff-week-2027","https://www.u-bordeaux-montaigne.fr/en/preparing-for-your-stay/international-colleagues/teaching-and-training-mobility-for-international-colleagues.html"]}
-};
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+"use strict";
+/* Erasmus International Weeks – mapa. Data: data.json (pole záznamů, viz README). */
+const TODAY = new Date().toISOString().slice(0, 10) < "2026-11-13" ? "2026-11-13" : new Date().toISOString().slice(0, 10);
+const MON = ["led","úno","bře","dub","kvě","čvn","čvc","srp","zář","říj","lis","pro"];
+const MESNAZ = ["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"];
+const MOBCZ = {teaching:"učit", training:"školit se", studying:"studovat"};
+const OBORY = {zdravi:"Zdravotnictví a sociální práce", pedag:"Pedagogika a vzdělávání", design:"Design, umění a média", human:"Humanitní a sociální vědy", tech:"Technika", it:"Informatika a AI", ekon:"Ekonomie, právo a management", prir:"Přírodní vědy a životní prostředí", intl:"Správa VŠ a internacionalizace"};
+const FOCUS_ZOOM = 6; // maximální přiblížení při výběru
+
+let EV = [], META = {};
+let filter = "all", obor = "all";
+const X = {zeme:"all", fee:"all", dl:"all", mes:"all", ver:false};
+let map = null, cluster = null, markers = {}, selectedId = null, savedView = null;
+
+const $ = id => document.getElementById(id);
+const d = s => new Date(s + "T00:00:00");
+const dayDiff = (a, b) => Math.round((d(b) - d(a)) / 864e5);
+const fmt = (a, b) => { const A = d(a), B = d(b || a); return A.getMonth() === B.getMonth() ? (A.getDate() === B.getDate() ? `${A.getDate()}. ${A.getMonth()+1}.` : `${A.getDate()}.–${B.getDate()}. ${A.getMonth()+1}.`) : `${A.getDate()}. ${A.getMonth()+1}.–${B.getDate()}. ${B.getMonth()+1}.`; };
+const fmt1 = a => { const A = d(a); return `${A.getDate()}. ${A.getMonth()+1}. ${A.getFullYear()}`; };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const mcol = e => `var(--m${d(e.start).getMonth()+1})`;
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : null;
+const st = e => (e.verify && e.verify.status) || "neověřeno";
+const months = e => { const m = [e.start.slice(0, 7)]; if (e.start2) m.push(e.start2.slice(0, 7)); return m; };
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- filtry ---------- */
+function feeOk(e){ const f = e.fee_eur;
+  if (X.fee === "all") return true; if (X.fee === "na") return f == null; if (f == null) return false;
+  return X.fee === "free" ? f === 0 : X.fee === "low" ? f > 0 && f <= 200 : f > 200; }
+function dlOk(e){ if (X.dl === "all") return true; if (!e.deadline) return false; const n = dayDiff(TODAY, e.deadline);
+  return (X.dl === "open" && n >= 0) || (X.dl === "soon" && n >= 0 && n <= 30); }
+function visible(){
+  return EV.filter(e => (filter === "all" || e.mobility.includes(filter))
+    && (obor === "all" || (e.fields || []).includes(obor))
+    && (X.zeme === "all" || e.country === X.zeme) && feeOk(e) && dlOk(e)
+    && (X.mes === "all" || months(e).includes(X.mes))
+    && (!X.ver || st(e) === "ověřeno"));
+}
+
+/* ---------- seznam ---------- */
+function dlTag(e){
+  if (!e.deadline) return `<span class="tag dl">uzávěrka ${e.deadline_note ? esc(e.deadline_note) : "neuvedena"}</span>`;
+  const n = dayDiff(TODAY, e.deadline); const note = e.deadline_note ? ` (${esc(e.deadline_note)})` : "";
+  if (n < 0) return `<span class="tag dl past">uzávěrka ${fmt1(e.deadline)} prošla${note}</span>`;
+  return `<span class="${n <= 30 ? "tag dl soon" : "tag dl"}">přihláška do ${fmt1(e.deadline)} · ${n} dní${note}</span>`;
+}
+function renderList(){
+  const L = $("list"), vis = visible();
+  if (!vis.length){ L.innerHTML = `<p style="padding:12px;color:var(--muted)">Žádná akce neodpovídá filtrům.</p>`; return; }
+  L.innerHTML = vis.map(e => `
+    <div class="ev" tabindex="0" data-id="${e.id}" style="--c:${mcol(e)}">
+      <div class="date">${fmt(e.start, e.end)}<small>${d(e.start).getFullYear()}</small></div>
+      <div>
+        <h3>${esc(e.event_name)}</h3>
+        <div class="uni">${esc(e.uni_short || e.uni)} · ${esc(e.city)}, ${esc(e.country)}</div>
+        <div class="tags">
+          ${e.mobility.map(m => `<span class="tag">${MOBCZ[m] || m}</span>`).join("")}
+          ${dlTag(e)}
+          ${e.fee_text ? `<span class="tag">${esc(e.fee_text.length > 40 ? (e.fee_eur === 0 ? "zdarma" : e.fee_eur != null ? e.fee_eur + " €" : "poplatek: viz detail") : e.fee_text)}</span>` : ""}
+          ${(e.fields || []).map(o => OBORY[o] ? `<span class="tag ob">${OBORY[o]}</span>` : "").join("")}
+          <span class="tag ${st(e) === "ověřeno" ? "ok" : "part"}">${st(e)}</span>
+        </div>
+        <button type="button" class="more">Zobrazit detail →</button>${safeUrl(e.event_url) ? `<a href="${esc(e.event_url)}" target="_blank" rel="noopener">Stránka akce ↗</a>` : ""}
+      </div>
+    </div>`).join("");
+}
+$("list").addEventListener("click", ev => {
+  if (ev.target.closest("a")) return;
+  const el = ev.target.closest(".ev"); if (!el) return;
+  if (ev.target.closest(".more")) { openDetail(el.dataset.id); return; }
+  pick(el.dataset.id);
+});
+$("list").addEventListener("keydown", ev => {
+  const el = ev.target.closest(".ev"); if (!el || (ev.key !== "Enter" && ev.key !== " ")) return;
+  ev.preventDefault(); pick(el.dataset.id);
+});
+function pick(id){ if (selectedId === id) openDetail(id); else focusEv(id); }
+
+/* ---------- detail ---------- */
 function openDetail(id){
-  const e = EV.find(x=>x.id===id), t = DET[id]; if(!e||!t) return;
-  const dlg = document.getElementById("dlg");
-  const n = dayDiff(TODAY,e.dl);
-  const dlTxt = n<0 ? `${fmt1(e.dl)} (prošla)` : `${fmt1(e.dl)} (za ${n} dní)`;
-  const second = e.od2 ? `<div class="fact"><b>2. edice</b><span>${fmt(e.od2,e.do2)} ${d(e.od2).getFullYear()}</span></div>` : "";
-  document.getElementById("dlg-body").innerHTML = `
+  const e = EV.find(x => x.id === id); if (!e) return;
+  const dlg = $("dlg");
+  const dlTxt = e.deadline ? (dayDiff(TODAY, e.deadline) < 0 ? `${fmt1(e.deadline)} (prošla)` : `${fmt1(e.deadline)} (za ${dayDiff(TODAY, e.deadline)} dní)`) : "neuvedena";
+  const second = e.start2 ? `<div class="fact"><b>2. termín</b><span>${fmt(e.start2, e.end2)} ${d(e.start2).getFullYear()}</span></div>` : "";
+  const li = arr => (arr && arr.length) ? `<ul>${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p style="color:var(--muted)">neuvedeno</p>`;
+  const kont = (e.contacts || []).length ? e.contacts.map(k => `<div><b>${esc(k.name || "Tým")}</b>${k.role ? `<br><small>${esc(k.role)}</small>` : ""}<br>${esc(k.email || "")}${k.phone ? ` · ${esc(k.phone)}` : ""}</div>`).join("") : `<p style="color:var(--muted)">neuvedeno</p>`;
+  const v = e.verify || {};
+  $("dlg-body").innerHTML = `
    <div class="hd" style="--c:${mcol(e)}">
-     <h2 id="dlg-title">${esc(e.name)}</h2>
-     <div class="uni">${esc(e.uni)} · ${esc(e.city)}, ${esc(e.cc)}</div>
-     <div class="tags">${e.mob.map(m=>`<span class="tag">${MOBCZ[m]}</span>`).join("")}<span class="tag ${e.st==="ověřeno"?"ok":"part"}">${e.st}</span></div>
+     <h2 id="dlg-title">${esc(e.event_name)}</h2>
+     <div class="uni">${esc(e.uni)} · ${esc(e.city)}, ${esc(e.country)}</div>
+     <div class="tags">${e.mobility.map(m => `<span class="tag">${MOBCZ[m] || m}</span>`).join("")}${(e.fields || []).map(o => OBORY[o] ? `<span class="tag ob">${OBORY[o]}</span>` : "").join("")}<span class="tag ${st(e) === "ověřeno" ? "ok" : "part"}">${st(e)}</span></div>
      <button class="x" id="dlg-x" aria-label="Zavřít detail">×</button>
    </div>
    <div class="bd">
      <div class="facts">
-       <div class="fact"><b>Termín</b><span>${fmt(e.od,e.do)} ${d(e.od).getFullYear()}</span></div>${second}
-       <div class="fact"><b>Uzávěrka</b><span>${dlTxt}</span></div>
-       <div class="fact"><b>Poplatek</b><span>${esc(e.fee)}</span></div>
-       <div class="fact"><b>Kapacita</b><span>${esc(t.kap)}</span></div>
-       <div class="fact"><b>Jazyk</b><span>${esc(t.jazyk)}</span></div>
-       <div class="fact"><b>Obor</b><span>${esc(e.obor)}</span></div>
+       <div class="fact"><b>Termín</b><span>${fmt(e.start, e.end)} ${d(e.start).getFullYear()}</span></div>${second}
+       <div class="fact"><b>Uzávěrka</b><span>${dlTxt}${e.deadline_note ? `<br><small>${esc(e.deadline_note)}</small>` : ""}</span></div>
+       <div class="fact"><b>Poplatek</b><span>${esc(e.fee_text || (e.fee_eur === 0 ? "zdarma" : e.fee_eur != null ? e.fee_eur + " €" : "neuvedeno"))}</span></div>
+       <div class="fact"><b>Kapacita</b><span>${esc(e.capacity || "neuvedeno")}</span></div>
+       <div class="fact"><b>Jazyk</b><span>${esc(e.language || "neuvedeno")}</span></div>
+       ${e.erasmus_code ? `<div class="fact"><b>Erasmus kód</b><span>${esc(e.erasmus_code)}</span></div>` : ""}
      </div>
-     <div><h3>Téma</h3><p>${esc(t.tema)}</p></div>
-     <div><h3>Pro koho</h3><ul>${t.kdo.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
-     <div><h3>Program</h3><ul>${t.prog.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
-     <div><h3>Organizátoři</h3><div class="kont">${t.kont.map(k=>`<div><b>${esc(k.j)}</b><br><small>${esc(k.r)}</small><br>${esc(k.e)}${k.t&&k.t!=="neuvedeno"?` · ${esc(k.t)}`:""}</div>`).join("")}</div></div>
-     <div class="btns"><a class="btn pri" href="${t.reg}" target="_blank" rel="noopener">Registrace ↗</a>${t.reg2?`<a class="btn pri" href="${t.reg2}" target="_blank" rel="noopener">Registrace – letní edice ↗</a>`:""}<a class="btn" href="${e.url}" target="_blank" rel="noopener">Stránka akce ↗</a></div>
-     <div class="note"><b>Ověření (13. 11. 2026):</b> ${esc(t.ov)}</div>
-     <div class="src"><b>Zdroje:</b><br>${t.src.map(u=>`<a href="${u}" target="_blank" rel="noopener">${esc(u)}</a>`).join("<br>")}</div>
+     <div><h3>Téma</h3><p>${esc(e.topic || "neuvedeno")}</p></div>
+     <div><h3>Pro koho</h3>${li(e.audience)}</div>
+     <div><h3>Program</h3>${li(e.program)}</div>
+     <div><h3>Organizátoři</h3><div class="kont">${kont}</div></div>
+     <div class="btns">
+       ${safeUrl(e.registration_url) ? `<a class="btn pri" href="${esc(e.registration_url)}" target="_blank" rel="noopener">Registrace ↗</a>` : ""}
+       ${safeUrl(e.registration_url2) ? `<a class="btn pri" href="${esc(e.registration_url2)}" target="_blank" rel="noopener">Registrace – 2. termín ↗</a>` : ""}
+       ${safeUrl(e.event_url) ? `<a class="btn" href="${esc(e.event_url)}" target="_blank" rel="noopener">Stránka akce ↗</a>` : ""}
+     </div>
+     ${e.notes ? `<div class="note"><b>Poznámka:</b> ${esc(e.notes)}</div>` : ""}
+     <div class="note"><b>Ověření${v.checked ? ` (${fmt1(v.checked)})` : ""}:</b> ${esc(st(e))}${v.note ? ` – ${esc(v.note)}` : ""}</div>
+     <div class="src"><b>Zdroje:</b><br>${(e.source_urls || []).filter(safeUrl).map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join("<br>") || "neuvedeno"}</div>
    </div>`;
-  document.getElementById("dlg-x").addEventListener("click",()=>dlg.close());
-  if (typeof dlg.showModal === "function") { if(!dlg.open) dlg.showModal(); } else { dlg.setAttribute("open",""); }
+  $("dlg-x").addEventListener("click", () => dlg.close());
+  if (typeof dlg.showModal === "function") { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute("open", "");
   focusEv(id);
 }
-document.getElementById("dlg").addEventListener("click", ev => { if (ev.target.id === "dlg") ev.target.close(); });
-const OBORY = {zdravi:"Zdravotnictví a sociální práce", pedag:"Pedagogika a vzdělávání", design:"Design a umění", human:"Humanitní a sociální vědy", tech:"Technika", ekon:"Ekonomie a právo", intl:"Správa VŠ a internacionalizace"};
-const OB = {hamk:["zdravi","pedag"], via:["pedag","zdravi"], fhj:["design"], uma:["intl"], ug:["intl","ekon"], vmu:["human","intl"], hsel:["tech","ekon","intl"], kdg:["zdravi","pedag"], ips:["intl"], ubm:["human","intl"]};
-let obor = "all";
-const FEE = {hamk:150, via:0, fhj:null, uma:250, ug:350, vmu:200, hsel:0, kdg:0, ips:150, ubm:300}; // nejvyšší uvedený poplatek v €, null = neuvedeno
-const X = {zeme:"all", fee:"all", dl:"all", mes:"all", ver:false};
-const MESNAZ = ["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"];
-const months = e => { const m = [d(e.od).getMonth()]; if (e.od2) m.push(d(e.od2).getMonth()); return m; };
-function feeOk(e){ const f = FEE[e.id];
-  if (X.fee==="all") return true; if (X.fee==="na") return f==null; if (f==null) return false;
-  return X.fee==="free" ? f===0 : X.fee==="low" ? f>0 && f<=200 : f>200; }
-function dlOk(e){ const n = dayDiff(TODAY, e.dl);
-  return X.dl==="all" || (X.dl==="open" && n>=0) || (X.dl==="soon" && n>=0 && n<=30); }
-const MON = ["led","úno","bře","dub","kvě","čvn","čvc","srp","zář","říj","lis","pro"];
-const MONFULL = {2:"únor",3:"březen",4:"duben",5:"květen",6:"červen"};
-const MOBCZ = {teaching:"učit",training:"školit se",studying:"studovat"};
-const d = s => new Date(s+"T00:00:00");
-const dayDiff = (a,b) => Math.round((d(b)-d(a))/864e5);
-const fmt = (a,b) => { const A=d(a),B=d(b); return A.getMonth()===B.getMonth() ? `${A.getDate()}.–${B.getDate()}. ${A.getMonth()+1}.` : `${A.getDate()}. ${A.getMonth()+1}.–${B.getDate()}. ${B.getMonth()+1}.`; };
-const fmt1 = a => { const A=d(a); return `${A.getDate()}. ${A.getMonth()+1}. ${A.getFullYear()}`; };
-const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
-const mcol = e => `var(--m${d(e.od).getMonth()+1})`;
-const mcolV = e => css(`--m${d(e.od).getMonth()+1}`);
-let filter = "all";
+$("dlg").addEventListener("click", ev => { if (ev.target.id === "dlg") ev.target.close(); });
 
-function dlTag(e){
-  const n = dayDiff(TODAY, e.dl);
-  const note = e.dlNote ? ` (${e.dlNote})` : "";
-  if (n < 0) return `<span class="tag dl past">uzávěrka ${fmt1(e.dl)} prošla${note}</span>`;
-  const cls = n <= 30 ? "tag dl soon" : "tag dl";
-  return `<span class="${cls}">přihláška do ${fmt1(e.dl)} · ${n} dní${note}</span>`;
+/* ---------- mapa ---------- */
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+const BASES = {
+  "Mapa": () => L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}),
+  "Satelit": () => L.tileLayer(ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}", {maxZoom:19, attribution:"Tiles &copy; Esri, Maxar, Earthstar Geographics"}),
+  "Světlá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16})]),
+  "Tmavá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16})])
+};
+function icon(e, sel){
+  return L.divIcon({className: "evm" + (sel ? " sel" : ""), iconSize: [0, 0],
+    html: `<span class="pin" style="--c:${mcol(e)}"></span><span class="plbl" style="--c:${mcol(e)}">${fmt(e.start, e.end)}</span>`});
 }
-function visible(){ return EV.filter(e => (filter==="all" || e.mob.includes(filter)) && (obor==="all" || (OB[e.id]||[]).includes(obor))
-  && (X.zeme==="all" || e.cc===X.zeme) && feeOk(e) && dlOk(e) && (X.mes==="all" || months(e).includes(+X.mes)) && (!X.ver || e.st==="ověřeno")); }
-
-function renderList(){
-  const L = document.getElementById("list");
-  if (!visible().length){ L.innerHTML = `<p style="padding:12px;color:var(--muted)">Žádná akce neodpovídá filtrům.</p>`; return; }
-  L.innerHTML = visible().map(e => `
-    <div class="ev" tabindex="0" data-id="${e.id}" style="--c:${mcol(e)}">
-      <div class="date">${fmt(e.od,e.do)}<small>${d(e.od).getFullYear()}</small></div>
-      <div>
-        <h3>${e.name}</h3>
-        <div class="uni">${e.uni} · ${e.city}, ${e.cc}</div>
-        <div class="tags">
-          ${e.mob.map(m=>`<span class="tag">${MOBCZ[m]}</span>`).join("")}
-          ${dlTag(e)}
-          ${(OB[e.id]||[]).map(o=>`<span class="tag ob">${OBORY[o]}</span>`).join("")}
-          <span class="tag">${e.fee}</span>
-          <span class="tag ${e.st==="ověřeno"?"ok":"part"}">${e.st}</span>
-        </div>
-        <button type="button" class="more">Zobrazit detail →</button><a href="${e.url}" target="_blank" rel="noopener">Stránka akce ↗</a>
-      </div>
-    </div>`).join("");
-  L.querySelectorAll(".ev").forEach(el => {
-    const go = () => { const id = el.dataset.id; if (selectedId === id) openDetail(id); else focusEv(id); };
-    el.addEventListener("click", ev => {
-      if (ev.target.tagName === "A") return;
-      if (ev.target.closest(".more")) { openDetail(el.dataset.id); return; }
-      go();
-    });
-    el.addEventListener("keydown", ev => { if (ev.key==="Enter"||ev.key===" "){ev.preventDefault();go();} });
+function initMap(){
+  const el = $("map");
+  if (!window.L) { el.innerHTML = `<p style="padding:24px;color:var(--muted)">Mapu se nepodařilo načíst. Akce najdete v seznamu a na časové ose.</p>`; return; }
+  map = L.map(el, {zoomControl:false, worldCopyJump:true}).fitBounds([[35, -11], [64, 32]]);
+  const layers = {}; for (const k in BASES) layers[k] = BASES[k]();
+  let start = "Mapa"; try { const s = localStorage.getItem("eiw-base"); if (s && layers[s]) start = s; } catch (e) {}
+  let current = layers[start].addTo(map);
+  const Sel = L.Control.extend({options:{position:"topright"}, onAdd(){
+    const box = L.DomUtil.create("div", "basesel");
+    box.innerHTML = `<label for="base-select">Podklad</label><select id="base-select">${Object.keys(layers).map(k => `<option value="${k}"${k === start ? " selected" : ""}>${k}</option>`).join("")}</select>`;
+    L.DomEvent.disableClickPropagation(box); L.DomEvent.disableScrollPropagation(box);
+    box.querySelector("select").addEventListener("change", ev => { map.removeLayer(current); current = layers[ev.target.value].addTo(map); try { localStorage.setItem("eiw-base", ev.target.value); } catch (e) {} });
+    return box;
+  }});
+  new Sel().addTo(map);
+  L.control.zoom({position:"bottomright"}).addTo(map);
+  L.control.scale({imperial:false, position:"bottomleft"}).addTo(map);
+  const hasCluster = typeof L.markerClusterGroup === "function";
+  cluster = hasCluster ? L.markerClusterGroup({showCoverageOnHover:false, maxClusterRadius:42, spiderfyOnMaxZoom:true, disableClusteringAtZoom:9,
+    iconCreateFunction: c => { const n = c.getChildCount(); const sel = c.getAllChildMarkers().some(m => m.options.evId === selectedId);
+      return L.divIcon({html:`<div>${n}</div>`, className:"clu" + (n >= 10 ? " big" : "") + (sel ? " has-sel" : ""), iconSize:[48, 48]}); }}) : L.layerGroup();
+  cluster.addTo(map);
+  const lblToggle = () => el.classList.toggle("lbls-off", map.getZoom() < 6);
+  map.on("zoomend", lblToggle); lblToggle();
+}
+function renderMap(){
+  if (!map) return;
+  cluster.clearLayers(); markers = {};
+  const ms = visible().map(e => {
+    const m = L.marker([e.lat, e.lng], {icon: icon(e, e.id === selectedId), evId: e.id, keyboard: true, title: e.uni_short || e.uni, riseOnHover: true});
+    m.bindTooltip(() => `<b>${esc(e.uni_short || e.uni)}</b><br>${esc(e.event_name)}<br>${fmt(e.start, e.end)} ${d(e.start).getFullYear()}${e.deadline ? `<br>přihláška do ${fmt1(e.deadline)}` : ""}<br><i>${selectedId === e.id ? "klikněte pro detail" : "klikněte pro výběr, znovu pro detail"}</i>`, {direction:"top", offset:[0, -10]});
+    m.on("click", () => { if (selectedId === e.id) { openDetail(e.id); return; } focusEv(e.id, true); const li = document.querySelector(`.ev[data-id="${e.id}"]`); if (li) li.scrollIntoView({block:"nearest", behavior:"smooth"}); });
+    markers[e.id] = m; return m;
   });
+  if (cluster.addLayers) cluster.addLayers(ms); else ms.forEach(m => cluster.addLayer(m));
 }
-let selectedId = null, labels = {};
-const FOCUS_ZOOM = 6; // maximální přiblížení při výběru
+function applySel(prev){
+  document.querySelectorAll(".ev,.row[data-id]").forEach(x => x.classList.toggle("on", x.dataset.id === selectedId));
+  [prev, selectedId].forEach(id => { const m = markers[id]; if (!m) return; const e = EV.find(x => x.id === id); m.setIcon(icon(e, id === selectedId)); m.setZIndexOffset(id === selectedId ? 1000 : 0); });
+  if (cluster && cluster.refreshClusters) cluster.refreshClusters();
+}
 function zoomTo(id){
-  // Přiblíží jen tolik, aby vybraná akce byla uprostřed a byly vidět i její 2 nejbližší sousedé.
+  // Přiblíží jen tolik, aby byla vybraná akce uprostřed a byli vidět i její 2 nejbližší sousedé.
   const ll = markers[id].getLatLng();
   const others = Object.keys(markers).filter(k => k !== id).map(k => markers[k].getLatLng())
-    .sort((a,b) => ll.distanceTo(a) - ll.distanceTo(b)).slice(0, 2);
+    .filter(o => o.distanceTo(ll) > 500).sort((a, b) => ll.distanceTo(a) - ll.distanceTo(b)).slice(0, 2);
   let z = FOCUS_ZOOM;
-  if (others.length){
-    const pts = [ll];
-    others.forEach(o => { pts.push(o); pts.push(L.latLng(2*ll.lat - o.lat, 2*ll.lng - o.lng)); });
+  if (others.length) {
+    const pts = [ll]; others.forEach(o => { pts.push(o); pts.push(L.latLng(2 * ll.lat - o.lat, 2 * ll.lng - o.lng)); });
     z = Math.min(FOCUS_ZOOM, map.getBoundsZoom(L.latLngBounds(pts).pad(0.15)));
   }
   z = Math.max(z, 4);
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) map.setView(ll, z, {animate:false});
-  else map.flyTo(ll, z, {duration:1.0});
+  const after = () => { if (cluster.getVisibleParent && cluster.getVisibleParent(markers[id]) !== markers[id]) cluster.zoomToShowLayer(markers[id]); };
+  if (reduceMotion()) { map.setView(ll, z, {animate:false}); after(); }
+  else { map.once("moveend", after); map.flyTo(ll, z, {duration:1.0}); }
 }
-function applySel(){
-  document.querySelectorAll(".ev,.row[data-id]").forEach(x=>x.classList.toggle("on",x.dataset.id===selectedId));
-  for (const id in markers){
-    const on = id === selectedId;
-    markers[id].setStyle(on ? {radius:13, opacity:1, fillOpacity:1, weight:3} : {radius:9, opacity:0.55, fillOpacity:0.35, weight:2});
-    markers[id].setRadius(on ? 13 : 9);
-    if (on) markers[id].bringToFront();
-    const el = labels[id] && labels[id].getElement();
-    if (el){ el.classList.toggle("sel", on); labels[id].setZIndexOffset(on ? 1000 : 0); }
-  }
-}
-let savedView = null;
 function fitAll(){
-  if (!map) return;
-  const pts = visible().map(e => [e.lat, e.lng]);
-  if (!pts.length) return;
-  map.fitBounds(L.latLngBounds(pts), {padding:[28,28], maxZoom:6, animate:true});
+  if (!map) return; const pts = visible().map(e => [e.lat, e.lng]); if (!pts.length) return;
+  map.fitBounds(L.latLngBounds(pts), {padding:[28, 28], maxZoom:6, animate:true});
 }
 function setMini(on){
   if (!map || on === document.body.classList.contains("mini")) return;
   if (on) savedView = {c: map.getCenter(), z: map.getZoom()};
   document.body.classList.toggle("mini", on);
   map.invalidateSize();
-  if (on) fitAll();
-  else if (savedView) map.setView(savedView.c, savedView.z, {animate:false});
+  if (on) fitAll(); else if (savedView) map.setView(savedView.c, savedView.z, {animate:false});
 }
 function focusEv(id){
-  selectedId = id; applySel();
+  const prev = selectedId; selectedId = id; applySel(prev);
   if (map && markers[id] && !document.body.classList.contains("mini")) zoomTo(id);
 }
 
+/* ---------- legenda, časová osa ---------- */
 function renderLegend(){
-  const months=[...new Set(EV.map(e=>d(e.od).getMonth()+1))].sort((a,b)=>a-b);
-  document.getElementById("legend").innerHTML = "Začátek akce: " + months.map(m=>`<span><i class="dot" style="background:var(--m${m})"></i>${MONFULL[m]}</span>`).join("");
-}
-
-let map = null, layerGroup = null, markers = {};
-// Volitelné: bezplatný klíč z https://carto.com/basemaps/apikey (omezte ho na doménu viktorstech.github.io).
-// Když zůstane prázdný, Světlá a Tmavá mapa použijí podklady Esri Canvas, které klíč nepotřebují.
-const CARTO_KEY = "";
-const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/";
-const esriCanvas = tone => L.layerGroup([
-  L.tileLayer(ESRI+`World_${tone}_Gray_Base/MapServer/tile/{z}/{y}/{x}`,{maxZoom:16,attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors"}),
-  L.tileLayer(ESRI+`World_${tone}_Gray_Reference/MapServer/tile/{z}/{y}/{x}`,{maxZoom:16})
-]);
-const carto = style => L.tileLayer(`https://basemaps.cartocdn.com/rastertiles/${style}/{z}/{x}/{y}.png?key=${CARTO_KEY}`,{maxZoom:19,attribution:'&copy; OpenStreetMap &copy; <a href="https://carto.com/attributions">CARTO</a>'});
-const BASES = {
-  "Mapa": () => L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}),
-  "Satelit": () => L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{maxZoom:19,attribution:'Tiles &copy; Esri, Maxar, Earthstar Geographics'}),
-  "Světlá": () => CARTO_KEY ? carto("light_all") : esriCanvas("Light"),
-  "Tmavá": () => CARTO_KEY ? carto("dark_all") : esriCanvas("Dark")
-};
-function initMap(){
-  const el = document.getElementById("map");
-  if (!window.L){ el.innerHTML = `<p style="padding:24px;color:var(--muted)">Mapu se nepodařilo načíst. Akce najdete v seznamu a na časové ose.</p>`; return; }
-  map = L.map(el, {zoomControl:false, worldCopyJump:true}).fitBounds([[35,-11],[63.5,31]]);
-  const layers = {}; for (const k in BASES) layers[k] = BASES[k]();
-  let start = "Mapa"; try { const s = localStorage.getItem("eiw-base"); if (s && layers[s]) start = s; } catch(e){}
-  let current = layers[start].addTo(map);
-  const Sel = L.Control.extend({ options:{position:"topright"}, onAdd(){
-    const box = L.DomUtil.create("div","basesel");
-    box.innerHTML = `<label for="base-select">Podklad</label><select id="base-select">${Object.keys(layers).map(k=>`<option value="${k}"${k===start?" selected":""}>${k}</option>`).join("")}</select>`;
-    L.DomEvent.disableClickPropagation(box); L.DomEvent.disableScrollPropagation(box);
-    box.querySelector("select").addEventListener("change", ev => {
-      const k = ev.target.value; map.removeLayer(current); current = layers[k].addTo(map);
-      try { localStorage.setItem("eiw-base", k); } catch(e){}
-    });
-    return box;
-  }});
-  new Sel().addTo(map);
-  L.control.zoom({position:"bottomright"}).addTo(map);
-  L.control.scale({imperial:false, position:"bottomleft"}).addTo(map);
-  layerGroup = L.layerGroup().addTo(map);
-}
-function renderMap(){
-  if (!map) return;
-  layerGroup.clearLayers(); markers = {}; labels = {};
-  visible().forEach(e => {
-    const col = mcolV(e);
-    const m = L.circleMarker([e.lat,e.lng], {radius:9, color:"#ffffff", weight:2, fillColor:col, fillOpacity:1});
-    const second = e.od2 ? `<br>2. edice: ${fmt(e.od2,e.do2)}` : "";
-    m.bindTooltip(() => `<b>${esc(e.uni)}</b><br>${fmt(e.od,e.do)} ${d(e.od).getFullYear()}${second}<br>přihláška do ${fmt1(e.dl)}<br><i>${selectedId===e.id?"klikněte pro detail":"klikněte pro výběr, znovu pro detail"}</i>`, {direction:"top", offset:[0,-8]});
-    const lbl = L.marker([e.lat,e.lng], {interactive:true, keyboard:false, icon: L.divIcon({className:"mlabel", html:`<span style="border-color:${col}">${fmt(e.od,e.do)}</span>`, iconSize:null, iconAnchor: e.id==="hsel" ? [86,10] : [-12,10]})});
-    const open = () => {
-      if (selectedId === e.id) { openDetail(e.id); return; }
-      focusEv(e.id);
-      const li=document.querySelector(`.ev[data-id="${e.id}"]`); if(li) li.scrollIntoView({block:"nearest",behavior:"smooth"});
-    };
-    m.on("click", open); lbl.on("click", open);
-    layerGroup.addLayer(m); layerGroup.addLayer(lbl);
-    markers[e.id] = m; labels[e.id] = lbl;
-  });
+  const ms = [...new Set(EV.map(e => d(e.start).getMonth() + 100 * d(e.start).getFullYear()))].sort((a, b) => a - b);
+  $("legend").innerHTML = "Začátek akce: " + ms.map(k => `<span><i class="dot" style="background:var(--m${k % 100 + 1})"></i>${MON[k % 100]}</span>`).join("");
 }
 function renderTimeline(){
-  const start = "2026-11-01", end = "2027-06-30";
-  const span = dayDiff(start,end);
-  const pos = s => Math.max(0,Math.min(100, dayDiff(start,s)/span*100));
-  const months = []; for (let y=2026,m=10; !(y===2027&&m===6); ){ months.push([y,m]); m++; if(m===12){m=0;y++;} }
-  let h = `<div class="months"><div></div><div class="mrow">${months.map(([y,m])=>{const s=`${y}-${String(m+1).padStart(2,"0")}-01`;return `<span style="left:${pos(s)}%">${MON[m]} ${m===0||(y===2026&&m===10)?y:""}</span>`;}).join("")}</div></div>`;
-  const grid = months.map(([y,m])=>`<div class="vline" style="left:${pos(`${y}-${String(m+1).padStart(2,"0")}-01`)}%"></div>`).join("")
-    + `<div class="vline today" style="left:${pos(TODAY)}%"></div>`;
-  h += `<div class="row" style="border-top:0;min-height:18px"><div></div><div class="track" style="height:18px">${grid}<span class="todaylbl" style="left:${pos(TODAY)}%">dnes 13. 11.</span></div></div>`;
-  h += visible().map(e => {
-    const bars = `<div class="bar" title="${fmt(e.od,e.do)}" style="left:${pos(e.od)}%;width:${pos(e.do)-pos(e.od)}%"></div>` + (e.od2?`<div class="bar" title="${fmt(e.od2,e.do2)}" style="left:${pos(e.od2)}%;width:${pos(e.do2)-pos(e.od2)}%"></div>`:"");
-    return `<div class="row${e.id===selectedId?" on":""}" data-id="${e.id}" tabindex="0" style="--c:${mcol(e)}"><div class="lbl" title="${e.uni}">${e.uni}</div><div class="track">${grid}${bars}<div class="dlm" title="uzávěrka ${fmt1(e.dl)}" style="left:${pos(e.dl)}%"></div></div></div>`;
+  const vis = visible();
+  const startD = "2026-11-01";
+  const lastEnd = EV.reduce((m, e) => (e.end2 || e.end) > m ? (e.end2 || e.end) : m, "2027-06-30");
+  const endD = lastEnd.slice(0, 7) + "-" + String(new Date(+lastEnd.slice(0, 4), +lastEnd.slice(5, 7), 0).getDate()).padStart(2, "0");
+  const span = dayDiff(startD, endD);
+  const pos = s => Math.max(0, Math.min(100, dayDiff(startD, s) / span * 100));
+  const mlist = []; for (let y = 2026, m = 10; `${y}-${String(m + 1).padStart(2, "0")}` <= endD.slice(0, 7); ) { mlist.push([y, m]); m++; if (m === 12) { m = 0; y++; } }
+  const ms = ([y, m]) => `${y}-${String(m + 1).padStart(2, "0")}-01`;
+  let h = `<div class="months"><div></div><div class="mrow">${mlist.map(([y, m]) => `<span style="left:${pos(ms([y, m]))}%">${MON[m]}${m === 0 || (y === 2026 && m === 10) ? " " + y : ""}</span>`).join("")}</div></div>`;
+  const grid = mlist.map(x => `<div class="vline" style="left:${pos(ms(x))}%"></div>`).join("") + `<div class="vline today" style="left:${pos(TODAY)}%"></div>`;
+  h += `<div class="row" style="border-top:0;min-height:18px"><div></div><div class="track" style="height:18px">${grid}<span class="todaylbl" style="left:${pos(TODAY)}%">dnes ${fmt(TODAY)}</span></div></div>`;
+  h += vis.map(e => {
+    const bars = `<div class="bar" title="${fmt(e.start, e.end)}" style="left:${pos(e.start)}%;width:${pos(e.end) - pos(e.start)}%"></div>` + (e.start2 ? `<div class="bar" title="${fmt(e.start2, e.end2)}" style="left:${pos(e.start2)}%;width:${pos(e.end2) - pos(e.start2)}%"></div>` : "");
+    const dl = e.deadline ? `<div class="dlm" title="uzávěrka ${fmt1(e.deadline)}" style="left:${pos(e.deadline)}%"></div>` : "";
+    return `<div class="row${e.id === selectedId ? " on" : ""}" data-id="${e.id}" tabindex="0" style="--c:${mcol(e)}"><div class="lbl" title="${esc(e.uni_short || e.uni)} – ${esc(e.event_name)}">${esc(e.uni_short || e.uni)}</div><div class="track">${grid}${bars}${dl}</div></div>`;
   }).join("");
-  document.getElementById("tl").innerHTML = h;
+  $("tl").innerHTML = h;
+  $("tlcount").textContent = `${vis.length} akcí`;
+}
+$("tl").addEventListener("click", ev => { const r = ev.target.closest(".row[data-id]"); if (r) pick(r.dataset.id); });
+$("tl").addEventListener("keydown", ev => { const r = ev.target.closest(".row[data-id]"); if (!r || (ev.key !== "Enter" && ev.key !== " ")) return; ev.preventDefault(); pick(r.dataset.id); });
+
+/* ---------- vykreslení ---------- */
+function renderAll(){
+  const vis = visible();
+  $("listcount").textContent = `(${vis.length})`;
+  if (!vis.some(e => e.id === selectedId)) selectedId = (vis.find(e => e.deadline && e.deadline >= TODAY) || vis[0] || {}).id || null;
+  renderList(); renderMap(); renderTimeline(); applySel(null);
+  if (document.body.classList.contains("mini")) setTimeout(fitAll, 0);
 }
 
-function renderAll(){
-  setTimeout(() => { if (document.body.classList.contains("mini")) fitAll(); }, 0);
-  const vis = visible();
-  const lc = document.getElementById("listcount"); if (lc) lc.textContent = `(${vis.length})`;
-  if (!vis.some(e=>e.id===selectedId)) selectedId = (vis.find(e=>e.dl>=TODAY) || vis[0] || {}).id || null;
-  renderList(); renderMap(); renderTimeline(); applySel();
-}
+/* ---------- ovládání ---------- */
 document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
   filter = b.dataset.f;
-  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x===b)));
-  renderAll();
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  renderAll(); updCount();
 }));
-try { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch(e){}
-window.scrollTo(0,0);
-document.getElementById("scrollhint").addEventListener("click", () => {
-  const sec = document.getElementById("casova-osa");
-  const card = document.querySelector(".titlecard");
-  const off = innerWidth > 700 ? card.offsetHeight + 40 : 12;
-  window.scrollTo({top: sec.getBoundingClientRect().top + scrollY - off, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
-});
-initMap(); renderLegend(); renderAll();
-const lp = document.getElementById("listpanel"), lb = document.getElementById("listbtn");
-const fab = document.getElementById("fab");
-function placePanel(){
-  if (innerWidth > 700){ const r = document.querySelector(".titlecard").getBoundingClientRect(); lp.style.top = Math.max(16, r.bottom + 8) + "px"; }
-  else lp.style.top = "";
-}
-function updatePad(){}
-function setList(open){
-  lp.hidden = !open; lb.setAttribute("aria-expanded", String(open)); fab.setAttribute("aria-expanded", String(open));
-  document.body.classList.toggle("lp-open", open);
-  fab.textContent = open ? "× Zavřít seznam" : "☰ Seznam akcí";
-  if (open){ placePanel(); const s=document.querySelector(".ev.on"); if(s) s.scrollIntoView({block:"nearest"}); }
-  updatePad();
-}
-lb.addEventListener("click", () => setList(lp.hidden));
-fab.addEventListener("click", () => setList(lp.hidden));
-const goMap = () => { window.scrollTo({top:0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); if (map) setTimeout(() => { if (!document.body.classList.contains("mini") && selectedId && markers[selectedId]) zoomTo(selectedId); }, 700); };
-document.getElementById("tomap").addEventListener("click", goMap);
-document.getElementById("tomap2").addEventListener("click", goMap);
-function onScroll(){
-  const heroBottom = document.querySelector(".hero").getBoundingClientRect().bottom;
-  fab.hidden = heroBottom > 120;
-  const sc = heroBottom < innerHeight * 0.6;
-  if (sc !== document.body.classList.contains("scrolled")){ document.body.classList.toggle("scrolled", sc); if (!lp.hidden) placePanel(); }
-  setMini(sc && innerWidth > 700);
-  document.getElementById("tomap").hidden = heroBottom > 120;
-  if (!lp.hidden) placePanel();
-}
-window.addEventListener("scroll", onScroll, {passive:true});
-onScroll();
-const os = document.getElementById("obor-select");
-os.innerHTML += Object.entries(OBORY).filter(([k]) => EV.some(e => (OB[e.id]||[]).includes(k))).map(([k,v]) => `<option value="${k}">${v} (${EV.filter(e=>(OB[e.id]||[]).includes(k)).length})</option>`).join("");
-os.addEventListener("change", () => { obor = os.value; renderAll(); updCount(); });
-const $ = id => document.getElementById(id);
-[...new Set(EV.map(e=>e.cc))].sort((a,b)=>a.localeCompare(b,"cs")).forEach(c => $("f-zeme").insertAdjacentHTML("beforeend", `<option value="${c}">${c}</option>`));
-[...new Set(EV.flatMap(months))].sort((a,b)=>a-b).forEach(m => $("f-mes").insertAdjacentHTML("beforeend", `<option value="${m}">${MESNAZ[m]} ${m>=10?2026:2027}</option>`));
 function updCount(){
-  const n = ["zeme","fee","dl","mes"].filter(k=>X[k]!=="all").length + (X.ver?1:0);
+  const n = ["zeme", "fee", "dl", "mes"].filter(k => X[k] !== "all").length + (X.ver ? 1 : 0);
   $("fcount").hidden = !n; $("fcount").textContent = n;
 }
-[["f-zeme","zeme"],["f-fee","fee"],["f-dl","dl"],["f-mes","mes"]].forEach(([id,k]) => $(id).addEventListener("change", ev => { X[k] = ev.target.value; renderAll(); updCount(); }));
-$("f-ver").addEventListener("change", ev => { X.ver = ev.target.checked; renderAll(); updCount(); });
-$("f-reset").addEventListener("click", () => {
-  Object.assign(X, {zeme:"all", fee:"all", dl:"all", mes:"all", ver:false});
-  ["f-zeme","f-fee","f-dl","f-mes"].forEach(id => $(id).value = "all"); $("f-ver").checked = false;
-  obor = "all"; os.value = "all"; filter = "all";
-  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.f==="all")));
-  renderAll(); updCount();
-});
-$("more").addEventListener("toggle", () => { if (!lp.hidden) placePanel(); });
-document.getElementById("tl").addEventListener("click", ev => {
-  const row = ev.target.closest(".row[data-id]"); if (!row) return;
-  const id = row.dataset.id; if (selectedId === id) openDetail(id); else focusEv(id);
-});
-document.getElementById("tl").addEventListener("keydown", ev => {
-  const row = ev.target.closest(".row[data-id]"); if (!row || (ev.key!=="Enter" && ev.key!==" ")) return;
-  ev.preventDefault(); const id = row.dataset.id; if (selectedId === id) openDetail(id); else focusEv(id);
-});
-document.getElementById("listclose").addEventListener("click", () => setList(false));
-window.addEventListener("resize", () => { if (!lp.hidden) placePanel(); updatePad(); });
+function initFilters(){
+  const cnt = f => EV.filter(f).length;
+  Object.entries(OBORY).filter(([k]) => cnt(e => (e.fields || []).includes(k))).forEach(([k, v]) => $("obor-select").insertAdjacentHTML("beforeend", `<option value="${k}">${v} (${cnt(e => (e.fields || []).includes(k))})</option>`));
+  [...new Set(EV.map(e => e.country))].sort((a, b) => a.localeCompare(b, "cs")).forEach(c => $("f-zeme").insertAdjacentHTML("beforeend", `<option value="${esc(c)}">${esc(c)} (${cnt(e => e.country === c)})</option>`));
+  [...new Set(EV.flatMap(months))].sort().forEach(k => $("f-mes").insertAdjacentHTML("beforeend", `<option value="${k}">${MESNAZ[+k.slice(5, 7) - 1]} ${k.slice(0, 4)} (${cnt(e => months(e).includes(k))})</option>`));
+  $("obor-select").addEventListener("change", ev => { obor = ev.target.value; renderAll(); });
+  [["f-zeme", "zeme"], ["f-fee", "fee"], ["f-dl", "dl"], ["f-mes", "mes"]].forEach(([id, k]) => $(id).addEventListener("change", ev => { X[k] = ev.target.value; renderAll(); updCount(); }));
+  $("f-ver").addEventListener("change", ev => { X.ver = ev.target.checked; renderAll(); updCount(); });
+  $("f-reset").addEventListener("click", () => {
+    Object.assign(X, {zeme:"all", fee:"all", dl:"all", mes:"all", ver:false});
+    ["f-zeme", "f-fee", "f-dl", "f-mes", "obor-select"].forEach(id => $(id).value = "all"); $("f-ver").checked = false;
+    obor = "all"; filter = "all";
+    document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.f === "all")));
+    renderAll(); updCount();
+  });
+}
+const lp = $("listpanel"), lb = $("listbtn");
+function placePanel(){ if (innerWidth > 700) { const r = document.querySelector(".titlecard").getBoundingClientRect(); lp.style.top = Math.max(16, r.bottom + 8) + "px"; } else lp.style.top = ""; }
+function setList(open){
+  lp.hidden = !open; lb.setAttribute("aria-expanded", String(open));
+  if (open) { placePanel(); const s = document.querySelector(".ev.on"); if (s) s.scrollIntoView({block:"nearest"}); }
+}
+lb.addEventListener("click", () => setList(lp.hidden));
+$("listclose").addEventListener("click", () => setList(false));
+$("more").addEventListener("toggle", () => { if (!lp.hidden) placePanel(); padTimeline(); });
+window.addEventListener("resize", () => { if (!lp.hidden) placePanel(); padTimeline(); setMini(view === "tl" && innerWidth > 700); });
 
-const rethemed = () => renderMap();
+/* ---------- přepínání obrazovek: mapa ⟷ časová osa ---------- */
+let view = "map";
+function padTimeline(){
+  // časová osa začíná pod kartou s filtry a pod minimapou (na počítači), aby ji nic nezakrývalo
+  const tv = $("tlview");
+  if (innerWidth <= 700) { tv.style.paddingTop = "16px"; return; }
+  const card = document.querySelector(".titlecard").getBoundingClientRect().bottom;
+  const mini = document.body.classList.contains("mini") ? $("map").getBoundingClientRect().bottom : 0;
+  tv.style.paddingTop = Math.round(Math.max(card, mini) + 20) + "px";
+}
+function setView(v, fromHash){
+  const wasTl = view === "tl";
+  view = v;
+  const tl = v === "tl";
+  document.body.classList.toggle("view-tl", tl);
+  $("tlview").hidden = !tl;
+  $("viewlbl").textContent = tl ? "Zpět na mapu" : "Časová osa";
+  $("viewsub").textContent = tl ? "" : "kdy se co koná";
+  document.querySelector("#viewbtn .ico").textContent = tl ? "←" : "→";
+  $("viewbtn").setAttribute("aria-controls", tl ? "map" : "casova-osa");
+  setMini(tl && innerWidth > 700);
+  padTimeline();
+  if (tl) { $("tlview").scrollTop = 0; const r = document.querySelector(".row.on"); if (r) r.scrollIntoView({block:"nearest"}); }
+  else if (map && wasTl) { setTimeout(() => { map.invalidateSize(); if (selectedId && markers[selectedId]) zoomTo(selectedId); }, 50); }
+  if (!fromHash) { try { history.pushState(null, "", tl ? "#casova-osa" : location.pathname + location.search); } catch (e) {} }
+}
+$("viewbtn").addEventListener("click", () => setView(view === "tl" ? "map" : "tl"));
+window.addEventListener("popstate", () => setView(location.hash === "#casova-osa" ? "tl" : "map", true));
+document.addEventListener("keydown", ev => { if (ev.key === "Escape" && view === "tl" && !$("dlg").open) setView("map"); });
 
-try { matchMedia("(prefers-color-scheme: dark)").addEventListener("change", rethemed); } catch(e){}
-new MutationObserver(rethemed).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+/* ---------- start ---------- */
+initMap();
+fetch("data.json", {cache: "no-cache"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
+  META = data.meta || {}; EV = (data.events || data).filter(e => e && e.start && e.lat != null).sort((a, b) => a.start.localeCompare(b.start) || (a.uni_short || "").localeCompare(b.uni_short || ""));
+  const unis = new Set(EV.map(e => e.uni)).size, cs = new Set(EV.map(e => e.country)).size;
+  $("subline").textContent = `${EV.length} akcí · ${unis} institucí · ${cs} zemí · údaje k ${META.updated ? fmt1(META.updated) : "–"}`;
+  const ld = $("loading"); if (ld) ld.remove();
+  initFilters(); renderLegend(); renderAll(); updCount();
+  setView(location.hash === "#casova-osa" ? "tl" : "map", true);
+}).catch(err => {
+  const ld = $("loading"); if (ld) ld.textContent = "Data se nepodařilo načíst (data.json). Zkuste stránku obnovit.";
+  console.error(err);
+});
+
 </script>
 </body>
 </html>
