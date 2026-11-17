@@ -1,25 +1,29 @@
 [
   {
-    "id": "ug-ai-2027-01",
+    "id": "auth-thessaloniki-2026-12",
     "status": "ověřeno",
-    "note": "Akci vložila přímo University of Gdańsk na portál IMOTION (s oficiálním kontaktem @ug.edu.pl). Potvrzen začátek 4. 1. 2027, uzávěrka 15. 12. 2026, mobilita (training) i jazyk; doplněn konec 8. 1. 2027, poplatek 350 €, kapacita 30 míst, kontakt a přímý odkaz na detail akce.",
+    "note": "Termín prezenční části (7.–11. 12. 2026), uzávěrka (7. 9. 2026), bezplatná účast (BIP pro zaměstnance), kapacitní limit i registrační odkaz potvrzeny na oficiálním webu AUTh; kontakt doplněn z detailu IMOTION vloženého pořadatelem.",
     "checked": "2026-11-17",
     "fixes": {
-      "end": "2027-01-08",
-      "fee_eur": 350,
-      "fee_text": "350 € (program, materiály, coffee breaky, obědy, kulturní program a certifikát; ubytování a cestu hradí účastník)",
-      "capacity": "max. 30 účastníků",
-      "event_url": "http://staffmobility.eu/staffweek/winter-ai-lab-staff-week",
+      "end": "2026-12-11",
+      "fee_eur": 0,
+      "fee_text": "zdarma (Erasmus+ BIP pro zaměstnance; ubytování nezajištěno)",
+      "capacity": "max. 2 zástupci z jedné instituce",
+      "language": "angličtina",
+      "registration_url": "https://eurep.auth.gr/en/stafftraining/applicationform",
+      "event_url": "https://eurep.auth.gr/en/staff/training/estw/15th",
       "source_urls": [
-        "http://staffmobility.eu/staffweek/winter-ai-lab-staff-week"
+        "https://eurep.auth.gr/en/staff/training/estw/15th",
+        "http://staffmobility.eu/staffweek/15th-erasmus-staff-training-week-quality"
       ],
+      "source_type": "official",
       "contacts": [
         {
-          "name": "University of Gdańsk – Staff Week",
-          "role": "organizátor",
-          "email": "staffweek@ug.edu.pl",
-          "phone": "+48 58 523 24 42",
-          "source": "http://staffmobility.eu/staffweek/winter-ai-lab-staff-week"
+          "name": "Erasmus Staff Training Week Team",
+          "role": "Department of European Educational Programmes",
+          "email": "estw@auth.gr",
+          "phone": "+30 2310 99 5289, 5293",
+          "source": "http://staffmobility.eu/staffweek/15th-erasmus-staff-training-week-quality"
         }
       ]
     },
@@ -27,12 +31,182 @@
     "reason": null
   },
   {
-    "id": "centria-2027-01",
+    "id": "mendelu-brno-2026-12",
     "status": "ověřeno",
-    "note": "Oficiální web Centria UAS potvrzuje konání International Staff Week 2027 (Embracing Intercultural Competence) v Kokkole v termínu 25.–28. 1. 2027, uzávěrku 30. 11. 2026, bezplatnou účast (bez cestovného a ubytování) i omezenou kapacitu. Doplněn jazyk angličtina (potvrzeno ze stránky partnera h_da i anglického programu).",
+    "note": "Termín (7.–11. 12. 2026), uzávěrka (31. 8. 2026), poplatek 145 €, kapacita 30 osob, mobilita (pouze training) i kontakt potvrzeny na detailu IMOTION vloženém pořadatelem MENDELU.",
     "checked": "2026-11-17",
     "fixes": {
-      "language": "angličtina"
+      "end": "2026-12-11",
+      "fee_eur": 145,
+      "fee_text": "145 € (cestu a ubytování hradí účastník)",
+      "capacity": "max. 30 účastníků",
+      "language": "angličtina",
+      "event_url": "http://staffmobility.eu/staffweek/international-week-mendelu-2026",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-week-mendelu-2026"
+      ],
+      "contacts": [
+        {
+          "name": "Mendel University in Brno – International Week",
+          "role": "organizátor",
+          "email": "intweek@mendelu.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-week-mendelu-2026"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "newton-2026-12",
+    "status": "ověřeno",
+    "note": "Termín (7.–11. 12. 2026) potvrzen ve dvou záznamech IMOTION vložených pořadatelem NEWTON University; novější záznam prodlužuje uzávěrku na 30. 11. 2026, původní záznam (uzávěrka 15. 10. 2026) uvádí poplatek 80 € a kontakt bip@newton.university.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2026-12-11",
+      "deadline": "2026-11-30",
+      "deadline_note": "původní záznam na IMOTION uváděl 15. 10. 2026, novější záznam prodlužuje uzávěrku do 30. 11. 2026",
+      "fee_eur": 80,
+      "fee_text": "80 € (dle původního záznamu na IMOTION; ubytování nezajištěno)",
+      "language": "angličtina",
+      "event_url": "http://staffmobility.eu/staffweek/christmas-staff-week-erasmus-0",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/christmas-staff-week-erasmus-0",
+        "http://staffmobility.eu/staffweek/christmas-staff-week-erasmus"
+      ],
+      "contacts": [
+        {
+          "name": "NEWTON University – Staff Week",
+          "role": "organizátor",
+          "email": "bip@newton.university",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/christmas-staff-week-erasmus"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ug-gdansk-2026-12",
+    "status": "ověřeno",
+    "note": "Termín (14.–18. 12. 2026), uzávěrka (20. 11. 2026), poplatek 350 €, kapacita 30 osob, registrace i kontakt potvrzeny na detailu IMOTION vloženém Právnickou fakultou UG; zařazení akce v prosinci 2026 potvrzuje i oficiální web Welcome Centre UG.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2026-12-18",
+      "fee_eur": 350,
+      "fee_text": "350 € (ubytování nezajištěno)",
+      "capacity": "max. 30 účastníků",
+      "language": "angličtina",
+      "registration_url": "https://forms.office.com/e/g7jnyYJjQb",
+      "event_url": "http://staffmobility.eu/staffweek/winter-reboot-ai-academy-ai-winter-lab",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/winter-reboot-ai-academy-ai-winter-lab",
+        "https://welcomecentre.ug.edu.pl/choose/other/"
+      ],
+      "contacts": [
+        {
+          "name": "University of Gdańsk – Faculty of Law and Administration",
+          "role": "organizátor",
+          "email": "staffweek@ug.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/winter-reboot-ai-academy-ai-winter-lab"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ug-ai-2027-01",
+    "status": "ověřeno",
+    "note": "Všechny údaje (termín 4.–8. 1. 2027, uzávěrka 15. 12. 2026, poplatek 350 €, kapacita 30 osob, kontakt) potvrzeny přímo na živé stránce IMOTION vložené pořadatelem University of Gdańsk; doplněn registrační formulář.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "registration_url": "https://forms.office.com/e/g7jnyYJjQb"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "iae-montpellier-2027-01",
+    "status": "ověřeno",
+    "note": "Termín (11.–15. 1. 2027), téma i výuková mobilita potvrzeny na oficiálním webu IAE Montpellier a na oficiálním LinkedInu IAE Montpellier; oficiální příspěvek uvádí prodlouženou uzávěrku 30. 10. 2026 (BOKU uváděla 20. 9. 2026) a kontaktní e-mail iae-international@umontpellier.fr.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2026-10-30",
+      "deadline_note": "zaslání návrhu kurzu a životopisu na iae-international@umontpellier.fr (partnerská BOKU uváděla dřívější termín 20. 9. 2026)",
+      "event_url": "https://iae.umontpellier.fr/en-ce-moment-a-liae-de-montpellier/",
+      "source_urls": [
+        "https://iae.umontpellier.fr/en-ce-moment-a-liae-de-montpellier/",
+        "https://www.linkedin.com/posts/iae-montpellier_iaemontpellier-internationalweek-artificialintelligence-activity-7519053350391234560-g729",
+        "https://boku.ac.at/en/international/themen/boku-staff-going-international/erasmus-personal-mobilitaet/erasmus-staff-training/international-staff-training-weeks"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "IAE Montpellier – International Office",
+          "role": "organizátor",
+          "email": "iae-international@umontpellier.fr",
+          "phone": null,
+          "source": "https://www.linkedin.com/posts/iae-montpellier_iaemontpellier-internationalweek-artificialintelligence-activity-7519053350391234560-g729"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "usmb-chambery-bip-2027-01",
+    "status": "neověřeno",
+    "note": "Termín (11.–15. 1. 2027) je uveden pouze jako jednořádková položka bez odkazu na partnerském webu Universidad de Jaén (EN/ES); oficiální stránku pořadatele Université Savoie Mont Blanc, uzávěrku ani další detaily se nepodařilo dohledat.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "centria-2027-01",
+    "status": "ověřeno",
+    "note": "Termín (25.–28. 1. 2027), místo konání (Kokkola), uzávěrka (30. 11. 2026), bezplatná účast i omezená kapacita plně potvrzeny přímo na živé oficiální stránce Centria UAS.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "cuni-ilps-english-2027-01",
+    "status": "ověřeno",
+    "note": "Termín lednové edice (25.–29. 1. 2027), uzávěrka (25. 12. 2026), poplatek 450 €, kapacita 20 osob, registrační web ÚJOP UK i kontakty potvrzeny na detailu IMOTION vloženém pořadatelem ÚJOP UK.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-01-29",
+      "fee_eur": 450,
+      "fee_text": "450 € (ubytování nezajištěno; způsobilé pro grant Erasmus+)",
+      "capacity": "max. 20 účastníků",
+      "registration_url": "https://ujop.cuni.cz/UJOPEN-462.html",
+      "event_url": "http://staffmobility.eu/staffweek/practical-english-office-staff-week",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/practical-english-office-staff-week",
+        "https://ujop.cuni.cz/UJOPEN-462.html"
+      ],
+      "contacts": [
+        {
+          "name": "Irena Antonová",
+          "role": "koordinátorka kurzu",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-office-staff-week"
+        },
+        {
+          "name": "Klára Kosová",
+          "role": "administrativa",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-office-staff-week"
+        }
+      ]
     },
     "remove": false,
     "reason": null
@@ -40,28 +214,59 @@
   {
     "id": "aigaia-2027-01",
     "status": "ověřeno",
-    "note": "Akci vložila přímo Aigaia School of Art and Design (akreditovaná VŠ na Kypru, s podporou Odisee UAS a ATU) na IMOTION pod oficiálním kontaktem @aigaia.com.cy. Potvrzen začátek 28. 1. 2027 a uzávěrka 8. 1. 2027; doplněn konec 14. 5. 2027 (online část začíná 28. 1., prezenční týden v Nikósii 10.–14. 5. 2027), poplatek 495 € včetně ubytování, kapacita 15 míst, registrační formulář a kontakt.",
+    "note": "Termín (28. 1.–14. 5. 2027; online start 28. 1., prezenční týden v Nikósii 10.–14. 5. 2027), uzávěrka (8. 1. 2027), poplatek 495 €, kapacita 15 osob, registrace i kontakt potvrzeny na živém detailu IMOTION vloženém pořadatelem (ve spolupráci s Odisee UAS a ATU). Živá stránka uvádí ubytování nezajištěno (opraven fee_text).",
     "checked": "2026-11-17",
     "fixes": {
-      "end": "2027-05-14",
-      "fee_eur": 495,
-      "fee_text": "495 € (ubytování zajištěno)",
-      "capacity": "max. 15 účastníků",
-      "registration_url": "https://forms.cloud.microsoft/e/CZikeBNPX0",
-      "event_url": "http://staffmobility.eu/staffweek/2nd-edition-qa-motion-blended-staff",
+      "fee_text": "495 € (ubytování nezajištěno; způsobilé pro grant Erasmus+)",
+      "notes": "Blended program: online část začíná 28. 1. 2027, prezenční týden v Nikósii probíhá 10.–14. 5. 2027. Živá stránka IMOTION uvádí ubytování nezajištěno (dřívější verze uváděla zajištěno)."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uninettuno-rome-bip-2027-02",
+    "status": "částečně",
+    "note": "Termín prezenční části (1.–5. 2. 2027), název, jazyk i Erasmus kód (I ROMA24) potvrzeny oficiálním letákem UNINETTUNO na webu partnerské UJA; prezenční výuka však probíhá v Miláně (Domus Academy), nikoli v Římě. Uzávěrka a poplatek nebyly v dostupném výňatku uvedeny.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "city": "Milan",
+      "event_name": "Computational Learning and Design Winter School 2027 (BIP)",
+      "erasmus_code": "I ROMA24",
+      "language": "angličtina",
+      "event_url": "https://www.ujaen.es/internacional/sites/segundonivel_internacional/files/uploads/CLDWS2027_Erasmus_BIP_Announcement%20(Uninettuno%20University%20-%20I%20ROMA24).pdf",
       "source_urls": [
-        "http://staffmobility.eu/staffweek/2nd-edition-qa-motion-blended-staff"
+        "https://www.ujaen.es/internacional/sites/segundonivel_internacional/files/uploads/CLDWS2027_Erasmus_BIP_Announcement%20(Uninettuno%20University%20-%20I%20ROMA24).pdf",
+        "https://www.ujaen.es/internacional/en/uja-students/summer-schools-others"
+      ],
+      "notes": "Koordinuje UNINETTUNO (Řím, I ROMA24), prezenční část BIP však probíhá v Miláně (Domus Academy) 1.–5. 2. 2027; online semináře probíhají v listopadu–prosinci 2026. Leták odkazuje na cldws2027.uninettunouniversity.net."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "newton-2027-02",
+    "status": "ověřeno",
+    "note": "Termín (1.–5. 2. 2027) a uzávěrka (15. 10. 2026) potvrzeny z detailu IMOTION vloženého NEWTON University i z oficiálního PDF letáku; z letáku doplněn poplatek (100 € / 50 € pro partnery) a kontakt na koordinátorku.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-02-05",
+      "fee_eur": 100,
+      "fee_text": "100 € (50 € pro partnerské VŠ; zahrnuje obědy a společenský program, ubytování nezajištěno)",
+      "language": "angličtina",
+      "event_url": "http://staffmobility.eu/staffweek/research-innovation-week-1",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/research-innovation-week-1",
+        "https://nki.bme.hu/sites/default/files/Research%20and%20Innovation%20Staff%20Week%202027.pdf"
       ],
       "contacts": [
         {
-          "name": "Aigaia School of Art and Design – QA in Motion",
-          "role": "organizátor",
-          "email": "qa.bip.training@aigaia.com.cy",
+          "name": "Petra Borkovcová",
+          "role": "koordinátorka",
+          "email": "bip@newton.university",
           "phone": null,
-          "source": "http://staffmobility.eu/staffweek/2nd-edition-qa-motion-blended-staff"
+          "source": "https://nki.bme.hu/sites/default/files/Research%20and%20Innovation%20Staff%20Week%202027.pdf"
         }
-      ],
-      "notes": "Blended program (BIP): online část začíná 28. 1. 2027, prezenční školicí týden v Nikósii probíhá 10.–14. 5. 2027. Organizováno s podporou Odisee UAS (BE) a Atlantic Technological University (IE)."
+      ]
     },
     "remove": false,
     "reason": null
@@ -69,10 +274,111 @@
   {
     "id": "unibo-una-europa-baes-2027-02",
     "status": "ověřeno",
-    "note": "Oficiální web University of Bologna i výzva Call for Applications (PDF) potvrzují prezenční termín 8.–12. 2. 2027 (včetně povinné online části 5. 2. 2027), uzávěrku 23. 11. 2026 do 12:00 pro studenty UNIBO, bezplatnou účast (kromě pojištění), kapacitu cca 50–60 studentů, angličtinu i předsedu výboru Carmela Danisiho.",
+    "note": "Všechny klíčové údaje (termín prezenční části 8.–12. 2. 2027, uzávěrka 23. 11. 2026 do 12:00 pro studenty UNIBO, bezplatná účast, kapacita, jazyk, organizátor) plně potvrzeny na živém oficiálním webu a v PDF výzvě University of Bologna.",
     "checked": "2026-11-17",
     "fixes": {
-      "notes": "Určeno pouze pro studenty programu BAES (Una Europa). Součástí BIP je povinná online lekce 5. 2. 2027, prezenční část probíhá 8.–12. 2. 2027 (3 ECTS)."
+      "notes": "Povinná online část probíhá 5. 2. 2027, prezenční týden 8.–12. 2. 2027 v Bologni. Určeno výhradně studentům programu BAES v rámci aliance Una Europa."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "liuc-castellanza-2027-02",
+    "status": "ověřeno",
+    "note": "Termín (8.–12. 2. 2027) a kapacita (10–20 osob, 1–2 za zemi) potvrzeny na oficiálním webu LIUC; uzávěrka (23. 11. 2026), bezplatná účast a kontakt potvrzeny na detailu IMOTION vloženém pořadatelem.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-02-12",
+      "fee_eur": 0,
+      "fee_text": "zdarma (BIP pro zaměstnance; ubytování nezajištěno)",
+      "capacity": "10–20 účastníků (1–2 za zemi)",
+      "language": "angličtina",
+      "event_url": "https://en.liuc.it/campus-and-opportunities/international-office/incoming/incoming-faculty-staff/student-wellbeing-360/",
+      "source_urls": [
+        "https://en.liuc.it/campus-and-opportunities/international-office/incoming/incoming-faculty-staff/student-wellbeing-360/",
+        "http://staffmobility.eu/staffweek/student-wellbeing-360deg"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Immacolata Flagiello",
+          "role": "kontaktní osoba",
+          "email": "staffweek@liuc.it",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/student-wellbeing-360deg"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "galway-business-school-2027-02",
+    "status": "částečně",
+    "note": "Kurz 15.–19. 2. 2027 (450 €) existuje na webu soukromé jazykové školy Galway Cultural Institute (gci.ie, kontakt cosmina@gci.ie) jako komerční týdenní jazykový kurz z ceníku GCI 2027; na IMOTION je inzerován pod sesterskou Galway Business School. Nejde o vysokoškolský International/Staff Week, proto vyřazeno.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Komerční jazykový kurz soukromé jazykové školy Galway Cultural Institute (gci.ie, kontakt cosmina@gci.ie, komerční ceník 2027) inzerovaný na IMOTION pod sesterskou Galway Business School; nejde o vysokoškolský International/Staff Week."
+  },
+  {
+    "id": "sorbonne-nouvelle-2027-02",
+    "status": "ověřeno",
+    "note": "Termín (15.–19. 2. 2027), uzávěrka (23. 10. 2026), poplatek 250 €, kapacita 25–35 osob, jazyk i kontakt potvrzeny na detailu IMOTION vloženém pořadatelem Sorbonne Nouvelle a nezávisle potvrzeny partnerskými weby AUTh a Uni Mannheim.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "fee_eur": 250,
+      "fee_text": "250 € (program, materiály, uvítací káva a kulturní návštěvy; ubytování a cestu hradí účastník)",
+      "capacity": "25–35 účastníků",
+      "language": "angličtina",
+      "event_url": "http://staffmobility.eu/staffweek/enhancing-internationalization-sorbonne",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/enhancing-internationalization-sorbonne",
+        "https://eurep.auth.gr/en/node/3125",
+        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Université Sorbonne Nouvelle – Staff Week",
+          "role": "organizátor",
+          "email": "staffweekfrench@sorbonne-nouvelle.fr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/enhancing-internationalization-sorbonne"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "hamk-freezing-week-2027-02",
+    "status": "ověřeno",
+    "note": "Termín (17.–18. 2. 2027), uzávěrka (30. 11. 2026), bezplatná účast i zaměření na výuku (co-teaching) a job shadowing potvrzeny na oficiálním webu HAMK a na detailu IMOTION; opravena mobilita na teaching + training a doplněn konec a kontakt.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-02-18",
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fee_eur": 0,
+      "fee_text": "zdarma (cestu a ubytování hradí účastník)",
+      "event_url": "https://www.hamk.fi/en/about-hamk/internationality/freezing-week/",
+      "source_urls": [
+        "https://www.hamk.fi/en/about-hamk/internationality/freezing-week/",
+        "http://staffmobility.eu/staffweek/freezing-week-2027"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "HAMK – Freezing Week",
+          "role": "organizátor",
+          "email": "freezing.week@hamk.fi",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/freezing-week-2027"
+        }
+      ]
     },
     "remove": false,
     "reason": null
@@ -80,7 +386,7 @@
   {
     "id": "hamk",
     "status": "částečně",
-    "note": "Oficiální web HAMK (HTTP 200) potvrzuje konání Wellbeing International Week 2027 – The Human Factor v termínu 22.–26. 2. 2027 v Hämeenlinně. Stažený text důkazu byl však kvůli dlouhé navigaci zkrácen před částmi s uzávěrkou, poplatky, mobilitou a kontakty, takže tyto údaje nešlo v tomto ověření nezávisle potvrdit.",
+    "note": "Živá oficiální stránka HAMK (HTTP 200) potvrzuje ročník 2027, název Wellbeing International Week – The Human Factor, město Hämeenlinna i termín 22.–26. 2. 2027; spodní část stránky s uzávěrkou, poplatkem a kontaktem byla ve staženém výňatku oříznuta kvůli dlouhému navigačnímu menu.",
     "checked": "2026-11-17",
     "fixes": {},
     "remove": false,
@@ -89,48 +395,52 @@
   {
     "id": "upsa-ele-2027-03",
     "status": "ověřeno",
-    "note": "Akci vložila přímo Pontifical University of Salamanca (Observatory of the Spanish Language, ole@upsa.es) na portál IMOTION. Potvrzen začátek 1. 3. 2027, uzávěrka 13. 12. 2026, mobilita (training) i španělština; doplněn konec 5. 3. 2027, kontakt, přímý odkaz na detail akce a poznámka o virtuální části BIP.",
+    "note": "Termín (1.–5. 3. 2027), uzávěrka (13. 12. 2026), jazyk (španělština), mobilita (staff training BIP) i kontakt potvrzeny přímo na živé stránce IMOTION vložené pořadatelem UPSA; doplněn registrační formulář.",
     "checked": "2026-11-17",
     "fixes": {
-      "end": "2027-03-05",
-      "event_url": "http://staffmobility.eu/staffweek/ele-experience-language-culture-and-new",
-      "source_urls": [
-        "http://staffmobility.eu/staffweek/ele-experience-language-culture-and-new"
-      ],
-      "contacts": [
-        {
-          "name": "Observatory of the Spanish Language (OLE) – UPSA",
-          "role": "organizátor",
-          "email": "ole@upsa.es",
-          "phone": null,
-          "source": "http://staffmobility.eu/staffweek/ele-experience-language-culture-and-new"
-        }
-      ],
-      "notes": "Blended Intensive Programme (BIP) pro vyučující španělštiny jako cizího jazyka (ELE) v rámci zaměstnanecké mobility Erasmus+ (training); před prezenční částí 1.–5. 3. 2027 probíhá virtuální komponenta."
+      "registration_url": "https://forms.gle/EappECY9PkL6UVhJA"
     },
     "remove": false,
     "reason": null
   },
   {
-    "id": "via",
-    "status": "částečně",
-    "note": "Termín 1.–3. 3. 2027, zaměření na workshopy (teaching) a angličtina jsou potvrzeny na registračním formuláři tilmeld.dk a obecná bezplatnost Staff Weeks na webu en.via.dk. Konkrétní akce však na en.via.dk zveřejněna není a uzávěrka 27. 11. 2026 i e-mailové kontakty pocházejí jen z partnerské stránky h_da.",
+    "id": "upv-valencia-iro-2027-03",
+    "status": "ověřeno",
+    "note": "Termín (1.–5. 3. 2027), uzávěrka (8. 2. 2027), poplatek 500 €, kapacita 20 osob, registrační formulář i kontakty potvrzeny na detailu IMOTION a v oficiálním PDF letáku UPV ETSEAMN (nezávisle potvrzeno i na webu Uni Mannheim).",
     "checked": "2026-11-17",
     "fixes": {
-      "fee_text": "zdarma (ubytování, cestu a stravu hradí účastník)",
+      "deadline_note": "uzávěrka platby poplatku 15. 2. 2027",
+      "fee_eur": 500,
+      "fee_text": "500 € (výuka, materiály, coffee breaky, uvítací paella a rozlučkový oběd; ubytování nezajištěno)",
+      "capacity": "max. 20 účastníků",
+      "registration_url": "https://forms.gle/mqbP3B5maVjs4CUL8",
+      "event_url": "http://staffmobility.eu/staffweek/22nd-iro-valencia",
       "source_urls": [
-        "https://www.tilmeld.dk/internationalstaffweek2027-meetingtheother",
-        "https://en.via.dk/global-partnerships/staff-weeks",
-        "https://international.h-da.de/wege-ins-ausland/mitarbeitenden-lehrenden/staff-weeks",
-        "https://international.h-da.de/en/1/your-stay-abroad/fuer-unsere-mitarbeitenden-lehrenden/staff-weeks-an-partnerhochschulen"
+        "http://staffmobility.eu/staffweek/22nd-iro-valencia",
+        "http://staffmobility.eu/sites/default/files/staffweek/22nd_iro_valencia.pdf",
+        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/"
       ],
       "contacts": [
         {
-          "name": "Tým Staff Week (jméno neuvedeno)",
-          "role": "organizátoři",
-          "email": "loul@via.dk; ci@via.dk",
+          "name": "Claudio Benavent",
+          "role": "International Officer IRO ETSEAMN",
+          "email": "cbenavent@upvnet.upv.es",
           "phone": null,
-          "source": "https://international.h-da.de/wege-ins-ausland/mitarbeitenden-lehrenden/staff-weeks"
+          "source": "http://staffmobility.eu/staffweek/22nd-iro-valencia"
+        },
+        {
+          "name": "IRO ETSEAMN – UPV",
+          "role": "kancelář mezinárodních vztahů",
+          "email": "interagr@upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/22nd-iro-valencia"
+        },
+        {
+          "name": "Prof. Dr. Vicente Castell",
+          "role": "Head of IRO ETSEAMN",
+          "email": null,
+          "phone": null,
+          "source": "http://staffmobility.eu/sites/default/files/staffweek/22nd_iro_valencia.pdf"
         }
       ]
     },
@@ -138,64 +448,36 @@
     "reason": null
   },
   {
-    "id": "fhj",
+    "id": "upv-etseamn-2027-03",
     "status": "ověřeno",
-    "note": "Oficiální web IDW27 (fh-joanneum.design), PDF výzva i registrační formulář FH JOANNEUM potvrzují termín 8.–12. 3. 2027, uzávěrku návrhů workshopů 30. 11. 2026, mobilitu (teaching i studying), kapacitu 9–14 studentů na workshop a angličtinu. Na partnerském webu h_da je navíc uveden kontakt IDK.international@fh-joanneum.at.",
+    "note": "Akce existuje (1.–5. 3. 2027, UPV ETSEAMN, Valencia), jde však o přímý duplikát záznamu upv-valencia-iro-2027-03 se stejným registračním formulářem i letákem.",
     "checked": "2026-11-17",
     "fixes": {},
-    "remove": false,
-    "reason": null
+    "remove": true,
+    "reason": "Duplikát akce upv-valencia-iro-2027-03 (totožná akce 22nd IRO Valencia na UPV ETSEAMN 1.–5. 3. 2027)."
   },
   {
-    "id": "uma",
+    "id": "via",
     "status": "částečně",
-    "note": "Oficiální web uma.es a oficiální registrační formulář UMA potvrzují oba termíny (8.–12. 3. a 10.–14. 5. 2027), poplatek 250 €, omezenou kapacitu, angličtinu i přímý kontakt na UMA International HUB (source_type povýšen na official). Uzávěrka však na oficiálních stránkách ani ve formuláři chybí a partnerské zdroje se v ní rozcházejí (Uni Passau uvádí 15. 1. 2027, MENDELU 30. 11. 2026).",
+    "note": "Termín (1.–3. 3. 2027), místo konání (Aarhus), bezplatná účast i přihlašovací formulář potvrzeny přímo na živém oficiálním webu VIA University College a portálu tilmeld.dk; uzávěrka (27. 11. 2026) a kontaktní e-maily jsou doloženy jen na partnerském webu h_da.",
     "checked": "2026-11-17",
     "fixes": {
+      "event_url": "https://en.via.dk/global-partnerships/staff-weeks",
       "source_type": "official",
-      "event_url": "https://www.uma.es/international-hub/cms/base/ver/collection/collection/134986/uma-international-hub-staff-weeks/",
-      "fee_text": "250 € (zahrnuje všechny organizované aktivity, snídaně po–čt, workshopy, vstupy a společný oběd)",
-      "source_urls": [
-        "https://www.uma.es/international-hub/cms/base/ver/collection/collection/134986/uma-international-hub-staff-weeks/",
-        "https://u.uma.es/iui/",
-        "https://www.uni-passau.de/en/international/going-abroad-as-academics-or-university-staff/current-calls-staff-weeks",
-        "https://international.mendelu.cz/international-staff-weeks-2027-na-univerzite-v-malaze/"
-      ],
       "contacts": [
         {
-          "name": "UMA International HUB",
-          "role": "organizátor Staff Weeks",
-          "email": "internationalhub@uma.es",
-          "phone": "+34 951 952 773",
-          "source": "https://u.uma.es/iui/"
-        }
-      ],
-      "notes": "Rozpor v uzávěrce mezi sekundárními zdroji: Uni Passau uvádí 15. 1. 2027, MENDELU 30. 11. 2026; oficiální web ani registrační formulář UMA uzávěrku neuvádějí."
-    },
-    "remove": false,
-    "reason": null
-  },
-  {
-    "id": "aubg-2027-03",
-    "status": "ověřeno",
-    "note": "Akci vložila přímo American University in Bulgaria na portál IMOTION (oficiální kontakt Mariya Handzhiyska, @aubg.edu). Potvrzen začátek 15. 3. 2027, uzávěrka 19. 2. 2027, mobilita (training) i angličtina; doplněn konec 19. 3. 2027, poplatek 70 €, kapacita 100 míst, kontakt a přímý odkaz na detail akce.",
-    "checked": "2026-11-17",
-    "fixes": {
-      "end": "2027-03-19",
-      "fee_eur": 70,
-      "fee_text": "70 € (interaktivní workshop v Gorno Draglishte – doprava, strava aj.; ubytování není zahrnuto)",
-      "capacity": "max. 100 účastníků",
-      "event_url": "http://staffmobility.eu/staffweek/advancing-student-success-and-well-being",
-      "source_urls": [
-        "http://staffmobility.eu/staffweek/advancing-student-success-and-well-being"
-      ],
-      "contacts": [
+          "name": "VIA University College – Staff Week",
+          "role": "organizátor",
+          "email": "loul@via.dk",
+          "phone": null,
+          "source": "https://international.h-da.de/wege-ins-ausland/mitarbeitenden-lehrenden/staff-weeks"
+        },
         {
-          "name": "Mariya Handzhiyska",
-          "role": "Erasmus and Study Abroad Manager, Office of Erasmus and Study Abroad Programs",
-          "email": "mhandzhiyska@aubg.edu",
-          "phone": "+359 73 888 531; +359 877 461 410",
-          "source": "http://staffmobility.eu/staffweek/advancing-student-success-and-well-being"
+          "name": "VIA University College – Staff Week",
+          "role": "organizátor",
+          "email": "ci@via.dk",
+          "phone": null,
+          "source": "https://international.h-da.de/wege-ins-ausland/mitarbeitenden-lehrenden/staff-weeks"
         }
       ]
     },

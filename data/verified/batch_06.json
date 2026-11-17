@@ -1,0 +1,423 @@
+[
+  {
+    "id": "ug-gdansk-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 14.–18. 6. 2027, uzávěrka 21. 5. 2027, poplatek 350 €, kapacita 30, registrační formulář i kontakt staffweek@ug.edu.pl potvrzeny na detailu IMOTION vloženém přímo UG; konání v červnu 2027 potvrzeno také na oficiálním webu UG Welcome Centre.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-18",
+      "fee_eur": 350,
+      "fee_text": "350 € (ubytování není v ceně)",
+      "capacity": "30",
+      "registration_url": "https://forms.office.com/e/g7jnyYJjQb",
+      "event_url": "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities",
+      "source_urls": [
+        "https://welcomecentre.ug.edu.pl/choose/other/",
+        "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "Staff Week",
+          "email": "staffweek@ug.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-innsbruck-2027-06",
+    "status": "neověřeno",
+    "note": "Existence akce na Universität Innsbruck v roce 2027 potvrzena z oficiálního sylabu PDF na partnerské UniBG (Syllabus Staff Week UIBK 2027.pdf), nicméně v sylabu ani ve staženém textu stránky Uni Mannheim není uveden přesný termín 14.–18. 6. 2027 ani uzávěrka či stránka akce na uibk.ac.at.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/",
+        "https://www.unibg.it/sites/default/files/media/documents/2026-11-03/Syllabus%20Staff%20Week%20UIBK%202027.pdf"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "univ-montp3-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 14.–18. 6. 2027, uzávěrka 29. 1. 2027, poplatek 400 €, kapacita 25, kontakt Lydia a oficiální registrační formulář na doméně univ-montp3.fr potvrzeny na detailu IMOTION vloženém přímo pořadatelem. Pozn.: kontaktní e-mail ve zdroji obsahuje zjevný překlep „eramsus-agreements@umpv.fr“ (ponecháno doslovně dle zdroje).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-18",
+      "fee_eur": 400,
+      "fee_text": "400 € (ubytování není v ceně)",
+      "capacity": "25",
+      "registration_url": "https://enquetes.univ-montp3.fr/index.php/568366?lang=en",
+      "event_url": "http://staffmobility.eu/staffweek/french-language-and-civilization-staff",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/french-language-and-civilization-staff"
+      ],
+      "contacts": [
+        {
+          "name": "Lydia",
+          "role": "kontaktní osoba",
+          "email": "eramsus-agreements@umpv.fr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/french-language-and-civilization-staff"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uvt-timisoara-2027-06",
+    "status": "ověřeno",
+    "note": "Všechny údaje (17. ročník, 14.–18. 6. 2027, uzávěrka 31. 1. 2027, poplatek 80 €, kapacita 60, kontakt erasmus.staff@e-uvt.ro) plně potvrzeny na detailu IMOTION i v aktivním přihlašovacím formuláři vytvořeném přímo pod účtem Universitatea de Vest din Timișoara.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "fu-berlin-2027-06",
+    "status": "ověřeno",
+    "note": "Všechny údaje (15. ročník, 21.–25. 6. 2027, otevření přihlášek koncem listopadu 2026, uzávěrka 25. 1. 2027, 10 sekcí, 200+ účastníků, kontakt staffweek@international.fu-berlin.de) plně potvrzeny na obou oficiálních stránkách Freie Universität Berlin.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "fau-erlangen-onboarding-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 21.–25. 6. 2027 (BIP 2026-1-DE01-KA131-HED-000404586-1, online část kolem 11. 5. 2027), uzávěrka 11. 12. 2026, nulový poplatek, kapacita i kontakt Bianca Köndgen (mobility@fau.de) potvrzeny na detailu IMOTION vloženém FAU a v oficiálním letáku FAU (PDF).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-25",
+      "fee_eur": 0,
+      "fee_text": "zdarma (ubytování není v ceně)",
+      "capacity": "15 účastníků z KA131 + 10 z vybraných partnerů KA171",
+      "event_url": "http://staffmobility.eu/staffweek/welcoming-und-onboarding-international",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/welcoming-und-onboarding-international",
+        "https://nki.bme.hu/sites/default/files/Flyer_Staff%20Week_2027.pdf"
+      ],
+      "contacts": [
+        {
+          "name": "Bianca Köndgen",
+          "role": "kontaktní osoba",
+          "email": "mobility@fau.de",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/welcoming-und-onboarding-international"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "gbs-galway-ai-2027-06",
+    "status": "neověřeno",
+    "note": "Detail IMOTION odkazuje na gci.ie a kontakt cosmina@gci.ie; jde o komerční placený kurz (475 €) jazykové školy Galway Cultural Institute cílený primárně na učitele základních, středních a odborných škol, nikoli vysokoškolský staff week.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Komerční jazyková a školicí škola Galway Cultural Institute (gci.ie, kurz pro učitele ZŠ/SŠ), nikoli vysokoškolský staff week VŠ."
+  },
+  {
+    "id": "muni-brno-2027-06-prof",
+    "status": "ověřeno",
+    "note": "Termín 21.–25. 6. 2027 a kapacita (max. 12 účastníků ve skupině, 2 úrovně) potvrzeny na oficiálním webu CJV Masarykovy univerzity; uzávěrka 20. 5. 2027, poplatek 490 € a kontakt summerschools@cjv.muni.cz potvrzeny na detailu IMOTION vloženém MUNI.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-25",
+      "fee_eur": 490,
+      "fee_text": "490 € (ubytování není v ceně)",
+      "capacity": "max. 12 účastníků ve skupině (2 skupiny podle úrovně)",
+      "event_url": "https://www.cjv.muni.cz/en/courses/english-for-professionals-summer-school-27",
+      "source_urls": [
+        "https://www.cjv.muni.cz/en/courses/english-for-professionals-summer-school-27",
+        "https://www.cjv.muni.cz/en/public/summer-schools",
+        "http://staffmobility.eu/staffweek/english-professionals-summer-school-0"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Language Centre Summer School Team",
+          "role": "organizátor",
+          "email": "summerschools@cjv.muni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/english-professionals-summer-school-0"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "mu-plovdiv-eracon-2027-06",
+    "status": "částečně",
+    "note": "Termín 21.–25. 6. 2027, hostitelská univerzita Medical University of Plovdiv, poplatek 240 € i kontakty potvrzeny na registrační stránce spolupořadatele EAEC/ERACON (eaec.cy); chybí však uzávěrka přihlášek a potvrzení na vlastní doméně MU Plovdiv.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "unifg-foggia-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 21.–25. 6. 2027 (Edition 2), uzávěrka 1. 3. 2027, poplatek 250 € (předběžně), kapacita 300, mobilita teaching+training i kontakt internationalweek@unifg.it potvrzeny na detailu IMOTION i v aktivním Google formuláři vytvořeném přímo pod Università degli Studi di Foggia. Opraveno chybné duplicitní pole start2.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "start2": null
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucc-cork-2027-07-ewal",
+    "status": "ověřeno",
+    "note": "Letní škola 14. 6. – 20. 8. 2027 s nástupy každé pondělí potvrzena na oficiálním webu UCC Language Centre (ucc.ie/en/esol/courses/pricelist/), všechny červencové termíny (5. 7., 12. 7., 19. 7., 26. 7.) a jejich uzávěrky (4. 6., 11. 6., 18. 6., 25. 6. 2027) potvrzeny na IMOTION. Délka Po–Pá, poplatek 415 € a kapacita 15 doloženy ze sousedních detailů téhož kurzu EWAL 2027 na IMOTION.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-07-09",
+      "end2": "2027-07-16",
+      "fee_eur": 415,
+      "fee_text": "415 € (týdenní kurz; ubytování není v ceně, možnost zprostředkování přes UCC)",
+      "capacity": "15",
+      "event_url": "https://www.ucc.ie/en/esol/courses/pricelist/",
+      "source_urls": [
+        "https://www.ucc.ie/en/esol/courses/pricelist/",
+        "https://www.ucc.ie/en/esol/",
+        "http://staffmobility.eu/staff-Week-search?page=1"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "UCC Language Centre",
+          "role": "informace a registrace",
+          "email": "infolang@ucc.ie",
+          "phone": "+353 (0)21 490 2043",
+          "source": "https://www.ucc.ie/en/esol/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "muni-brno-summer-ai-lab-2027-07",
+    "status": "ověřeno",
+    "note": "Oba týdenní běhy pro administrativní zaměstnance a manažery (12.–16. 7. a 19.–23. 7. 2027), uzávěrka 20. 5. 2027, poplatek 490 € i kontakt summerschools@cjv.muni.cz potvrzeny na oficiálním přehledu CJV Masarykovy univerzity a na detailu/výpisu IMOTION vloženém MUNI.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-07-16",
+      "end2": "2027-07-23",
+      "fee_eur": 490,
+      "fee_text": "490 € (ubytování není v ceně)",
+      "event_url": "https://www.cjv.muni.cz/en/public/summer-schools",
+      "source_urls": [
+        "https://www.cjv.muni.cz/en/public/summer-schools",
+        "http://staffmobility.eu/staffweek/summer-ai-lab-ii-0"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Language Centre Summer School Team",
+          "role": "organizátor",
+          "email": "summerschools@cjv.muni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/summer-ai-lab-ii-0"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucc-cork-clil-2027-07",
+    "status": "ověřeno",
+    "note": "Termín 12.–16. 7. 2027, poplatek 535 €, kapacita 20 i kontakty b.ose@ucc.ie / tandd@ucc.ie potvrzeny na detailu IMOTION vloženém přímo UCC Language Centre. Uzávěrka je na IMOTION uvedena 5. 11. 2026 (již uplynula / možný překlep v datu – doporučeno ověřit u pořadatele).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-07-16",
+      "deadline_note": "Na IMOTION uvedeno 5. 11. 2026 (již po termínu / možný překlep v datu, doporučeno ověřit u pořadatele)",
+      "fee_eur": 535,
+      "fee_text": "535 € (ubytování není v ceně, možnost zprostředkování přes UCC)",
+      "capacity": "20",
+      "event_url": "http://staffmobility.eu/staffweek/english-work-and-life-ewal-content-and",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/english-work-and-life-ewal-content-and"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "dotazy ke kurzu",
+          "email": "b.ose@ucc.ie",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/english-work-and-life-ewal-content-and"
+        },
+        {
+          "name": null,
+          "role": "Teacher Training & Development",
+          "email": "tandd@ucc.ie",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/english-work-and-life-ewal-content-and"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ug-gdansk-2027-07",
+    "status": "ověřeno",
+    "note": "Termín 12.–16. 7. 2027, uzávěrka 18. 6. 2027, poplatek 350 €, kapacita 30, registrační formulář i kontakt staffweek@ug.edu.pl potvrzeny na detailu IMOTION vloženém přímo UG; konání v červenci 2027 potvrzeno také na oficiálním webu UG Welcome Centre.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-07-16",
+      "fee_eur": 350,
+      "fee_text": "350 € (ubytování není v ceně)",
+      "capacity": "30",
+      "registration_url": "https://forms.office.com/e/g7jnyYJjQb",
+      "event_url": "http://staffmobility.eu/staffweek/amber-algorithms-baltic-ai-staff-week-ai",
+      "source_urls": [
+        "https://welcomecentre.ug.edu.pl/choose/other/",
+        "http://staffmobility.eu/staffweek/amber-algorithms-baltic-ai-staff-week-ai"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "Staff Week",
+          "email": "staffweek@ug.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/amber-algorithms-baltic-ai-staff-week-ai"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "cuni-ujop-2027-07",
+    "status": "ověřeno",
+    "note": "Termín 19.–23. 7. 2027 a cena 490 € (11 417 Kč) potvrzeny na oficiální stránce ÚJOP Univerzity Karlovy (ujop.cuni.cz/UJOPEN-462.html); uzávěrka 19. 6. 2027, kapacita 30 a kontakty (Irena Antonová, Klára Kosová, ErasmusStaff@ujop.cuni.cz) potvrzeny na detailu IMOTION vloženém ÚJOP UK.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-07-23",
+      "fee_eur": 490,
+      "fee_text": "490 € / 11 417 Kč (ubytování není v ceně)",
+      "capacity": "30",
+      "registration_url": "https://ujop.cuni.cz/UJOPEN-462.html",
+      "event_url": "https://ujop.cuni.cz/UJOPEN-462.html",
+      "source_urls": [
+        "https://ujop.cuni.cz/UJOPEN-462.html",
+        "http://staffmobility.eu/staffweek/practical-english-university-staff-week-1"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Irena Antonová",
+          "role": "koordinátorka kurzu",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-university-staff-week-1"
+        },
+        {
+          "name": "Klára Kosová",
+          "role": "administrativa",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-university-staff-week-1"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "galway-business-school-clil-2027-07",
+    "status": "neověřeno",
+    "note": "Detail IMOTION odkazuje na gci.ie a kontakt cosmina@gci.ie; jde o komerční placený kurz (475 €) jazykové školy Galway Cultural Institute určený učitelům středních škol (CLIL Secondary), nikoli vysokoškolský staff week.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Komerční jazyková a školicí škola Galway Cultural Institute (gci.ie), kurz je určen učitelům středních škol (Secondary), nikoli VŠ."
+  },
+  {
+    "id": "ucc-cork-2027-08-ewal",
+    "status": "ověřeno",
+    "note": "Letní škola 14. 6. – 20. 8. 2027 (bez výuky v pondělí 2. 8. kvůli svátku Bank Holiday, proto první srpnový běh začíná v úterý 3. 8.) potvrzena na oficiálním webu UCC; všechny tři srpnové běhy (3. 8., 9. 8., 16. 8.) a jejich uzávěrky (2. 7., 9. 7., 16. 7. 2027), cena 415 € i kapacita 15 potvrzeny na IMOTION (včetně detailu běhu 16.–20. 8. 2027).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-08-06",
+      "end2": "2027-08-13",
+      "fee_eur": 415,
+      "fee_text": "415 € (týdenní kurz; ubytování není v ceně, možnost zprostředkování přes UCC)",
+      "capacity": "15",
+      "event_url": "https://www.ucc.ie/en/esol/courses/pricelist/",
+      "source_urls": [
+        "https://www.ucc.ie/en/esol/courses/pricelist/",
+        "https://www.ucc.ie/en/esol/news/2025/-summer-school-2026.html",
+        "http://staffmobility.eu/staffweek/english-work-and-life-46"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "UCC Language Centre",
+          "role": "informace a registrace",
+          "email": "infolang@ucc.ie",
+          "phone": "+353 (0)21 490 2043",
+          "source": "https://www.ucc.ie/en/esol/news/2025/-summer-school-2026.html"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucc-cork-genai-2027-08",
+    "status": "ověřeno",
+    "note": "Termín 9.–13. 8. 2027, poplatek 615 €, kapacita 20 i kontakty b.ose@ucc.ie / tandd@ucc.ie potvrzeny na detailu IMOTION vloženém přímo UCC Language Centre. Uzávěrka je na IMOTION uvedena 5. 11. 2026 (již uplynula / možný překlep v datu – doporučeno ověřit u pořadatele).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-08-13",
+      "deadline_note": "Na IMOTION uvedeno 5. 11. 2026 (již po termínu / možný překlep v datu, doporučeno ověřit u pořadatele)",
+      "fee_eur": 615,
+      "fee_text": "615 € (ubytování není v ceně, možnost zprostředkování přes UCC)",
+      "capacity": "20",
+      "event_url": "http://staffmobility.eu/staffweek/harnessing-power-generative-ai-and-other-4",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/harnessing-power-generative-ai-and-other-4"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "dotazy ke kurzu",
+          "email": "b.ose@ucc.ie",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/harnessing-power-generative-ai-and-other-4"
+        },
+        {
+          "name": null,
+          "role": "Teacher Training & Development",
+          "email": "tandd@ucc.ie",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/harnessing-power-generative-ai-and-other-4"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "galway-business-school-2027-08",
+    "status": "neověřeno",
+    "note": "Web akce (gci.ie/courses/english-language-and-irish-culture/), ceník GCI 2027, sídlo GCI House i kontakt cosmina@gci.ie dokládají, že jde o komerční jazykový kurz soukromé jazykové školy Galway Cultural Institute (450 € na gci.ie / 475 € na IMOTION) pro veřejnost a učitele angličtiny, nikoli vysokoškolský staff week.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Komerční jazykový kurz soukromé jazykové školy Galway Cultural Institute (gci.ie, GCI House) pro veřejnost a učitele angličtiny, nikoli vysokoškolský staff week."
+  }
+]

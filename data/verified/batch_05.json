@@ -1,0 +1,476 @@
+[
+  {
+    "id": "uva-valladolid-2027-05-lib",
+    "status": "ověřeno",
+    "note": "Detail na IMOTION vložený přímo knihovnou University of Valladolid (@uva.es) potvrzuje 3. ročník akce 17.–21. 5. 2027, poplatek 550 € (včetně ubytování a elektrokol) a kapacitu 10 osob. Drobný rozpor v uzávěrce: hlavička IMOTION uvádí 31. 3. 2027, text pozvánky 30. 4. 2027.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-21",
+      "deadline_note": "V hlavičce IMOTION uvedeno 31. 3. 2027, v textu pozvánky 30. 4. 2027",
+      "fee_eur": 550,
+      "fee_text": "550 € (včetně ubytování, snídaní, obědů, elektrokol a kulturního programu; nižší bez ubytování)",
+      "capacity": "10",
+      "event_url": "http://staffmobility.eu/staffweek/library-staff-week-bibliobike-uva",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/library-staff-week-bibliobike-uva"
+      ],
+      "contacts": [
+        {
+          "name": "Biblioteca Universitaria UVa",
+          "role": "kontakt pro Erasmus Staff Week",
+          "email": "erasmus.biblioteca.universitaria@uva.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/library-staff-week-bibliobike-uva"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "kdg",
+    "status": "ověřeno",
+    "note": "Termín 18.–20. 5. 2027, uzávěrka 14. 12. 2026, bezplatná účast, kapacita 30 osob, výuková mobilita i kontakt crossingborders.iw2027@kdg.be plně potvrzeny na oficiálním webu KdG.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "university-of-helsinki-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 19.–21. 5. 2027, přihlašovací období 18. 1.–15. 2. 2027 i zaměření na neakademické pracovníky (training) potvrzeny na oficiálním webu University of Helsinki.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "university-of-galway-2027-05",
+    "status": "částečně",
+    "note": "Oficiální web English Language Centre University of Galway potvrzuje program a kontakt, ale bez konkrétních dat 2027. Běh 30. 5.–5. 6. 2027, poplatek 495 € a kapacitu 15/třídu potvrzuje detail IMOTION (s uzávěrkou 1. 4. 2027 oproti 16. 4. 2027 ve výpisu IMOTION). U běhu 23. 5. 2027 chybí potvrzené datum konce.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end2": "2027-06-05",
+      "fee_eur": 495,
+      "fee_text": "495 € (bez ubytování; možnost ubytování na kampusu za 65 €/noc)",
+      "capacity": "15 ve skupině",
+      "registration_url": "https://universityofgalwayelc.clr.events",
+      "event_url": "https://universityofgalway.ie/englishlanguage/erasmusstaffmobilitycourses/",
+      "source_type": "official",
+      "source_urls": [
+        "https://universityofgalway.ie/englishlanguage/erasmusstaffmobilitycourses/",
+        "http://staffmobility.eu/staffweek/erasmus-higher-education-staff-mobility-1",
+        "http://staffmobility.eu/staff-Week-search?page=1"
+      ],
+      "contacts": [
+        {
+          "name": "English Language Centre",
+          "role": "organizátor kurzu",
+          "email": "englishlanguage@universityofgalway.ie",
+          "phone": "+353 91 524411",
+          "source": "https://universityofgalway.ie/englishlanguage/erasmusstaffmobilitycourses/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "university-of-rijeka-fthm-2027-05",
+    "status": "částečně",
+    "note": "Totožná akce FTHM University of Rijeka v Opatiji 24.–28. 5. 2027 jako záznam uniri-fthm-opatija-2027-05, který obsahuje oficiální URL pořadatele.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Duplikát záznamu uniri-fthm-opatija-2027-05 (táž akce FTHM University of Rijeka v Opatiji 24.–28. 5. 2027; zachován úplnější záznam s oficiálním URL)."
+  },
+  {
+    "id": "umfst-targu-mures-2027-05",
+    "status": "ověřeno",
+    "note": "Detail na IMOTION vložený přímo knihovnou UMFST Târgu Mureș (@umfst.ro) potvrzuje 5. ročník akce 24.–28. 5. 2027, uzávěrku 3. 5. 2027, bezplatnou účast, kapacitu 12 osob i kontaktní osoby.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-28",
+      "fee_eur": 0,
+      "fee_text": "zdarma",
+      "capacity": "12",
+      "event_url": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+      ],
+      "contacts": [
+        {
+          "name": "Anamaria Helgiu",
+          "role": "Head of Library Services",
+          "email": "anamaria.helgiu@umfst.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+        },
+        {
+          "name": "Andreea Albert",
+          "role": "Librarian",
+          "email": "andreea.albert@umfst.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+        },
+        {
+          "name": "Dîrstar Greta",
+          "role": "Librarian",
+          "email": "greta.dirstar@umfst.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ua-alicante-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 24.–28. 5. 2027 a bezplatná účast potvrzeny na oficiálním webu University of Alicante (aktualizováno 12. 11. 2026); uzávěrka 31. 1. 2027, kapacita 50 a kontakt potvrzeny v propojeném detailu IMOTION vloženém pořadatelem.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uniri-fthm-opatija-2027-05",
+    "status": "částečně",
+    "note": "Termín 24.–28. 5. 2027 v Opatiji a název akce potvrzeny na oficiálním webu FTHM University of Rijeka; uzávěrka 15. 1. 2027 však pochází jen ze sekundárního partnerského přehledu University of Passau a poplatek ani přímé kontakty nebyly na oficiální stránce doloženy.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "feup-porto-2027-05",
+    "status": "ověřeno",
+    "note": "Detail na IMOTION vložený přímo FEUP University of Porto (staff.week@fe.up.pt) potvrzuje termín 31. 5.–4. 6. 2027, uzávěrku 31. 1. 2027, poplatek 400 €, kapacitu 40–50 osob, přihlašovací formulář i kontakty.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-04",
+      "fee_eur": 400,
+      "fee_text": "400 € (ubytování není zajištěno)",
+      "capacity": "min. 40, max. 50 (max. 2 z jedné instituce)",
+      "registration_url": "https://forms.gle/bTJ8QeGtVGnrvXkH6",
+      "event_url": "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem"
+      ],
+      "contacts": [
+        {
+          "name": "Álvaro Paralta",
+          "role": "Talent Unit",
+          "email": "staff.week@fe.up.pt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem"
+        },
+        {
+          "name": "Sara Cristóvão",
+          "role": "Cooperation Unit",
+          "email": "staff.week@fe.up.pt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "hmu-chania-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 31. 5.–4. 6. 2027 v Chanii, uzávěrka 30. 4. 2027, Erasmus kód G KRITIS05 i univerzitní kontakty potvrzeny přímo na oficiálním webu iw.hmu.gr; poplatek 200 € a kapacita 300 potvrzeny v propojeném detailu IMOTION. Hostitelem je veřejná VŠ HMU (technickou organizaci zajišťuje externí agentura Filestia).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "erasmus_code": "G KRITIS05",
+      "source_type": "official",
+      "source_urls": [
+        "https://iw.hmu.gr/",
+        "http://staffmobility.eu/staffweek/14th-international-week-0"
+      ],
+      "contacts": [
+        {
+          "name": "Prof. Konstantinos Petridis",
+          "role": "Vice Rector of Internationalization & Extroversion (academic program)",
+          "email": "c.petridischania@gmail.com",
+          "phone": "+306932250964",
+          "source": "https://iw.hmu.gr/"
+        },
+        {
+          "name": "Dr. Gareth Owens",
+          "role": "administration (invitation letters & KA131)",
+          "email": "ogareth@hmu.gr",
+          "phone": null,
+          "source": "https://iw.hmu.gr/"
+        },
+        {
+          "name": "Kristina Giatsina",
+          "role": "administration (KA171)",
+          "email": "kristinag@hmu.gr",
+          "phone": null,
+          "source": "https://iw.hmu.gr/"
+        },
+        {
+          "name": "Eva Menegaki",
+          "role": "administration (BIPs)",
+          "email": "evamen@hmu.gr",
+          "phone": null,
+          "source": "https://iw.hmu.gr/"
+        },
+        {
+          "name": "Asst. Prof. Ioannis Daliakopoulos",
+          "role": "academic program",
+          "email": "idaliak@hmu.gr",
+          "phone": null,
+          "source": "https://iw.hmu.gr/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ips-santarem-2027-05",
+    "status": "ověřeno",
+    "note": "XVI. ročník a uzávěrka 29. 1. 2027 potvrzeny na oficiálním webu ipsantarem.pt; termín 31. 5.–4. 6. 2027, poplatek 150 €, kapacita 30, termín platby 28. 2. 2027 i kontakt gmci@ipsantarem.pt potvrzeny v propojeném detailu IMOTION vloženém pořadatelem.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_type": "official",
+      "fee_text": "150 € (zahrnuje uvítací večeři, 3 obědy, coffee breaky a kulturní návštěvy; bez ubytování)",
+      "source_urls": [
+        "https://www.ipsantarem.pt/internacionalizacao/semana-internacional/",
+        "http://staffmobility.eu/staffweek/xvi-international-week"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "university-of-galway-2027-06",
+    "status": "částečně",
+    "note": "Červnové běhy se začátky 6. 6., 13. 6., 20. 6. a 27. 6. 2027 a uzávěrkou 7. 5. 2027 potvrzeny ve výpisu IMOTION a program na obecném webu ELC University of Galway; chybí však samostatný detail s datem konce a poplatkem pro červnové běhy.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "event_url": "https://universityofgalway.ie/englishlanguage/erasmusstaffmobilitycourses/",
+      "source_urls": [
+        "http://staffmobility.eu/staff-Week-search?page=1",
+        "https://universityofgalway.ie/englishlanguage/erasmusstaffmobilitycourses/"
+      ],
+      "contacts": [
+        {
+          "name": "English Language Centre",
+          "role": "organizátor kurzu",
+          "email": "englishlanguage@universityofgalway.ie",
+          "phone": "+353 91 524411",
+          "source": "https://universityofgalway.ie/englishlanguage/erasmusstaffmobilitycourses/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "cuni-ujop-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 7.–11. 6. 2027 a poplatek 490 € (11 417 Kč) potvrzeny přímo na oficiálním webu ÚJOP UK; uzávěrka 7. 5. 2027, kapacita 20 a kontakty potvrzeny v propojeném detailu IMOTION vloženém pořadatelem.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-11",
+      "fee_eur": 490,
+      "fee_text": "490 € (11 417 Kč; bez ubytování)",
+      "capacity": "20",
+      "registration_url": "https://ujop.cuni.cz/UJOPEN-462.html",
+      "event_url": "https://ujop.cuni.cz/UJOPEN-462.html",
+      "source_type": "official",
+      "source_urls": [
+        "https://ujop.cuni.cz/UJOPEN-462.html?ecmid=45238",
+        "http://staffmobility.eu/staffweek/practical-english-university-staff-week-0"
+      ],
+      "contacts": [
+        {
+          "name": "Irena Antonová",
+          "role": "koordinátorka kurzu",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-university-staff-week-0"
+        },
+        {
+          "name": "Klára Kosová",
+          "role": "administrativní agenda",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-university-staff-week-0"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "hof-university-2027-06",
+    "status": "částečně",
+    "note": "Termín 7.–11. 6. 2027, téma Digitainability, výuková mobilita i kontakt Tina Seidel potvrzeny na oficiálním webu Hof University; uzávěrka přihlášek a případný poplatek však na oficiální stránce zatím nebyly zveřejněny.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "kdg-antwerp-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 7.–11. 6. 2027 (plus online úvod v dubnu 2027), uzávěrka 15. 12. 2026, bezplatná účast, Erasmus kód B ANTWERP 59 i oba kontakty plně potvrzeny na oficiálním webu KdG.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "tampere-university-2027-06",
+    "status": "neověřeno",
+    "note": "Ročník 2027 (7.–11. 6. 2027, uzávěrka 31. 1. 2027) se nepodařilo v dostupných živých důkazech potvrdit: nalezen byl pouze starší záznam IMOTION pro ročník 2025 a stažený výpis partnerské stránky Uni Mannheim končí u dubna 2027.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ubm",
+    "status": "ověřeno",
+    "note": "Oficiální web Université Bordeaux Montaigne výslovně odkazuje na IMOTION jako zdroj procedur pro každoroční červnový Staff Week; termín 7.–11. 6. 2027, uzávěrka 31. 1. 2027, poplatek 300 €, kapacita 20 i aktivní formulář Framaforms jsou plně potvrzeny.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "fee_text": "300 € (zahrnuje 4× oběd, coffee breaky, uvítací večeři, prohlídku Bordeaux a výlet do Saint-Émilion; bez ubytování)"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucv-valencia-spanish-2027-06",
+    "status": "ověřeno",
+    "note": "Samostatné detailní stránky na IMOTION vložené přímo Institute of Languages UCV (@ucv.es) potvrzují oba červnové běhy (14.–18. 6. a 28. 6.–2. 7. 2027), uzávěrky 14. 5. a 28. 5. 2027, poplatek 490 €, kapacitu 25 i kontakty.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-06-18",
+      "end2": "2027-07-02",
+      "fee_eur": 490,
+      "fee_text": "490 € za týden (zahrnuje 20h kurz španělštiny, obědy a kulturní program; bez ubytování)",
+      "capacity": "25",
+      "event_url": "http://staffmobility.eu/staffweek/spanish-language-international-week-2027",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/spanish-language-international-week-2027",
+        "http://staffmobility.eu/staffweek/spanish-language-international-week-2027-2"
+      ],
+      "contacts": [
+        {
+          "name": "Lucía de Ros",
+          "role": "Institute of Languages (hlavní kontakt)",
+          "email": "lucia.deros@ucv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/spanish-language-international-week-2027"
+        },
+        {
+          "name": "UCV Staff Mobility",
+          "role": "asistence k Erasmus+ stipendiu",
+          "email": "staffmobility@ucv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/spanish-language-international-week-2027"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "metu-ankara-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 14.–18. 6. 2027 (BIP), uzávěrka 15. 3. 2027, bezplatná účast i kontakty @metu.edu.tr potvrzeny v detailu IMOTION vloženém METU i přímo v živém přihlašovacím formuláři Google Forms (uzávěrka 15. 3. 2027 je ve formuláři výslovně potvrzena).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline_note": "Uzávěrka 15. 3. 2027 potvrzena v hlavičce IMOTION i v aktivním přihlašovacím formuláři METU"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucc-cork-2027-06-ewal",
+    "status": "ověřeno",
+    "note": "Letní program English for Work and Life (od 14. 6. do 20. 8. 2027) a kontakt infolang@ucc.ie potvrzeny na oficiálním webu UCC Language Centre; běh 21.–25. 6. 2027, uzávěrka 21. 5. 2027, poplatek 415 € a kapacita 15 potvrzeny v detailu IMOTION vloženém UCC. U běhu 14. 6. 2027 uvádí výpis IMOTION anomální prošlou uzávěrku 16. 11. 2026 a chybí samostatný detail s datem konce.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end2": "2027-06-25",
+      "fee_eur": 415,
+      "fee_text": "415 € (ubytování není v ceně; možnost ubytování v hostitelské rodině)",
+      "capacity": "15",
+      "event_url": "https://www.ucc.ie/en/esol/courses/erasmusprogrammes/englishforworkandlifegeneralenglish/",
+      "source_type": "official",
+      "source_urls": [
+        "https://www.ucc.ie/en/esol/courses/erasmusprogrammes/englishforworkandlifegeneralenglish/",
+        "https://www.ucc.ie/en/esol/courses/pricelist/",
+        "http://staffmobility.eu/staffweek/english-work-and-life-40",
+        "http://staffmobility.eu/staff-Week-search?page=1"
+      ],
+      "contacts": [
+        {
+          "name": "UCC Language Centre",
+          "role": "obecné dotazy a registrace",
+          "email": "infolang@ucc.ie",
+          "phone": "+353 (0)21 490 2043",
+          "source": "https://www.ucc.ie/en/esol/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upv-valencia-stp-2027-06",
+    "status": "ověřeno",
+    "note": "Termín 14.–18. 6. 2027, uzávěrka 24. 5. 2027 (platba do 31. 5. 2027), poplatek 500 €, kapacita 20, registrační formulář i koordinátoři ETSEAMN UPV potvrzeni z oficiální PDF brožury nahrané na IMOTION.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2027-05-24",
+      "deadline_note": "úhrada poplatku do 31. 5. 2027",
+      "fee_eur": 500,
+      "fee_text": "500 € (zahrnuje výuku, materiály, 5× coffee break, uvítací paellu a závěrečný oběd; bez ubytování)",
+      "capacity": "20",
+      "language": "angličtina, španělština",
+      "registration_url": "https://forms.gle/mqbP3B5maVjs4CUL8",
+      "event_url": "http://staffmobility.eu/sites/default/files/staffweek/33rd_stp_valencia.pdf",
+      "source_type": "imotion",
+      "source_urls": [
+        "http://staffmobility.eu/sites/default/files/staffweek/33rd_stp_valencia.pdf",
+        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/"
+      ],
+      "contacts": [
+        {
+          "name": "Prof. Dr. Vicente Castell",
+          "role": "Head of IRO ETSEAMN",
+          "email": null,
+          "phone": null,
+          "source": "http://staffmobility.eu/sites/default/files/staffweek/33rd_stp_valencia.pdf"
+        },
+        {
+          "name": "Claudio Benavent",
+          "role": "International Officer IRO ETSEAMN",
+          "email": null,
+          "phone": null,
+          "source": "http://staffmobility.eu/sites/default/files/staffweek/33rd_stp_valencia.pdf"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucc-cork-ewal-2027-06",
+    "status": "ověřeno",
+    "note": "Totožná červnová akce English for Work and Life na UCC Language Centre jako záznam ucc-cork-2027-06-ewal.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Duplikát záznamu ucc-cork-2027-06-ewal (táž akce UCC Language Centre v červnu 2027; zachován přesnější záznam s aktivní uzávěrkou 21. 5. 2027)."
+  }
+]

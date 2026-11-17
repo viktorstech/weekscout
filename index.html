@@ -410,11 +410,18 @@ $("dlg").addEventListener("click", ev => { if (ev.target.id === "dlg") ev.target
 /* ---------- mapa ---------- */
 const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
 const BASES = {
-  "Mapa": () => L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}),
-  "Satelit": () => L.tileLayer(ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}", {maxZoom:19, attribution:"Tiles &copy; Esri, Maxar, Earthstar Geographics"}),
-  "Světlá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16})]),
-  "Tmavá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16})])
+  "Mapa": () => L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, noWrap:false, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}),
+  "Satelit": () => L.tileLayer(ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}", {maxZoom:19, noWrap:false, attribution:"Tiles &copy; Esri, Maxar, Earthstar Geographics"}),
+  "Světlá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false})]),
+  "Tmavá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false})])
 };
+function updateMinZoom(){
+  if (!map) return;
+  const h = $("map").clientHeight || window.innerHeight;
+  const mz = Math.max(1, Math.ceil(Math.log2(Math.max(h, 256) / 256)));
+  map.setMinZoom(mz);
+  if (map.getZoom() < mz) map.setZoom(mz);
+}
 function icon(e, sel){
   return L.divIcon({className: "evm" + (sel ? " sel" : ""), iconSize: [0, 0],
     html: `<span class="pin" style="--c:${mcol(e)}"></span><span class="plbl" style="--c:${mcol(e)}">${fmt(e.start, e.end)}</span>`});
@@ -422,7 +429,8 @@ function icon(e, sel){
 function initMap(){
   const el = $("map");
   if (!window.L) { el.innerHTML = `<p style="padding:24px;color:var(--muted)">Mapu se nepodařilo načíst. Akce najdete v seznamu a na časové ose.</p>`; return; }
-  map = L.map(el, {zoomControl:false, worldCopyJump:true}).fitBounds([[35, -11], [64, 32]]);
+  map = L.map(el, {zoomControl:false, worldCopyJump:true, maxBounds:[[-85, -1800], [85, 1800]], maxBoundsViscosity:1.0}).fitBounds([[35, -11], [64, 32]]);
+  updateMinZoom();
   const layers = {}; for (const k in BASES) layers[k] = BASES[k]();
   let start = "Mapa"; try { const s = localStorage.getItem("eiw-base"); if (s && layers[s]) start = s; } catch (e) {}
   let current = layers[start].addTo(map);
@@ -484,6 +492,7 @@ function setMini(on){
   if (on) savedView = {c: map.getCenter(), z: map.getZoom()};
   document.body.classList.toggle("mini", on);
   map.invalidateSize();
+  updateMinZoom();
   if (on) fitAll(); else if (savedView) map.setView(savedView.c, savedView.z, {animate:false});
 }
 function focusEv(id){
@@ -563,7 +572,7 @@ function setList(open){
 lb.addEventListener("click", () => setList(lp.hidden));
 $("listclose").addEventListener("click", () => setList(false));
 $("more").addEventListener("toggle", () => { if (!lp.hidden) placePanel(); padTimeline(); });
-window.addEventListener("resize", () => { if (!lp.hidden) placePanel(); padTimeline(); setMini(view === "tl" && innerWidth > 700); });
+window.addEventListener("resize", () => { if (!lp.hidden) placePanel(); padTimeline(); setMini(view === "tl" && innerWidth > 700); updateMinZoom(); });
 
 /* ---------- přepínání obrazovek: mapa ⟷ časová osa ---------- */
 let view = "map";

@@ -1,0 +1,298 @@
+[
+  {
+    "id": "viko-vilnius-2027-03",
+    "status": "ověřeno",
+    "note": "Akce je reálná a potvrzená v detailu na IMOTION (1.–5. 3. 2027, v textu IMOTION uzávěrka 15. 12. 2026, v hlavičce překlep 2027), jedná se ale o duplikát záznamu viko-vilnius-2027-03-2, který obsahuje oficiální web iw.viko.lt a odkaz na registraci.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Duplikát akce viko-vilnius-2027-03-2 (19th International Teaching Week ITW'2027 na VIKO ve dnech 1.–5. 3. 2027)."
+  },
+  {
+    "id": "viko-vilnius-2027-03-2",
+    "status": "ověřeno",
+    "note": "Potvrzeno přímo na oficiálním webu iw.viko.lt (včetně podstránek Registration a Programme at a glance) i v detailu na IMOTION: 1.–5. 3. 2027, uzávěrka 15. 12. 2026, výuková mobilita, zdarma, kapacita 100 účastníků, kontakty international@viko.lt a s.leistrumiene@viko.lt.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "fhj",
+    "status": "ověřeno",
+    "note": "Potvrzeno na oficiálním webu akce internationaldesignweek27.fh-joanneum.design, v PDF výzvě IDW27_Call.pdf i v živém formuláři FH JOANNEUM: 8.–12. 3. 2027, uzávěrka návrhů workshopů pro lektory 30. 11. 2026, 9–14 studentů na workshop, angličtina, teaching i studying.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "fau-erlangen-flugel-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém přímo pořadatelem (FAU Erlangen-Nürnberg) i na partnerském webu BOKU: oba termíny 8.–12. 3. a 15.–19. 3. 2027, uzávěrka 15. 12. 2026 (first-come-first-served). Doplněn bezplatný režim, kapacita 15 účastníků, kontakt axel.munnecke@fau.de a detailní URL na IMOTION.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline_note": "přihlášky podle pořadí doručení (first-come-first-served)",
+      "fee_eur": 0,
+      "fee_text": "zdarma (ubytování nezajištěno)",
+      "capacity": "max. 15 účastníků",
+      "event_url": "http://staffmobility.eu/staffweek/flugel-course-carbonate-microfacies-8-12",
+      "source_type": "imotion",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/flugel-course-carbonate-microfacies-8-12",
+        "https://boku.ac.at/en/international/themen/boku-staff-going-international/erasmus-personal-mobilitaet/erasmus-staff-training/international-staff-training-weeks"
+      ],
+      "contacts": [
+        {
+          "name": "Axel Munnecke",
+          "role": "GeoZentrum Nordbayern – Palaeontology",
+          "email": "axel.munnecke@fau.de",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/flugel-course-carbonate-microfacies-8-12"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uma",
+    "status": "částečně",
+    "note": "Oba termíny (8.–12. 3. a 10.–14. 5. 2027), poplatek 250 €, omezená kapacita, angličtina i kontakty jsou potvrzeny na oficiálním webu UMA a v oficiálním registračním formuláři. Uzávěrka 15. 1. 2027 však není na stažených oficiálních stránkách UMA uvedena a pochází pouze ze sekundárního zdroje (University of Passau).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ugr-granada-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno jak na oficiálním webu UGR (internacional.ugr.es/print/pdf/node/774, termín 8.–12. 3. 2027, angličtina), tak v detailu na IMOTION vloženém pořadatelem (konec 12. 3. 2027, uzávěrka 31. 1. 2027, kapacita 25 účastníků). Doplněn konec akce, kapacita a oficiální zdroje.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-03-12",
+      "capacity": "max. 25 účastníků",
+      "event_url": "https://internacional.ugr.es/en/node/774",
+      "source_type": "official",
+      "source_urls": [
+        "https://internacional.ugr.es/en/node/774",
+        "https://internacional.ugr.es/print/pdf/node/774",
+        "http://staffmobility.eu/staffweek/it-network-and-it-services-centre-staff-1"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "aubg-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém přímo pořadatelem AUBG (15.–19. 3. 2027, uzávěrka 19. 2. 2027, poplatek 70 €, kapacita 100, kontakt mhandzhiyska@aubg.edu). Doplněn přímý odkaz na oficiální registrační formulář na doméně apply.aubg.edu.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "registration_url": "https://apply.aubg.edu/register/erasmus_staff_mobility"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "inseec-bba-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém přímo pořadatelem INSEEC BBA (člen OMNES Education Group): 15.–19. 3. 2027 (kampusy Paříž, Bordeaux, Lyon), uzávěrka 5. 12. 2026, dvoukroková přihláška, výuková mobilita, zdarma, kapacita 15 účastníků, kontakty international.bbainseec@inseec.com a cmassane@inseec.com.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "hs-kl-kaiserslautern-ibw-2027-03",
+    "status": "neověřeno",
+    "note": "Ročník 2027 ani termín 15.–19. 3. 2027 se nepodařilo v živých důkazech potvrdit: na oficiálním webu hs-kl.de byly nalezeny pouze zprávy o dřívějších ročnících (2025, 2026) a výpis na partnerské stránce ujaen.es neobsahuje v zachycené části záznam o této akci.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "laurea-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno přímo na oficiálním webu Laurea UAS (laurea.fi/en/events/laurea-international-week-2027/): 15.–19. 3. 2027 (kampusy Leppävaara v Espoo a Tikkurila ve Vantaa), uzávěrka 6. 1. 2027, bez registračního poplatku (storno poplatek 50 € při neomluveném zrušení).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "mru-vilnius-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém přímo pořadatelem MRU (LT VILNIUS06): 15.–19. 3. 2027, uzávěrka 31. 1. 2027, výuková mobilita (STA), zdarma, kapacita 20 účastníků, angličtina (B2/C1), kontakty erasmus@mruni.eu a io@mruni.eu.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ug-gdansk-2027-03",
+    "status": "ověřeno",
+    "note": "Potvrzeno na oficiálním webu Welcome Centre University of Gdańsk (březen 2027) i v detailu na IMOTION vloženém pořadatelem: 15.–19. 3. 2027, uzávěrka 10. 2. 2027, poplatek 350 €, kapacita 30 účastníků, souběžný BIP a studentské sympozium, registrační formulář i kontakt staffweek@ug.edu.pl.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-ljubljana-2027-03",
+    "status": "částečně",
+    "note": "Termín 15.–19. 3. 2027, uzávěrku 16. 11. 2026, bezplatnou účast, kapacitu 30 osob i kontakty na @uni-lj.si shodně potvrzuje oficiální PDF leták UL zveřejněný partnerskou KPH Vídeň a weby partnerských VŠ (IPCB, PřF UK, UNTZ). Přímá stránka na doméně uni-lj.si však nebyla v důkazech nalezena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline_note": "oznámení vybraným uchazečům 30. 11. 2026",
+      "fee_eur": 0,
+      "fee_text": "zdarma (ubytování nezajištěno)",
+      "capacity": "max. 30 účastníků",
+      "event_url": "https://kphvie.ac.at/fileadmin/Dateien_KPH/Go_international/pdf/UL_STT2027_general_info_preliminary_programme.pdf",
+      "source_urls": [
+        "https://ipcb.pt/estudar/internacionais/internationalweeks/",
+        "https://kphvie.ac.at/fileadmin/Dateien_KPH/Go_international/pdf/UL_STT2027_general_info_preliminary_programme.pdf",
+        "https://natur.cuni.cz/en/faculty/foreign-affairs/news/news/12236-erasmus-staff-week-digital-bridges-communicating-with-students-in-erasmus-in-the-age-of-digital-tools"
+      ],
+      "contacts": [
+        {
+          "name": "Jerneja Čelofiga",
+          "role": "International Relations Office, Faculty of Medicine",
+          "email": "International.erasmus@mf.uni-lj.si",
+          "phone": null,
+          "source": "https://kphvie.ac.at/fileadmin/Dateien_KPH/Go_international/pdf/UL_STT2027_general_info_preliminary_programme.pdf"
+        },
+        {
+          "name": "Bibi Ovaska",
+          "role": "Head of the University Office for International Relations",
+          "email": "studentof@uni-lj.si",
+          "phone": null,
+          "source": "https://kphvie.ac.at/fileadmin/Dateien_KPH/Go_international/pdf/UL_STT2027_general_info_preliminary_programme.pdf"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vdu-kaunas-t4eu-bip-2027-03",
+    "status": "částečně",
+    "note": "Termín 15.–19. 3. 2027 na VMU v Kaunasu, forma BIP a jazyk angličtina jsou potvrzeny na oficiálním webu aliance Transform4Europe a v PDF programu. Přihlášky se podávají přes domovskou kancelář T4EU; konkrétní uzávěrka 30. 11. 2026 (a online úvod 8. 3. 2027) pochází ze sekundárního zdroje partnerské TUL.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2026-11-30",
+      "deadline_note": "přihláška přes domovskou univerzitu / kancelář T4EU (termín 30. 11. 2026 dle TUL; online úvodní setkání 8. 3. 2027)",
+      "language": "English",
+      "event_url": "https://transform4europe.eu/events/transform4europe-doctoral-week/",
+      "source_type": "official",
+      "source_urls": [
+        "https://transform4europe.eu/events/transform4europe-doctoral-week/",
+        "https://transform4europe.units.it/wp-content/uploads/2026/11/T4EU_1st_Time_Researcher_programme-info.pdf",
+        "https://easy.tul.cz/aktuality/erasmus-bip-doctoral-week-in-social-sciences-in-lithuania",
+        "https://www.ujaen.es/internacional/en/uja-students/summer-schools-others"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "xamk-savonlinna-2027-03",
+    "status": "částečně",
+    "note": "Oficiální stránka xamk.fi/en/international-xamk-week/ potvrzuje konání International Week v Savonlinně v březnu 2027, uzávěrku 15. 1. 2027, bezplatnou účast, kapacitu 50 účastníků a otevřenost pro výuku (STA), školení (STT) i studenty. Přesné dny 16.–18. 3. 2027 však nejsou v zachyceném textu oficiální stránky výslovně uvedeny (v úvodním odstavci navíc zůstal neaktualizovaný rok 2025).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline": "2027-01-15",
+      "mobility": [
+        "teaching",
+        "training",
+        "studying"
+      ],
+      "fee_eur": 0,
+      "fee_text": "zdarma (cestovní náklady a ubytování hradí účastník)",
+      "capacity": "max. 50 účastníků",
+      "event_url": "https://www.xamk.fi/en/international-xamk-week/",
+      "source_type": "official",
+      "source_urls": [
+        "https://www.xamk.fi/en/international-xamk-week/",
+        "https://www.ujaen.es/internacional/en/uja-students/summer-schools-others"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "elte-budapest-2027-04",
+    "status": "částečně",
+    "note": "Datum začátku 5. 4. 2027, uzávěrka 3. 1. 2027, hostitel ELTE (Fakulta pedagogiky a psychologie) a anglický jazyk jsou potvrzeny v přehledovém výpisu IMOTION. Detailní karta akce na IMOTION ani oficiální stránka na webu ELTE však nebyla v důkazech nalezena, takže chybí datum konce, poplatek i kontakty.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-marburg-2027-04",
+    "status": "částečně",
+    "note": "Termín 5.–9. 4. 2027, anglický jazyk i oba kontakty jsou potvrzeny na dvou oficiálních stránkách Philipps-Universität Marburg (na EN webu s podtitulem Building Resilient Partnerships, v kalendáři s podtitulem Empowering Universities). Uzávěrka přihlášek a poplatek však dosud nebyly zveřejněny (odkaz SqmcB1 slouží jen k zanechání e-mailu pro zaslání informací).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "utb-zlin-2027-04",
+    "status": "ověřeno",
+    "note": "Plně potvrzeno na oficiálním webu utb.cz/en/international-week/: 5.–9. 4. 2027, uzávěrka 1. 3. 2027 (s průběžným hodnocením a možností dřívějšího uzavření), zdarma, max. 2 účastníci za instituci, pro neakademické i akademické pracovníky, kontakt staffexchange@utb.cz.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "kp-copenhagen-2027-04",
+    "status": "ověřeno",
+    "note": "Plně potvrzeno na oficiálním webu kp.dk/en/kp-international-week-2027/: 5.–7. 4. 2027, uzávěrka 1. 12. 2026, bez registračního poplatku, pro výukovou i školicí mobilitu (teaching/training), kontakt international@kp.dk a +45 41 89 70 60.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-freiburg-2027-04-ai",
+    "status": "částečně",
+    "note": "Termín 5.–9. 4. 2027, poplatek 400 € (tematický kurz, 20 hodin) i kontakt staffweek@sli.uni-freiburg.de jsou potvrzeny v oficiálním PDF letáku SLI pro rok 2027 na IMOTION a obecně na webu uni-freiburg.de (kde je ale v tabulce zatím ročník 2026). Opraven chybný 2. termín 19.–23. 4. 2027 (v letáku jde o kurz němčiny B1; druhý běh AI Literacy 29. 11.–3. 12. 2027 spadá mimo sledované období). Pevná uzávěrka není uvedena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "start2": null,
+      "end2": null,
+      "event_url": "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+      "source_type": "official",
+      "source_urls": [
+        "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vilnius-tech-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém přímo pořadatelem VILNIUS TECH (i na partnerské stránce ipc.sze.hu): 5.–9. 4. 2027, uzávěrka 1. 2. 2027, zdarma, max. 2 účastníci za instituci, pro akademické i administrativní pracovníky (STA/STT), kontakt staffmobility@vilniustech.lt.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uvt-timisoara-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém pořadatelem UVT, v živém oficiálním registračním formuláři UVT i na partnerských univerzitách (UNTZ, UET): 5.–9. 4. 2027, kapacita 50, teaching, kontakt Flavia Miruna Seres (erasmus.staff@e-uvt.ro). Uzávěrka 31. 12. 2026 ze strukturovaného pole IMOTION (v textu je zjevný překlep 31. 12. 2027).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "deadline_note": "v textu na IMOTION je překlep 31. 12. 2027, ve strukturovaném poli IMOTION je správně 31. 12. 2026"
+    },
+    "remove": false,
+    "reason": null
+  }
+]

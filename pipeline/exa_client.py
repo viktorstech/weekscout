@@ -39,7 +39,9 @@ EXA_SEARCH_URL = "https://api.exa.ai/search"
 EXA_CONTENTS_URL = "https://api.exa.ai/contents"
 
 ROTATE_STATUSES = {401, 402, 403, 429}
+EXHAUSTED_STATUSES = {401, 402, 403}
 RETRY_STATUSES = {500, 502, 503, 504}
+_EXHAUSTED_SLOTS: set[int] = set()
 
 
 class _HTMLTextExtractor(HTMLParser):
@@ -106,8 +108,10 @@ def get_api_keys() -> dict[int, str]:
 
 
 def _ordered_key_slots(keys: dict[int, str], preferred: int) -> list[tuple[int, str]]:
-    """Seřadí dostupné klíče tak, aby se začalo preferovaným a pak rotovalo."""
-    slots = sorted(keys.keys())
+    """Seřadí dostupné klíče tak, aby se začalo preferovaným a pak rotovalo (přeskakuje vyčerpané)."""
+    slots = [s for s in sorted(keys.keys()) if s not in _EXHAUSTED_SLOTS]
+    if not slots:
+        slots = sorted(keys.keys())
     if preferred in slots:
         idx = slots.index(preferred)
         slots = slots[idx:] + slots[:idx]
@@ -187,6 +191,8 @@ def exa_post(
                 detail = exc.read().decode("utf-8", errors="replace")[:300]
                 last_error = f"HTTP {code} (klíč #{slot}): {detail}"
                 if code in ROTATE_STATUSES:
+                    if code in EXHAUSTED_STATUSES:
+                        _EXHAUSTED_SLOTS.add(slot)
                     print(
                         f"[rotace klíče] klíč #{slot} vrátil HTTP {code}, zkouším další klíč...",
                         file=sys.stderr,

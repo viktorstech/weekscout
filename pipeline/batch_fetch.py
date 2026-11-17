@@ -304,6 +304,24 @@ def cmd_verify(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_verify_all(args: argparse.Namespace) -> int:
+    bdir = REPO_ROOT / "data" / "verify_batches"
+    batches = sorted(bdir.glob("batch_*.json"))
+    if not batches:
+        print(f"V {bdir} nejsou žádné dávky batch_*.json.", file=sys.stderr)
+        return 1
+    key_ring = [4, 5, 4, 5, 1, 2, 3]
+    for i, bpath in enumerate(batches):
+        sub_args = argparse.Namespace(
+            batch=str(bpath),
+            key=key_ring[i % len(key_ring)],
+            max_chars=args.max_chars,
+            no_cache=args.no_cache,
+        )
+        cmd_verify(sub_args)
+    return 0
+
+
 def cmd_enrich(args: argparse.Namespace) -> int:
     in_path = Path(args.file)
     if not in_path.is_file():
@@ -374,6 +392,11 @@ def build_parser() -> argparse.ArgumentParser:
     vr.add_argument("--max-chars", type=int, default=6000)
     vr.add_argument("--no-cache", action="store_true")
     vr.set_defaults(func=cmd_verify)
+
+    va = sub.add_parser("verify-all", help="Stáhne důkazy pro všechny dávky batch_*.json najednou.")
+    va.add_argument("--max-chars", type=int, default=6000)
+    va.add_argument("--no-cache", action="store_true")
+    va.set_defaults(func=cmd_verify_all)
 
     en = sub.add_parser("enrich", help="Dohledá chybějící oficiální údaje pro Agenta 5 přes klíč #5.")
     en.add_argument("file", help="Cesta k data/curated.json.")

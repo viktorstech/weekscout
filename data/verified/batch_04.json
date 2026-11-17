@@ -1,0 +1,434 @@
+[
+  {
+    "id": "lsu-kaunas-2027-04",
+    "status": "částečně",
+    "note": "Termín prezenční části BIP (26.–30. 4. 2027; online 4. 2.–15. 4. 2027) a hostitel LSU Kaunas potvrzeny na partnerském webu WZ UW. Oficiální stránka pořadatele LSU nebyla v důkazech nalezena a uzávěrka 2026-12-03 nebyla v dostupném výňatku viditelná (týká se navíc jen studentů WZ UW). Odstraněn chybný zdroj tf-ex.dreamapply.com a mobilita teaching, které patřily jiné akci (10th LSU International Week, 12.–16. 4. 2027).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "mobility": [
+        "studying"
+      ],
+      "event_url": "https://wz.uw.edu.pl/en/the-faculty/news/recruitment-of-university-of-warsaw-faculty-of-management-students-for-the-erasmus-bip-in-kaunas-lithuania/",
+      "source_urls": [
+        "https://wz.uw.edu.pl/en/the-faculty/news/recruitment-of-university-of-warsaw-faculty-of-management-students-for-the-erasmus-bip-in-kaunas-lithuania/",
+        "https://wz.uw.edu.pl/wydzial/aktualnosci/rekrutacja-studentow-wz-uw-do-programu-erasmus-bip-w-kownie-litwa/"
+      ],
+      "notes": "Erasmus+ BIP pro studenty bakalářského studia (online část 4. 2.–15. 4. 2027, prezenční část v Kaunasu 26.–30. 4. 2027). Původní odkaz na 10th LSU International Week (12.–16. 4. 2027) patřil jiné akci a byl odstraněn."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "stuba-bratislava-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 26.–30. 4. 2027, uzávěrka 31. 1. 2027 (výsledky v únoru 2027), poplatek 290 € i kontakt Mgr. Dominika Repko potvrzeny na detailu IMOTION vloženém přímo pořadatelem STU Bratislava a shodným oznámením STU International na LinkedInu.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-relations-erasmus-staff",
+        "https://www.linkedin.com/posts/stu-international_international-relations-erasmus-staff-activity-7480525087687753728-ene_"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upv-valencia-ufm-2027-04",
+    "status": "částečně",
+    "note": "Termín 26.–28. 4. 2027 a název 9th UFM Valencia na UPV potvrzeny ze sekundárního zdroje (seznam Staff Weeks Universität Mannheim). Původní stránka výpisu IMOTION akci již neobsahuje a oficiální web UPV ani uzávěrka 5. 4. 2027 nebyly v živých důkazech potvrzeny.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_type": "partner",
+      "source_urls": [
+        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "hs-emden-leer-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 26.–30. 4. 2027, uzávěrka 25. 11. 2026, bezplatnost i kapacita 25 míst potvrzeny na detailu IMOTION vloženém přímo pořadatelem HS Emden/Leer (a rovněž v přehledu partnerské Universidad de Jaén). Oficiální URL na hs-emden-leer.de je funkční (HTTP 200), extrakt však zachytil jen navigaci.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-staff-training-week-new-0",
+        "https://www.hs-emden-leer.de/einrichtungen/international-office/internationalisierung-an-der-hochschule/staff-week",
+        "https://www.ujaen.es/internacional/en/uja-staff/teaching-and-administration-staff-news"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vdu-kaunas-2027-04",
+    "status": "částečně",
+    "note": "Termín 26.–30. 4. 2027, mobilita teaching i training a obecný kontakt potvrzeny přímo na oficiálním webu VDU (vdu.lt). Uzávěrka 6. 12. 2026 je potvrzena pouze ve výpisu IMOTION u souběžného programu Belonging Beyond Borders; poplatek 200 €, kapacita 30 ani registrační formulář na aktuální stránce VDU uvedeny nejsou.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "hs-kaiserslautern-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 27.–29. 4. 2027, uzávěrka 15. 2. 2027 i poplatek 150 € potvrzeny přímo na oficiálním webu Hochschule Kaiserslautern (EN i DE) a na detailu IMOTION, který navíc uvádí kapacitu 20 účastníků. Doplněn konec akce, poplatek, kapacita a oficiální URL.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-29",
+      "fee_eur": 150,
+      "fee_text": "150 € (pro zaměstnance HS Kaiserslautern zdarma)",
+      "capacity": "20",
+      "event_url": "https://hs-kl.de/en/international/international-office/from-abroad/international-staff-training-in",
+      "source_type": "official",
+      "source_urls": [
+        "https://hs-kl.de/en/international/international-office/from-abroad/international-staff-training-in",
+        "http://staffmobility.eu/staffweek/best-practice-days-mobility-matters"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ase-fabiz-bucharest-2027-05",
+    "status": "ověřeno",
+    "note": "Termín jarního běhu i uzávěrka 15. 3. 2027 potvrzeny na oficiálním webu FABIZ-ASE (aktualizováno 10. 11. 2026) a v oficiální brožuře 2026/2027. Oproti starší brožuře u partnera UE Varna (3.–7. 5. 2027) byl termín oficiálně posunut na 10.–14. 5. 2027. Doplněna oprava termínu, poplatek 0 €, Erasmus kód RO BUCURES04 a oficiální URL.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "fee_eur": 0,
+      "fee_text": "Bez účastnického poplatku",
+      "erasmus_code": "RO BUCURES04",
+      "event_url": "https://www.fabiz.ase.ro/itw/",
+      "source_type": "official",
+      "source_urls": [
+        "https://www.fabiz.ase.ro/itw/",
+        "https://www.fabiz.ase.ro/wp-content/uploads/2026/09/Brosura_ITW_2026-2027.pdf",
+        "https://ue-varna.bg/uploads/filemanager/3135/ITW%20oct%202026%20-%20mai%202027%20(5).pdf"
+      ],
+      "notes": "Termín jarního běhu byl na oficiálním webu FABIZ-ASE (aktualizováno 10. 11. 2026) a v aktuální brožuře posunut z původních 3.–7. 5. 2027 na 10.–14. 5. 2027."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "bme-budapest-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 3.–7. 5. 2027, poplatek 300 € i kapacita 15–30 účastníků (s předností pro alianci EELISA) potvrzeny na oficiální stránce BME (nki.bme.hu) i na detailu IMOTION vloženém pořadatelem, který potvrzuje uzávěrku 1. 2. 2027 a kontakt Susana Jászai. Doplněno oficiální URL a kontakt mezinárodního oddělení BME.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "event_url": "https://nki.bme.hu/node/6288?language=en",
+      "source_type": "official",
+      "source_urls": [
+        "https://nki.bme.hu/node/6288?language=en",
+        "http://staffmobility.eu/staffweek/beyond-mobility-exchange-3rd"
+      ],
+      "contacts": [
+        {
+          "name": "Susana Jászai",
+          "role": null,
+          "email": "erasmus_staffweek@bme.hu",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-mobility-exchange-3rd"
+        },
+        {
+          "name": "International Relations Office (BME)",
+          "role": "mezinárodní oddělení",
+          "email": "internationalrelations@bme.hu",
+          "phone": "+36 1 463-1111",
+          "source": "https://nki.bme.hu/node/6288?language=en"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "muni-brno-2027-05",
+    "status": "ověřeno",
+    "note": "Potvrzeno na detailu IMOTION (masaryk-university-staff-training-week-24) vloženém střediskem Teiresiás MU: jde o nový ročník 2027 (pondělí 3. 5. – pátek 7. 5. 2027, uzávěrka středa 31. 3. 2027, poplatek TBC, kapacita 30, kontakt Tomas Varga), pouze v názvu zůstal překlep „2026“ z loňského ročníku (11.–15. 5. 2026 pod záznamem -17). Doplněn konec akce, kapacita, poznámka k poplatku, kontakt a URL.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-07",
+      "capacity": "30",
+      "fee_text": "Bude upřesněno (TBC)",
+      "registration_url": "https://www.teiresias.muni.cz/en/education-sport-and-leisure/must-week",
+      "event_url": "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-24",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-24"
+      ],
+      "contacts": [
+        {
+          "name": "Tomas Varga",
+          "role": "Teiresias Centre",
+          "email": "varga@teiresias.muni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-24"
+        }
+      ],
+      "notes": "V názvu na IMOTION zůstal z předchozího ročníku překlep „2026“, jde však o nový ročník 2027 (3.–7. 5. 2027, uzávěrka 31. 3. 2027); loňský ročník proběhl 11.–15. 5. 2026 pod samostatným záznamem."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "usj-zaragoza-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 3.–7. 5. 2027, uzávěrka 11. 1. 2027, poplatek 250 €, kapacita 25 i kontakt Paula Navarro potvrzeny na detailu IMOTION vloženém přímo San Jorge University a nezávisle potvrzeny oficiální brožurou USJ na webu partnerské Università degli Studi di Messina. Doplněny chybějící údaje.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-07",
+      "fee_eur": 250,
+      "fee_text": "250 € (zahrnuje akademický a kulturní program, obědy a dvě večeře; bez ubytování a dopravy)",
+      "capacity": "25",
+      "event_url": "http://staffmobility.eu/staffweek/ii-international-simulation-week",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/ii-international-simulation-week",
+        "https://www.unime.it/notizie/ii-international-simulation-week-experiential-learning-higher-education-san-jorge",
+        "https://www.unime.it/sites/default/files/2026-11/USJ_Agenda_Staff_Week_EN_2027.pdf"
+      ],
+      "contacts": [
+        {
+          "name": "Paula Navarro",
+          "role": "International Officer",
+          "email": "staffweek@usj.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/ii-international-simulation-week"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upv-valencia-sss-2027-05",
+    "status": "neověřeno",
+    "note": "Akce 13th SSS Valencia (3.–7. 5. 2027) ani uzávěrka 12. 4. 2027 nebyly v živě stažených důkazech nalezeny – stránkování výpisu IMOTION se posunulo a textový výpis tabulky Universität Mannheim končí u dubnových akcí. Termín se z dostupných důkazů nepodařilo potvrdit.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucv-valencia-spanish-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027, uzávěrka 10. 4. 2027, poplatek 490 €, kapacita 25 i kontakty UCV potvrzeny na detailu IMOTION vloženém přímo pořadatelem (Institute of Languages, Catholic University of Valencia). Doplněn konec akce, poplatek, kapacita, kontakty a URL detailu.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-14",
+      "fee_eur": 490,
+      "fee_text": "490 € (zahrnuje 20hodinový kurz španělštiny, kulturní program a obědy; bez ubytování)",
+      "capacity": "25",
+      "event_url": "http://staffmobility.eu/staffweek/spanish-language-international-week-2027-1",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/spanish-language-international-week-2027-1"
+      ],
+      "contacts": [
+        {
+          "name": "Lucía de Ros",
+          "role": "Institute of Languages (UCV)",
+          "email": "lucia.deros@ucv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/spanish-language-international-week-2027-1"
+        },
+        {
+          "name": "UCV Staff Mobility",
+          "role": "podpora k Erasmus+ mobilitě",
+          "email": "staffmobility@ucv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/spanish-language-international-week-2027-1"
+        }
+      ],
+      "notes": "UCV nabízí stejný týdenní kurz španělštiny také v dalších termínech v červnu 2027 (14.–18. 6. a 28. 6.–2. 7. 2027)."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ku-klaipeda-bip-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027, uzávěrka 10. 4. 2027, bezplatnost, kapacita 25 i kontakt Jelena Bogatova potvrzeny na detailu IMOTION vloženém přímo Klaipeda University. Doplněn konec akce, poplatek 0 €, kapacita, kontakt a URL detailu.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-14",
+      "fee_eur": 0,
+      "fee_text": "Bez účastnického poplatku",
+      "capacity": "25",
+      "event_url": "http://staffmobility.eu/staffweek/bip-transforming-higher-education",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/bip-transforming-higher-education"
+      ],
+      "contacts": [
+        {
+          "name": "Jelena Bogatova",
+          "role": "Erasmus+ Institutional Coordinator, International Relations Office",
+          "email": "jelena.bogatova@ku.lt",
+          "phone": "+370 46 398950",
+          "source": "http://staffmobility.eu/staffweek/bip-transforming-higher-education"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ulusofona-lisbon-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027, uzávěrka 15. 3. 2027, bezplatnost, jazyky (angličtina/portugalština), mobilita teaching i kontakty pro kampusy Lisabon a Porto potvrzeny na detailu IMOTION vloženém přímo Lusófona University (včetně příloh pro ročník 2027).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/8th-international-teaching-and-research"
+      ],
+      "notes": "Akce probíhá souběžně na kampusech v Lisabonu a Portu (prezenčně i online); každý přednášející si volí jeden kampus."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ipvc-viana-do-castelo-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027 (10th International Week), uzávěrka 31. 1. 2027, existence poplatku (výše zatím neuvedena) i kontakty IPVC potvrzeny na detailu IMOTION vloženém přímo pořadatelem. Doplněn konec akce, informace o poplatku, kontakt a URL detailu.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-14",
+      "fee_text": "Požadován poplatek (výše zatím neuvedena)",
+      "event_url": "http://staffmobility.eu/staffweek/rethinking-higher-education-ai-driven",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/rethinking-higher-education-ai-driven"
+      ],
+      "contacts": [
+        {
+          "name": "International Relations Office (IPVC)",
+          "role": "mezinárodní oddělení",
+          "email": "internacional@ipvc.pt",
+          "phone": "+351 258 809 610",
+          "source": "http://staffmobility.eu/staffweek/rethinking-higher-education-ai-driven"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-bremen-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027, harmonogram párování přednášek do ledna 2027 (bez pevného dne uzávěrky), bezplatnost, mobilita teaching i kontakt Jenny Bredull plně potvrzeny přímo na oficiálních stránkách Universität Bremen (EN i DE).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ue-katowice-2027-05",
+    "status": "částečně",
+    "note": "Termín 10.–16. 5. 2027 a podtitul „Internet Communication Management“ potvrzeny přímo na oficiálním webu UE Katowice (intweek.ue.katowice.pl). Uzávěrka přihlášek, poplatek, kontakty ani podrobnosti kurzů zatím nejsou na ověřené stránce zveřejněny (to be announced).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "event_name": "16th International Week „Internet Communication Management”"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vilnius-tech-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027, uzávěrka 28. 2. 2027, poplatek 300 € (+100 € při aktivní prezentaci na konferenci), kapacita 20, oba kontakty i živý registrační formulář potvrzeny na detailu IMOTION vloženém přímo pořadatelem (Faculty of Business Management, VILNIUS TECH).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/9th-erasmus-international-staff-exchange",
+        "https://forms.gle/p1ByydmMy8Jj4VRc6"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "svako-siauliai-2027-05",
+    "status": "ověřeno",
+    "note": "Termín 10.–14. 5. 2027, uzávěrka 31. 3. 2027, bezplatnost, registrační formulář, kontakt iro@svako.lt i předběžný denní program plně potvrzeny na oficiálním webu Šiaulių valstybinė kolegija (svako.lt) a v oficiální PDF agendě.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "https://svako.lt/en/news/international-staff-week27",
+        "http://staffmobility.eu/sites/default/files/staffweek/preliminary_agenda_iw27_participants.docx_0.pdf",
+        "http://staffmobility.eu/staffweek/international-staff-week27-experience"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ans-leszno-2027-05",
+    "status": "ověřeno",
+    "note": "Existence akce International Days 2027, Erasmus kód PL LESZNO01 i kontakt Dominika Pluta potvrzeny na oficiálním webu ANS Leszno; termín 17.–21. 5. 2027, uzávěrka 31. 1. 2027, poplatek 60 € a kapacita 25 potvrzeny na detailu IMOTION vloženém přímo pořadatelem. Doplněny všechny chybějící údaje a oficiální URL.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-21",
+      "fee_eur": 60,
+      "fee_text": "60 €",
+      "capacity": "25",
+      "erasmus_code": "PL LESZNO01",
+      "event_url": "https://en.ansleszno.pl/International-Days-2027,66099.html",
+      "source_type": "official",
+      "source_urls": [
+        "https://en.ansleszno.pl/International-Days-2027,66099.html",
+        "http://staffmobility.eu/staffweek/international-days-2027",
+        "https://en.ansleszno.pl/Contact,63564.html"
+      ],
+      "contacts": [
+        {
+          "name": "MA Dominika Pluta",
+          "role": "Head of the International Office, Institutional Erasmus+ Coordinator",
+          "email": "dwz@ansleszno.pl",
+          "phone": "+48 65 525 01 56",
+          "source": "https://en.ansleszno.pl/Contact,63564.html"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uwb-bialystok-2027-05",
+    "status": "částečně",
+    "note": "Termín 17.–21. 5. 2027, podrobný předběžný program i přihlašovací e-mail dwmprojekty@uwb.edu.pl potvrzeny přímo z oficiálního PDF na webu University of Białystok (uwb.edu.pl). Uzávěrka přihlášek ani informace o poplatku však v dokumentu uvedeny nejsou.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ug-gdansk-2027-05",
+    "status": "ověřeno",
+    "note": "Konání akce v květnu 2027 potvrzeno na oficiálním webu University of Gdańsk (welcomecentre.ug.edu.pl) a přesný termín 17.–21. 5. 2027, uzávěrka 23. 4. 2027, poplatek 350 €, kapacita 30, registrační formulář i kontakt staffweek@ug.edu.pl potvrzeny na detailu IMOTION vloženém přímo pořadatelem. Doplněny všechny chybějící údaje.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-05-21",
+      "fee_eur": 350,
+      "fee_text": "350 €",
+      "capacity": "30",
+      "registration_url": "https://forms.office.com/e/g7jnyYJjQb",
+      "event_url": "http://staffmobility.eu/staffweek/augmented-academic-smart-campus-human",
+      "source_type": "official",
+      "source_urls": [
+        "https://welcomecentre.ug.edu.pl/choose/other/",
+        "http://staffmobility.eu/staffweek/augmented-academic-smart-campus-human"
+      ],
+      "contacts": [
+        {
+          "name": "University of Gdańsk Staff Week",
+          "role": "organizátor Staff Week",
+          "email": "staffweek@ug.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/augmented-academic-smart-campus-human"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  }
+]

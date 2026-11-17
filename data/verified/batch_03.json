@@ -1,0 +1,432 @@
+[
+  {
+    "id": "algebra-bernays-zagreb-2027-04",
+    "status": "částečně",
+    "note": "Termín 12.–16. 4. 2027 i název akce jsou potvrzeny na oficiálním webu Algebra Bernays University (stránky Programme a Thursday Abroad). Uzávěrka přihlášek, poplatek ani přímý kontakt však nejsou na stažených podstránkách uvedeny.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ucv-valencia-spanish-2027-04",
+    "status": "neověřeno",
+    "note": "Dubnový termín (12. 4. 2027, uzávěrka 12. 3. 2027) se v živých důkazech z IMOTION nepodařilo potvrdit. Vyhledávání na IMOTION našlo pouze navazující ročníkové edice téže akce Catholic University of Valencia v květnu a červnu 2027 (10.–14. 5., 14.–18. 6. a 28. 6.–2. 7. 2027; poplatek 490 €, kapacita 25, kontakt lucia.deros@ucv.es).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "cuni-library-prague-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém Ústřední knihovnou Univerzity Karlovy (oficiální e-mail erasmus-lib@cuni.cz, odkaz na library.cuni.cz). Doplněn konec akce (16. 4. 2027), poplatek 200 €, kapacita 15 míst, kontakt a poznámka k přihlášce.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-16",
+      "deadline_note": "Přihláška e-mailem (CV a motivační dopis); výsledky nejpozději do 8. 2. 2027",
+      "fee_eur": 200,
+      "fee_text": "200 € (zahrnuje exkurze do národních knihoven, drobné občerstvení a organizaci; bez ubytování, stravy a MHD)",
+      "capacity": "15",
+      "event_url": "http://staffmobility.eu/staffweek/staff-training-week-charles-university-8",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/staff-training-week-charles-university-8"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "Ústřední knihovna UK (přihlášky a dotazy)",
+          "email": "erasmus-lib@cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/staff-training-week-charles-university-8"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "galway-business-school-clil-2027-04",
+    "status": "ověřeno",
+    "note": "Detail na IMOTION (12.–16. 4. 2027, uzávěrka 2. 4. 2027, 475 € jen školné) odkazuje přímo na jazykovou a školicí školu Galway Cultural Institute (gci.ie, cosmina@gci.ie) a kurz je určen učitelům středních škol (CLIL Secondary). Vyřazeno jako komerční jazykový/školicí kurz mimo záběr vysokoškolských International/Staff Weeks.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Komerční kurz soukromé jazykové a školicí školy Galway Cultural Institute (gci.ie, 475 € školné) určený pro učitele středních škol (CLIL Secondary), nikoli vysokoškolský Erasmus+ International/Staff Week."
+  },
+  {
+    "id": "kvk-klaipeda-2027-04",
+    "status": "ověřeno",
+    "note": "Plně potvrzeno na oficiálním webu Klaipėdos valstybinė kolegija (kvk.lt) i v detailu na IMOTION. Doplněn konec akce (16. 4. 2027), poplatek 80 €, mobilita rozšířena o výuku (Teaching i Training Agreement) a nastaven oficiální zdroj.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-16",
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fee_eur": 80,
+      "fee_text": "80 € (zahrnuje programové aktivity; ubytování není zajištěno)",
+      "event_url": "https://www.kvk.lt/en/event/invitation-to-international-week/",
+      "source_urls": [
+        "https://www.kvk.lt/en/event/invitation-to-international-week/",
+        "http://staffmobility.eu/staffweek/26-international-week-healthy-and"
+      ],
+      "source_type": "official"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upsa-salamanca-2027-04",
+    "status": "ověřeno",
+    "note": "Všechny údaje (termín 12.–16. 4. 2027, uzávěrka 6. 1. 2027, mobilita teaching/training, kontakt international.programs@upsa.es) jsou potvrzeny v detailu na IMOTION vloženém přímo Pontifical University of Salamanca.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uva-lund-2027-04",
+    "status": "částečně",
+    "note": "Termín 12.–16. 4. 2027 (společně s Lund University), odhadovaný poplatek 500 € (zdarma pro partnery U21 a EUGLOH) i kapacitní omezení (max. 2 za univerzitu) jsou potvrzeny na oficiálním webu University of Amsterdam (uva.nl). Uzávěrka přihlášek zatím nebyla zveřejněna (k dispozici je jen formulář pro odběr novinek).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "urca-reims-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém knihovnou University of Reims Champagne-Ardenne (oficiální e-mail lsw@univ-reims.fr). Doplněn konec akce (16. 4. 2027), bezplatná účast (0 €), kapacita 16 míst, kontakt a přímý odkaz na detail.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-16",
+      "fee_eur": 0,
+      "fee_text": "zdarma (ubytování není zajištěno)",
+      "capacity": "16",
+      "event_url": "http://staffmobility.eu/staffweek/how-help-them-focus-sharing-library",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/how-help-them-focus-sharing-library"
+      ],
+      "contacts": [
+        {
+          "name": null,
+          "role": "URCA Library Staff Week",
+          "email": "lsw@univ-reims.fr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/how-help-them-focus-sharing-library"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uew-wroclaw-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 12.–16. 4. 2027, uzávěrka 31. 1. 2027 (včetně navazujících milníků), poplatek 150 €, koordinátor Piotr Luty i telefon jsou potvrzeny na oficiálních stránkách Wroclaw University of Economics and Business (international.uew.pl a uew.pl).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "powislanska-kwidzyn-2027-04",
+    "status": "ověřeno",
+    "note": "Všechny údaje (termín St 14. 4. – Ne 18. 4. 2027, uzávěrka Ne 31. 1. 2027, poplatek 80 €, registrace přes MS Forms i kontakt erasmus@powislanska.edu.pl) jsou potvrzeny v živém detailu na IMOTION vloženém přímo pořadatelskou VŠ.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-ljubljana-harma-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 15.–17. 4. 2027, mobilita STT, kapacita i kontakty jsou potvrzeny na oficiálním webu akce (harma.eu.com); uzávěrka 20. 12. 2026 je potvrzena na IMOTION vloženém pořadatelem (s přímým odkazem na harma.eu.com). Drobný rozpor v kapacitě: oficiální web uvádí 85 míst, IMOTION 90. Přesná výše poplatku nebyla v načtené části webu uvedena.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-17",
+      "fee_text": "výše poplatku na webu akce (zahrnuje coffee breaky, 3 obědy a welcome pack; slavnostní večeře 2. den a ubytování zvlášť)",
+      "capacity": "85 (doporučeno max. 1–2 účastníci za instituci; IMOTION uvádí 90)",
+      "event_url": "https://harma.eu.com/",
+      "source_urls": [
+        "https://harma.eu.com/",
+        "https://harma.eu.com/information/",
+        "http://staffmobility.eu/staffweek/harma-harmony-and-music-analysis-seminar"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "David Veber",
+          "role": "HarMA Seminar Team (hostitelská instituce)",
+          "email": "david.veber@ag.uni-lj.si",
+          "phone": null,
+          "source": "https://harma.eu.com/information/"
+        },
+        {
+          "name": "Salvatore Gioveni",
+          "role": "HarMA projects President",
+          "email": "erasmus@conservatoire.be",
+          "phone": null,
+          "source": "https://harma.eu.com/information/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-lj-harma-2027-04",
+    "status": "ověřeno",
+    "note": "Totožná akce jako záznam uni-ljubljana-harma-2027-04 (5. ročník HarMA Seminar Event na Hudební akademii Univerzity v Lublani, 15.–17. 4. 2027). Vyřazeno jako duplikát.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": true,
+    "reason": "Duplikát záznamu uni-ljubljana-harma-2027-04 (stejná akce HarMA Seminar Event na Hudební akademii Univerzity v Lublani v termínu 15.–17. 4. 2027)."
+  },
+  {
+    "id": "cuni-ujop-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 19.–23. 4. 2027 i poplatek 490 € (11 417 Kč) jsou potvrzeny na oficiálním webu ÚJOP UK (ujop.cuni.cz); uzávěrka 19. 3. 2027, kapacita 20 míst a kontakty jsou potvrzeny v detailu na IMOTION vloženém ÚJOP UK.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-23",
+      "fee_eur": 490,
+      "fee_text": "490 € / 11 417 Kč (kurzovné; ubytování není zajištěno)",
+      "capacity": "20",
+      "registration_url": "https://ujop.cuni.cz/UJOPEN-462.html",
+      "event_url": "https://ujop.cuni.cz/UJOPEN-462.html?ecmid=45238",
+      "source_urls": [
+        "https://ujop.cuni.cz/UJOPEN-462.html?ecmid=45238",
+        "http://staffmobility.eu/staffweek/practical-english-university-staff-week"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Irena Antonová / Klára Kosová",
+          "role": "koordinátorka kurzu / administrativa (ÚJOP UK)",
+          "email": "ErasmusStaff@ujop.cuni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/practical-english-university-staff-week"
+        },
+        {
+          "name": "ÚJOP UK",
+          "role": "obecný kontakt",
+          "email": "ujop@ujop.cuni.cz",
+          "phone": "+420 212 245 245",
+          "source": "https://ujop.cuni.cz/UJOPEN-462.html?ecmid=45238"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "eka-riga-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém EKA University of Applied Sciences (s oficiálními kontakty @eka.edu.lv a @augstskola.lv) i v partnerském oznámení Széchenyi István University (ipc.sze.hu). Doplněn konec akce (23. 4. 2027), poplatek 250 € (early bird 200 € do 30. 11. 2026), kapacita 50 míst, registrační formulář a kontakty.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-23",
+      "fee_eur": 250,
+      "fee_text": "250 € (zahrnuje společenský program; early bird do 30. 11. 2026 za 200 €; ubytování není zajištěno)",
+      "capacity": "50",
+      "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeqaTpMGsxZ43QVtmXkrvJd7QJmTeJ_-YxLrfKnjuz4pcLQTg/viewform?usp=header",
+      "event_url": "http://staffmobility.eu/staffweek/international-academic-week-2027",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-academic-week-2027",
+        "https://ipc.sze.hu/international-academic-week-2027-eka"
+      ],
+      "contacts": [
+        {
+          "name": "Marina Tihomirova",
+          "role": "EKA Erasmus+ coordinator",
+          "email": "erasmus@eka.edu.lv",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-academic-week-2027"
+        },
+        {
+          "name": "Veronika Beluza",
+          "role": "IAW2027 coordinator",
+          "email": "veronika.beluza@augstskola.lv",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-academic-week-2027"
+        },
+        {
+          "name": "Jelena Titko",
+          "role": "Vice Rector for Science and International Relations",
+          "email": "jelena.titko@eka.edu.lv",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-academic-week-2027"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ugent-ghent-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém knihovnou Ghent University (kontakt @ugent.be), v přiloženém PDF letáku i v oznámení pracovnice knihovny UGent. Doplněna kapacita 16 míst, kontakt a přímý odkaz na detail IMOTION.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "capacity": "16",
+      "fee_text": "150 € registrační poplatek (ubytování není zajištěno)",
+      "event_url": "http://staffmobility.eu/staffweek/future-proofing-library-expertise",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/future-proofing-library-expertise",
+        "http://staffmobility.eu/sites/default/files/staffweek/isw3_flyer2027_def.pdf"
+      ],
+      "contacts": [
+        {
+          "name": "A. van der Meulen",
+          "role": "Ghent University Library",
+          "email": "annelise.vandermeulen@ugent.be",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/future-proofing-library-expertise"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "fh-salzburg-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 19.–23. 4. 2027, uzávěrka 31. 10. 2026 (již proběhlá), místo konání (Campus Urstein, Puch) i mobilita teaching/training jsou potvrzeny přímo na oficiálním webu FH Salzburg (fh-salzburg.ac.at).",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "samk-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 19.–23. 4. 2027, uzávěrka 15. 12. 2026 i cílová skupina (Erasmus+ training) jsou potvrzeny na oficiálním webu SAMK (samk.fi) a na webu aliance DIVERSE. Doplněn oficiální kontaktní e-mail int.office@samk.fi.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "contacts": [
+        {
+          "name": "SAMK International Office",
+          "role": "organizátor",
+          "email": "int.office@samk.fi",
+          "phone": null,
+          "source": "https://www.samk.fi/en/samk/internationalisation/samk-international-staff-week/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "sorbonne-nouvelle-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém Sorbonne Nouvelle University (Paris 3). Doplněn konec akce (23. 4. 2027), poplatek 250 €, kapacita 20 míst a přímý odkaz na detail akce.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-23",
+      "fee_eur": 250,
+      "fee_text": "250 € (zahrnuje program, materiály, organizované návštěvy a uvítací kávu; bez ubytování a stravy)",
+      "capacity": "20",
+      "event_url": "http://staffmobility.eu/staffweek/research-management-and-support-sorbonne",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/research-management-and-support-sorbonne"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uni-koeln-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 19.–22. 4. 2027 (čtyřdenní akce Po–Čt), uzávěrka 1. 12. 2026 i kontakt edi-staffmobility@verw.uni-koeln.de jsou potvrzeny přímo na oficiálních stránkách University of Cologne (survey.uni-koeln.de, PDF agenda na vielfalt.uni-koeln.de) i v detailu na IMOTION. Doplněn konec akce (22. 4. 2027), poplatek 300 €, kapacita 25 míst, registrační URL, kontakt a oficiální zdroje.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-22",
+      "fee_eur": 300,
+      "fee_text": "300 € (ubytování není zajištěno)",
+      "capacity": "25",
+      "registration_url": "https://survey.uni-koeln.de/index.php/561947?lang=en",
+      "event_url": "https://vielfalt.uni-koeln.de/events-kampagnen/staff-mobility-week",
+      "source_urls": [
+        "https://survey.uni-koeln.de/index.php/561947?lang=en",
+        "https://vielfalt.uni-koeln.de/fileadmin/home/bdahmen/PDFs/EDI-StaffMob_UoC_Agenda.pdf",
+        "http://staffmobility.eu/staffweek/why-edi-matters-equity-diversity-and"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Department for Equal Opportunities",
+          "role": "organizátor (University of Cologne)",
+          "email": "edi-staffmobility@verw.uni-koeln.de",
+          "phone": null,
+          "source": "https://survey.uni-koeln.de/index.php/561947?lang=en"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "ug-gdansk-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 19.–23. 4. 2027, uzávěrka 26. 3. 2027, poplatek 350 €, kapacita 30 míst, registrační odkaz i kontakt staffweek@ug.edu.pl jsou potvrzeny v živém detailu na IMOTION a existence dubnové akce 2027 je potvrzena také na oficiálním webu Welcome Centre University of Gdańsk (welcomecentre.ug.edu.pl).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "fee_text": "350 € účastnický poplatek (ubytování není zajištěno)",
+      "source_urls": [
+        "https://welcomecentre.ug.edu.pl/choose/other/",
+        "http://staffmobility.eu/staffweek/human-machine-teaching-age-ai-spring"
+      ],
+      "source_type": "official"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "osu-ostrava-2027-04",
+    "status": "ověřeno",
+    "note": "Potvrzeno v detailu na IMOTION vloženém Ostravskou univerzitou (oficiální e-mail international.office@osu.cz). V úvodní větě textu je zjevný překlep roku („19 – 23 April 2026“), avšak tabulka termínu (Po 19. 4. – Pá 23. 4. 2027), uzávěrka 5. 2. 2027, potvrzení 19. 2. 2027 i označení 6. ročníku jednoznačně potvrzují rok 2027 (5. ročník proběhl 20.–24. 4. 2026). Doplněn konec akce, poplatek 150 €, kapacita 15 míst, registrace a kontakt.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "end": "2027-04-23",
+      "deadline_note": "Potvrzení přijetí nejpozději do 19. 2. 2027",
+      "fee_eur": 150,
+      "fee_text": "150 € (zahrnuje oficiální společenský program; sleva/osvobození pro členy aliance NEOLAiA; ubytování není zajištěno)",
+      "capacity": "15 (max. 2 účastníci za instituci)",
+      "registration_url": "https://forms.cloud.microsoft/e/w0y0LM2pfs?origin=lprLink",
+      "event_url": "http://staffmobility.eu/staffweek/international-staff-week-33",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-staff-week-33"
+      ],
+      "contacts": [
+        {
+          "name": "Centre for International Cooperation",
+          "role": "organizátor (Ostravská univerzita)",
+          "email": "international.office@osu.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-staff-week-33"
+        }
+      ],
+      "notes": "V úvodní větě textu na IMOTION je zjevný překlep roku („19 – 23 April 2026“), tabulka termínu (Po 19. 4. – Pá 23. 4. 2027), uzávěrka (5. 2. 2027), potvrzení (19. 2. 2027) i 6. ročník jednoznačně potvrzují rok 2027 (5. ročník proběhl 20.–24. 4. 2026)."
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "haaga-helia-2027-04",
+    "status": "ověřeno",
+    "note": "Termín 26.–30. 4. 2027, uzávěrka 18. 1. 2027, mobilita teaching/training i struktura poplatků (150 € partneři / 450 € nepartneři / zdarma Ulysseus a plný 5denní program + online workshop přes Erasmus+ STT) jsou potvrzeny na oficiálním webu Haaga-Helia. Opraven překlep v URL z 29-30-april-2027 na platnou adresu 26-30-april-2027 a upřesněn text poplatku.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "fee_text": "150 € pro partnerské instituce, 450 € pro nepartnerské; zdarma pro členy aliance Ulysseus a pro účastníky plného 5denního programu s online workshopem v rámci Erasmus+ STT (zahrnuje uvítací večeři, obědy, dopravu do Porvoo a program)",
+      "event_url": "https://www.haaga-helia.fi/en/international-teacher-and-staff-week-26-30-april-2027",
+      "source_urls": [
+        "https://www.haaga-helia.fi/en/international-teacher-and-staff-week-26-30-april-2027"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  }
+]
