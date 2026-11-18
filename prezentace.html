@@ -130,6 +130,45 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
   .demo-banner{flex-direction:column;align-items:start}
   .metric-row{gap:18px;flex-wrap:wrap}
 }
+
+@media print {
+  @page {
+    size: 297mm 167.06mm;
+    margin: 0;
+  }
+  html, body {
+    width: 297mm !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #0c0a1d !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .deck {
+    display: block !important;
+    width: 297mm !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    width: 297mm !important;
+    height: 167.06mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    display: flex !important;
+    box-sizing: border-box !important;
+    padding: 34px 44px !important;
+    background: #0c0a1d !important;
+  }
+  .bottom-bar {
+    display: none !important;
+  }
+}
 </style>
 </head>
 <body>
