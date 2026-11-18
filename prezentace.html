@@ -57,9 +57,9 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:v
 .brand-name{font:800 16px var(--display);letter-spacing:-.02em}
 .tag-team{font:700 12px var(--mono);color:var(--sun);background:rgba(250,204,21,.12);padding:4px 10px;border-radius:999px}
 
-.speaker-pill{
-  font:700 13px var(--body);padding:6px 14px;border-radius:999px;
-  background:rgba(139,92,246,.16);border:1.5px solid var(--violet);color:#ddd6fe;
+.meta-pill{
+  font:600 12.5px var(--mono);padding:6px 14px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1.5px solid var(--line);color:var(--muted);
   display:inline-flex;align-items:center;gap:6px;
 }
 
@@ -155,19 +155,45 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
     inset: auto !important;
     width: 297mm !important;
     height: 167.06mm !important;
+    max-height: 167.06mm !important;
     page-break-after: always !important;
     break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
     opacity: 1 !important;
     pointer-events: auto !important;
     transform: none !important;
     display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
     box-sizing: border-box !important;
-    padding: 34px 44px !important;
+    padding: 24px 38px !important;
     background: #0c0a1d !important;
+    overflow: hidden !important;
   }
   .bottom-bar {
     display: none !important;
   }
+  .slide-body {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  h1.hero { font-size: 38px !important; line-height: 1.1 !important; }
+  h2.title { font-size: 26px !important; line-height: 1.15 !important; margin: 0 0 8px !important; }
+  p.sub { font-size: 13.5px !important; line-height: 1.35 !important; margin: 0 0 14px !important; }
+  .grid3 { gap: 12px !important; margin-top: 6px !important; }
+  .grid2 { gap: 14px !important; margin-top: 6px !important; }
+  .card-box { padding: 14px 18px !important; border-radius: 14px !important; gap: 6px !important; }
+  .card-title { font-size: 15px !important; }
+  .card-desc { font-size: 11.5px !important; line-height: 1.35 !important; }
+  .card-icon { font-size: 22px !important; }
+  .metric-row { margin: 10px 0 !important; gap: 24px !important; }
+  .metric-val { font-size: 34px !important; }
+  .metric-lbl { font-size: 11px !important; }
+  .demo-banner { margin-top: 10px !important; padding: 10px 16px !important; border-radius: 12px !important; gap: 12px !important; }
+  .demo-banner b { font-size: 14px !important; }
+  .demo-banner span { font-size: 11.5px !important; }
+  .demo-btn { padding: 7px 16px !important; font-size: 12px !important; }
 }
 </style>
 </head>
@@ -185,7 +211,7 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
         <span class="brand-name">WeekScout</span>
         <span class="tag-team">TÝM 17 · 4IT529</span>
       </div>
-      <div class="speaker-pill">🎙️ Viktor Štěch &amp; Jiří Matějka</div>
+      <div class="meta-pill">Semestrální projekt · ZS 2026/27</div>
     </div>
     <div class="slide-body">
       <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:14px">
@@ -204,7 +230,7 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
   <section class="slide" data-slide="2">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">WeekScout</span></div>
-      <div class="speaker-pill">🎙️ Viktor (0:45 – 1:30)</div>
+      <div class="meta-pill">4IT529 · Tým 17</div>
     </div>
     <div class="slide-body">
       <span style="font:700 13px var(--mono);color:var(--pink);text-transform:uppercase;letter-spacing:.05em">Realita na univerzitách</span>
@@ -229,14 +255,14 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
         </div>
       </div>
     </div>
-    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">A pro studenty hledající krátké BIP kurzy je situace ještě třikrát horší.</div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Informační asymetrie na straně účastníků (akademici i studenti)</div>
   </section>
 
   <!-- SLIDE 3: B2C Řešení – WeekScout pro účastníky -->
   <section class="slide" data-slide="3">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">WeekScout B2C</span></div>
-      <div class="speaker-pill">🎙️ Viktor (1:30 – 4:45)</div>
+      <div class="meta-pill">B2C Platforma</div>
     </div>
     <div class="slide-body">
       <span style="font:700 13px var(--mono);color:var(--teal);text-transform:uppercase;letter-spacing:.05em">Řešení pro vyučující a studenty</span>
@@ -272,14 +298,14 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
         <a class="demo-btn" href="https://viktorstech.github.io/weekscout/" target="_blank" rel="noopener">Otevřít živou mapu ↗</a>
       </div>
     </div>
-    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Přechod slova: Kde je v tom ale opravdový byznys a Competitive Intelligence?</div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Kompletní databáze: 153 akcí ze 107 univerzit ve 26 zemích Evropy</div>
   </section>
 
   <!-- SLIDE 4: Problém univerzit (OZS) -->
   <section class="slide" data-slide="4">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">WeekScout B2B</span></div>
-      <div class="speaker-pill">🎙️ Jirka (4:45 – 5:30)</div>
+      <div class="meta-pill">B2B Příležitost</div>
     </div>
     <div class="slide-body">
       <span style="font:700 13px var(--mono);color:var(--coral);text-transform:uppercase;letter-spacing:.05em">Obrácená strana mince</span>
@@ -311,7 +337,7 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
   <section class="slide" data-slide="5">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">WeekScout Campus</span></div>
-      <div class="speaker-pill">🎙️ Jirka (5:30 – 8:00)</div>
+      <div class="meta-pill">WeekScout Campus</div>
     </div>
     <div class="slide-body">
       <span style="font:700 13px var(--mono);color:var(--sun);text-transform:uppercase;letter-spacing:.05em">Manažerská Competitive Intelligence</span>
@@ -340,14 +366,14 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
         <a class="demo-btn" href="https://viktorstech.github.io/weekscout/uni.html" target="_blank" rel="noopener">Otevřít portál Campus ↗</a>
       </div>
     </div>
-    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Vyzkoušíme také přepnutí na tarif Free a ukázku paywallu.</div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Competitive Intelligence nástroje pro zahraniční oddělení (OZS)</div>
   </section>
 
   <!-- SLIDE 6: Monetizace & Byznys Model -->
   <section class="slide" data-slide="6">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">Business Model</span></div>
-      <div class="speaker-pill">🎙️ Jirka (8:00 – 9:00)</div>
+      <div class="meta-pill">Business Model</div>
     </div>
     <div class="slide-body">
       <span style="font:700 13px var(--mono);color:var(--ok);text-transform:uppercase;letter-spacing:.05em">Škálovatelný B2B SaaS</span>
@@ -388,7 +414,7 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
   <section class="slide" data-slide="7">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">Technologie &amp; CI</span></div>
-      <div class="speaker-pill">🎙️ Viktor &amp; Jirka (9:00 – 9:30)</div>
+      <div class="meta-pill">Architektura MAS</div>
     </div>
     <div class="slide-body">
       <span style="font:700 13px var(--mono);color:var(--violet);text-transform:uppercase;letter-spacing:.05em">Architektura v pozadí</span>
@@ -430,7 +456,7 @@ p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;mar
   <section class="slide" data-slide="8">
     <div class="slide-top">
       <div class="brand-pill"><span class="brand-name">WeekScout</span><span class="tag-team">TÝM 17</span></div>
-      <div class="speaker-pill">🎙️ Viktor &amp; Jirka (9:30 – 10:00)</div>
+      <div class="meta-pill">4IT529 · ZS 2026/27</div>
     </div>
     <div class="slide-body" style="text-align:center;align-items:center">
       <div class="brand-icon" style="width:58px;height:58px;border-radius:18px;margin-bottom:16px">
