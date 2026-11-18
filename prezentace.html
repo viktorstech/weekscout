@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WeekScout – Prezentace projektu (Tým 17 · 4IT529)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0a1d;
+  --surface:#15132d;
+  --card:#1d1a3e;
+  --line:#2e2a5c;
+  --text:#f8f7ff;
+  --muted:#a5a1ce;
+  --accent:#3b82f6;
+  --coral:#f97316;
+  --pink:#ec4899;
+  --violet:#8b5cf6;
+  --teal:#14b8a6;
+  --sun:#facc15;
+  --ok:#22c55e;
+  --display:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"Plus Jakarta Sans", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:var(--body)}
+
+/* Presentation Deck Container */
+.deck{position:relative;width:100vw;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+
+/* Slides */
+.slide{
+  position:absolute;inset:0;padding:60px 80px;display:flex;flex-direction:column;justify-content:space-between;
+  opacity:0;pointer-events:none;transform:scale(.96) translateY(20px);
+  transition:opacity .35s cubic-bezier(.16,1,.3,1), transform .35s cubic-bezier(.16,1,.3,1);
+  background:radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--violet) 18%, transparent), transparent 50%),
+             radial-gradient(circle at 10% 85%, color-mix(in srgb, var(--coral) 12%, transparent), transparent 45%),
+             var(--bg);
+}
+.slide.active{opacity:1;pointer-events:auto;transform:scale(1) translateY(0)}
+
+/* Header Elements */
+.slide-top{display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:2}
+.brand-pill{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;
+  background:rgba(255,255,255,.05);border:1.5px solid var(--line);backdrop-filter:blur(10px);
+}
+.brand-icon{
+  width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg, var(--accent), var(--coral));
+  display:grid;place-items:center;box-shadow:0 4px 12px rgba(249,115,22,.4);
+}
+.brand-icon svg{width:16px;height:16px}
+.brand-name{font:800 16px var(--display);letter-spacing:-.02em}
+.tag-team{font:700 12px var(--mono);color:var(--sun);background:rgba(250,204,21,.12);padding:4px 10px;border-radius:999px}
+
+.speaker-pill{
+  font:700 13px var(--body);padding:6px 14px;border-radius:999px;
+  background:rgba(139,92,246,.16);border:1.5px solid var(--violet);color:#ddd6fe;
+  display:inline-flex;align-items:center;gap:6px;
+}
+
+/* Slide Content Bodies */
+.slide-body{flex:1;display:flex;flex-direction:column;justify-content:center;max-width:1160px;margin:0 auto;width:100%;z-index:2}
+
+/* Typography */
+h1.hero{font:800 clamp(44px, 6vw, 76px)/1.08 var(--display);letter-spacing:-.03em;margin:0}
+h2.title{font:800 clamp(32px, 4.5vw, 54px)/1.15 var(--display);letter-spacing:-.025em;margin:0 0 16px}
+p.sub{font-size:clamp(16px, 1.8vw, 22px);color:var(--muted);line-height:1.45;margin:0 0 32px;max-width:880px}
+.grad{background:linear-gradient(135deg, #fff 30%, var(--muted));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.grad-fire{background:linear-gradient(135deg, var(--coral), var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.grad-cyan{background:linear-gradient(135deg, var(--accent), var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Feature Cards Grid */
+.grid3{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;margin-top:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:10px}
+.card-box{
+  background:rgba(29,26,62,.7);border:1.5px solid var(--line);border-radius:24px;padding:26px;
+  backdrop-filter:blur(14px);display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;
+}
+.card-box.hl{border-color:var(--coral);background:linear-gradient(145deg, rgba(249,115,22,.12), rgba(29,26,62,.7))}
+.card-box.hl-blue{border-color:var(--accent);background:linear-gradient(145deg, rgba(59,130,246,.12), rgba(29,26,62,.7))}
+.card-icon{font-size:32px;line-height:1}
+.card-title{font:800 20px var(--display);margin:0}
+.card-desc{font-size:14.5px;color:var(--muted);line-height:1.5;margin:0}
+
+/* Big Metrics / Numbers */
+.metric-row{display:flex;gap:36px;margin:24px 0}
+.metric-box{display:flex;flex-direction:column;gap:4px}
+.metric-val{font:800 clamp(36px, 4.5vw, 62px)/1 var(--display);color:#fff;font-variant-numeric:tabular-nums}
+.metric-lbl{font:700 13px var(--mono);text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
+
+/* Live Demo Action Banner */
+.demo-banner{
+  margin-top:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(135deg, rgba(249,115,22,.15), rgba(236,72,153,.15));
+  border:2px solid var(--coral);display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.demo-banner b{font:800 19px var(--display);display:block}
+.demo-banner span{font-size:14px;color:var(--muted)}
+.demo-btn{
+  display:inline-flex;align-items:center;gap:8px;font:700 14px var(--body);padding:11px 22px;border-radius:999px;
+  background:linear-gradient(135deg, var(--coral), var(--pink));color:#fff;text-decoration:none;
+  box-shadow:0 8px 24px -6px rgba(249,115,22,.6);cursor:pointer;border:0;transition:transform .15s, filter .15s;
+}
+.demo-btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+
+/* Bottom Controls */
+.bottom-bar{
+  position:fixed;bottom:20px;left:40px;right:40px;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;pointer-events:none;
+}
+.progress-wrap{width:220px;height:5px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}
+.progress-bar{height:100%;width:12.5%;background:linear-gradient(90deg, var(--accent), var(--coral));transition:width .3s ease}
+.slide-nav{display:flex;align-items:center;gap:12px;pointer-events:auto}
+.nav-arrow{
+  width:42px;height:42px;border-radius:50%;background:rgba(29,26,62,.85);border:1.5px solid var(--line);
+  color:#fff;font-size:18px;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(10px);
+  transition:border-color .15s, transform .12s, background .15s;
+}
+.nav-arrow:hover{border-color:var(--coral);background:var(--card);transform:scale(1.06)}
+.slide-num{font:700 13px var(--mono);color:var(--muted);min-width:44px;text-align:center}
+.keys-hint{font:600 11.5px var(--mono);color:var(--muted);opacity:.7}
+
+@media (max-width:900px){
+  .slide{padding:30px 24px}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .demo-banner{flex-direction:column;align-items:start}
+  .metric-row{gap:18px;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: Titulka (Hook) -->
+  <section class="slide active" data-slide="1">
+    <div class="slide-top">
+      <div class="brand-pill">
+        <div class="brand-icon">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/><path d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/></svg>
+        </div>
+        <span class="brand-name">WeekScout</span>
+        <span class="tag-team">TÝM 17 · 4IT529</span>
+      </div>
+      <div class="speaker-pill">🎙️ Viktor Štěch &amp; Jiří Matějka</div>
+    </div>
+    <div class="slide-body">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:14px">
+        <span style="font:700 14px var(--mono);color:var(--coral);text-transform:uppercase;letter-spacing:.06em">Competitive Intelligence · ZS 2026/27</span>
+      </div>
+      <h1 class="hero">Konec chaosu<br>v <span class="grad-fire">Erasmus+ týdnech</span>.</h1>
+      <p class="sub" style="margin-top:18px">Multiagentní inteligence pro akademiky, studenty i zahraniční oddělení vysokých škol.</p>
+      <div style="font:600 13.5px var(--body);color:var(--muted);padding-top:16px;border-top:1.5px solid var(--line)">
+        <strong>Tým 17:</strong> Viktor Štěch · Jiří Matějka · Jiří Jáchym · Jan Rehanzl · Barbora Beňová
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Vysoká škola ekonomická v Praze · Fakulta informatiky a statistiky</div>
+  </section>
+
+  <!-- SLIDE 2: Problém (Příběh dr. Nováka z VŠE) -->
+  <section class="slide" data-slide="2">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">WeekScout</span></div>
+      <div class="speaker-pill">🎙️ Viktor (0:45 – 1:30)</div>
+    </div>
+    <div class="slide-body">
+      <span style="font:700 13px var(--mono);color:var(--pink);text-transform:uppercase;letter-spacing:.05em">Realita na univerzitách</span>
+      <h2 class="title">Frustrace zvaná <span class="grad-fire">„Hledání Staff Weeku“</span></h2>
+      <p class="sub">Představte si vyučujícího z VŠE: v lednu dostane grant na výjezd, který musí vyčerpat do léta. Co následuje?</p>
+      
+      <div class="grid3">
+        <div class="card-box hl">
+          <div class="card-icon">📑</div>
+          <h3 class="card-title">45 otevřených záložek</h3>
+          <p class="card-desc">Informace jsou roztříštěné po stovkách webů škol. Polovina odkazů nefunguje a formuláře jsou v neznámých jazycích.</p>
+        </div>
+        <div class="card-box hl">
+          <div class="card-icon">💸</div>
+          <h3 class="card-title">Komerční paraziti</h3>
+          <p class="card-desc">Oficiální katalogy jsou zamořené soukromými agenturami, které z univerzitního grantu vytáhnou 600 € za komerční kurz.</p>
+        </div>
+        <div class="card-box hl">
+          <div class="card-icon">⌛</div>
+          <h3 class="card-title">Zmeškané uzávěrky</h3>
+          <p class="card-desc">Uživatel po hodině hledání zjistí, že registrace skončila včera. Výsledek? Frustrace a propadlý grant.</p>
+        </div>
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">A pro studenty hledající krátké BIP kurzy je situace ještě třikrát horší.</div>
+  </section>
+
+  <!-- SLIDE 3: B2C Řešení – WeekScout pro účastníky -->
+  <section class="slide" data-slide="3">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">WeekScout B2C</span></div>
+      <div class="speaker-pill">🎙️ Viktor (1:30 – 4:45)</div>
+    </div>
+    <div class="slide-body">
+      <span style="font:700 13px var(--mono);color:var(--teal);text-transform:uppercase;letter-spacing:.05em">Řešení pro vyučující a studenty</span>
+      <h2 class="title">Jedno přehledné místo <span class="grad-cyan">pro celou Evropu</span>.</h2>
+      
+      <div class="metric-row">
+        <div class="metric-box"><span class="metric-val">153</span><span class="metric-lbl">Ověřených akcí</span></div>
+        <div class="metric-box"><span class="metric-val">107</span><span class="metric-lbl">Evropských univerzit</span></div>
+        <div class="metric-box"><span class="metric-val">26</span><span class="metric-lbl">Zemí Evropy</span></div>
+        <div class="metric-box"><span class="metric-val">0</span><span class="metric-lbl">Komerčních agentur</span></div>
+      </div>
+
+      <div class="grid3">
+        <div class="card-box">
+          <h3 class="card-title">🎯 Přirozené persony</h3>
+          <p class="card-desc">Žádný byrokratický žargon. Čipy: <b>Chci učit</b> / <b>Chci se školit</b> / <b>Chci studovat</b> (BIP).</p>
+        </div>
+        <div class="card-box">
+          <h3 class="card-title">⚡ Inteligentní filtry</h3>
+          <p class="card-desc">Okamžitý fulltext bez diakritiky, filtr poplatků i tlačítko <em>„Skrýt prošlé“</em> jedním klikem.</p>
+        </div>
+        <div class="card-box">
+          <h3 class="card-title">📅 9měsíční časová osa</h3>
+          <p class="card-desc">Unikátní Ganttův diagram celé sezóny 2026/27 s panoramatickou minimapou.</p>
+        </div>
+      </div>
+
+      <div class="demo-banner">
+        <div>
+          <b>💻 Živé demo: Veřejná mapa a časová osa</b>
+          <span>Pojďme se podívat, jak dr. Novák najde výjezd za 10 sekund.</span>
+        </div>
+        <a class="demo-btn" href="https://viktorstech.github.io/weekscout/" target="_blank" rel="noopener">Otevřít živou mapu ↗</a>
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Přechod slova: Kde je v tom ale opravdový byznys a Competitive Intelligence?</div>
+  </section>
+
+  <!-- SLIDE 4: Problém univerzit (OZS) -->
+  <section class="slide" data-slide="4">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">WeekScout B2B</span></div>
+      <div class="speaker-pill">🎙️ Jirka (4:45 – 5:30)</div>
+    </div>
+    <div class="slide-body">
+      <span style="font:700 13px var(--mono);color:var(--coral);text-transform:uppercase;letter-spacing:.05em">Obrácená strana mince</span>
+      <h2 class="title">Proč univerzity dosud <span class="grad-fire">střílely naslepo</span>?</h2>
+      <p class="sub">Pohled vedoucího zahraničního oddělení (OZS VŠE): Uspořádá mezinárodní týden, naplánuje termín na duben... a přihlásí se jen 5 lidí. Proč?</p>
+      
+      <div class="grid2">
+        <div class="card-box hl">
+          <div class="card-icon">📉</div>
+          <h3 class="card-title">Nulová data o konkurenci</h3>
+          <p class="card-desc">Škola netuší, že ve stejném týdnu pořádá akce dalších 28 univerzit v Evropě. Kapacity zejí prázdnotou a prestiž klesá.</p>
+        </div>
+        <div class="card-box hl">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">Cenotvorba od stolu</h3>
+          <p class="card-desc">Univerzita neví, jak nastavit poplatek – zda je 200 € moc, nebo málo ve srovnání se zbytkem Evropy.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:24px;padding:20px;border-radius:18px;background:rgba(59,130,246,.12);border:1.5px solid var(--accent)">
+        <b style="color:#93c5fd;font:800 18px var(--display)">💡 Odpověď: WeekScout Campus</b>
+        <div style="color:#bfdbfe;font-size:14.5px;margin-top:4px">Manažerský Competitive Intelligence portál pro zahraniční oddělení evropských univerzit.</div>
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Rozhodování podložené daty, nikoli dojmy.</div>
+  </section>
+
+  <!-- SLIDE 5: B2B Campus Portál (Live Demo) -->
+  <section class="slide" data-slide="5">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">WeekScout Campus</span></div>
+      <div class="speaker-pill">🎙️ Jirka (5:30 – 8:00)</div>
+    </div>
+    <div class="slide-body">
+      <span style="font:700 13px var(--mono);color:var(--sun);text-transform:uppercase;letter-spacing:.05em">Manažerská Competitive Intelligence</span>
+      <h2 class="title">Analytika, za kterou <span class="grad-cyan">univerzity rády zaplatí</span>.</h2>
+      
+      <div class="grid3">
+        <div class="card-box hl-blue">
+          <h3 class="card-title">📊 Sezónní špičky Evropy</h3>
+          <p class="card-desc">Graf všech 153 akcí. Koordinátor vidí, že v dubnu je brutální přetlak (38 akcí), zatímco červenec má volné okno (7 akcí).</p>
+        </div>
+        <div class="card-box hl-blue">
+          <h3 class="card-title">⚠️ Kolize termínů (±4 dny)</h3>
+          <p class="card-desc">Detailní rozbor: s kým přímo soupeříte o stejný profil účastníků, jaké mají ceny a kde můžete termín posunout.</p>
+        </div>
+        <div class="card-box hl-blue">
+          <h3 class="card-title">💶 Tržní cenový benchmark</h3>
+          <p class="card-desc">Přesná data z Evropy: 42 % akcí je zdarma, u placených je medián přesně 350 €.</p>
+        </div>
+      </div>
+
+      <div class="demo-banner">
+        <div>
+          <b>💻 Živé demo: B2B Portál Campus pro VŠE / Charles University</b>
+          <span>Podívejme se přímo na analýzu kolizí a monetizační model.</span>
+        </div>
+        <a class="demo-btn" href="https://viktorstech.github.io/weekscout/uni.html" target="_blank" rel="noopener">Otevřít portál Campus ↗</a>
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Vyzkoušíme také přepnutí na tarif Free a ukázku paywallu.</div>
+  </section>
+
+  <!-- SLIDE 6: Monetizace & Byznys Model -->
+  <section class="slide" data-slide="6">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">Business Model</span></div>
+      <div class="speaker-pill">🎙️ Jirka (8:00 – 9:00)</div>
+    </div>
+    <div class="slide-body">
+      <span style="font:700 13px var(--mono);color:var(--ok);text-transform:uppercase;letter-spacing:.05em">Škálovatelný B2B SaaS</span>
+      <h2 class="title">Jak na tom <span class="grad-fire">vyděláváme</span>?</h2>
+      
+      <div class="grid2">
+        <div class="card-box hl">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <h3 class="card-title">1. Roční licence Campus</h3>
+            <span style="font:800 24px var(--display);color:var(--coral)">790 € / rok</span>
+          </div>
+          <p class="card-desc">Kompletní CI balíček pro zahraniční oddělení univerzity:</p>
+          <ul style="margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:grid;gap:6px">
+            <li><b>White-label mapa (iframe):</b> Vložení na web fakulty se zvýrazněním partnerů.</li>
+            <li><b>Pondělní e-mailový digest:</b> Automatické podklady s uzávěrkami pro katedry.</li>
+            <li><b>Kompletní CI analytika:</b> Kolize termínů, sezónní špičky a CSV export.</li>
+          </ul>
+        </div>
+
+        <div class="card-box hl">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <h3 class="card-title">2. Scout Credits (Promo)</h3>
+            <span style="font:800 24px var(--display);color:var(--sun)">99 € – 249 €</span>
+          </div>
+          <p class="card-desc">Monetizace propagace akcí (PPC model):</p>
+          <ul style="margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:grid;gap:6px">
+            <li>Školy si dokupují kredity, aby jejich Staff Week získal zlatý odznak <b>★ Doporučeno</b>.</li>
+            <li>Zvýrazněné akce se přednostně zobrazují tisícům účastníků na mapě před uzávěrkou.</li>
+            <li>1 zvýraznění = 2 kredity.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">V Evropě je přes 4 000 vysokých škol zapojených do Erasmus+. Potenciál trhu je obrovský.</div>
+  </section>
+
+  <!-- SLIDE 7: Multiagentní systém (Technologie bez žargonu) -->
+  <section class="slide" data-slide="7">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">Technologie &amp; CI</span></div>
+      <div class="speaker-pill">🎙️ Viktor &amp; Jirka (9:00 – 9:30)</div>
+    </div>
+    <div class="slide-body">
+      <span style="font:700 13px var(--mono);color:var(--violet);text-transform:uppercase;letter-spacing:.05em">Architektura v pozadí</span>
+      <h2 class="title">5 AI agentů v <span class="grad-cyan">5 fázích CI cyklu</span>.</h2>
+      <p class="sub">Žádná černá skříňka. Každý agent má přesně definovanou roli v klasickém cyklu Competitive Intelligence:</p>
+      
+      <div class="grid3" style="grid-template-columns:repeat(5, 1fr);gap:12px">
+        <div class="card-box" style="padding:16px">
+          <div style="font:800 12px var(--mono);color:var(--coral)">FÁZE 1</div>
+          <b style="font:800 15px var(--display)">Plánování</b>
+          <p style="font-size:12px;color:var(--muted);margin:0">Architekt: pravidla sběru a validační schéma.</p>
+        </div>
+        <div class="card-box" style="padding:16px">
+          <div style="font:800 12px var(--mono);color:var(--coral)">FÁZE 2</div>
+          <b style="font:800 15px var(--display)">Sběr dat</b>
+          <p style="font-size:12px;color:var(--muted);margin:0">Průzkumníci: IMOTION, aliance a 4 regiony Evropy.</p>
+        </div>
+        <div class="card-box" style="padding:16px">
+          <div style="font:800 12px var(--mono);color:var(--coral)">FÁZE 3</div>
+          <b style="font:800 15px var(--display)">Verifikace</b>
+          <p style="font-size:12px;color:var(--muted);margin:0">Ověřovatel: kontrola oficiálních webů a kontaktů.</p>
+        </div>
+        <div class="card-box" style="padding:16px">
+          <div style="font:800 12px var(--mono);color:var(--coral)">FÁZE 4</div>
+          <b style="font:800 15px var(--display)">Analýza</b>
+          <p style="font-size:12px;color:var(--muted);margin:0">Deduplikátor: sjednocení 107 univerzit a kolize.</p>
+        </div>
+        <div class="card-box" style="padding:16px">
+          <div style="font:800 12px var(--mono);color:var(--coral)">FÁZE 5</div>
+          <b style="font:800 15px var(--display)">Diseminace</b>
+          <p style="font-size:12px;color:var(--muted);margin:0">Kurátor: 0 chyb ve validaci, mapa a portál Campus.</p>
+        </div>
+      </div>
+    </div>
+    <div style="z-index:2;font:600 12px var(--mono);color:var(--muted)">Deterministická validace: 153 akcí, 0 chyb, 0 varování.</div>
+  </section>
+
+  <!-- SLIDE 8: Závěr & Otázky -->
+  <section class="slide" data-slide="8">
+    <div class="slide-top">
+      <div class="brand-pill"><span class="brand-name">WeekScout</span><span class="tag-team">TÝM 17</span></div>
+      <div class="speaker-pill">🎙️ Viktor &amp; Jirka (9:30 – 10:00)</div>
+    </div>
+    <div class="slide-body" style="text-align:center;align-items:center">
+      <div class="brand-icon" style="width:58px;height:58px;border-radius:18px;margin-bottom:16px">
+        <svg viewBox="0 0 32 32" fill="none" style="width:36px;height:36px"><path d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/><path d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/></svg>
+      </div>
+      <h1 class="hero" style="font-size:clamp(40px, 5vw, 68px)">WeekScout</h1>
+      <p class="sub" style="text-align:center;max-width:720px;margin:12px 0 28px">
+        Propojili jsme inteligenci AI agentů s manažerským rozhodováním.<br>
+        Účastníkům dáváme jistotu. Univerzitám dáváme data.
+      </p>
+
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a class="demo-btn" href="https://viktorstech.github.io/weekscout/" target="_blank" rel="noopener">🌍 Živá aplikace pro účastníky</a>
+        <a class="demo-btn" style="background:linear-gradient(135deg, var(--accent), var(--violet))" href="https://viktorstech.github.io/weekscout/uni.html" target="_blank" rel="noopener">🏛️ B2B Portál Campus</a>
+      </div>
+
+      <div style="margin-top:36px;font:700 18px var(--display);color:var(--coral)">Děkujeme za pozornost. Rádi zodpovíme vaše dotazy!</div>
+    </div>
+    <div style="z-index:2;display:flex;justify-content:space-between;width:100%;font:600 12px var(--mono);color:var(--muted)">
+      <span>Tým 17: Viktor Štěch · Jiří Matějka · Jiří Jáchym · Jan Rehanzl · Barbora Beňová</span>
+      <span>GitHub: viktorstech/weekscout</span>
+    </div>
+  </section>
+
+</div>
+
+<!-- Bottom Navigation Bar -->
+<div class="bottom-bar">
+  <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+  <div class="slide-nav">
+    <span class="keys-hint">Klávesy: ← / →</span>
+    <button type="button" class="nav-arrow" id="prev-btn" title="Předchozí slide">←</button>
+    <span class="slide-num" id="slide-num">1 / 8</span>
+    <button type="button" class="nav-arrow" id="next-btn" title="Následující slide">→</button>
+    <button type="button" class="nav-arrow" id="fs-btn" title="Celá obrazovka">⛶</button>
+  </div>
+</div>
+
+<script>
+"use strict";
+let current = 1;
+const total = 8;
+const slides = document.querySelectorAll(".slide");
+const progress = document.getElementById("progress");
+const num = document.getElementById("slide-num");
+
+function showSlide(idx){
+  if (idx < 1) idx = 1;
+  if (idx > total) idx = total;
+  current = idx;
+  slides.forEach((s, i) => s.classList.toggle("active", i + 1 === current));
+  progress.style.width = ((current / total) * 100) + "%";
+  num.textContent = `${current} / ${total}`;
+  location.hash = "slide-" + current;
+}
+
+document.getElementById("prev-btn").addEventListener("click", () => showSlide(current - 1));
+document.getElementById("next-btn").addEventListener("click", () => showSlide(current + 1));
+
+document.addEventListener("keydown", ev => {
+  if (ev.key === "ArrowRight" || ev.key === " " || ev.key === "PageDown") { ev.preventDefault(); showSlide(current + 1); }
+  else if (ev.key === "ArrowLeft" || ev.key === "PageUp") { ev.preventDefault(); showSlide(current - 1); }
+  else if (ev.key === "Home") { ev.preventDefault(); showSlide(1); }
+  else if (ev.key === "End") { ev.preventDefault(); showSlide(total); }
+  else if (ev.key.toLowerCase() === "f") { toggleFullscreen(); }
+});
+
+function toggleFullscreen(){
+  if (!document.fullscreenElement) { document.documentElement.requestFullscreen().catch(()=>{}); }
+  else { document.exitFullscreen().catch(()=>{}); }
+}
+document.getElementById("fs-btn").addEventListener("click", toggleFullscreen);
+
+// Read initial hash
+if (location.hash && /^#slide-[1-8]$/.test(location.hash)) {
+  const n = parseInt(location.hash.replace("#slide-", ""), 10);
+  if (n >= 1 && n <= total) showSlide(n);
+}
+</script>
+</body>
+</html>
