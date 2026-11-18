@@ -1,13 +1,17 @@
 {
   "meta": {
-    "updated": "2026-11-17",
-    "count": 144,
+    "updated": "2026-11-18",
+    "count": 174,
     "sources": [
       "data.json",
       "data\\raw\\01_portals.json",
       "data\\raw\\02_north_west.json",
       "data\\raw\\03_south_east.json",
-      "data\\raw\\04_gaps.json"
+      "data\\raw\\04_gaps.json",
+      "data\\raw\\05_wave_a_czsk.json",
+      "data\\raw\\06_wave_b_bips.json",
+      "data\\raw\\07a_wave_c_part1.json",
+      "data\\raw\\07b_wave_c_part2.json"
     ]
   },
   "events": [
@@ -143,7 +147,8 @@
         "training"
       ],
       "fields": [
-        "intl"
+        "intl",
+        "ekon"
       ],
       "topic": "Vánoční mezinárodní týden NEWTON University určený koordinátorům programu Erasmus a pracovníkům studijních oddělení.",
       "audience": [
@@ -165,7 +170,8 @@
         "http://staffmobility.eu/staff-Week-search/staff-week-archive?page=3",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=2",
         "http://staffmobility.eu/staff-Week-Search?f=field_staff_week_target_groups%3APR&page=1",
-        "http://staffmobility.eu/staff-Week-search?page=3"
+        "http://staffmobility.eu/staff-Week-search?page=3",
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Aplacements&page=3"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -225,7 +231,11 @@
       "source_type": "partner",
       "contacts": [],
       "notes": "Údaje pocházejí z přehledu Staff Mobilities aliance SEA-EU; uzávěrka a jazyk nebyly na přehledu uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 14.–16. 12. 2026 a hostitel University of Cádiz (ES) jsou potvrzeny na portálu aliance SEA-EU (sea-eu.org/staff-mobilities/). Detailní stránka akce na doméně pořadatele (uca.es), konkrétní uzávěrka, poplatek, jazyk ani kontakty nebyly v důkazech nalezeny; přihlášky probíhají přes zahraniční oddělení členských VŠ SEA-EU.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "ug-gdansk-2026-12",
@@ -302,9 +312,10 @@
       "end": "2026-12-18",
       "start2": null,
       "end2": null,
-      "deadline": null,
-      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU",
+      "deadline": "2026-09-25",
+      "deadline_note": "nominační uzávěrka univerzit aliance SEA-EU do 25. 9. 2026 (v textu uvedena i registrace do 11. 9. 2026); přihlášky přes domovskou univerzitu, nyní uzavřeno",
       "mobility": [
+        "training",
         "studying"
       ],
       "fields": [
@@ -316,20 +327,40 @@
         "Účastníci z partnerských univerzit aliance SEA-EU"
       ],
       "program": [],
-      "language": null,
+      "language": "angličtina",
       "fee_eur": null,
       "fee_text": null,
-      "capacity": null,
+      "capacity": "max. 4 akademičtí pracovníci z každé univerzity aliance SEA-EU",
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "https://sea-eu.org/bips/",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/",
       "source_urls": [
+        "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/",
         "https://sea-eu.org/bips/"
       ],
       "source_type": "partner",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": null,
+          "role": "SEA-EU Office (University of Malta)",
+          "email": "sea-eu@um.edu.mt",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/"
+        },
+        {
+          "name": null,
+          "role": "Erasmus Nominations and Registrations (University of Malta)",
+          "email": "erasmus@um.edu.mt",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-transformative-competencies-for-a-sustainable-and-secure-future-sea-eu-co-creation-lab-co-creating-a-future-ready-micro-credential/"
+        }
+      ],
       "notes": "Na přehledové stránce SEA-EU je akce uvedena současně v sekci Currently Open i Closed Applications; podrobnější údaje (uzávěrka, online část, cílová skupina) nebyly na přehledu uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 14.–18. 12. 2026 (University of Malta, MT; přípravná online sekce 25. 11. 2026), jazyk (angličtina B1+), kapacita i kontakty UM jsou potvrzeny na detailu aliance SEA-EU. Pozor: jde o staff BIP pro akademické pracovníky a tvůrce kurikula, nikoli pro studenty (oprava mobility ze studying na training). V textu jsou dvě data uzávěrky (registrace 11. 9. 2026, nominace 25. 9. 2026; akce je již uzavřená) a chybí přímá stránka na um.edu.mt.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "ug-ai-2027-01",
@@ -387,6 +418,61 @@
         "note": "Všechny údaje (termín 4.–8. 1. 2027, uzávěrka 15. 12. 2026, poplatek 350 €, kapacita 30 osob, kontakt) potvrzeny přímo na živé stránce IMOTION vložené pořadatelem University of Gdańsk; doplněn registrační formulář.",
         "checked": "2026-11-17"
       }
+    },
+    {
+      "id": "iaelyon-2027",
+      "uni": "iaelyon School of Management, Jean Moulin University Lyon 3",
+      "uni_short": "iaelyon",
+      "country_iso": "FR",
+      "country": "Francie",
+      "city": "Lyon",
+      "lat": 45.7485,
+      "lng": 4.86,
+      "erasmus_code": null,
+      "event_name": "21st iaelyon International Week",
+      "start": "2027-01-06",
+      "end": "2027-01-08",
+      "start2": "2027-01-11",
+      "end2": "2027-01-13",
+      "deadline": "2026-05-15",
+      "deadline_note": "uzávěrka přihlášek proběhla 15. května 2026",
+      "mobility": [
+        "teaching"
+      ],
+      "fields": [
+        "ekon"
+      ],
+      "topic": "Dvacátý první mezinárodní týden v Lyonu kombinující odborné semináře pro studenty magisterských oborů a mezinárodní výzkumné workshopy v managementu.",
+      "audience": [
+        "vyučující a výzkumní pracovníci v oblastech mezinárodního managementu, podnikové etiky a udržitelnosti"
+      ],
+      "program": [
+        "výuka 18hodinových mezinárodních seminářů v angličtině nebo španělštině",
+        "výzkumný seminář zaměřený na mezinárodní management, CSR a podnikatelský ekosystém",
+        "networking a rozvoj společných publikačních a výzkumných aktivit"
+      ],
+      "language": "angličtina, španělština",
+      "fee_eur": 0,
+      "fee_text": "Zdarma (vyučující obdrží odměnu cca 900 € za výuku 18hodinového kurzu)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://iae.univ-lyon3.fr/the-iaelyon-international-week-2027-call-for-applications-deadline-may-15th-2026",
+      "source_urls": [
+        "https://iae.univ-lyon3.fr/the-iaelyon-international-week-2027-call-for-applications-deadline-may-15th-2026"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": null,
+          "role": "Mezinárodní tým iaelyon",
+          "email": "iaelyoninternationalweek@univ-lyon3.fr",
+          "phone": null,
+          "source": "https://iae.univ-lyon3.fr/the-iaelyon-international-week-2027-call-for-applications-deadline-may-15th-2026"
+        }
+      ],
+      "notes": "Akce má dvě části: 6.–8. ledna a 11.–13. ledna 2027. Zahraniční vyučující jsou motivováni vyučovat v obou blocích.",
+      "verify": null
     },
     {
       "id": "iae-montpellier-2027-01",
@@ -465,9 +551,10 @@
       "end": "2027-01-15",
       "start2": null,
       "end2": null,
-      "deadline": null,
-      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU",
+      "deadline": "2026-11-09",
+      "deadline_note": "pro vyučující a výzkumníky z partnerských univerzit aliance SEA-EU (přihláška přímo na UBO se souhlasem nadřízeného)",
       "mobility": [
+        "teaching",
         "training"
       ],
       "fields": [
@@ -478,7 +565,7 @@
         "Zaměstnanci univerzit aliance SEA-EU"
       ],
       "program": [],
-      "language": null,
+      "language": "španělština (francouzština pro překladatelské semináře)",
       "fee_eur": null,
       "fee_text": null,
       "capacity": null,
@@ -486,12 +573,17 @@
       "registration_url2": null,
       "event_url": "https://sea-eu.org/staff-mobilities/",
       "source_urls": [
-        "https://sea-eu.org/staff-mobilities/"
+        "https://sea-eu.org/staff-mobilities/",
+        "https://www.uni-kiel.de/en/international/sea-eu/details/news/international-week-in-hispanic-studies-at-the-university-of-brest-1"
       ],
       "source_type": "partner",
       "contacts": [],
       "notes": "Stránka SEA-EU uvádí místo konání 'Brest' (členskou univerzitou SEA-EU v Brestu je University of Western Brittany / UBO). Uzávěrka a jazyk nebyly na přehledu uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 11.–15. 1. 2027 na UBO Brest potvrzen na portálu aliance SEA-EU, u partnerské Uni Kiel i v oznámení SEA-EU UNIST. Uni Kiel a UNIST doplňují uzávěrku 9. 11. 2026 (již po termínu), výukový charakter akce (8 hodin pro hostující vyučující z aliance SEA-EU) a jazyk (španělština, pro překladatelské semináře i francouzština). Přímá stránka akce na doméně univ-brest.fr nebyla v důkazech nalezena.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "usmb-chambery-bip-2027-01",
@@ -542,6 +634,124 @@
       }
     },
     {
+      "id": "ubb-human-relationships-digital-era-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Human Relationships in the Digital Era (2nd Edition)",
+      "start": "2027-01-18",
+      "end": "2027-01-22",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "human",
+        "design"
+      ],
+      "topic": "Vliv sociálních médií a digitálních technologií na mezilidské vztahy a intimitu s praktickým vyústěním v tvorbu dokumentárního divadla.",
+      "audience": [
+        "Vysokoškolští studenti společenských věd, psychologie, divadelních a mediálních oborů"
+      ],
+      "program": [
+        "Vliv sociálních sítí na mezilidské vazby",
+        "Komunikace a digitální technologie",
+        "Intimita a partnerské či rodinné vztahy v digitálním věku",
+        "Praktické workshopy tvorby dokumentárního divadla"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; účastníkům náleží finanční podpora Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část se koná 11.–12. ledna 2027, prezenční setkání v Kluži 18.–22. ledna 2027.",
+      "verify": null
+    },
+    {
+      "id": "vse-fis-iweek-2027-01",
+      "uni": "Prague University of Economics and Business (VŠE) – Faculty of Informatics and Statistics",
+      "uni_short": "VŠE FIS Praha",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Praha",
+      "lat": 50.0842,
+      "lng": 14.4411,
+      "erasmus_code": null,
+      "event_name": "FIS International Week 2027 (I-Week)",
+      "start": "2027-01-18",
+      "end": "2027-01-21",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-06",
+      "deadline_note": "registrace studentů 21. 9.–6. 12. 2026 (nebo do naplnění kapacity)",
+      "mobility": [
+        "teaching",
+        "studying"
+      ],
+      "fields": [
+        "it",
+        "ekon"
+      ],
+      "topic": "Intenzivní čtyřdenní týden 11 kurzů v angličtině (3 ECTS) vyučovaných hostujícími zahraničními profesory na Fakultě informatiky a statistiky VŠE.",
+      "audience": [
+        "Studenti (výběr z 11 intenzivních kurzů za 3 ECTS)",
+        "Hostující zahraniční akademici a profesoři"
+      ],
+      "program": [
+        "11 intenzivních interaktivních kurzů v angličtině (18.–21. 1. 2027)"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": "https://fis.vse.cz/english/faculty-2/events/iweek/",
+      "registration_url2": null,
+      "event_url": "https://fis.vse.cz/english/faculty-2/events/iweek/",
+      "source_urls": [
+        "https://fis.vse.cz/english/faculty-2/events/iweek/",
+        "https://fis.vse.cz/english/news/international-week-2027-course-offerings-announced/",
+        "https://fis.vse.cz/english/news/international-week-courses-registration-opens-on-monday-21-september/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Tereza Krajíčková",
+          "role": "FIS VŠE",
+          "email": "tereza.krajickova@vse.cz",
+          "phone": null,
+          "source": "https://fis.vse.cz/english/faculty-2/events/iweek/"
+        },
+        {
+          "name": "Student Affairs Office FIS",
+          "role": "studijní oddělení FIS VŠE",
+          "email": "fisbachelor@vse.cz; fismasters@vse.cz",
+          "phone": "+420 224 095 464",
+          "source": "https://fis.vse.cz/english/faculty-2/events/iweek/"
+        }
+      ],
+      "notes": null,
+      "verify": {
+        "status": "ověřeno",
+        "note": "Termín 18.–21. 1. 2027, registrace 21. 9.–6. 12. 2026, nabídka 11 kurzů v angličtině (3 ECTS) i kontakty potvrzeny přímo na oficiálním webu FIS VŠE.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
       "id": "centria-2027-01",
       "uni": "Centria University of Applied Sciences",
       "uni_short": "Centria UAS",
@@ -557,7 +767,7 @@
       "start2": null,
       "end2": null,
       "deadline": "2026-11-30",
-      "deadline_note": null,
+      "deadline_note": "registrace do 30. listopadu 2026",
       "mobility": [
         "teaching",
         "training"
@@ -659,6 +869,80 @@
       "verify": {
         "status": "ověřeno",
         "note": "Termín lednové edice (25.–29. 1. 2027), uzávěrka (25. 12. 2026), poplatek 450 €, kapacita 20 osob, registrační web ÚJOP UK i kontakty potvrzeny na detailu IMOTION vloženém pořadatelem ÚJOP UK.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "vsb-tuo-project-mgmt-2027-01",
+      "uni": "VSB – Technical University of Ostrava",
+      "uni_short": "VŠB-TUO EKF",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Ostrava",
+      "lat": 49.8306,
+      "lng": 18.1628,
+      "erasmus_code": "CZ OSTRAVA01",
+      "event_name": "International School on Project and Grant Management – From Theory to Practice",
+      "start": "2027-01-25",
+      "end": "2027-01-29",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon",
+        "intl"
+      ],
+      "topic": "Kombinovaný intenzivní program Ekonomické fakulty VŠB-TUO zaměřený na praktické dovednosti v přípravě a řízení mezinárodních grantových projektů.",
+      "audience": [
+        "Vysokoškolští studenti ekonomických, manažerských a příbuzných studijních programů"
+      ],
+      "program": [
+        "Virtuální část: před a po prezenční výuce",
+        "Prezenční intenzivní kurz v Ostravě: 25.–29. ledna 2027",
+        "Metodiky přípravy projektových žádostí, tvorba rozpočtu a řízení mezinárodních týmů (5 ECTS)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; podpořeno z grantu Erasmus+ BIP domovské univerzity (5 ECTS kreditů)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/",
+      "source_urls": [
+        "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Lukáš Melecký",
+          "role": "Course Leader",
+          "email": "lukas.melecky@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        },
+        {
+          "name": "Michaela Staníčková",
+          "role": "Course Leader",
+          "email": "michaela.stanickova@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        },
+        {
+          "name": "Lenka Heczková",
+          "role": "Erasmus Coordinator",
+          "email": "lenka.heczkova@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        }
+      ],
+      "notes": "BIP pořádaný Ekonomickou fakultou VŠB-TUO v Ostravě.",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín prezenční části (25.–29. 1. 2027) a zisk 5 ECTS ověřeny na oficiální stránce VŠB-TUO pro BIP programy; termín uzávěrky přihlášek zatím nebyl zveřejněn.",
         "checked": "2026-11-17"
       }
     },
@@ -896,6 +1180,50 @@
       }
     },
     {
+      "id": "dcu-fintech-innovation-challenge-2027",
+      "uni": "Dublin City University",
+      "uni_short": "DCU",
+      "country_iso": "IE",
+      "country": "Irsko",
+      "city": "Dublin",
+      "lat": 53.3854,
+      "lng": -6.2573,
+      "erasmus_code": null,
+      "event_name": "Financial Technology and Innovation Challenge",
+      "start": "2027-02-08",
+      "end": "2027-03-05",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-10",
+      "deadline_note": "Uzávěrka přihlášek je 10. ledna 2027.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon",
+        "it"
+      ],
+      "topic": "Inovační výzva zaměřená na moderní finanční technologie (FinTech) a vývoj inovativních řešení pro finanční sektor.",
+      "audience": [
+        "Studenti bakalářských a magisterských oborů v rámci aliance ECIU University"
+      ],
+      "program": null,
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; účastníci mohou čerpat grant Erasmus+ na krátkodobou mobilitu.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/",
+      "source_urls": [
+        "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Program je ohodnocen 5 ECTS kredity a probíhá v rámci sítě ECIU University.",
+      "verify": null
+    },
+    {
       "id": "liuc-castellanza-2027-02",
       "uni": "Università Carlo Cattaneo - LIUC",
       "uni_short": "LIUC Castellanza",
@@ -957,6 +1285,55 @@
       }
     },
     {
+      "id": "ubb-conflict-resolution-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Conflict Resolution: From Theory to Practice",
+      "start": "2027-02-15",
+      "end": "2027-02-19",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "human",
+        "pedag"
+      ],
+      "topic": "Teoretické i praktické strategie řešení konfliktů, krizová komunikace a procesy usmíření po násilných střetech.",
+      "audience": [
+        "Vysokoškolští studenti se znalostí angličtiny minimálně na úrovni B1"
+      ],
+      "program": [
+        "Strategie řízení a řešení konfliktů",
+        "Krizová komunikace a řízení zúčastněných stran",
+        "Rozšiřování EU a preventivní politiky",
+        "Usmíření po násilných a dlouhotrvajících konfliktech"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za výuku; účastníkům je přiznán grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část probíhá 9.–10. února 2027, prezenční část 15.–19. února 2027 v Kluži. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
       "id": "galway-business-school-2027-02",
       "uni": "Galway Business School",
       "uni_short": "Galway Business School",
@@ -1002,6 +1379,62 @@
       "verify": null
     },
     {
+      "id": "hmu-entrepreneurship-tech-transfer-2027",
+      "uni": "Hellenic Mediterranean University",
+      "uni_short": "HMU Crete",
+      "country_iso": "GR",
+      "country": "Řecko",
+      "city": "Heraklion",
+      "lat": 35.3167,
+      "lng": 25.1013,
+      "erasmus_code": null,
+      "event_name": "Entrepreneurship & Technology Transfer Principles",
+      "start": "2027-02-15",
+      "end": "2027-02-19",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-18",
+      "deadline_note": "Uzávěrka přihlášek je 18. prosince 2026.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon",
+        "tech"
+      ],
+      "topic": "Praktický průvodce převodem podnikatelského a technologického nápadu do podoby životaschopného podniku včetně ochrany duševního vlastnictví.",
+      "audience": [
+        "Studenti všech oborů a studijních úrovní z partnerských univerzit aliance ATHENA"
+      ],
+      "program": [
+        "Zákaznický průzkum a ověření tržního potenciálu",
+        "Transfer technologií a ochrana duševního vlastnictví",
+        "Příprava a prezentace před investory (pitching)"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku pro studenty z univerzit aliance ATHENA.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://athenauni.eu/mobility/students-2/blended-intensive-programmes-2/",
+      "source_urls": [
+        "https://athenauni.eu/mobility/students-2/blended-intensive-programmes-2/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Prof. Konstantinos Petridis",
+          "role": "Koordinátor BIP, HMU",
+          "email": "c.petridischania@gmail.com",
+          "phone": null,
+          "source": "https://athenauni.eu/mobility/students-2/blended-intensive-programmes-2/"
+        }
+      ],
+      "notes": "BIP kód: 2025-1-EL01-KA131-HED-000318176-4. Virtuální část probíhá od 11. ledna do 8. února 2027, prezenční týden 15.–19. února 2027 na Krétě. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
       "id": "parthenope-naples-leadership-bip-2027-02",
       "uni": "University of Naples Parthenope",
       "uni_short": "Parthenope Naples",
@@ -1010,14 +1443,14 @@
       "city": "Naples",
       "lat": 40.8371,
       "lng": 14.2528,
-      "erasmus_code": null,
+      "erasmus_code": "I NAPOLI 03",
       "event_name": "Leadership and Soft Skills for Modern Organizations",
       "start": "2027-02-15",
       "end": "2027-02-19",
       "start2": null,
       "end2": null,
-      "deadline": null,
-      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU",
+      "deadline": "2026-12-30",
+      "deadline_note": "nominační uzávěrka univerzit aliance SEA-EU (30. 12. 2026); studenti podávají přihlášku dříve přes domovskou univerzitu (např. UBO do 17. 12. 2026)",
       "mobility": [
         "studying"
       ],
@@ -1035,17 +1468,38 @@
       "language": null,
       "fee_eur": null,
       "fee_text": null,
-      "capacity": null,
+      "capacity": "10–24 studentů (standardně 3 na partnerskou univerzitu)",
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "https://sea-eu.org/bips/",
+      "event_url": "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf",
       "source_urls": [
-        "https://sea-eu.org/bips/"
+        "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf",
+        "https://sea-eu.org/bips/",
+        "https://www.univ-brest.fr/sea-eu/index.php/fr/actualite/bip-sea-eu-naples-leadership-and-soft-skills-modern-organizations"
       ],
       "source_type": "partner",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": "Prof. Filomena Buonocore",
+          "role": "BIP Coordinator / Organisational Aspects (UPN)",
+          "email": "seaeu.upn@uniparthenope.it",
+          "phone": null,
+          "source": "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf"
+        },
+        {
+          "name": null,
+          "role": "Erasmus BIP Nominations (UPN)",
+          "email": "erasmus.bip@uniparthenope.it",
+          "phone": null,
+          "source": "https://sea-eu.org/wp-content/uploads/2025/03/BIP-UPN-Leadership-and-Soft-Skills-for-Modern-Organizations_SEA-EU.pdf"
+        }
+      ],
       "notes": "Stránka SEA-EU uvádí místo konání 'Naples' (členskou univerzitou SEA-EU v Neapoli je University of Naples Parthenope). Uzávěrka a jazyk nebyly na přehledu uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 15.–19. 2. 2027 v Neapoli (online 27. 1. a 3. 2. 2027), nominační uzávěrka 30. 12. 2026, Erasmus kód I NAPOLI 03, kapacita 10–24 studentů i kontakty pořadatele Parthenope University of Naples jsou potvrzeny v programovém PDF na portálu SEA-EU a na webu partnerské UBO (interní uzávěrka UBO 17. 12. 2026). Chybí samostatná stránka na doméně uniparthenope.it a údaj o poplatku.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "sorbonne-nouvelle-2027-02",
@@ -1074,7 +1528,13 @@
       "audience": [
         "Zaměstnanci partnerských univerzit zabývající se mezinárodní mobilitou"
       ],
-      "program": [],
+      "program": [
+        "mezinárodní spolupráce a mobilita v rámci Erasmus+",
+        "přijímání a integrace osob v exilu",
+        "nástroje a mechanismy pro budování globální atraktivity univerzity",
+        "od mezinárodních diplomů ke krátkým intenzivním programům",
+        "kulturní prohlídky Paříže"
+      ],
       "language": "angličtina",
       "fee_eur": 250,
       "fee_text": "250 € (program, materiály, uvítací káva a kulturní návštěvy; ubytování a cestu hradí účastník)",
@@ -1085,7 +1545,8 @@
       "source_urls": [
         "http://staffmobility.eu/staffweek/enhancing-internationalization-sorbonne",
         "https://eurep.auth.gr/en/node/3125",
-        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/"
+        "https://www.uni-mannheim.de/en/about/institutions-and-schools/international-office/staff-week-offers/",
+        "http://staffmobility.eu/sites/default/files/staffweek/annonce_imotion_staff_week_2.pdf"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -1225,6 +1686,122 @@
         "note": "Živá oficiální stránka HAMK (HTTP 200) potvrzuje ročník 2027, název Wellbeing International Week – The Human Factor, město Hämeenlinna i termín 22.–26. 2. 2027; spodní část stránky s uzávěrkou, poplatkem a kontaktem byla ve staženém výňatku oříznuta kvůli dlouhému navigačnímu menu.",
         "checked": "2026-11-17"
       }
+    },
+    {
+      "id": "jmu-wuerzburg-2027-02",
+      "uni": "Julius-Maximilians-Universität Würzburg",
+      "uni_short": "JMU Würzburg",
+      "country_iso": "DE",
+      "country": "Německo",
+      "city": "Würzburg",
+      "lat": 49.7885,
+      "lng": 9.9723,
+      "erasmus_code": "D WURZBUR01",
+      "event_name": "BIP: New perspectives through exchange on education – comparison of how differentiation is handled (6th GoTEd+ Week 2027)",
+      "start": "2027-02-22",
+      "end": "2027-02-26",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-10-15",
+      "deadline_note": "Termín podání přihlášky přes IS/STAG na PdF UHK",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "pedag"
+      ],
+      "topic": "Kombinovaný intenzivní program pro budoucí učitele zaměřený na srovnání přístupů k diferenciaci a rozmanitosti ve školách v Německu, Česku a Španělsku.",
+      "audience": [
+        "Studenti učitelských a pedagogických oborů bakalářského a magisterského studia"
+      ],
+      "program": [
+        "Virtuální přípravná setkání: 5. 11. 2026, 17. 12. 2026 a začátek roku 2027",
+        "Prezenční mezinárodní zimní škola 6th GoTEd+ Week ve Würzburgu: 22.–26. února 2027",
+        "Komparativní analýza vzdělávacích systémů, tvorba společného posteru a reflexivní zpráva (5 ECTS)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Studentům je poskytnuto stipendium Erasmus+ (395 € pobytové náklady, 285 € cestovné; zisk 5 ECTS)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/erasmus-blended-intensive-programme/",
+      "source_urls": [
+        "https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/erasmus-blended-intensive-programme/",
+        "https://www.uni-wuerzburg.de/pse/international/internationalisierungsprojekt-goted/news-archiv/",
+        "https://www.uhk.cz/cs/pedagogicka-fakulta/zahranici/oznameni/blended-intensive-programme-bip-nemecko-bip",
+        "https://www.uhk.cz/file/edee/pedagogicka-fakulta/zahranici/vyhlaseni-vr-na-bip-wurzbur01-1.pdf"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Maike Madera",
+          "role": "Koordinátorka Erasmus+ a GoTEd+ na PSE JMU",
+          "email": "pse@uni-wuerzburg.de",
+          "phone": "+49 931 31-83214",
+          "source": "https://www.uni-wuerzburg.de/pse/international/internationalisierungsprojekt-goted/news-archiv/"
+        },
+        {
+          "name": "Lucie Martinková",
+          "role": "Koordinátorka přihlášek na PdF UHK",
+          "email": "lucie.martinkova@uhk.cz",
+          "phone": null,
+          "source": "https://www.uhk.cz/cs/pedagogicka-fakulta/zahranici/oznameni/blended-intensive-programme-bip-nemecko-bip"
+        }
+      ],
+      "notes": "Pořádá Julius-Maximilians-Universität Würzburg ve spolupráci s PdF UHK a Universidad de Cádiz v rámci zimní školy 6th GoTEd+ Week 2027.",
+      "verify": {
+        "status": "ověřeno",
+        "note": "BIP program v rámci 6th GoTEd+ Week (prezenční část 22.–26. 2. 2027) potvrzen na oficiálním webu JMU Würzburg (PSE) i partnerské PdF UHK. Doplněny oficiální URL a kontakt.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "artevelde-education-2027",
+      "uni": "Artevelde University of Applied Sciences",
+      "uni_short": "Artevelde UAS",
+      "country_iso": "BE",
+      "country": "Belgie",
+      "city": "Gent",
+      "lat": 51.0535,
+      "lng": 3.7304,
+      "erasmus_code": null,
+      "event_name": "Artevelde Education: International Staff Week",
+      "start": "2027-02-23",
+      "end": "2027-02-25",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "pedag"
+      ],
+      "topic": "Třídenní mezinárodní zaměstnanecký týden v rámci sítě Comenius zaměřený na inovativní pedagogické přístupy a profesní rozvoj.",
+      "audience": [
+        "odborní a akademičtí pracovníci v oblasti pedagogiky a vzdělávání"
+      ],
+      "program": [
+        "sdílení pedagogických zkušeností a workshopy",
+        "návštěvy vzdělávacích institucí a seznámení s belgickými přístupy k výuce",
+        "budování mezinárodních kontaktů v rámci Comenius Association"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.comeniusassociation.org/international-weeks-for-staff",
+      "source_urls": [
+        "https://www.comeniusassociation.org/international-weeks-for-staff"
+      ],
+      "source_type": "partner",
+      "contacts": [],
+      "notes": "Organizováno na Arteveldehogeschool v Gentu ve spolupráci s Comenius Association.",
+      "verify": null
     },
     {
       "id": "upsa-ele-2027-03",
@@ -1473,16 +2050,16 @@
       }
     },
     {
-      "id": "viko-vilnius-2027-03",
+      "id": "viko-vilnius-2027",
       "uni": "Vilniaus Kolegija / Higher Education Institution",
-      "uni_short": "VIKO Vilnius",
+      "uni_short": "VIKO",
       "country_iso": "LT",
       "country": "Litva",
       "city": "Vilnius",
-      "lat": 54.6872,
-      "lng": 25.2797,
+      "lat": 54.698,
+      "lng": 25.2678,
       "erasmus_code": null,
-      "event_name": "International teaching Week'2027",
+      "event_name": "19th International Teaching Week (ITW’2027)",
       "start": "2027-03-01",
       "end": "2027-03-05",
       "start2": null,
@@ -1496,43 +2073,38 @@
         "pedag",
         "intl"
       ],
-      "topic": "Devatenáctý ročník výukového týdne na devíti fakultách Vilniaus Kolegija pro hostující lektory z partnerských vysokých škol.",
+      "topic": "Devatenáctý ročník mezinárodního výukového týdne pro akademiky na devíti fakultách největší litevské odborné vysoké školy.",
       "audience": [
-        "Akademičtí pracovníci partnerských VŠ"
+        "akademičtí pracovníci a lektoři z mezinárodních partnerských institucí"
       ],
       "program": [
-        "Výuka, semináře nebo workshopy v rozsahu až 8 akademických hodin napříč 9 fakultami VIKO",
-        "Setkání se studenty a akademickými pracovníky v mezinárodním prostředí"
+        "výuka, semináře nebo workshopy pro studenty v rozsahu až 8 akademických hodin",
+        "setkání s vyučujícími a vedením jednotlivých fakult VIKO",
+        "sdílení odborných poznatků a pedagogických postupů"
       ],
-      "language": "English",
+      "language": "angličtina",
       "fee_eur": 0,
       "fee_text": "Bez poplatku",
       "capacity": "100",
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "http://staffmobility.eu/staffweek/international-teaching-week2027",
+      "event_url": "https://iw.viko.lt/",
       "source_urls": [
+        "https://iw.viko.lt/",
         "http://staffmobility.eu/staffweek/international-teaching-week2027",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_state%3Aupcoming&f=field_staff_week_target_groups%3APR&page=11"
       ],
-      "source_type": "imotion",
+      "source_type": "official",
       "contacts": [
         {
-          "name": "Sigita Leistrumienė",
-          "role": "Project manager, International Relations and Projects department",
-          "email": "s.leistrumiene@viko.lt",
-          "phone": null,
-          "source": "http://staffmobility.eu/staffweek/international-teaching-week2027"
-        },
-        {
-          "name": null,
-          "role": "VIKO IW team",
+          "name": "VIKO IW team",
+          "role": "organizační tým",
           "email": "international@viko.lt",
           "phone": null,
-          "source": "http://staffmobility.eu/staffweek/international-teaching-week2027"
+          "source": "https://iw.viko.lt/"
         }
       ],
-      "notes": "V tabulce IMOTION je zjevný překlep roku uzávěrky (15. 12. 2027), v textu oznámení je jednoznačně uvedeno 15. 12. 2026.",
+      "notes": "Probíhá na všech devíti fakultách Vilniaus Kolegija.",
       "verify": null
     },
     {
@@ -1652,7 +2224,8 @@
       "source_urls": [
         "https://internationaldesignweek27.fh-joanneum.design/",
         "https://internationaldesignweek27.fh-joanneum.design/assets/IDW27_Call.pdf",
-        "https://international.h-da.de/en/1/your-stay-abroad/fuer-unsere-mitarbeitenden-lehrenden/staff-weeks-an-partnerhochschulen"
+        "https://international.h-da.de/en/1/your-stay-abroad/fuer-unsere-mitarbeitenden-lehrenden/staff-weeks-an-partnerhochschulen",
+        "https://internationaldesignweek27.fh-joanneum.design"
       ],
       "source_type": "official",
       "contacts": [
@@ -1747,7 +2320,7 @@
       "start2": null,
       "end2": null,
       "deadline": null,
-      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU",
+      "deadline_note": "nominace přes zahraniční/SEA-EU oddělení domovské univerzity (interní uzávěrky se liší, např. Univ. of Malta 2026-11-12; na portálu SEA-EU uvedena nominace 01.12.2027 a přihláška 15.12.2027 – zřejmý překlep v roce místo prosince 2026)",
       "mobility": [
         "studying"
       ],
@@ -1763,20 +2336,27 @@
         "4 online setkání (přesné termíny neuvedeny)",
         "Prezenční týden na Nord University v Bodø (8.–13. 3. 2027)"
       ],
-      "language": null,
+      "language": "angličtina (min. B2)",
       "fee_eur": null,
       "fee_text": null,
       "capacity": null,
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "https://sea-eu.org/bips/",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-narratives-for-action-translating-climate-goals-into-personal-and-collective-engagement/",
       "source_urls": [
-        "https://sea-eu.org/bips/"
+        "https://sea-eu.org/opportunity-browser/bip-narratives-for-action-translating-climate-goals-into-personal-and-collective-engagement/",
+        "https://sea-eu.org/bips/",
+        "https://www.um.edu.mt/about/sea-eu/opportunities/availablebipopportunities2026/",
+        "https://www.uni-kiel.de/en/international/sea-eu/details/news/bip-narratives-for-action"
       ],
       "source_type": "partner",
       "contacts": [],
       "notes": "Údaje pocházejí z přehledu BIP aliance SEA-EU; podrobný program, jazyk a uzávěrka nebyly na přehledové stránce uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Fyzický termín 8.–13. 3. 2027 v Bodø (Nord University, Norsko) i online část 3. 2.–17. 3. 2027 (55 hodin, 5 ECTS, angličtina min. B2) potvrzeny na portálu SEA-EU i u spolupořádajících univerzit (University of Malta, Kiel University). Uzávěrka 2026-11-17 z dávky nebyla v důkazech doložena: na portálu SEA-EU je uvedena nominace 01.12.2027 a přihláška 15.12.2027 (zřejmý překlep v roce místo prosince 2026) a interní uzávěrky jednotlivých univerzit SEA-EU se liší (např. UM měla 12. 11. 2026). Přímá stránka na doméně nord.no nebyla nalezena.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "uma",
@@ -1899,6 +2479,211 @@
       }
     },
     {
+      "id": "utwente-humanitarian-engineering-2027",
+      "uni": "University of Twente",
+      "uni_short": "UTwente",
+      "country_iso": "NL",
+      "country": "Nizozemsko",
+      "city": "Enschede",
+      "lat": 52.2408,
+      "lng": 6.853,
+      "erasmus_code": null,
+      "event_name": "Humanitarian engineering for inclusive and resilient communities",
+      "start": "2027-03-08",
+      "end": "2027-03-26",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-01",
+      "deadline_note": "Uzávěrka podání přihlášek je 1. prosince 2026.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "tech",
+        "human"
+      ],
+      "topic": "Inženýrská řešení a technologie pro podporu inkluzivních a odolných komunit v humanitárním kontextu.",
+      "audience": [
+        "Studenti bakalářského a navazujícího studia, případně doktorandi a zaměstnanci univerzit sítě ECIU"
+      ],
+      "program": null,
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; možnost získání stipendia Erasmus+ na pokrytí cestovních nákladů a ubytování.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/",
+      "source_urls": [
+        "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/"
+      ],
+      "source_type": "official",
+      "contacts": null,
+      "notes": "BIP je organizován v rámci konsorcia ECIU University s ohodnocením 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "ehu-bilbao-2027",
+      "uni": "University of the Basque Country",
+      "uni_short": "UPV/EHU Bilbao",
+      "country_iso": "ES",
+      "country": "Španělsko",
+      "city": "Bilbao",
+      "lat": 43.263,
+      "lng": -2.935,
+      "erasmus_code": null,
+      "event_name": "International Week 2027 for Incoming Professors & Staff",
+      "start": "2027-03-08",
+      "end": "2027-03-12",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-15",
+      "deadline_note": null,
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fields": [
+        "pedag",
+        "intl"
+      ],
+      "topic": "Mezinárodní týden pedagogické fakulty v Bilbau zaměřený na baskický vzdělávací systém, inovace ve vzdělávání a vícejazyčnou výuku.",
+      "audience": [
+        "vysokoškolští profesoři, vyučující a administrativní pracovníci v oblasti vzdělávání"
+      ],
+      "program": [
+        "prezentace baskického vzdělávacího systému a vícejazyčného vzdělávání",
+        "workshopy k inovacím ve vzdělávání a jejich dopadu na školy a univerzity",
+        "networking pro navazování společných výzkumných projektů",
+        "diskuse o možnostech studentských a zaměstnaneckých mobilit"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Zdarma (ubytování a dopravu si účastníci hradí sami)",
+      "capacity": "max. 25 účastníků",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.ehu.eus/en/web/bilboko-hezkuntza-fakultatea/international-week",
+      "source_urls": [
+        "https://www.ehu.eus/en/web/bilboko-hezkuntza-fakultatea/international-week"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Mari Mar Boillos",
+          "role": "Vice-Dean for International Relations",
+          "email": "bhf.internazionala@ehu.eus",
+          "phone": null,
+          "source": "https://www.ehu.eus/en/web/bilboko-hezkuntza-fakultatea/international-week"
+        }
+      ],
+      "notes": "Pořádá Fakulta vzdělávání v Bilbau (Bilboko Hezkuntza Fakultatea).",
+      "verify": null
+    },
+    {
+      "id": "wwu-muenster-2027-03",
+      "uni": "Universität Münster",
+      "uni_short": "WWU Münster",
+      "country_iso": "DE",
+      "country": "Německo",
+      "city": "Münster",
+      "lat": 51.9639,
+      "lng": 7.6133,
+      "erasmus_code": "D MUNSTER01",
+      "event_name": "BIP: Multilingualism and Intercultural Competences: building a sustainable and lasting multilingual Ulysseus community",
+      "start": "2027-03-08",
+      "end": "2027-03-12",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-01",
+      "deadline_note": "Registrace v portálu aliance Ulysseus do 1. 12. 2026 (nominace partnerských VŠ do 15. 12. 2026; interní uzávěrka na TUKE byla 15. 11. 2026)",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "human",
+        "intl"
+      ],
+      "topic": "Školení pro neakademické pracovníky univerzit aliance Ulysseus zaměřené na mnohojazyčnost, interkulturní komunikaci a udržitelné partnerství.",
+      "audience": [
+        "Neakademičtí zaměstnanci univerzit zapojených do aliance Ulysseus a mezinárodní spolupráce"
+      ],
+      "program": [
+        "Rozvoj interkulturních dovedností a komunikačních strategií ve vícejazyčném univerzitním prostředí",
+        "Sdílení osvědčených postupů mezi administrativními pracovníky členských institucí aliance Ulysseus",
+        "Praktické workshopy a síťovací aktivity v Münsteru"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Financováno z grantu Erasmus+ pro zaměstnanecká školení (STT)",
+      "capacity": "25 účastníků (3–5 míst na členskou univerzitu aliance Ulysseus)",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://ulysseus.eu/other-activities/bip-multilingualism-and-intercultural-competences/",
+      "source_urls": [
+        "https://ulysseus.eu/other-activities/bip-multilingualism-and-intercultural-competences/",
+        "https://ulysseus.eu/wp-content/uploads/2026/10/Munster-Multilingualism-and-intercultural-competences_BIP-8-12March2027.pdf",
+        "https://erasmus.tuke.sk/call-for-a-bip-mobility-for-non-academic-staff-munster-germany/",
+        "https://erasmus.tuke.sk/vyzva-na-bip-mobilitu-pre-neakademickych-zamestnancov-munster-nemecko/"
+      ],
+      "source_type": "official",
+      "contacts": [],
+      "notes": "Organizováno Universität Münster v rámci evropské aliance ULYSSEUS; výzva publikována Technickou univerzitou v Košicích (TUKE).",
+      "verify": {
+        "status": "ověřeno",
+        "note": "Termín fyzické části (8.–12. 3. 2027) i uzávěrka přihlášek (1. 12. 2026) plně potvrzeny na oficiálním portálu univerzitní aliance Ulysseus a v popisu BIP pořádaného Universität Münster.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "artevelde-social-education-2027",
+      "uni": "Artevelde University of Applied Sciences",
+      "uni_short": "Artevelde UAS",
+      "country_iso": "BE",
+      "country": "Belgie",
+      "city": "Gent",
+      "lat": 51.0535,
+      "lng": 3.7304,
+      "erasmus_code": null,
+      "event_name": "Artevelde Social Education: Participation and Inclusion",
+      "start": "2027-03-09",
+      "end": "2027-03-11",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "pedag",
+        "zdravi"
+      ],
+      "topic": "Mezinárodní seminář pro pracovníky vysokých škol zaměřený na témata participace, inkluze a sociální práce v praxi.",
+      "audience": [
+        "odborní a akademičtí pracovníci v sociálním vzdělávání a sociální práci"
+      ],
+      "program": [
+        "workshopy k metodám participace a inkluzivního vzdělávání",
+        "výměna dobré praxe mezi evropskými partnery",
+        "odborné návštěvy a institucionální networking"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.comeniusassociation.org/international-weeks-for-staff",
+      "source_urls": [
+        "https://www.comeniusassociation.org/international-weeks-for-staff"
+      ],
+      "source_type": "partner",
+      "contacts": [],
+      "notes": "Akce probíhá na fakultě sociálního vzdělávání Arteveldehogeschool v Gentu.",
+      "verify": null
+    },
+    {
       "id": "aubg-2027-03",
       "uni": "American University in Bulgaria",
       "uni_short": "AUBG Blagoevgrad",
@@ -1957,6 +2742,55 @@
         "note": "Potvrzeno v detailu na IMOTION vloženém přímo pořadatelem AUBG (15.–19. 3. 2027, uzávěrka 19. 2. 2027, poplatek 70 €, kapacita 100, kontakt mhandzhiyska@aubg.edu). Doplněn přímý odkaz na oficiální registrační formulář na doméně apply.aubg.edu.",
         "checked": "2026-11-17"
       }
+    },
+    {
+      "id": "ubb-empowered-leadership-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Empowered Leadership: Managing People & Business Skills",
+      "start": "2027-03-15",
+      "end": "2027-03-19",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon"
+      ],
+      "topic": "Rozvoj vůdčích osobnostních schopností, mezinárodní řízení lidských zdrojů a podpora diverzity a inkluze v byznysu.",
+      "audience": [
+        "Studenti ekonomických a manažerských oborů (angličtina na úrovni alespoň B1)"
+      ],
+      "program": [
+        "Vedení lidí a rozvoj měkkých dovedností",
+        "Globální trendy v řízení lidských zdrojů",
+        "Získávání a udržení talentovaných pracovníků",
+        "Řízení výkonu a zapojení zaměstnanců",
+        "Diverzita, rovnost a inkluze na pracovišti"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za výuku; účastníkům náleží grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální setkání se konají 9.–10. března 2027, prezenční část 15.–19. března 2027 v Kluži. Ohodnocení: 3 ECTS.",
+      "verify": null
     },
     {
       "id": "inseec-bba-2027-03",
@@ -2195,6 +3029,58 @@
       }
     },
     {
+      "id": "angewandte-vienna-2027-03",
+      "uni": "University of Applied Arts Vienna",
+      "uni_short": "Angewandte Wien",
+      "country_iso": "AT",
+      "country": "Rakousko",
+      "city": "Vídeň",
+      "lat": 48.2078,
+      "lng": 16.3814,
+      "erasmus_code": "A WIEN07",
+      "event_name": "Erasmus+ BIP: The Digital Body",
+      "start": "2027-03-15",
+      "end": "2027-03-20",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-09-30",
+      "deadline_note": "Uzávěrka e-přihlášek na FaVU VUT",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "design",
+        "it"
+      ],
+      "topic": "Kombinovaný intenzivní program propojující digitální umění, intermediální technologie a performativní praxi se zaměřením na tělesnost a nová média.",
+      "audience": [
+        "Studenti uměleckých oborů zaměření na digitální umění, nová média a performanci"
+      ],
+      "program": [
+        "Tři online pracovní bloky (19. 10., 16. 11. a 7. 12. 2026) pro konceptualizaci a sestavení interdisciplinárních týmů",
+        "Šestidenní tvůrčí rezidence na Angewandte ve Vídni: 15.–20. března 2027",
+        "Vývoj týmových uměleckých projektů a závěrečná veřejná prezentace Open Lab (4 ECTS)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Hostitelská univerzita poskytuje zázemí, materiály a jízdenku na MHD ve Vídni; pobyt je hrazen z grantu Erasmus+ (4 ECTS)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.favu.vut.cz/en/faculty/structure/international-department/ffa-international-office-news-f26634/call-for-applications-erasmus-bip-the-digital-body-deadline-30-sep-2026-d360239",
+      "source_urls": [
+        "https://www.favu.vut.cz/en/faculty/structure/international-department/ffa-international-office-news-f26634/call-for-applications-erasmus-bip-the-digital-body-deadline-30-sep-2026-d360239"
+      ],
+      "source_type": "partner",
+      "contacts": [],
+      "notes": "Výzva publikována na webu FaVU VUT v Brně; pořadatelem je Universität für angewandte Kunst Wien.",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín (15.–20. 3. 2027) a parametry BIP ověřeny z oficiální výzvy partnerské FaVU VUT; přímá veřejná webová stránka na hostitelské Die Angewandte není veřejně dostupná.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
       "id": "ug-gdansk-2027-03",
       "uni": "University of Gdańsk",
       "uni_short": "UG Gdańsk",
@@ -2340,7 +3226,7 @@
       "city": "Kaunas",
       "lat": 54.8969,
       "lng": 23.9134,
-      "erasmus_code": null,
+      "erasmus_code": "LT KAUNAS01",
       "event_name": "BIP Transform4Europe Doctoral Week in Social Sciences: Scientific Research Methodology",
       "start": "2027-03-15",
       "end": "2027-03-19",
@@ -2358,26 +3244,102 @@
       "audience": [
         "Doktorandi v oblasti sociálních věd"
       ],
-      "program": [],
+      "program": [
+        "Online úvodní setkání: 8. března 2027 ve 13:00 SEČ",
+        "Prezenční blok v Kaunasu: 15.–19. března 2027",
+        "Filozofická a metodologická paradigmata, multidisciplinární výzkumný design",
+        "Akademické publikování a tvůrčí vědecká integrace (3 ECTS)"
+      ],
       "language": "English",
-      "fee_eur": null,
-      "fee_text": null,
+      "fee_eur": 0,
+      "fee_text": "Financováno z grantu Erasmus+ BIP domovské instituce (3 ECTS kredity)",
       "capacity": null,
-      "registration_url": null,
+      "registration_url": "https://transform4europe.eu/events/transform4europe-doctoral-week/",
       "registration_url2": null,
       "event_url": "https://transform4europe.eu/events/transform4europe-doctoral-week/",
       "source_urls": [
         "https://transform4europe.eu/events/transform4europe-doctoral-week/",
         "https://transform4europe.units.it/wp-content/uploads/2026/11/T4EU_1st_Time_Researcher_programme-info.pdf",
         "https://easy.tul.cz/aktuality/erasmus-bip-doctoral-week-in-social-sciences-in-lithuania",
-        "https://www.ujaen.es/internacional/en/uja-students/summer-schools-others"
+        "https://www.ujaen.es/internacional/en/uja-students/summer-schools-others",
+        "https://fpvmv.umb.sk/novinka/144126/erasmus-bip-program-transform4europe-doctoral-week-in-social-sciences"
       ],
       "source_type": "official",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": "Transform4Europe Team",
+          "role": "Organizátor BIP",
+          "email": "Transform4Europe@vdu.lt",
+          "phone": null,
+          "source": "https://fpvmv.umb.sk/novinka/144126/erasmus-bip-program-transform4europe-doctoral-week-in-social-sciences"
+        }
+      ],
       "notes": "Zdroj: přehled krátkodobých programů pro studenty University of Jaén.",
       "verify": {
         "status": "částečně",
         "note": "Termín 15.–19. 3. 2027 na VMU v Kaunasu, forma BIP a jazyk angličtina jsou potvrzeny na oficiálním webu aliance Transform4Europe a v PDF programu. Přihlášky se podávají přes domovskou kancelář T4EU; konkrétní uzávěrka 30. 11. 2026 (a online úvod 8. 3. 2027) pochází ze sekundárního zdroje partnerské TUL.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "windesheim-zwolle-2027-03",
+      "uni": "Windesheim University of Applied Sciences",
+      "uni_short": "Windesheim UAS",
+      "country_iso": "NL",
+      "country": "Nizozemsko",
+      "city": "Zwolle",
+      "lat": 52.4998,
+      "lng": 6.0792,
+      "erasmus_code": "NL ZWOLLE05",
+      "event_name": "4th International BIP Week at Windesheim University of Applied Sciences",
+      "start": "2027-03-15",
+      "end": "2027-03-19",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-11-10",
+      "deadline_note": "Uzávěrka přihlášek na FSpS MU",
+      "mobility": [
+        "training",
+        "studying"
+      ],
+      "fields": [
+        "pedag",
+        "zdravi"
+      ],
+      "topic": "Kombinovaný intenzivní program zaměřený na didaktiku sportovních her, řízení třídy a komunitní rozvoj sportu.",
+      "audience": [
+        "Studenti tělesné výchovy, sportovních studií a příbuzných oborů"
+      ],
+      "program": [
+        "Online setkání: 3. března a 10. března 2027",
+        "Prezenční intenzivní týden v kampusu Zwolle: 15.–19. března 2027",
+        "Tematické moduly: Výuka her v tělesné výchově, skupinová dynamika a komunitní sport (3 ECTS)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Financováno z grantu Erasmus+ domovské instituce (3 ECTS kredity)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.fsps.muni.cz/studenti/studium-a-staze-v-zahranici/aktualni-nabidky/4th-international-bip-week-at-windesheim-university-of-applied-sciences",
+      "source_urls": [
+        "https://www.fsps.muni.cz/studenti/studium-a-staze-v-zahranici/aktualni-nabidky/4th-international-bip-week-at-windesheim-university-of-applied-sciences",
+        "https://www.hiof.no/studier/utveksling/slik-reiser-du-pa-utveksling/for-du-reiser/blended-intensive-programmes/bip---trauma-and-the-body.html"
+      ],
+      "source_type": "partner",
+      "contacts": [
+        {
+          "name": "Corine Visser",
+          "role": "Koordinátorka BIP na Windesheim UAS",
+          "email": "cbj.visser@windesheim.nl",
+          "phone": null,
+          "source": "https://www.hiof.no/studier/utveksling/slik-reiser-du-pa-utveksling/for-du-reiser/blended-intensive-programmes/bip---trauma-and-the-body.html"
+        }
+      ],
+      "notes": "Výzva publikována Fakultou sportovních studií Masarykovy univerzity; akce probíhá na Windesheim University of Applied Sciences v Nizozemsku.",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín (15.–19. 3. 2027) i zaměření potvrzeny z výzev partnerských institucí (FSpS MU a Høgskolen i Østfold). Zjištěn kontakt na hlavní koordinátorku na Windesheim UAS a upřesněna cílová skupina (studenti i zaměstnanci).",
         "checked": "2026-11-17"
       }
     },
@@ -2432,6 +3394,55 @@
       }
     },
     {
+      "id": "elte-budapest-2027",
+      "uni": "Eötvös Loránd University",
+      "uni_short": "ELTE",
+      "country_iso": "HU",
+      "country": "Maďarsko",
+      "city": "Budapešť",
+      "lat": 47.4979,
+      "lng": 19.0402,
+      "erasmus_code": null,
+      "event_name": "Bridging Cultures in Higher Education: From Understanding to Action",
+      "start": "2027-04-05",
+      "end": "2027-04-09",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-03",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "pedag",
+        "human",
+        "intl"
+      ],
+      "topic": "Zaměstnanecký týden na Fakultě pedagogiky a psychologie ELTE zaměřený na interkulturní porozumění a inkluzi ve vysokoškolském vzdělávání.",
+      "audience": [
+        "akademičtí a administrativní pracovníci vysokých škol"
+      ],
+      "program": [
+        "workshopy o propojování kultur a interkulturní komunikaci",
+        "praktické nástroje pro podporu rozmanitosti na univerzitách",
+        "institucionální networking a kulturní aktivity v Budapešti"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staff-Week-search",
+      "source_urls": [
+        "http://staffmobility.eu/staff-Week-search"
+      ],
+      "source_type": "imotion",
+      "contacts": [],
+      "notes": "Pořádá Faculty of Education and Psychology, Eötvös Loránd University.",
+      "verify": null
+    },
+    {
       "id": "elte-budapest-2027-04",
       "uni": "Eötvös Loránd University (ELTE), Faculty of Education and Psychology",
       "uni_short": "ELTE Budapest",
@@ -2473,6 +3484,65 @@
       "contacts": [],
       "notes": "Údaje pocházejí z výpisu IMOTION; datum konce akce nebylo uvedeno.",
       "verify": null
+    },
+    {
+      "id": "upol-olomouc-2027-04",
+      "uni": "Palacký University Olomouc",
+      "uni_short": "UPOL FTK",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Olomouc",
+      "lat": 49.5938,
+      "lng": 17.2509,
+      "erasmus_code": "CZ OLOMOUC01",
+      "event_name": "International Teaching Week (Spring Edition)",
+      "start": "2027-04-05",
+      "end": "2027-04-09",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "teaching"
+      ],
+      "fields": [
+        "pedag",
+        "zdravi"
+      ],
+      "topic": "Jarní týden mezinárodní výuky na Fakultě tělesné kultury Univerzity Palackého zaměřený na přednášky a semináře zahraničních vyučujících v oblasti sportu a tělesné výchovy.",
+      "audience": [
+        "Vyučující a akademičtí pracovníci zahraničních partnerských univerzit"
+      ],
+      "program": [
+        "Přednášky, semináře a praktická cvičení pro studenty UPOL",
+        "Sdílení pedagogických zkušeností a rozvoj mezinárodní spolupráce"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://ftk.upol.cz/en/international/international-teaching-week/news/",
+      "source_urls": [
+        "https://ftk.upol.cz/en/international/international-teaching-week/news/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Viktorie Machalová",
+          "role": "Koordinátorka ITW",
+          "email": "viktorie.machalova@upol.cz",
+          "phone": "+420 585 636 080",
+          "source": "https://ftk.upol.cz/en/international/international-teaching-week/news/"
+        }
+      ],
+      "notes": "Akce Fakulty tělesné kultury Univerzity Palackého v Olomouci; navazuje na předchozí ročníky ITW.",
+      "verify": {
+        "status": "částečně",
+        "note": "Jarní termín akce (5.–9. 4. 2027) potvrzen přímo na oficiální stránce FTK Univerzity Palackého v Olomouci. Přihlašování probíhá průběžně kontaktováním koordinátorky, formální uzávěrka není vypsána.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "uni-marburg-2027-04",
@@ -2552,12 +3622,13 @@
       "erasmus_code": null,
       "event_name": "Eye on TAMK 2027: Creative Collaboration",
       "start": "2027-04-05",
-      "end": null,
+      "end": "2027-04-09",
       "start2": null,
       "end2": null,
-      "deadline": "2026-10-31",
-      "deadline_note": null,
+      "deadline": "2026-11-09",
+      "deadline_note": "uzávěrka Call for Papers pro prezentující (již uzavřena); oficiální registrace účastníků se otevírá v prosinci 2026",
       "mobility": [
+        "teaching",
         "training"
       ],
       "fields": [
@@ -2567,19 +3638,34 @@
       "audience": [],
       "program": [],
       "language": "angličtina",
-      "fee_eur": null,
-      "fee_text": null,
+      "fee_eur": 250,
+      "fee_text": "250 € (seminář, akademické sekce a doprovodný program; platí i pro prezentující; max. 2 účastníci z každé univerzity aliance UNINOVIS zdarma)",
       "capacity": null,
-      "registration_url": null,
+      "registration_url": "https://www.lyyti.fi/reg/EyeOnTAMK2027",
       "registration_url2": null,
-      "event_url": null,
+      "event_url": "http://staffmobility.eu/staffweek/eye-tamk-2027-creative-collaboration",
       "source_urls": [
+        "http://staffmobility.eu/staffweek/eye-tamk-2027-creative-collaboration",
+        "https://www.lyyti.fi/reg/EyeOnTAMK2027",
+        "https://uninovis.eu/news/call-for-papers-eye-on-tamk-2027/",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_target_groups%3AITC&f=field_staff_week_target_groups%3Adoctoral&f=field_staff_week_target_groups%3Afinance&page=11"
       ],
       "source_type": "imotion",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": null,
+          "role": "Organizační tým Eye on TAMK",
+          "email": "eyeontamk@tuni.fi",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/eye-tamk-2027-creative-collaboration"
+        }
+      ],
       "notes": "Údaje pocházejí ze souhrnného výpisu IMOTION; datum konce akce a další detaily nebyly ve výpisu uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "ověřeno",
+        "note": "Termín 5.–9. 4. 2027, poplatek 250 € (pro max. 2 účastníky z každé univerzity aliance UNINOVIS zdarma), kontakt eyeontamk@tuni.fi i uzávěrka Call for Papers 9. 11. 2026 (místo 31. 10. 2026 v dávce; obecná registrace účastníků se otevírá v prosinci 2026) jsou potvrzeny přímo na detailu IMOTION vloženém pořadatelem (TAMK), v registračním formuláři TAMK na Lyyti i na webu aliance UNINOVIS. Akce je určena akademickým i neakademickým pracovníkům.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "utb-zlin-2027-04",
@@ -2765,6 +3851,130 @@
       }
     },
     {
+      "id": "univr-verona-2027-04",
+      "uni": "University of Verona",
+      "uni_short": "Univr Verona",
+      "country_iso": "IT",
+      "country": "Itálie",
+      "city": "Verona",
+      "lat": 45.4384,
+      "lng": 10.9916,
+      "erasmus_code": null,
+      "event_name": "From Collections to Connections: the evolving Academic Library. The Academic Library as a place where people and knowledge come together.",
+      "start": "2027-04-05",
+      "end": "2027-04-09",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-11-30",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "human",
+        "it",
+        "intl"
+      ],
+      "topic": "Druhý ročník knihovnického týdne na univerzitě ve Veroně věnovaný transformaci akademických knihoven, rozvoji dovedností knihovníků, informační gramotnosti v éře AI a tvorbě inkluzivních a udržitelných studijních prostor.",
+      "audience": [
+        "Knihovníci a zaměstnanci akademických knihoven z vysokoškolských institucí v programových a partnerských zemích Erasmus+"
+      ],
+      "program": [
+        "Přednášky a diskuse o roli knihoven v éře umělé inteligence a informační gramotnosti",
+        "Prezentace osvědčených postupů účastníků (15–20 minut)",
+        "Prohlídky univerzitních knihoven a společenský i kulturní program ve Veroně"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Zdarma",
+      "capacity": "20 (max. 2 účastníci z jedné instituce)",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/collections-connections-evolving",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/collections-connections-evolving"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Tiziana Di Cerbo",
+          "role": null,
+          "email": "tiziana.dicerbo@univr.it",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/collections-connections-evolving"
+        },
+        {
+          "name": "Elisabetta Guerra",
+          "role": null,
+          "email": "elisabetta.guerra@univr.it",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/collections-connections-evolving"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "vilnius-tech-2027",
+      "uni": "Vilnius Gediminas Technical University",
+      "uni_short": "VILNIUS TECH",
+      "country_iso": "LT",
+      "country": "Litva",
+      "city": "Vilnius",
+      "lat": 54.7224,
+      "lng": 25.3377,
+      "erasmus_code": "LT VILNIUS08",
+      "event_name": "International Teaching and Training Staff Week 2027 – Internationalisation 360°",
+      "start": "2027-04-05",
+      "end": "2027-04-09",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-02-01",
+      "deadline_note": null,
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fields": [
+        "intl",
+        "tech"
+      ],
+      "topic": "Interaktivní týden výuky i školení zaměřený na komplexní pohled na internacionalizaci na moderní technické univerzitě.",
+      "audience": [
+        "akademičtí a administrativní pracovníci zahraničních vysokých škol"
+      ],
+      "program": [
+        "výukové hodiny hostujících vyučujících pro studenty VILNIUS TECH",
+        "náhled do procesů internacionalizace technické univerzity",
+        "diskuse o výzvách a úspěších moderního vysokoškolského vzdělávání",
+        "networking a společensko-kulturní program ve Vilniusu"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Zdarma (ubytování si účastníci hradí sami)",
+      "capacity": "max. 2 kolegové za instituci",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/internationalisation-360deg-0",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/internationalisation-360deg-0",
+        "https://international.mendelu.cz/",
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Aplacements&page=3"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": null,
+          "role": "Staff Mobility Team",
+          "email": "staffmobility@vilniustech.lt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/internationalisation-360deg-0"
+        }
+      ],
+      "notes": "K dispozici je předběžný program a seznam témat pro výuku.",
+      "verify": null
+    },
+    {
       "id": "vilnius-tech-2027-04",
       "uni": "Vilnius Gediminas Technical University (VILNIUS TECH)",
       "uni_short": "VILNIUS TECH",
@@ -2874,7 +4084,8 @@
       "source_urls": [
         "http://staffmobility.eu/staffweek/erasmus-international-teaching-week-3rd",
         "http://staffmobility.eu/staff-Week-search?page=11",
-        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=10"
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=10",
+        "https://forms.gle/kcG3ditbG1ZXqGR6A"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -2987,6 +4198,71 @@
       "source_type": "imotion",
       "contacts": [],
       "notes": "Extrahováno z přehledové tabulky IMOTION bez uvedeného data konce.",
+      "verify": null
+    },
+    {
+      "id": "cuni-prague-libraries-2027-04",
+      "uni": "Charles University",
+      "uni_short": "UK Praha",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Praha",
+      "lat": 50.0888,
+      "lng": 14.4042,
+      "erasmus_code": "CZ PRAHA07",
+      "event_name": "Staff Training Week at Charles University Libraries 2027",
+      "start": "2027-04-12",
+      "end": "2027-04-16",
+      "start2": "2027-10-11",
+      "end2": "2027-10-15",
+      "deadline": "2027-02-01",
+      "deadline_note": "Uzávěrka přihlášek pro dubnový termín (výsledky budou do 8. 2. 2027); pro říjnový termín je uzávěrka 1. 8. 2027",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "human",
+        "intl"
+      ],
+      "topic": "Školicí týden pro pracovníky univerzitních knihoven organizovaný Ústřední knihovnou Univerzity Karlovy v Praze s návštěvami fakultních a národních knihoven.",
+      "audience": [
+        "Pracovníci vysokoškolských a akademických knihoven"
+      ],
+      "program": [
+        "Návštěvy vybraných fakultních knihoven Univerzity Karlovy",
+        "Prezentace a workshopy v Ústřední knihovně UK",
+        "Odborné exkurze do pražských národních knihoven",
+        "Sdílení zkušeností a inovací v knihovnických službách"
+      ],
+      "language": "English",
+      "fee_eur": 200,
+      "fee_text": "200 € (pokrývá exkurze do národních knihoven, drobné občerstvení a organizační zajištění; nezahrnuje ubytování a stravu)",
+      "capacity": "15 účastníků na běh",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://library.cuni.cz/staff-training-weeks-2027/",
+      "source_urls": [
+        "https://library.cuni.cz/staff-training-weeks-2027/",
+        "http://staffmobility.eu/staffweek/staff-training-week-charles-university-9"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "PhDr. Radka Římanová, PhD",
+          "role": "Ředitelka Ústřední knihovny UK",
+          "email": "ukn@ruk.cuni.cz",
+          "phone": "+420 224 491 231",
+          "source": "https://library.cuni.cz/staff-training-weeks-2027/"
+        },
+        {
+          "name": "Erasmus Library Team",
+          "role": "Koordinace školení",
+          "email": "erasmus-lib@cuni.cz",
+          "phone": null,
+          "source": "https://library.cuni.cz/staff-training-weeks-2027/"
+        }
+      ],
+      "notes": "Přihlášky se podávají e-mailem na erasmus-lib@cuni.cz (životopis a motivační dopis); akce má dvě edice (duben a říjen 2027).",
       "verify": null
     },
     {
@@ -3331,13 +4607,19 @@
       ],
       "fields": [
         "intl",
-        "human"
+        "human",
+        "pedag"
       ],
       "topic": "Knihovnický zaměstnanecký týden věnovaný sdílení praxe pro podporu soustředění, pohody a inkluze studentů v akademických knihovnách.",
       "audience": [
         "Pracovníci univerzitních knihoven"
       ],
-      "program": [],
+      "program": [
+        "Hledání rovnováhy mezi digitálními technologiemi a potřebou odpojení pro podporu koncentrace",
+        "Inovace v knihovních službách a UX designu, aktivní učení a vzdělávací hry",
+        "Podpora inkluze a přizpůsobení prostor studentům se specifickými potřebami",
+        "Workshopy sofrologie, animoterapie a relaxační zóny v knihovně"
+      ],
       "language": "English",
       "fee_eur": 0,
       "fee_text": "zdarma (ubytování není zajištěno)",
@@ -3384,7 +4666,8 @@
       "deadline": "2027-01-31",
       "deadline_note": "potvrzení přijetí 6. 2. 2027, úhrada poplatku do 13. 2. 2027",
       "mobility": [
-        "teaching"
+        "teaching",
+        "training"
       ],
       "fields": [
         "ekon"
@@ -3425,7 +4708,7 @@
           "source": "https://international.uew.pl/international-teaching-week-2027/"
         }
       ],
-      "notes": null,
+      "notes": "Výuka je začleněna do bakalářských a magisterských studijních programů.",
       "verify": {
         "status": "ověřeno",
         "note": "Termín 12.–16. 4. 2027, uzávěrka 31. 1. 2027 (včetně navazujících milníků), poplatek 150 €, koordinátor Piotr Luty i telefon jsou potvrzeny na oficiálních stránkách Wroclaw University of Economics and Business (international.uew.pl a uew.pl).",
@@ -3601,6 +4884,122 @@
       "source_type": "imotion",
       "contacts": [],
       "notes": "Údaje pocházejí jen ze souhrnného výpisu IMOTION (chybí datum konce, poplatek a kontakty).",
+      "verify": null
+    },
+    {
+      "id": "vsb-tuo-urban-phoenix-2027-04",
+      "uni": "VSB – Technical University of Ostrava",
+      "uni_short": "VŠB-TUO FAST",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Ostrava",
+      "lat": 49.8306,
+      "lng": 18.1628,
+      "erasmus_code": "CZ OSTRAVA01",
+      "event_name": "Urban Phoenix: Brownfields Reborn?",
+      "start": "2027-04-18",
+      "end": "2027-04-23",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "tech",
+        "prir"
+      ],
+      "topic": "Kombinovaný intenzivní program Fakulty stavební VŠB-TUO zaměřený na udržitelnou regeneraci a architektonickou obnovu postindustriálních brownfieldů.",
+      "audience": [
+        "Vysokoškolští studenti stavebních, architektonických a environmentálních studijních oborů"
+      ],
+      "program": [
+        "Virtuální část: 9. března 2027 a 2. dubna 2027",
+        "Prezenční intenzivní výuka a terénní práce v Ostravě: 18.–23. dubna 2027",
+        "Analýza průmyslových lokalit, návrh regeneračních projektů a jejich prezentace (5 ECTS)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; financováno z grantu Erasmus+ BIP domovské instituce (5 ECTS kreditů)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/",
+      "source_urls": [
+        "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Tereza Majstríková",
+          "role": "BIP Academic Coordinator",
+          "email": "tereza.majstrikova@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        },
+        {
+          "name": "Marcela Maturová",
+          "role": "Erasmus Administrative Coordinator",
+          "email": "marcela.maturova@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        }
+      ],
+      "notes": "BIP organizovaný Fakultou stavební VŠB-TUO; kombinuje dvě virtuální setkání s prezenčním týdnem v Ostravě.",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín prezenční části (18.–23. 4. 2027) i virtuální části potvrzen na oficiálním webu VŠB-TUO pro BIP programy. Doplněn chybějící e-mail administrativní koordinátorky. Uzávěrka přihlášek zatím nebyla zveřejněna.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "ubb-health4media-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Health4Media",
+      "start": "2027-04-19",
+      "end": "2027-04-23",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "zdravi",
+        "design"
+      ],
+      "topic": "Péče o duševní zdraví, zvládání stresu a posilování psychické odolnosti pro studenty médií a novináře.",
+      "audience": [
+        "Studenti žurnalistiky, mediálních studií, komunikace a příbuzných oborů"
+      ],
+      "program": [
+        "Výzvy v oblasti duševního zdraví u pracovníků v médiích",
+        "Praktické strategie zvládání stresu a self-care",
+        "Budování emoční pohody a psychické odolnosti",
+        "Networking s mezinárodními odborníky a kolegy"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; studentům je poskytnut grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část: 1.–2. dubna 2027, prezenční část v Kluži: 19.–23. dubna 2027.",
       "verify": null
     },
     {
@@ -3829,7 +5228,7 @@
       "start2": null,
       "end2": null,
       "deadline": "2026-10-31",
-      "deadline_note": null,
+      "deadline_note": "registrace byla uzavřena 31. října 2026",
       "mobility": [
         "teaching",
         "training"
@@ -4125,7 +5524,7 @@
       "city": "Ostrava",
       "lat": 49.8355,
       "lng": 18.2925,
-      "erasmus_code": null,
+      "erasmus_code": "CZ OSTRAVA02",
       "event_name": "International Staff Week",
       "start": "2027-04-19",
       "end": "2027-04-23",
@@ -4156,7 +5555,8 @@
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3APR&page=1",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=2",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Aasa&page=1",
-        "http://staffmobility.eu/staff-Week-search?page=3"
+        "http://staffmobility.eu/staff-Week-search?page=3",
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Aplacements&page=3"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -4216,7 +5616,7 @@
       "fee_eur": 450,
       "fee_text": "150 € pro partnerské instituce, 450 € pro nepartnerské; zdarma pro členy aliance Ulysseus a pro účastníky plného 5denního programu s online workshopem v rámci Erasmus+ STT (zahrnuje uvítací večeři, obědy, dopravu do Porvoo a program)",
       "capacity": "omezená kapacita",
-      "registration_url": null,
+      "registration_url": "https://www.haaga-helia.fi/en/international-teacher-and-staff-week-29-30-april-2027",
       "registration_url2": null,
       "event_url": "https://www.haaga-helia.fi/en/international-teacher-and-staff-week-26-30-april-2027",
       "source_urls": [
@@ -4275,8 +5675,8 @@
         "Prezenční výuka v Kaunasu 26.–30. 4. 2027"
       ],
       "language": "English",
-      "fee_eur": null,
-      "fee_text": null,
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; studenti obdrží stipendium Erasmus+ na pokrytí krátkodobé mobility.",
       "capacity": "6 míst pro studenty WZ UW",
       "registration_url": null,
       "registration_url2": null,
@@ -4311,7 +5711,7 @@
       "start2": null,
       "end2": null,
       "deadline": null,
-      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU",
+      "deadline_note": "přihlášky přes zahraniční oddělení domovské univerzity aliance SEA-EU (např. interní uzávěrka Kiel University je 6. 12. 2026)",
       "mobility": [
         "studying"
       ],
@@ -4327,20 +5727,34 @@
         "Prezenční část na Nord University v Bodø (26.–30. 4. 2027)",
         "Navazující online setkání 13. 5. 2027"
       ],
-      "language": null,
+      "language": "angličtina",
       "fee_eur": null,
       "fee_text": null,
       "capacity": null,
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "https://sea-eu.org/bips/",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-teaching-and-learning-in-higher-education-for-phd-students-a-european-perspective/",
       "source_urls": [
-        "https://sea-eu.org/bips/"
+        "https://sea-eu.org/opportunity-browser/bip-teaching-and-learning-in-higher-education-for-phd-students-a-european-perspective/",
+        "https://sea-eu.org/bips/",
+        "https://www.uni-kiel.de/en/international/sea-eu/details/news/bip-teaching-and-learning-in-higher-education-1"
       ],
       "source_type": "partner",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": "Anna CohenMiller",
+          "role": "BIP Contact (Nord University)",
+          "email": "anna.cohenmiller@nord.no",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-teaching-and-learning-in-higher-education-for-phd-students-a-european-perspective/"
+        }
+      ],
       "notes": "Údaje pocházejí z přehledu BIP aliance SEA-EU; uzávěrka a jazyk nebyly na přehledové stránce uvedeny.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 26.–30. 4. 2027 na Nord University v Bodø (NO; online 8. 4. a 13. 5. 2027), jazyk angličtina (min. B2) a kontakt na Nord University jsou potvrzeny na detailu aliance SEA-EU a na webech Kiel University a University of Malta. Chybí obecná uzávěrka (každá členská VŠ má vlastní interní termín, např. Kiel 6. 12. 2026), poplatek i samostatná stránka na doméně nord.no.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "stuba-bratislava-2027-04",
@@ -4351,7 +5765,7 @@
       "city": "Bratislava",
       "lat": 48.1517,
       "lng": 17.1157,
-      "erasmus_code": null,
+      "erasmus_code": "SK BRATISL01",
       "event_name": "INTERNATIONAL RELATIONS & ERASMUS+ STAFF WEEK 2027",
       "start": "2027-04-26",
       "end": "2027-04-30",
@@ -4380,7 +5794,7 @@
       "fee_eur": 290,
       "fee_text": "290 € (zahrnuje program, jeden oběd, jednu večeři s degustací vín, občerstvení, exkurze v Bratislavě a Trnavě, fotodokumentaci a uvítací balíček)",
       "capacity": null,
-      "registration_url": null,
+      "registration_url": "http://staffmobility.eu/staffweek/international-relations-erasmus-staff",
       "registration_url2": null,
       "event_url": "http://staffmobility.eu/staffweek/international-relations-erasmus-staff",
       "source_urls": [
@@ -4388,7 +5802,8 @@
         "https://www.linkedin.com/posts/stu-international_international-relations-erasmus-staff-activity-7480525087687753728-ene_",
         "http://staffmobility.eu/staff-Week-search?page=11",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=10",
-        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_state%3Aupcoming&f=field_staff_week_target_groups%3APR&page=11"
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_state%3Aupcoming&f=field_staff_week_target_groups%3APR&page=11",
+        "https://www.stuba.sk/english.html"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -4709,7 +6124,8 @@
       ],
       "fields": [
         "intl",
-        "tech"
+        "tech",
+        "ekon"
       ],
       "topic": "Třetí mezinárodní týden BME věnovaný udržitelným technologiím, internacionalizaci, Erasmus Without Paper a aktivitám aliance EELISA.",
       "audience": [
@@ -4732,7 +6148,8 @@
       "source_urls": [
         "https://nki.bme.hu/node/6288?language=en",
         "http://staffmobility.eu/staffweek/beyond-mobility-exchange-3rd",
-        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_target_groups%3AITC&f=field_staff_week_target_groups%3Adoctoral&f=field_staff_week_target_groups%3Afinance&page=11"
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_target_groups%3AITC&f=field_staff_week_target_groups%3Adoctoral&f=field_staff_week_target_groups%3Afinance&page=11",
+        "https://www.nki.bme.hu/node/6288?language=en"
       ],
       "source_type": "official",
       "contacts": [
@@ -4767,7 +6184,7 @@
       "city": "Brno",
       "lat": 49.1987,
       "lng": 16.6056,
-      "erasmus_code": null,
+      "erasmus_code": "CZ BRNO05",
       "event_name": "Masaryk University Staff Training Week 2026: Universal Design for Learning",
       "start": "2027-05-03",
       "end": "2027-05-07",
@@ -4799,7 +6216,8 @@
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3APR&page=1",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=2",
         "http://staffmobility.eu/staff-Week-Search?f=field_staff_week_target_groups%3APR&page=1",
-        "http://staffmobility.eu/staff-Week-search?page=3"
+        "http://staffmobility.eu/staff-Week-search?page=3",
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Aplacements&page=3"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -4920,11 +6338,7 @@
       "source_type": "imotion",
       "contacts": [],
       "notes": "Datum konce doplněno z partnerského přehledu University of Mannheim.",
-      "verify": {
-        "status": "neověřeno",
-        "note": "Akce 13th SSS Valencia (3.–7. 5. 2027) ani uzávěrka 12. 4. 2027 nebyly v živě stažených důkazech nalezeny – stránkování výpisu IMOTION se posunulo a textový výpis tabulky Universität Mannheim končí u dubnových akcí. Termín se z dostupných důkazů nepodařilo potvrdit.",
-        "checked": "2026-11-17"
-      }
+      "verify": null
     },
     {
       "id": "upv-etseamn-2027-05-sss",
@@ -4935,14 +6349,14 @@
       "city": "Valencia",
       "lat": 39.4811,
       "lng": -0.3409,
-      "erasmus_code": null,
+      "erasmus_code": "E VALENCI02",
       "event_name": "13th SSS VALENCIA: Job Shadowing and Training – for Support Services Staff",
       "start": "2027-05-03",
       "end": "2027-05-07",
       "start2": null,
       "end2": null,
-      "deadline": null,
-      "deadline_note": null,
+      "deadline": "2027-04-12",
+      "deadline_note": "uzávěrka platby poplatku 19. 4. 2027",
       "mobility": [
         "training"
       ],
@@ -4956,19 +6370,90 @@
       "program": [
         "Job shadowing a praktické školení na pracovištích ETSEAMN"
       ],
-      "language": null,
-      "fee_eur": null,
-      "fee_text": null,
-      "capacity": null,
+      "language": "angličtina",
+      "fee_eur": 500,
+      "fee_text": "500 € (zahrnuje výuku, materiály, občerstvení, uvítací paellu a závěrečný oběd; bez ubytování)",
+      "capacity": "max. 40 účastníků",
       "registration_url": "https://forms.gle/mqbP3B5maVjs4CUL8",
       "registration_url2": null,
-      "event_url": "http://staffmobility.eu/sites/default/files/staffweek/stws_2627_0.pdf",
+      "event_url": "http://staffmobility.eu/staffweek/13th-sss-valencia",
       "source_urls": [
-        "http://staffmobility.eu/sites/default/files/staffweek/stws_2627_0.pdf"
+        "http://staffmobility.eu/staffweek/13th-sss-valencia",
+        "http://staffmobility.eu/sites/default/files/staffweek/13th_sss_valencia.pdf",
+        "http://staffmobility.eu/sites/default/files/staffweek/stws_2627_0.pdf",
+        "https://forms.gle/mqbP3B5maVjs4CUL8",
+        "https://up.lublin.pl/blog/zaproszenie-do-udzialu-w-mobilnosci-szkoleniowej-stt-do-universitat-politecnica-de-valencia-hiszpania-2026-27/"
       ],
       "source_type": "imotion",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": "Claudio Benavent",
+          "role": "International Officer ETSEAMN",
+          "email": "cbenavent@upvnet.upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/13th-sss-valencia"
+        },
+        {
+          "name": null,
+          "role": "International Relations Office ETSEAMN",
+          "email": "interagr@upv.es",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/13th-sss-valencia"
+        }
+      ],
       "notes": "Údaje pocházejí z přehledového letáku ETSEAMN Valencia 2026–2027 na IMOTION.",
+      "verify": {
+        "status": "ověřeno",
+        "note": "Termín 3.–7. 5. 2027, uzávěrka 12. 4. 2027 (platba do 19. 4. 2027), poplatek 500 €, kapacita 40 účastníků, jazyk angličtina, Erasmus kód E VALENCI02 i kontakty jsou potvrzeny na IMOTION (vloženém pořadatelem), v oficiálním PDF programu 13th SSS Valencia, v přihlašovacím formuláři UPV i v partnerské pozvánce UP Lublin.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "ubb-cybersecurity-ai-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Cybersecurity Strategies in the Era of Artificial Intelligence (4th Edition)",
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "it"
+      ],
+      "topic": "Strategie kybernetické bezpečnosti v kontextu rozvoje umělé inteligence, prevence kyberkriminality a zabezpečení cloudových a IoT systémů.",
+      "audience": [
+        "Vysokoškolští studenti se zájmem o IT, kybernetickou bezpečnost a AI (úroveň AJ alespoň B1)"
+      ],
+      "program": [
+        "Umělá inteligence v kybernetické bezpečnosti",
+        "Prevence kybernetické kriminality a detekce hrozeb",
+        "IoT, blockchain, cloudové technologie a kryptoměny",
+        "Digitální hrozby, dezinformační kampaně a kyberšikana"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; vybraní studenti obdrží stipendium Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část probíhá 27.–28. dubna 2027, prezenční týden 10.–14. května 2027 v Kluži. Ohodnocení: 3 ECTS.",
       "verify": null
     },
     {
@@ -5479,11 +6964,13 @@
       "deadline": "2027-03-31",
       "deadline_note": null,
       "mobility": [
+        "teaching",
         "training"
       ],
       "fields": [
         "intl",
-        "it"
+        "it",
+        "pedag"
       ],
       "topic": "Jedenáctý mezinárodní zaměstnanecký týden zaměřený na osobní mezikulturní zkušenosti, spolupráci a kreativní workshopy v éře umělé inteligence.",
       "audience": [
@@ -5506,7 +6993,8 @@
         "https://svako.lt/en/news/international-staff-week27",
         "http://staffmobility.eu/sites/default/files/staffweek/preliminary_agenda_iw27_participants.docx_0.pdf",
         "http://staffmobility.eu/staffweek/international-staff-week27-experience",
-        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Alibraries&page=6"
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Alibraries&page=6",
+        "https://forms.gle/ttMXGxGBSq2CqPYe8"
       ],
       "source_type": "official",
       "contacts": [
@@ -5518,7 +7006,7 @@
           "source": "https://svako.lt/en/news/international-staff-week27"
         }
       ],
-      "notes": null,
+      "notes": "Téma ročníku: Experience Can't Be Generated by AI.",
       "verify": {
         "status": "ověřeno",
         "note": "Termín 10.–14. 5. 2027, uzávěrka 31. 3. 2027, bezplatnost, registrační formulář, kontakt iro@svako.lt i předběžný denní program plně potvrzeny na oficiálním webu Šiaulių valstybinė kolegija (svako.lt) a v oficiální PDF agendě.",
@@ -5583,6 +7071,65 @@
       "verify": {
         "status": "ověřeno",
         "note": "Existence akce International Days 2027, Erasmus kód PL LESZNO01 i kontakt Dominika Pluta potvrzeny na oficiálním webu ANS Leszno; termín 17.–21. 5. 2027, uzávěrka 31. 1. 2027, poplatek 60 € a kapacita 25 potvrzeny na detailu IMOTION vloženém přímo pořadatelem. Doplněny všechny chybějící údaje a oficiální URL.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "vse-ozs-staff-week-2027-05",
+      "uni": "Prague University of Economics and Business (VŠE)",
+      "uni_short": "VŠE Praha (OZS)",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Praha",
+      "lat": 50.0842,
+      "lng": 14.4411,
+      "erasmus_code": "CZ PRAHA09",
+      "event_name": "15th Prague International Staff Week",
+      "start": "2027-05-17",
+      "end": "2027-05-21",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": "zatím neuvedena na oficiální stránce OZS VŠE",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl",
+        "ekon"
+      ],
+      "topic": "Každoroční mezinárodní školicí týden Oddělení zahraničních styků VŠE pro pracovníky zahraničních oddělení partnerských univerzit.",
+      "audience": [
+        "Pracovníci mezinárodních oddělení a koordinátoři partnerských univerzit"
+      ],
+      "program": [
+        "Workshopy, prezentace a sdílení dobré praxe v oblasti studentských a zaměstnaneckých mobilit",
+        "Networking a společenský program v Praze"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://ozs.vse.cz/english/prague-international-week/",
+      "source_urls": [
+        "https://ozs.vse.cz/english/prague-international-week/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Oddělení zahraničních styků (OZS VŠE)",
+          "role": "International Office",
+          "email": "ozs@vse.cz",
+          "phone": null,
+          "source": "https://ozs.vse.cz/english/prague-international-week/"
+        }
+      ],
+      "notes": "Na oficiální stránce OZS VŠE je potvrzen termín 15. ročníku (17.–21. 5. 2027); podrobný program, poplatek a uzávěrka přihlášek budou doplněny.",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 15th Prague International Staff Week (17.–21. 5. 2027) je potvrzen přímo na oficiálním webu OZS VŠE; uzávěrka a poplatek pro ročník 2027 zatím nejsou zveřejněny.",
         "checked": "2026-11-17"
       }
     },
@@ -5703,6 +7250,68 @@
       "verify": {
         "status": "ověřeno",
         "note": "Konání akce v květnu 2027 potvrzeno na oficiálním webu University of Gdańsk (welcomecentre.ug.edu.pl) a přesný termín 17.–21. 5. 2027, uzávěrka 23. 4. 2027, poplatek 350 €, kapacita 30, registrační formulář i kontakt staffweek@ug.edu.pl potvrzeny na detailu IMOTION vloženém přímo pořadatelem. Doplněny všechny chybějící údaje.",
+        "checked": "2026-11-17"
+      }
+    },
+    {
+      "id": "upr-izola-2027-05",
+      "uni": "University of Primorska",
+      "uni_short": "UP Izola",
+      "country_iso": "SI",
+      "country": "Slovinsko",
+      "city": "Izola",
+      "lat": 45.5397,
+      "lng": 13.6596,
+      "erasmus_code": "SI KOPER03",
+      "event_name": "BIP: Active Schools Through Physical Literacy",
+      "start": "2027-05-17",
+      "end": "2027-05-21",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-11-15",
+      "deadline_note": "Uzávěrka přihlášek do 12:00 na FTVŠ UK v Bratislavě",
+      "mobility": [
+        "teaching",
+        "studying"
+      ],
+      "fields": [
+        "zdravi",
+        "pedag"
+      ],
+      "topic": "Kombinovaný intenzivní program zaměřený na tělesnou gramotnost a podporu pohybových aktivit dětí a mládeže ve školním prostředí.",
+      "audience": [
+        "Studenti 1. ročníku magisterského studia tělesné výchovy a sportu"
+      ],
+      "program": [
+        "Virtuální část: duben–květen 2027",
+        "Prezenční blok v Izole: 17.–21. května 2027",
+        "Teoretické základy a praktické modely rozvoje tělesné gramotnosti v praxi (3 ECTS)"
+      ],
+      "language": "angličtina",
+      "fee_eur": 0,
+      "fee_text": "Financováno ze stipendia Erasmus+ domovské instituce (3 ECTS kredity)",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://fsport.uniba.sk/detail-aktuality/back_to_page/fakulta-telesnej-vychovy-a-sportu-uk/article/call-for-applications-bip-2027-in-slovenia/calendar_date/2026/may/",
+      "source_urls": [
+        "https://fsport.uniba.sk/detail-aktuality/back_to_page/fakulta-telesnej-vychovy-a-sportu-uk/article/call-for-applications-bip-2027-in-slovenia/calendar_date/2026/may/",
+        "https://www.kif.unizg.hr/_news/19472/Natjecaj%20za%20sudjelovanje%20u%20Erasmus%20%20BIP%20programu%202026.pdf"
+      ],
+      "source_type": "partner",
+      "contacts": [
+        {
+          "name": "Erasmus referát FTVŠ UK",
+          "role": "Kontaktní pracoviště pro přihlášky",
+          "email": "erasmus@fsport.uniba.sk",
+          "phone": "+421 2 9010 9986",
+          "source": "https://fsport.uniba.sk/detail-aktuality/back_to_page/fakulta-telesnej-vychovy-a-sportu-uk/article/call-for-applications-bip-2027-in-slovenia/calendar_date/2026/may/"
+        }
+      ],
+      "notes": "Výzva zveřejněna na FTVŠ Univerzity Komenského v Bratislavě; prezenční část probíhá v Izole ve Slovinsku (Univerzita na Primorskem).",
+      "verify": {
+        "status": "částečně",
+        "note": "Termín (17.–21. 5. 2027) a parametry BIP ověřeny ze dvou nezávislých partnerských univerzit (UK Bratislava a Sveučilište u Zagrebu). Pořádá Univerza na Primorskem (Fakulteta za vede o zdravju v Izole). Rozšířena mobilita na výuku i studium (studenti a učitelé).",
         "checked": "2026-11-17"
       }
     },
@@ -5838,13 +7447,15 @@
       "erasmus_code": null,
       "event_name": "1st International Health Week",
       "start": "2027-05-19",
-      "end": null,
+      "end": "2027-05-23",
       "start2": null,
       "end2": null,
       "deadline": "2026-02-23",
-      "deadline_note": "v IMOTION je uveden rok 2026 (pravděpodobně překlep za 2027-02-23)",
+      "deadline_note": "v IMOTION je uvedeno 2026-02-23 (pravděpodobně překlep v roce za 2027-02-23; na webu VŠ neověřeno)",
       "mobility": [
-        "training"
+        "teaching",
+        "training",
+        "studying"
       ],
       "fields": [
         "zdravi"
@@ -5853,19 +7464,32 @@
       "audience": [],
       "program": [],
       "language": "angličtina",
-      "fee_eur": null,
-      "fee_text": null,
+      "fee_eur": 80,
+      "fee_text": "80 € (ubytování není zahrnuto)",
       "capacity": null,
-      "registration_url": null,
+      "registration_url": "https://forms.office.com/e/wNMjaxgTYM",
       "registration_url2": null,
-      "event_url": null,
+      "event_url": "http://staffmobility.eu/staffweek/1st-international-health-week",
       "source_urls": [
+        "http://staffmobility.eu/staffweek/1st-international-health-week",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A41&f=field_staff_week_target_groups%3AITC&f=field_staff_week_target_groups%3Adoctoral&f=field_staff_week_target_groups%3Afinance&page=11"
       ],
       "source_type": "imotion",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": "Mateusz Grądzki",
+          "role": "Erasmus+ / kontakt akce",
+          "email": "erasmus@powislanska.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/1st-international-health-week"
+        }
+      ],
       "notes": "Údaje pocházejí ze souhrnného výpisu IMOTION; datum uzávěrky 2026-02-23 má pravděpodobně chybný rok. Datum konce akce není uvedeno.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 19.–23. 5. 2027, poplatek 80 € (bez ubytování), kontakt Mateusz Grądzki (erasmus@powislanska.edu.pl) a přihlašovací formulář jsou potvrzeny na detailu IMOTION vloženém pořadatelem (Powiślańska Academy of Applied Sciences). Akce je určena studentům, akademikům, výzkumníkům i odborníkům. Uzávěrka na IMOTION je však uvedena jako 23. 2. 2026 (pravděpodobně překlep v roce za 2027-02-23) a samostatnou stránku akce na doméně powislanska.edu.pl se nepodařilo v důkazech ověřit, proto uzávěrku ponecháváme jako null s poznámkou.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "university-of-helsinki-2027-05",
@@ -5997,7 +7621,12 @@
       "audience": [
         "Pracovníci univerzitních knihoven"
       ],
-      "program": [],
+      "program": [
+        "Interaktivní workshopy a výměna osvědčených postupů v oblasti studentského wellbeingu a inkluze",
+        "Prezentace inovativních služeb, digitálních nástrojů a technologií s asistencí AI v knihovnách",
+        "Návštěvy univerzitních a místních knihoven včetně nového Multikulturního centra",
+        "Kulturní aktivity a seznámení s městem Târgu Mureș a okolím"
+      ],
       "language": "Romanian",
       "fee_eur": 0,
       "fee_text": "zdarma",
@@ -6041,6 +7670,69 @@
         "note": "Detail na IMOTION vložený přímo knihovnou UMFST Târgu Mureș (@umfst.ro) potvrzuje 5. ročník akce 24.–28. 5. 2027, uzávěrku 3. 5. 2027, bezplatnou účast, kapacitu 12 osob i kontaktní osoby.",
         "checked": "2026-11-17"
       }
+    },
+    {
+      "id": "xamk-nature-based-wellbeing-2027",
+      "uni": "South-Eastern Finland University of Applied Sciences",
+      "uni_short": "XAMK",
+      "country_iso": "FI",
+      "country": "Finsko",
+      "city": "Mikkeli",
+      "lat": 61.6888,
+      "lng": 27.2723,
+      "erasmus_code": null,
+      "event_name": "Nature-Based Wellbeing Experience",
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "zdravi",
+        "prir"
+      ],
+      "topic": "Využití bohatství finské přírody pro tvorbu inovativních konceptů v oblasti podpory zdraví, udržitelnosti a zážitkového učení.",
+      "audience": [
+        "Studenti 1. a 2. cyklu (bakalářského a magisterského studia) v oborech sociální péče, ošetřovatelství, tělesná výchova, cestovní ruch a příbuzných oborech"
+      ],
+      "program": [
+        "Dvě online přípravná setkání zaměřená na metodiku a možnosti nature-based wellbeing",
+        "Zážitkový týden v čisté finské přírodě s multidisciplinární týmovou prací",
+        "Spolutvorba udržitelných produktů (např. vedené outdoorové aktivity, mindfulness v přírodě)"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez účastnického poplatku; výjezd je hrazen z grantu programu Erasmus+.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf",
+      "source_urls": [
+        "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+      ],
+      "source_type": "partner",
+      "contacts": [
+        {
+          "name": "Maria Tamvaki",
+          "role": "International Relations, University of Crete",
+          "email": "bip-erasmus@uoc.gr",
+          "phone": "+30 28310 77724",
+          "source": "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+        },
+        {
+          "name": "Julia Stagaki",
+          "role": "International Relations, University of Crete",
+          "email": "intrelations@admin.uoc.gr",
+          "phone": "+30 28310 77725",
+          "source": "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+        }
+      ],
+      "notes": "Organizováno v rámci aliance INGENIUM. Ohodnocení: 3 ECTS. Virtuální příprava probíhá před prezenčním týdnem během jarního semestru 2027.",
+      "verify": null
     },
     {
       "id": "ua-alicante-2027-05",
@@ -6104,6 +7796,55 @@
         "note": "Termín 24.–28. 5. 2027 a bezplatná účast potvrzeny na oficiálním webu University of Alicante (aktualizováno 12. 11. 2026); uzávěrka 31. 1. 2027, kapacita 50 a kontakt potvrzeny v propojeném detailu IMOTION vloženém pořadatelem.",
         "checked": "2026-11-17"
       }
+    },
+    {
+      "id": "uni-rijeka-2027",
+      "uni": "University of Rijeka",
+      "uni_short": "UNIRI FTHM",
+      "country_iso": "HR",
+      "country": "Chorvatsko",
+      "city": "Opatija",
+      "lat": 45.3271,
+      "lng": 14.3056,
+      "erasmus_code": null,
+      "event_name": "International Staff Week 2027 – Bridging Cultures, Building Connections",
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-15",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "ekon",
+        "intl"
+      ],
+      "topic": "Zaměstnanecký týden na Fakultě managementu v cestovním ruchu a pohostinství zaměřený na interkulturní leadership spojený s konferencí ToSEE 2027.",
+      "audience": [
+        "akademičtí a administrativní pracovníci vysokých škol"
+      ],
+      "program": [
+        "interaktivní workshopy o interkulturním vedení a komunikaci",
+        "mezinárodní výměna zkušeností a networking",
+        "účast na mezinárodní vědecké konferenci ToSEE 2027 o turismu",
+        "komentovaná prohlídka přímořského letoviska Opatija"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.uni-passau.de/en/international/going-abroad-as-academics-or-university-staff/current-calls-staff-weeks",
+      "source_urls": [
+        "https://www.uni-passau.de/en/international/going-abroad-as-academics-or-university-staff/current-calls-staff-weeks"
+      ],
+      "source_type": "partner",
+      "contacts": [],
+      "notes": "Akce probíhá na Faculty of Tourism and Hospitality Management Univerzity v Rijece v Opatiji.",
+      "verify": null
     },
     {
       "id": "uniri-fthm-opatija-2027-05",
@@ -6189,7 +7930,12 @@
       "audience": [
         "Pracovníci odborných a administrativních služeb VŠ"
       ],
-      "program": [],
+      "program": [
+        "metodika výuky v anglickém jazyce (English-Medium Instruction)",
+        "interaktivní komunikační techniky v mezinárodní učebně",
+        "praktická cvičení a zpětná vazba od lektorů",
+        "sdílení zkušeností mezi evropskými vysokoškolskými pedagogy"
+      ],
       "language": "English",
       "fee_eur": 495,
       "fee_text": "495 € (bez ubytování; možnost ubytování na kampusu za 65 €/noc)",
@@ -6441,6 +8187,64 @@
         "note": "XVI. ročník a uzávěrka 29. 1. 2027 potvrzeny na oficiálním webu ipsantarem.pt; termín 31. 5.–4. 6. 2027, poplatek 150 €, kapacita 30, termín platby 28. 2. 2027 i kontakt gmci@ipsantarem.pt potvrzeny v propojeném detailu IMOTION vloženém pořadatelem.",
         "checked": "2026-11-17"
       }
+    },
+    {
+      "id": "uporto-porto-2027-05",
+      "uni": "University of Porto",
+      "uni_short": "U.Porto FEUP",
+      "country_iso": "PT",
+      "country": "Portugalsko",
+      "city": "Porto",
+      "lat": 41.178,
+      "lng": -8.595,
+      "erasmus_code": "P PORTO02",
+      "event_name": "Porto Communication Staff Week 2027: A Campus Without Borders: Promoting STEM in Schools",
+      "start": "2027-05-31",
+      "end": "2027-06-04",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": "Žádosti o grant Erasmus+ na domovské univerzitě se podávají v průběhu ledna 2027",
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "tech",
+        "pedag",
+        "intl"
+      ],
+      "topic": "Mezinárodní týden pro zaměstnance na Fakultě inženýrství Univerzity v Portu zaměřený na popularizaci STEM oborů a podporu zájmu o technické vzdělávání.",
+      "audience": [
+        "Zaměstnanci vysokých škol a koordinátoři zapojení do popularizace STEM a mezinárodní spolupráce"
+      ],
+      "program": [
+        "Sdílení zkušeností a dobré praxe v popularizaci technických a přírodovědných oborů",
+        "Diskuse o přístupech univerzit k podpoře zájmu žáků a studentů o STEM",
+        "Hledání nových možností společných projektů a rozvoj partnerských vztahů"
+      ],
+      "language": "English",
+      "fee_eur": null,
+      "fee_text": "Financování prostřednictvím zaměstnaneckých mobilit programu Erasmus+",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.vut.cz/spoluprace/zahranicni/aktuality-f163562/porto-communication-staff-week-2027-d377165",
+      "source_urls": [
+        "https://www.vut.cz/spoluprace/zahranicni/aktuality-f163562/porto-communication-staff-week-2027-d377165",
+        "https://www.vut.cz/spoluprace/zahranicni/f163562/d377165"
+      ],
+      "source_type": "partner",
+      "contacts": [
+        {
+          "name": "Ing. et Ing. Mariana Rozsypálková, MSc",
+          "role": "Zodpovědná osoba za zprostředkování výzvy (VUT)",
+          "email": null,
+          "phone": null,
+          "source": "https://www.vut.cz/spoluprace/zahranicni/aktuality-f163562/porto-communication-staff-week-2027-d377165"
+        }
+      ],
+      "notes": "Výzva publikována na webu VUT v Brně; akce probíhá na Faculty of Engineering (FEUP), University of Porto v Portugalsku.",
+      "verify": null
     },
     {
       "id": "university-of-galway-2027-06",
@@ -6763,17 +8567,19 @@
         "Prohlídka Univerzity ve Freiburgu",
         "Kulturní a společenské aktivity"
       ],
-      "language": "English",
+      "language": "angličtina",
       "fee_eur": 400,
       "fee_text": "400 € (tematický kurz; zahrnuje 20 hodin výuky, materiály, certifikát, prohlídku univerzity a doprovodný program)",
       "capacity": null,
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf",
+      "event_url": "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
       "source_urls": [
-        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf"
+        "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf",
+        "https://cercles.org/2026/08/12/universitat-freiburg-university-of-freiburg-sli-staff-week-2026-and-2027-programmes/"
       ],
-      "source_type": "imotion",
+      "source_type": "official",
       "contacts": [
         {
           "name": null,
@@ -6784,7 +8590,11 @@
         }
       ],
       "notes": "První termín (21.–25. 6. 2027) je úroveň A2, druhý termín (28. 6.–2. 7. 2027) úroveň B1/B2.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Červnové termíny 7.–11. 6. 2027 a 21.–25. 6. 2027 (v letáku jsou i další termíny téhož kurzu v únoru a červenci 2027), poplatek 400 € a kontakt staffweek@sli.uni-freiburg.de jsou potvrzeny v oficiálním letáku SLI 2027 na IMOTION; existenci programu 2027 nezávisle potvrzují CercleS a Univ. of Catania. Oficiální stránka uni-freiburg.de potvrzuje tematický kurz i registraci e-mailem, ale webová tabulka zatím zobrazuje jen termíny 2026 a pevná uzávěrka přihlášek není nikde uvedena.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "ubm",
@@ -7005,7 +8815,7 @@
       "start2": null,
       "end2": null,
       "deadline": "2026-11-17",
-      "deadline_note": "interní uzávěrka University of Malta; přihlášky podávají studenti přes domovskou univerzitu aliance SEA-EU",
+      "deadline_note": "přihlášky podávají studenti přes domovskou univerzitu aliance SEA-EU (interní uzávěrky stanovuje každá vysílající univerzita zvlášť)",
       "mobility": [
         "studying"
       ],
@@ -7026,18 +8836,31 @@
       "language": null,
       "fee_eur": null,
       "fee_text": null,
-      "capacity": null,
+      "capacity": "1 student z každé univerzity SEA-EU (UCA a Uni Udine až 5 studentů)",
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "https://sea-eu.org/bips/",
+      "event_url": "https://sea-eu.org/opportunity-browser/bip-leaders-for-digital-and-sustainable-futures-gaining-experience-in-arctic-norway/",
       "source_urls": [
+        "https://sea-eu.org/opportunity-browser/bip-leaders-for-digital-and-sustainable-futures-gaining-experience-in-arctic-norway/",
         "https://sea-eu.org/bips/",
         "https://www.um.edu.mt/about/sea-eu/opportunities/availablebipopportunities2026/"
       ],
       "source_type": "partner",
-      "contacts": [],
+      "contacts": [
+        {
+          "name": "Sandra Wiik",
+          "role": "BIP Contact (Nord University)",
+          "email": "sandra.wiik@nord.no",
+          "phone": null,
+          "source": "https://sea-eu.org/opportunity-browser/bip-leaders-for-digital-and-sustainable-futures-gaining-experience-in-arctic-norway/"
+        }
+      ],
       "notes": "Pořádá Nord University ve spolupráci s University of Cádiz (UCA) a University of Udine v rámci aliance SEA-EU. Datum uzávěrky 2026-11-17 je interní uzávěrka University of Malta.",
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Termín 14.–18. 6. 2027 na Nord University v Bodø (NO; online 12. 4.–14. 5. 2027), kvóty pro vysílající VŠ i kontakt na Nord University jsou potvrzeny na detailu aliance SEA-EU. Obecná uzávěrka není uvedena (původně zapsaná interní uzávěrka University of Malta 17. 11. 2026 nebyla ve zkráceném výpisu stránky UM zachycena a neplatí obecně pro všechny univerzity), chybí také poplatek a samostatná stránka na nord.no.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "upv-valencia-stp-2027-06",
@@ -7213,17 +9036,25 @@
       "deadline": "2027-05-21",
       "deadline_note": null,
       "mobility": [
+        "teaching",
         "training"
       ],
       "fields": [
         "it",
-        "intl"
+        "intl",
+        "ekon"
       ],
       "topic": "Červnový týden Gdaňské univerzity zaměřený na odpovědné využívání umělé inteligence, důvěryhodnost algoritmů a akademickou integritu.",
       "audience": [
         "Zaměstnanci vysokých škol"
       ],
-      "program": [],
+      "program": [
+        "Akt o umělé inteligenci (EU AI Act) na vysokých školách: povinnosti, vysoce rizikové využití a praktická implementace",
+        "Ochrana osobních údajů, soukromí a duševní vlastnictví ve výuce a výzkumu využívajícím AI",
+        "Akademická integrita: AI v hodnocení, autorství a etice výzkumu",
+        "Institucionální správa AI: politiky, směrnice, nákup technologií a řízení rizik",
+        "Kulturní program v historickém Gdaňsku a na baltském pobřeží"
+      ],
       "language": "English",
       "fee_eur": 350,
       "fee_text": "350 € (ubytování není v ceně)",
@@ -7235,7 +9066,8 @@
         "https://welcomecentre.ug.edu.pl/choose/other/",
         "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Alibraries&page=6",
-        "http://staffmobility.eu/staff-Week-search/staff-week-archive?page=3"
+        "http://staffmobility.eu/staff-Week-search/staff-week-archive?page=3",
+        "https://forms.office.com/e/g7jnyYJjQb"
       ],
       "source_type": "imotion",
       "contacts": [
@@ -7460,7 +9292,7 @@
       "fee_eur": null,
       "fee_text": null,
       "capacity": "přes 200 účastníků z více než 50 zemí (max. 1 na instituci a sekci)",
-      "registration_url": null,
+      "registration_url": "https://www.fu-berlin.de/en/international/faculty-staff/mobility-staff/staff-week/international-week-2027/index.html",
       "registration_url2": null,
       "event_url": "https://www.fu-berlin.de/en/international/faculty-staff/mobility-staff/staff-week/international-week-2027/index.html",
       "source_urls": [
@@ -7596,7 +9428,7 @@
       "city": "Brno",
       "lat": 49.1987,
       "lng": 16.6056,
-      "erasmus_code": null,
+      "erasmus_code": "CZ BRNO05",
       "event_name": "English for Professionals Summer School",
       "start": "2027-06-21",
       "end": "2027-06-25",
@@ -7616,12 +9448,17 @@
       "audience": [
         "Administrativní a odborní pracovníci VŠ"
       ],
-      "program": [],
+      "program": [
+        "Přednášky a workshopy k implementaci AI v knihovnických službách",
+        "Podpora výzkumu (predátorské časopisy, citační analýzy, systematické rešerše)",
+        "Netradiční a inovativní služby knihoven Masarykovy univerzity",
+        "Individuální konzultace v knihovnách MUNI a prezentace účastníků"
+      ],
       "language": "English",
       "fee_eur": 490,
       "fee_text": "490 € (ubytování není v ceně)",
       "capacity": "max. 12 účastníků ve skupině (2 skupiny podle úrovně)",
-      "registration_url": null,
+      "registration_url": "https://mustlib.muni.cz",
       "registration_url2": null,
       "event_url": "https://www.cjv.muni.cz/en/courses/english-for-professionals-summer-school-27",
       "source_urls": [
@@ -7631,7 +9468,10 @@
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3APR&page=1",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3AIR&page=2",
         "http://staffmobility.eu/staff-Week-search?f=field_staff_week_country%3A64&page=2",
-        "http://staffmobility.eu/staff-Week-search?page=3"
+        "http://staffmobility.eu/staff-Week-search?page=3",
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_target_groups%3Aplacements&page=3",
+        "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-23",
+        "https://mustlib.muni.cz"
       ],
       "source_type": "official",
       "contacts": [
@@ -7841,6 +9681,53 @@
       }
     },
     {
+      "id": "university-of-galway-prof-2027",
+      "uni": "University of Galway",
+      "uni_short": "Uni of Galway",
+      "country_iso": "IE",
+      "country": "Irsko",
+      "city": "Galway",
+      "lat": 53.279,
+      "lng": -9.06,
+      "erasmus_code": null,
+      "event_name": "Erasmus+ Higher Education Staff Mobility Programme (Professional Services)",
+      "start": "2027-07-04",
+      "end": "2027-07-09",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-05-07",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "intl"
+      ],
+      "topic": "Školicí program pro neakademické a administrativní pracovníky vysokých škol zaměřený na sdílení postupů v univerzitních službách.",
+      "audience": [
+        "administrativní a podpůrní pracovníci univerzit (studijní oddělení, knihovny, IT, mezinárodní vztahy)"
+      ],
+      "program": [
+        "výměna zkušeností s fungováním univerzitních administrativních a podpůrných služeb",
+        "interaktivní workshopy a networking s irskými kolegy",
+        "poznávání univerzitního kampusu v Galway"
+      ],
+      "language": "angličtina",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staff-Week-search",
+      "source_urls": [
+        "http://staffmobility.eu/staff-Week-search"
+      ],
+      "source_type": "imotion",
+      "contacts": [],
+      "notes": "Program probíhá v několika týdenních bězích v červenci 2027 (začátky: 4. 7., 11. 7., 18. 7., 25. 7. 2027).",
+      "verify": null
+    },
+    {
       "id": "ucc-cork-2027-07-ewal",
       "uni": "The Language Centre of University College Cork",
       "uni_short": "UCC Cork",
@@ -7935,17 +9822,19 @@
         "20 hodin praktických cvičení zaměřených na hlas, řeč těla a komunikaci",
         "Prohlídka univerzity a kulturní program"
       ],
-      "language": "English",
+      "language": "angličtina",
       "fee_eur": 400,
       "fee_text": "400 € (tematický kurz; zahrnuje 20 hodin výuky, materiály, certifikát, prohlídku univerzity a doprovodný program)",
       "capacity": null,
       "registration_url": null,
       "registration_url2": null,
-      "event_url": "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf",
+      "event_url": "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
       "source_urls": [
-        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf"
+        "https://uni-freiburg.de/language-teaching-centre/international/staff-week/",
+        "http://staffmobility.eu/sites/default/files/staffweek/staff_week_flyer_2027_0.pdf",
+        "https://cercles.org/2026/08/12/universitat-freiburg-university-of-freiburg-sli-staff-week-2026-and-2027-programmes/"
       ],
-      "source_type": "imotion",
+      "source_type": "official",
       "contacts": [
         {
           "name": null,
@@ -7956,7 +9845,11 @@
         }
       ],
       "notes": null,
-      "verify": null
+      "verify": {
+        "status": "částečně",
+        "note": "Oba červencové termíny 2027 (5.–9. 7. a 19.–23. 7. 2027), poplatek 400 €, jazyk angličtina a kontakt staffweek@sli.uni-freiburg.de jsou potvrzeny v letáku SLI 2027 na IMOTION a vydání programu 2027 potvrzují i CercleS a UniCT. Oficiální stránka uni-freiburg.de potvrzuje program SLI Staff Week, kurz Theatre Techniques i registrační postup e-mailem, v dostupném výpisu však zobrazuje jen termíny 2026 a uzávěrka přihlášek není uvedena.",
+        "checked": "2026-11-17"
+      }
     },
     {
       "id": "muni-brno-summer-ai-lab-2027-07",
@@ -7987,7 +9880,12 @@
       "audience": [
         "Vysokoškolští pedagogové"
       ],
-      "program": [],
+      "program": [
+        "Tvorba interaktivních aktivit a vzdělávacích her bez programování",
+        "Převod studijních textů do interaktivních studijních materiálů",
+        "Nastavení AI asistenta pro podporu studentů mezi výukovými bloky",
+        "Nové přístupy k hodnocení vědomostí v prostředí běžně dostupných AI nástrojů"
+      ],
       "language": "English",
       "fee_eur": 490,
       "fee_text": "490 € (ubytování není v ceně)",
@@ -8000,7 +9898,8 @@
         "http://staffmobility.eu/staffweek/summer-ai-lab-ii-0",
         "http://staffmobility.eu/staff-Week-search?page=2",
         "http://staffmobility.eu/staff-Week-search/1000?page=1",
-        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_state%3Aopen&f=field_staff_week_target_groups%3AITC&f=field_staff_week_target_groups%3Aasa&page=2"
+        "http://staffmobility.eu/staff-Week-search?f=field_staff_week_state%3Aopen&f=field_staff_week_target_groups%3AITC&f=field_staff_week_target_groups%3Aasa&page=2",
+        "http://staffmobility.eu/staffweek/teaching-ai-summer-lab-ii"
       ],
       "source_type": "official",
       "contacts": [

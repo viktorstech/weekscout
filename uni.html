@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fdfbf7">
+<title>WeekScout Campus – Portál pro univerzity</title>
+<meta name="description" content="WeekScout Campus – správa Erasmus+ akcí, Scout Credits, white-label embed a analytika pro univerzity a International Offices.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='100%25' stop-color='%23f97316'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='11' fill='url(%23g)'/%3E%3Cpath d='M5.8 13.4L10.9 23.8L16 14.8' stroke='%23fff' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round' opacity='.58'/%3E%3Cpath d='M16 14.8L21.1 23.8L26.2 13.4' stroke='%23fff' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z' fill='%23fde047'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* WeekScout Campus (v4 Erasmus Brand) */
+:root{
+  --paper:#fdfbf7;
+  --surface:#ffffff;
+  --soft:#f5f2ea;
+  --ink:#1e1b4b;
+  --muted:#646082;
+  --line:#e6e1d6;
+  --accent:#2563eb;
+  --coral:#f97316;
+  --violet:#7c3aed;
+  --teal:#0d9488;
+  --sun:#eab308;
+  --warn:#ea580c;
+  --warn-bg:#ffedd5;
+  --ok:#15803d;
+  --ok-bg:#dcfce7;
+  --part:#b45309;
+  --part-bg:#fef3c7;
+  --shadow-card:0 12px 32px -8px rgba(30,27,75,.12), 0 2px 0 rgba(30,27,75,.04);
+  --shadow-pop:0 22px 54px -10px rgba(30,27,75,.24);
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+:root[data-theme="dark"]{
+  --paper:#121126;
+  --surface:#1b1a36;
+  --soft:#252348;
+  --ink:#f8f7ff;
+  --muted:#c2bee8;
+  --line:#34315e;
+  --accent:#60a5fa;
+  --coral:#fb923c;
+  --violet:#a78bfa;
+  --teal:#2dd4bf;
+  --sun:#fde047;
+  --warn:#fb923c;
+  --warn-bg:rgba(251,146,60,.18);
+  --ok:#4ade80;
+  --ok-bg:rgba(74,222,128,.16);
+  --part:#fde047;
+  --part-bg:rgba(253,224,71,.16);
+  --shadow-card:0 16px 40px -8px rgba(4,3,18,.58);
+  --shadow-pop:0 26px 64px -10px rgba(4,3,18,.78);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--paper);color:var(--ink);font:14.5px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+
+/* Top Navigation Bar */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter:blur(14px);
+  border-bottom:2px solid var(--line);
+}
+.topbar-in{
+  max-width:1240px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand-mark{
+  width:42px;height:42px;border-radius:15px;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(135deg, var(--accent), var(--coral));
+  box-shadow:0 6px 16px -4px color-mix(in srgb, var(--coral) 50%, transparent);
+  transform:rotate(-4deg);transition:transform .16s ease;
+}
+.brand:hover .brand-mark{transform:rotate(0deg) scale(1.05)}
+.brand:hover h1{color:var(--accent)}
+.brand-mark svg{width:26px;height:26px;transform:rotate(4deg)}
+.brand h1{font:800 22px/1 var(--display);letter-spacing:-.025em;margin:0}
+.campus-badge{
+  font:700 11px/1 var(--body);padding:4px 10px;border-radius:999px;margin-left:8px;
+  background:var(--warn-bg);color:var(--warn);
+}
+.brand-sub{font-size:12px;color:var(--muted);margin-top:2px;font-weight:500}
+.top-acts{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pill-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font:700 13px var(--body);padding:8px 15px;border-radius:999px;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+  text-decoration:none;cursor:pointer;transition:transform .12s, border-color .14s, background .14s;
+}
+.pill-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.pill-btn.pri{
+  background:linear-gradient(135deg, var(--coral), #ec4899);background-origin:border-box;border-color:transparent;color:#fff;
+  box-shadow:0 8px 20px -5px rgba(249,115,22,.5);
+}
+.pill-btn.pri:hover{filter:brightness(1.06);color:#fff}
+.pill-btn.cred{background:var(--part-bg);border-color:color-mix(in srgb, var(--sun) 55%, transparent);color:var(--part)}
+.icobtn{
+  width:36px;height:36px;border-radius:999px;display:grid;place-items:center;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);cursor:pointer;font-size:15px;
+}
+.icobtn:hover{border-color:var(--coral)}
+
+/* Main Container */
+.wrap{max-width:1240px;margin:0 auto;padding:24px 20px 56px;display:grid;gap:22px}
+
+/* Hero Banner */
+.hero-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  background:linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface)), color-mix(in srgb, var(--coral) 8%, var(--surface)));
+  border:2px solid var(--line);border-radius:26px;padding:22px 26px;box-shadow:var(--shadow-card);
+}
+.hero-bar h2{font:800 26px/1.15 var(--display);letter-spacing:-.025em;margin:0}
+.hero-bar p{margin:5px 0 0;color:var(--muted);font-size:13.5px;font-weight:500}
+.uni-pick{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.uni-pick label{font:700 12px var(--body);color:var(--muted)}
+.uni-pick select{
+  font:700 13.5px var(--body);padding:9px 14px;border-radius:999px;
+  border:2px solid var(--line);background:var(--surface);color:var(--ink);
+  min-width:280px;max-width:460px;cursor:pointer;
+}
+.uni-pick select option{background:var(--surface);color:var(--ink)}
+
+/* KPI Row */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:14px}
+.kpi{
+  background:var(--surface);border:2px solid var(--line);border-radius:22px;
+  padding:18px 20px;box-shadow:var(--shadow-card);display:grid;gap:4px;
+}
+.kpi .kl{font:700 11.5px var(--body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.kpi .kv{font:800 30px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.kpi .kd{font-size:12.5px;color:var(--ok);font-weight:700}
+.kpi .kd.warn{color:var(--warn)}
+
+/* Two-Column Workspace (balanced left & right stacks) */
+.grid2{display:grid;grid-template-columns:minmax(0, 1.45fr) minmax(330px, 1fr);gap:20px;align-items:start}
+.grid2.eq{align-items:stretch}
+.grid2.eq .card{align-content:start}
+.col-stack{display:grid;gap:20px;align-content:start}
+@media (max-width:940px){.grid2{grid-template-columns:1fr}}
+
+.card{
+  background:var(--surface);border:2px solid var(--line);border-radius:24px;
+  padding:20px 22px;box-shadow:var(--shadow-card);display:grid;gap:14px;
+  transition:border-color .25s, box-shadow .25s;
+}
+.card.hl{border-color:var(--coral);box-shadow:0 0 0 4px color-mix(in srgb, var(--coral) 22%, transparent), var(--shadow-card)}
+.card-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card h3{font:800 18.5px var(--display);letter-spacing:-.015em;margin:0}
+.card-sub{font-size:13px;color:var(--muted);margin:-6px 0 0;font-weight:500}
+
+/* University Events List */
+.evlist{display:grid;gap:10px;max-height:520px;overflow-y:auto;padding-right:2px}
+.evrow{
+  border:2px solid var(--line);background:var(--soft);border-radius:18px;
+  padding:15px 17px;display:grid;gap:9px;transition:border-color .15s, transform .12s;
+}
+.evrow.feat{
+  border-color:var(--sun);
+  background:linear-gradient(135deg, var(--part-bg), var(--surface));
+}
+.evrow-top{display:flex;align-items:start;justify-content:space-between;gap:12px}
+.evrow-top > div:first-child{min-width:0}
+.evrow h4{margin:0;font:800 15.5px/1.3 var(--body)}
+.evmeta{font-size:12.5px;color:var(--muted);margin-top:2px;font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;flex-shrink:0}
+.b{font:700 11.5px var(--body);padding:3px 10px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);white-space:nowrap}
+.b.ok{color:var(--ok);background:var(--ok-bg);border-color:transparent}
+.b.part{color:var(--part);background:var(--part-bg);border-color:transparent}
+.b.warn{color:var(--warn);background:var(--warn-bg);border-color:transparent}
+.b.feat{color:var(--part);background:var(--part-bg);border-color:color-mix(in srgb, var(--sun) 50%, transparent)}
+.b.custom{color:var(--accent);background:color-mix(in srgb, var(--accent) 14%, transparent);border-color:transparent}
+.ev-stats{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted)}
+.ev-stats strong{color:var(--ink)}
+.ev-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.smbtn{
+  font:700 12.5px var(--body);padding:7px 14px;border-radius:999px;cursor:pointer;
+  border:2px solid var(--line);background:var(--surface);color:var(--ink);
+  text-decoration:none;white-space:nowrap;transition:transform .12s, border-color .14s;
+}
+.smbtn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.smbtn.boost{background:linear-gradient(135deg, var(--coral), #ec4899);background-origin:border-box;border-color:transparent;color:#fff}
+.smbtn.boost:hover{filter:brightness(1.06);color:#fff}
+.smbtn.danger{color:var(--warn);border-color:color-mix(in srgb, var(--warn) 40%, transparent)}
+
+/* Side Tools */
+.plan-grid{display:grid;gap:10px}
+.plan{
+  border:2px solid var(--line);background:var(--soft);border-radius:18px;padding:13px 15px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.plan.best{border-color:var(--coral);background:linear-gradient(135deg, var(--warn-bg), var(--surface))}
+.plan b{display:block;font:800 15px var(--display)}
+.plan small{display:block;font-size:12px;color:var(--muted);font-weight:500}
+.plan-r{display:grid;gap:5px;justify-items:end;flex-shrink:0}
+.plan .price{font:800 16px var(--display);white-space:nowrap;text-align:right}
+.codebox{
+  margin:0;font:500 12px/1.65 var(--mono);background:var(--soft);border:2px solid var(--line);
+  border-radius:16px;padding:14px 16px;color:var(--ink);
+  white-space:pre-wrap;word-break:normal;overflow-wrap:anywhere;overflow-x:auto;
+}
+.digest-preview{
+  border:2px solid var(--line);border-radius:16px;padding:13px 15px;background:var(--soft);
+  font-size:12.5px;display:grid;gap:7px;
+}
+.digest-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:7px;border-top:1.5px dashed var(--line);min-width:0}
+.digest-title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.digest-date{white-space:nowrap;color:var(--warn);font-weight:700;font-variant-numeric:tabular-nums;flex-shrink:0}
+
+/* Modal Dialog */
+dialog.mdl{
+  border:2px solid var(--line);border-radius:26px;padding:0;
+  max-width:560px;width:calc(100% - 28px);background:var(--surface);color:var(--ink);
+  box-shadow:var(--shadow-pop);overflow:hidden;
+}
+dialog.mdl::backdrop{background:rgba(18,17,38,.56);backdrop-filter:blur(6px)}
+.mdl-hd{padding:18px 22px;border-bottom:2px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.mdl-hd h3{font:800 20px var(--display);margin:0}
+.mdl-bd{padding:18px 22px 22px;display:grid;gap:12px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){.f2{grid-template-columns:1fr}}
+.fld{display:grid;gap:5px}
+.fld[hidden]{display:none}
+.fld label{font:700 12px var(--body);color:var(--muted)}
+.fld input,.fld select{
+  font:600 13.5px var(--body);padding:9px 13px;border-radius:14px;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+}
+.fld input::placeholder{color:var(--muted);opacity:.72;font-weight:500}
+.fld input:focus,.fld select:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+.toast{
+  position:fixed;right:20px;bottom:20px;z-index:2000;
+  background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:999px;
+  font:700 13px var(--body);box-shadow:var(--shadow-pop);opacity:0;transform:translateY(10px);
+  transition:opacity .2s, transform .2s;pointer-events:none;
+}
+.toast.show{opacity:1;transform:translateY(0)}
+
+/* Login Gate if opened directly */
+.gate{
+  position:fixed;inset:0;z-index:2500;display:grid;place-items:center;padding:16px;
+  background:radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--coral) 14%, var(--paper)), var(--paper) 65%);
+}
+.gate[hidden]{display:none}
+.gate-card{
+  position:relative;
+  width:min(480px, 100%);background:var(--surface);border:2px solid var(--line);
+  border-radius:28px;padding:26px;box-shadow:var(--shadow-pop);display:grid;gap:14px;
+}
+.gate-x{
+  position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);text-decoration:none;
+  font-size:20px;line-height:1;display:grid;place-items:center;cursor:pointer;
+  transition:border-color .14s, color .14s, transform .12s;
+}
+.gate-x:hover{border-color:var(--coral);color:var(--coral);transform:scale(1.05)}
+.gate-x:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.gate-card h2{font:800 23px var(--display);margin:0}
+.err{color:var(--warn);font-size:12.5px;font-weight:700;min-height:18px}
+.demo-bar{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.demo-lbl{font:700 11.5px var(--body);color:var(--muted)}
+.demo-pill{
+  font:700 11.5px var(--body);padding:4px 10px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--line);background:var(--soft);color:var(--ink);
+}
+.demo-pill:hover{border-color:var(--coral);background:var(--surface)}
+.demo-pill small{color:var(--muted);font-weight:600;margin-left:3px}
+/* Paywall Lock Overlay (Starter Free -> Campus) */
+.lock-area{position:relative;display:grid;gap:12px}
+.card.locked .lock-blur{filter:blur(4px);opacity:.48;pointer-events:none;user-select:none}
+.lock-ov{
+  display:none;position:absolute;inset:0;z-index:5;border-radius:16px;padding:16px;
+  background:color-mix(in srgb, var(--surface) 76%, transparent);
+  backdrop-filter:blur(2px);place-items:center;text-align:center;
+}
+.card.locked .lock-ov{display:grid}
+.lock-box{display:grid;gap:8px;justify-items:center;max-width:340px}
+.lock-box b{font:800 15px var(--display)}
+.lock-box p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.sub-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  padding:10px 13px;border-radius:16px;background:var(--soft);border:1.5px solid var(--line);font-size:12.5px;
+}
+.sub-bar strong{color:var(--ink)}
+.bill-sw{display:inline-flex;gap:3px;padding:3px;border-radius:999px;background:var(--soft);border:1.5px solid var(--line)}
+.bill-sw button{font:700 12px var(--body);padding:6px 12px;border-radius:999px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.bill-sw button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.pay-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:520px){.pay-opts{grid-template-columns:1fr}}
+.pay-opt{font:700 12.5px var(--body);padding:9px 12px;border-radius:14px;cursor:pointer;border:2px solid var(--line);background:var(--soft);color:var(--ink);text-align:left}
+.pay-opt[aria-pressed="true"]{border-color:var(--accent);background:var(--surface);color:var(--accent)}
+.perk-list{margin:0;padding-left:18px;font-size:13px;color:var(--muted);display:grid;gap:4px}
+/* Competitive Intelligence Benchmark Card */
+.ci-grid{display:grid;grid-template-columns:minmax(0, 1.05fr) minmax(0, 1.25fr) minmax(0, 1fr);gap:14px;align-items:stretch}
+@media (max-width:980px){.ci-grid{grid-template-columns:1fr}}
+.ci-box{
+  min-width:0;border:2px solid var(--line);background:var(--soft);border-radius:18px;
+  padding:15px 16px;display:grid;gap:10px;align-content:start;
+}
+.ci-box h4{margin:0;font:800 14.5px var(--display);display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.ci-note{font-size:12px;color:var(--muted);line-height:1.45;margin:0}
+.ci-note strong{color:var(--ink)}
+.ci-bars{
+  display:grid;grid-template-columns:repeat(9, minmax(0, 1fr));gap:6px;
+  align-items:end;height:122px;padding-top:18px;
+}
+.ci-col{display:grid;justify-items:center;gap:4px;height:100%;align-content:end}
+.ci-val{font:700 10.5px/1 var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.ci-bar{
+  width:100%;max-width:30px;min-height:6px;border-radius:8px 8px 4px 4px;
+  background:color-mix(in srgb, var(--accent) 45%, var(--line));
+  transition:transform .14s;position:relative;
+}
+.ci-bar.peak{background:linear-gradient(180deg, var(--coral), #ec4899)}
+.ci-bar.mine{background:linear-gradient(180deg, var(--accent), var(--violet));box-shadow:0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent)}
+.ci-bar.peak.mine{background:linear-gradient(180deg, var(--coral), var(--violet))}
+.ci-mon{font:700 10.5px/1 var(--body);color:var(--muted)}
+.ci-col.is-mine .ci-mon{color:var(--accent)}
+.ci-leg{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--muted);font-weight:600}
+.ci-leg span{display:inline-flex;align-items:center;gap:5px}
+.ci-leg i{width:9px;height:9px;border-radius:3px;display:inline-block}
+.ci-cols{display:grid;gap:8px;min-width:0;max-height:380px;overflow-y:auto;padding-right:2px}
+.ci-crow{
+  min-width:0;border:1.5px solid var(--line);background:var(--surface);border-radius:14px;
+  padding:11px 13px;display:grid;gap:6px;cursor:pointer;
+  transition:border-color .15s, transform .12s, box-shadow .15s, background .15s;
+}
+.ci-crow:hover{
+  border-color:var(--accent);
+  background:color-mix(in srgb, var(--accent) 4%, var(--surface));
+  transform:translateY(-1px);
+  box-shadow:0 6px 18px -6px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+.ci-crow:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ci-crow-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;min-width:0}
+.ci-crow-hd b{
+  font:700 13px/1.3 var(--body);min-width:0;color:var(--ink);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.ci-crow-sub{font-size:12px;color:var(--muted);line-height:1.4}
+.ci-crow-act{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  margin-top:2px;padding-top:5px;border-top:1px dashed var(--line);
+}
+.ci-open-link{
+  display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;
+  color:var(--accent);
+}
+.ci-crow:hover .ci-open-link{text-decoration:underline}
+
+/* Collision Detail Modal */
+dialog.mdl.wide{max-width:880px;width:calc(100% - 24px);max-height:92vh}
+.col-summary{
+  background:var(--soft);border:1.5px solid var(--line);border-radius:18px;
+  padding:14px 16px;display:grid;gap:10px;font-size:13px;line-height:1.45;
+}
+.col-summary-chips{
+  display:grid;grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));gap:8px;
+}
+.col-chip{
+  background:var(--surface);border:1.5px solid var(--line);border-radius:12px;
+  padding:8px 11px;display:grid;gap:2px;
+}
+.col-chip span{font:700 10.5px var(--body);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.col-chip b{font:800 17px/1.1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.col-chip small{font-size:11px;color:var(--muted);font-weight:600}
+.col-advice{
+  background:var(--surface);border:1.5px solid var(--line);border-radius:12px;
+  padding:10px 12px;font-size:12.5px;color:var(--ink);line-height:1.45;
+}
+.col-advice strong{color:var(--ink)}
+
+.col-toolbar{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;
+}
+.col-tabs{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.col-tab{
+  font:700 12px var(--body);padding:6px 13px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--line);background:var(--soft);color:var(--muted);
+  transition:border-color .14s, color .14s, background .14s;
+}
+.col-tab:hover{border-color:var(--accent);color:var(--ink)}
+.col-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.col-search-inp{
+  font:600 12.5px var(--body);padding:7px 14px;border-radius:999px;
+  border:1.5px solid var(--line);background:var(--surface);color:var(--ink);
+  min-width:240px;flex:1;max-width:340px;
+}
+.col-search-inp:focus{outline:none;border-color:var(--accent)}
+
+.col-list{
+  display:grid;gap:10px;max-height:420px;overflow-y:auto;padding-right:4px;
+}
+.col-item{
+  background:var(--soft);border:1.5px solid var(--line);border-radius:16px;
+  padding:13px 15px;display:grid;gap:8px;transition:border-color .14s, transform .1s, background .14s;
+}
+.col-item:hover{border-color:var(--accent);background:var(--surface)}
+.col-item.is-same{
+  border-color:color-mix(in srgb, var(--coral) 55%, var(--line));
+  background:linear-gradient(135deg, color-mix(in srgb, var(--coral) 7%, var(--soft)), var(--soft));
+}
+.col-item-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.col-uni{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px}
+.col-uni strong{color:var(--ink);font-weight:700}
+.col-flag{font-size:15px;line-height:1}
+.col-loc{color:var(--muted);font-weight:500}
+.col-ev-title{margin:4px 0 0;font:800 15px/1.3 var(--body);color:var(--ink)}
+.col-item-meta{display:flex;align-items:center;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.col-dates{font:700 12px var(--body);color:var(--muted);white-space:nowrap}
+.col-topic{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
+.col-item-ft{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  flex-wrap:wrap;padding-top:6px;border-top:1px dashed var(--line);
+}
+.col-mobs{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.col-item-acts{display:flex;align-items:center;gap:6px}
+.ci-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ci-m{
+  min-width:0;border:1.5px solid var(--line);background:var(--surface);border-radius:14px;
+  padding:10px 12px;display:grid;gap:2px;
+}
+.ci-m span{font:700 10.5px var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.ci-m b{font:800 19px/1.15 var(--display);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ci-m small{font-size:11.5px;color:var(--muted);font-weight:600}
+.ci-mix{display:grid;gap:6px}
+.ci-mix-row{display:grid;grid-template-columns:78px 1fr 38px;gap:8px;align-items:center;font-size:12px;font-weight:600;color:var(--muted)}
+.ci-mix-track{height:8px;border-radius:999px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.ci-mix-track i{display:block;height:100%;border-radius:999px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="gate" id="gate" hidden>
+  <form class="gate-card" id="gate-form">
+    <a class="gate-x" id="gate-close" href="index.html?role=participant" title="Zavřít a přejít na mapu pro účastníky" aria-label="Zavřít přihlášení a přejít na mapu">×</a>
+    <div style="display:flex;align-items:center;gap:12px;padding-right:40px">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/><path d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/></svg>
+      </div>
+      <div>
+        <h2>WeekScout Campus</h2>
+        <div class="brand-sub">Přihlášení pro univerzity · testovací účty i vlastní registrace</div>
+      </div>
+    </div>
+    <div class="fld"><label for="g-user">Uživatelské jméno</label><input id="g-user" value="admin" autocomplete="username" required></div>
+    <div class="fld"><label for="g-pass">Heslo</label><input id="g-pass" type="password" value="admin" autocomplete="current-password" required></div>
+    <div class="demo-bar" id="gate-pills"></div>
+    <div class="err" id="g-err"></div>
+    <div style="display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <a class="pill-btn" href="index.html?auth=register">+ Registrovat školu</a>
+      <button type="submit" class="pill-btn pri">Přihlásit se →</button>
+    </div>
+  </form>
+</div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html?role=participant" title="Zpět na hlavní mapu WeekScout">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/>
+          <path d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/>
+        </svg>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center"><h1>WeekScout</h1><span class="campus-badge" id="top-plan-badge">🏛️ Pro univerzity</span></div>
+        <div class="brand-sub" id="top-plan-sub">International Office &amp; Pořadatelé · tarif Campus (Demo)</div>
+      </div>
+    </a>
+    <div class="top-acts">
+      <button type="button" class="pill-btn cred" id="cred-btn">✦ <span id="cred-val">12</span> kreditů · Dokoupit</button>
+      <a class="pill-btn" href="index.html?role=participant">🌍 Mapa pro účastníky</a>
+      <button type="button" class="icobtn" id="themebtn" title="Přepnout režim">☾</button>
+      <button type="button" class="pill-btn" id="logout-btn" title="Odhlásit a vrátit na výběr role">admin · Odhlásit</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero-bar">
+    <div>
+      <h2 id="uni-title">Načítám profil univerzity…</h2>
+      <p id="uni-sub">Spravujte své Erasmus+ akce, zvýrazňujte termíny přes Scout Credits a sdílejte mapu na fakultním webu.</p>
+    </div>
+    <div class="uni-pick">
+      <label for="uni-select">Pohled školy:</label>
+      <select id="uni-select"></select>
+      <button type="button" class="pill-btn pri" id="add-ev-btn">+ Přidat akci</button>
+    </div>
+  </section>
+
+  <section class="kpis" aria-label="Přehledové metriky">
+    <div class="kpi"><span class="kl">Vaše akce v katalogu</span><span class="kv" id="k-mine">–</span><span class="kd" id="k-mine-sub">načítám…</span></div>
+    <div class="kpi"><span class="kl">Zobrazení detailu (30 dní)</span><span class="kv" id="k-views">–</span><span class="kd">↑ +34 % před uzávěrkou</span></div>
+    <div class="kpi"><span class="kl">Uložení do ★ zájemci</span><span class="kv" id="k-saves">–</span><span class="kd">Top země: DE, ES, PL, IT</span></div>
+    <div class="kpi"><span class="kl">Scout Credits</span><span class="kv" id="k-creds">12</span><span class="kd warn">1 zvýraznění = 2 kredity</span></div>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <div class="card-hd">
+        <h3>Vaše publikované akce 2026/27</h3>
+        <span class="b" id="mine-cnt-pill">0 akcí</span>
+      </div>
+      <p class="card-sub">Zvýrazněné akce se okamžitě označí zlatým odznakem <b>★ Doporučeno</b> v mapě pro účastníky.</p>
+      <div class="evlist" id="evlist"></div>
+    </section>
+
+    <section class="card" id="tarify-card">
+      <div class="card-hd">
+        <h3>Předplatné &amp; Scout Credits</h3>
+        <span class="b ok" id="plan-status-badge">Aktivní: Campus</span>
+      </div>
+      <div class="sub-bar" id="sub-bar">
+        <div id="sub-bar-txt"><strong>Campus (Roční)</strong> · další obnova 18. 11. 2027</div>
+        <button type="button" class="smbtn" id="manage-sub-btn" data-open-sub>Spravovat tarif</button>
+      </div>
+      <div class="plan-grid">
+        <div class="plan">
+          <div><b>Balíček 5 kreditů</b><small>Pro 2–3 zvýrazněné Staff Weeks</small></div>
+          <div class="plan-r"><span class="price">99 €</span><button type="button" class="smbtn" data-buy="5">+5 kr.</button></div>
+        </div>
+        <div class="plan best">
+          <div><b>Campus 15 kreditů</b><small>Zvýraznění na mapě před uzávěrkou</small></div>
+          <div class="plan-r"><span class="price">249 €</span><button type="button" class="smbtn boost" data-buy="15">+15 kr.</button></div>
+        </div>
+        <div class="plan">
+          <div><b>Roční licence OZS</b><small>White-label mapa, digesty, CSV + 15 kr.</small></div>
+          <div class="plan-r"><span class="price">790 € / rok</span><button type="button" class="smbtn" id="campus-tier-btn" data-open-sub>Spravovat</button></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="card" id="ci-card" aria-label="Competitive Intelligence analýza">
+    <div class="card-hd">
+      <h3>📊 Competitive Intelligence – Konkurenční analýza sezóny 2026/27</h3>
+      <div style="display:flex;align-items:center;gap:6px">
+        <span class="b" id="ci-plan-badge">Campus</span>
+        <span class="b custom" id="ci-data-badge">Živá data z 5-agentní MAS pipeline</span>
+      </div>
+    </div>
+    <p class="card-sub">Podklady pro manažerské rozhodování zahraničního oddělení (OZS): kdy plánovat termín, s kým přímo soupeříte o účastníky a jak nastavit účastnický poplatek.</p>
+    <div class="lock-area">
+      <div class="lock-blur">
+        <div class="ci-grid">
+          <div class="ci-box">
+            <h4>Sezónní vytížení Evropy <span class="b" id="ci-peak-badge">–</span></h4>
+            <div class="ci-bars" id="ci-bars"></div>
+            <div class="ci-leg">
+              <span><i style="background:linear-gradient(180deg, var(--coral), #ec4899)"></i>Špička sezóny</span>
+              <span><i style="background:linear-gradient(180deg, var(--accent), var(--violet))"></i>Měsíc vaší akce</span>
+            </div>
+            <p class="ci-note" id="ci-season-note"></p>
+          </div>
+
+          <div class="ci-box">
+            <h4>Kolize termínů s konkurencí <span class="b">±4 dny</span></h4>
+            <div class="ci-cols" id="ci-collisions"></div>
+          </div>
+
+          <div class="ci-box">
+            <h4>Cenový &amp; oborový benchmark</h4>
+            <div class="ci-metrics" id="ci-fees"></div>
+            <div class="ci-mix" id="ci-mix"></div>
+            <p class="ci-note" id="ci-fee-note"></p>
+          </div>
+        </div>
+      </div>
+      <div class="lock-ov">
+        <div class="lock-box">
+          <b>🔒 Funkce tarifu Campus</b>
+          <p>Manažerská analýza sezóny 2026/27: přehled kolizí termínů pro vaši školu, špičky sezóny a cenový benchmark Evropy.</p>
+          <button type="button" class="smbtn boost" data-open-sub>Odemknout Campus (790 €/rok) →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid2 eq">
+    <section class="card" id="digest-card">
+      <div class="card-hd"><h3>Týdenní digest pro katedry</h3><span class="b" id="digest-badge">Každé pondělí</span></div>
+      <p class="card-sub">Nejbližší otevřené uzávěrky z celé Evropy připravené k rozeslání vyučujícím a studentům:</p>
+      <div class="lock-area">
+        <div class="lock-blur" style="display:grid;gap:12px">
+          <div class="digest-preview" id="digest"></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button type="button" class="smbtn" id="copy-digest">Kopírovat text e-mailu</button>
+          </div>
+        </div>
+        <div class="lock-ov">
+          <div class="lock-box">
+            <b>🔒 Funkce tarifu Campus</b>
+            <p>Automatický pondělní přehled nejbližších uzávěrek připravený pro vaše katedry a studenty.</p>
+            <button type="button" class="smbtn boost" data-open-sub>Odemknout Campus (790 €/rok) →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="embed-card">
+      <div class="card-hd"><h3>White-label mapa pro web školy</h3><span class="b" id="embed-badge">Campus</span></div>
+      <p class="card-sub">Vložte WeekScout přímo na stránku zahraničního oddělení (zvýrazní partnerské školy a aktuální termíny).</p>
+      <div class="lock-area">
+        <div class="lock-blur" style="display:grid;gap:12px">
+          <pre class="codebox" id="embed-code"></pre>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button type="button" class="smbtn" id="copy-embed">Kopírovat embed kód</button>
+            <button type="button" class="smbtn" id="export-csv">⬇ Exportovat CSV (<span id="csv-cnt">0</span> akcí)</button>
+          </div>
+        </div>
+        <div class="lock-ov">
+          <div class="lock-box">
+            <b>🔒 Funkce tarifu Campus</b>
+            <p>Vložte interaktivní mapu přímo na fakultní web a exportujte celý katalog do CSV.</p>
+            <button type="button" class="smbtn boost" data-open-sub>Odemknout Campus (790 €/rok) →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<dialog class="mdl" id="add-mdl">
+  <div class="mdl-hd">
+    <h3>Přidat novou akci (Demo)</h3>
+    <button type="button" class="icobtn" id="add-close" aria-label="Zavřít">×</button>
+  </div>
+  <form class="mdl-bd" id="add-form">
+    <div class="fld"><label for="a-name">Název akce *</label><input id="a-name" placeholder="např. International AI &amp; Teaching Week 2027" required></div>
+    <div class="f2">
+      <div class="fld"><label for="a-start">Začátek *</label><input id="a-start" type="date" value="2027-04-12" required></div>
+      <div class="fld"><label for="a-end">Konec *</label><input id="a-end" type="date" value="2027-04-16" required></div>
+    </div>
+    <div class="f2">
+      <div class="fld"><label for="a-dl">Uzávěrka přihlášek</label><input id="a-dl" type="date" value="2027-02-15"></div>
+      <div class="fld"><label for="a-fee">Poplatek (€, 0 = zdarma)</label><input id="a-fee" type="number" min="0" value="0"></div>
+    </div>
+    <div class="f2">
+      <div class="fld"><label for="a-mob">Typ mobility</label>
+        <select id="a-mob"><option value="training">Školení (STT)</option><option value="teaching">Výuka (STA)</option><option value="studying">Studenti (BIP)</option><option value="teaching,training">Výuka i školení</option></select>
+      </div>
+      <div class="fld"><label for="a-field">Hlavní obor</label>
+        <select id="a-field">
+          <option value="intl">Správa VŠ a internacionalizace</option>
+          <option value="it">Informatika a AI</option>
+          <option value="ekon">Ekonomie, právo a management</option>
+          <option value="pedag">Pedagogika a vzdělávání</option>
+          <option value="tech">Technika</option>
+          <option value="zdravi">Zdravotnictví a sociální práce</option>
+          <option value="design">Design, umění a média</option>
+          <option value="human">Humanitní a sociální vědy</option>
+          <option value="prir">Přírodní vědy a životní prostředí</option>
+          <option value="jine">Jiné (vlastní upřesnění)</option>
+        </select>
+      </div>
+    </div>
+    <div class="fld" id="a-field-custom-wrap" hidden><label for="a-field-custom">Upřesnění oboru (nepovinné)</label><input id="a-field-custom" placeholder="např. Knihovnictví, Sport, Gastronomie…"></div>
+    <div class="fld"><label for="a-topic">Stručný popis (1 věta)</label><input id="a-topic" placeholder="Mezinárodní týden zaměřený na sdílení dobré praxe a spolupráci." required></div>
+    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:4px">
+      <button type="button" class="pill-btn" id="add-cancel">Zrušit</button>
+      <button type="submit" class="pill-btn pri">Publikovat na mapu →</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="mdl" id="sub-mdl">
+  <div class="mdl-hd">
+    <h3 id="sub-mdl-title">Aktivace tarifu Campus</h3>
+    <button type="button" class="icobtn" id="sub-close" aria-label="Zavřít">×</button>
+  </div>
+  <form class="mdl-bd" id="sub-form">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <div class="bill-sw" role="group" aria-label="Fakturační období">
+        <button type="button" id="sb-yearly" data-sb="yearly" aria-pressed="true">Ročně · 790 € (−17 %)</button>
+        <button type="button" id="sb-monthly" data-sb="monthly" aria-pressed="false">Měsíčně · 79 €</button>
+      </div>
+      <span class="b ok" id="sub-price-pill">790 € / rok</span>
+    </div>
+    <ul class="perk-list">
+      <li><b>Manažerský CI Benchmark</b> (kolize termínů ±4 dny, sezónní špičky a cenový medián Evropy)</li>
+      <li><b>White-label mapa</b> (iframe) pro web vaší univerzity</li>
+      <li><b>CSV export</b> celého katalogu 153+ evropských akcí</li>
+      <li><b>Týdenní pondělní digest</b> uzávěrek pro katedry a studenty</li>
+      <li><b>+15 Scout Credits</b> v ceně při aktivaci tarifu Campus</li>
+    </ul>
+    <div class="fld">
+      <label>Způsob platby (Demo)</label>
+      <div class="pay-opts" role="group" aria-label="Způsob platby">
+        <button type="button" class="pay-opt" data-sp="invoice" aria-pressed="true">📄 Faktura na IČO (objednávka VŠ)</button>
+        <button type="button" class="pay-opt" data-sp="card" aria-pressed="false">💳 Demo platební karta (•••• 4242)</button>
+      </div>
+    </div>
+    <div class="fld" id="sub-ico-wrap"><label for="sub-ico">IČO univerzity (na fakturu)</label><input id="sub-ico" placeholder="např. 61384399"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px">
+      <button type="button" class="smbtn danger" id="sub-downgrade" hidden>Přepnout na Starter Free</button>
+      <div style="display:flex;gap:8px;margin-left:auto">
+        <button type="button" class="pill-btn" id="sub-cancel">Zavřít</button>
+        <button type="submit" class="pill-btn pri" id="sub-submit">Aktivovat Campus (+15 kr.) →</button>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="mdl wide" id="col-mdl">
+  <div class="mdl-hd">
+    <div style="min-width:0;padding-right:10px">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <h3 id="col-title" style="font-size:18.5px;line-height:1.25">Detail termínových kolizí</h3>
+        <span class="b" id="col-badge">–</span>
+      </div>
+      <div class="card-sub" id="col-sub" style="margin:4px 0 0">Souběžné akce v Evropě v okně ±4 dny</div>
+    </div>
+    <button type="button" class="icobtn" id="col-close" aria-label="Zavřít">×</button>
+  </div>
+  <div class="mdl-bd" style="gap:14px">
+    <div class="col-summary" id="col-summary"></div>
+    <div class="col-toolbar">
+      <div class="col-tabs" id="col-tabs" role="tablist" aria-label="Filtrovat souběžné akce"></div>
+      <input type="search" id="col-search" class="col-search-inp" placeholder="Hledat školu, zemi, město…" aria-label="Hledat mezi souběžnými akcemi">
+    </div>
+    <div class="col-list" id="col-list"></div>
+    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:2px;padding-top:10px;border-top:1.5px solid var(--line)">
+      <button type="button" class="pill-btn" id="col-cancel">Zavřít detail</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const TODAY = new Date().toISOString().slice(0, 10) < "2026-11-13" ? "2026-11-13" : new Date().toISOString().slice(0, 10);
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const d = s => new Date(s + "T00:00:00");
+const fmt = (a, b) => { const A = d(a), B = d(b || a); return A.getMonth() === B.getMonth() ? `${A.getDate()}.–${B.getDate()}. ${A.getMonth()+1}. ${A.getFullYear()}` : `${A.getDate()}. ${A.getMonth()+1}.–${B.getDate()}. ${B.getMonth()+1}. ${B.getFullYear()}`; };
+const fmt1 = a => { const A = d(a); return `${A.getDate()}. ${A.getMonth()+1}. ${A.getFullYear()}`; };
+
+/* Theme sync with index.html */
+function applyTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  const mc = document.querySelector('meta[name="theme-color"]'); if (mc) mc.setAttribute("content", t === "dark" ? "#121126" : "#fdfbf7");
+  $("themebtn").textContent = t === "dark" ? "☀" : "☾";
+}
+(function(){
+  let t = "light";
+  try { const s = localStorage.getItem("eiw-theme-v4"); if (s === "light" || s === "dark") t = s; } catch (e) {}
+  applyTheme(t);
+  $("themebtn").addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next); try { localStorage.setItem("eiw-theme-v4", next); } catch (e) {}
+  });
+})();
+
+/* Shared accounts & subscription state (synced with index.html via localStorage) */
+const DEFAULT_ACCOUNTS = {
+  student: {user:"student", pass:"student", role:"participant", label:"Účastník (Zdarma)"},
+  admin: {user:"admin", pass:"admin", role:"university", uni:"Prague University of Economics and Business (VŠE)", email:"ozs@vse.cz", plan:"campus", billing:"yearly", payMethod:"invoice", ico:"61384399", credits:12, renewsAt:"2027-11-18"},
+  free: {user:"free", pass:"free", role:"university", uni:"Masaryk University", email:"czs@muni.cz", plan:"free", billing:"none", payMethod:"none", ico:"", credits:0, renewsAt:null}
+};
+const loadJson = (k, def) => { try { const v = JSON.parse(localStorage.getItem(k) || "null"); return v != null ? v : def; } catch (e) { return def; } };
+function loadAccounts(){
+  const saved = loadJson("ws-accounts-v1", {});
+  return Object.assign({}, DEFAULT_ACCOUNTS, saved && typeof saved === "object" ? saved : {});
+}
+function saveAccounts(accs){ try { localStorage.setItem("ws-accounts-v1", JSON.stringify(accs)); } catch (e) {} }
+
+let activeUser = null, accounts = loadAccounts();
+function getAcc(){ return activeUser && accounts[activeUser] ? accounts[activeUser] : accounts.admin; }
+function syncAccount(patch){
+  accounts = loadAccounts();
+  const cur = getAcc();
+  accounts[cur.user] = Object.assign({}, cur, patch);
+  saveAccounts(accounts);
+}
+
+function renderGatePills(){
+  const unis = Object.values(loadAccounts()).filter(a => a.role === "university");
+  $("gate-pills").innerHTML = `<span class="demo-lbl">Testovací účty:</span>` + unis.map(a =>
+    `<button type="button" class="demo-pill" data-u="${esc(a.user)}" data-p="${esc(a.pass)}">${esc(a.user)}<small>${a.plan === "campus" ? "Campus" : "Free"}</small></button>`
+  ).join("");
+}
+$("gate-pills").addEventListener("click", ev => {
+  const p = ev.target.closest(".demo-pill"); if (!p) return;
+  $("g-user").value = p.dataset.u; $("g-pass").value = p.dataset.p; $("g-err").textContent = "";
+});
+
+function checkSession(){
+  try {
+    const s = JSON.parse(sessionStorage.getItem("ws-session") || "null");
+    const accs = loadAccounts();
+    if (s && s.user && s.role === "university" && accs[s.user] && accs[s.user].role === "university") {
+      activeUser = s.user; return true;
+    }
+  } catch (e) {}
+  return false;
+}
+renderGatePills();
+if (!checkSession()) $("gate").hidden = false;
+$("gate").addEventListener("click", ev => { if (ev.target === $("gate")) location.href = "index.html?role=participant"; });
+document.addEventListener("keydown", ev => { if (ev.key === "Escape" && !$("gate").hidden) location.href = "index.html?role=participant"; });
+$("gate-form").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const u = $("g-user").value.trim(), p = $("g-pass").value;
+  accounts = loadAccounts();
+  const acc = accounts[u];
+  if (acc && acc.pass === p && acc.role === "university") {
+    activeUser = acc.user;
+    try { sessionStorage.setItem("ws-session", JSON.stringify({user:acc.user, role:"university"})); } catch (e) {}
+    $("gate").hidden = true; $("g-err").textContent = "";
+    syncUniFromAccount(); renderUni();
+  } else {
+    $("g-err").textContent = "Neplatné údaje — vyberte testovací účet výše nebo zaregistrujte školu.";
+  }
+});
+$("logout-btn").addEventListener("click", () => {
+  try { sessionStorage.removeItem("ws-session"); } catch (e) {}
+  activeUser = null;
+  renderGatePills();
+  $("gate").hidden = false;
+  toast("Byli jste odhlášeni. Zvolte účet pro přihlášení.");
+});
+
+let featured = new Set(loadJson("ws-featured", []));
+let customEvents = loadJson("ws-custom-events", []);
+let BASE_EV = [], ALL_EV = [], currentUni = "";
+
+function saveState(){
+  try {
+    localStorage.setItem("ws-featured", JSON.stringify([...featured]));
+    localStorage.setItem("ws-custom-events", JSON.stringify(customEvents));
+  } catch (e) {}
+}
+let _tTimer = 0;
+function toast(msg){
+  const el = $("toast"); el.textContent = msg; el.classList.add("show");
+  clearTimeout(_tTimer); _tTimer = setTimeout(() => el.classList.remove("show"), 2800);
+}
+function renderCredits(){
+  const c = getAcc().credits || 0;
+  $("cred-val").textContent = c; $("k-creds").textContent = c;
+}
+function ensureUniOption(u){
+  if (!u) return;
+  const sel = $("uni-select");
+  if (![...sel.options].some(o => o.value === u)) sel.insertAdjacentHTML("afterbegin", `<option value="${esc(u)}">${esc(u)} (nová škola)</option>`);
+}
+function syncUniFromAccount(){
+  const acc = getAcc();
+  if (acc && acc.uni) { ensureUniOption(acc.uni); currentUni = acc.uni; $("uni-select").value = currentUni; }
+}
+
+const slugify = s => String(s || "partner").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "partner";
+const akceLabel = n => n === 1 ? "1 akce" : (n >= 2 && n <= 4 ? `${n} akce` : `${n} akcí`);
+function evStats(e){
+  const isF = featured.has(e.id);
+  const views = (e.id.length * 13 + 95) + (isF ? 210 : 0);
+  const saves = Math.round(views * 0.16);
+  const clicks = Math.round(saves * 0.62);
+  return {views, saves, clicks, isF};
+}
+const verClass = st => st === "ověřeno" ? "ok" : (st === "částečně" ? "part" : "warn");
+let lastDigest = [];
+
+function renderSubscription(){
+  const acc = getAcc();
+  const isCampus = acc.plan === "campus";
+  const billTxt = acc.billing === "monthly" ? "Měsíční · 79 €/měs." : "Roční · 790 €/rok";
+  $("logout-btn").textContent = `${acc.user} · Odhlásit`;
+  $("top-plan-badge").textContent = isCampus ? "🏛️ Campus" : "🏛️ Starter Free";
+  $("top-plan-sub").textContent = isCampus
+    ? `International Office & Pořadatelé · tarif Campus (${acc.billing === "monthly" ? "měsíční" : "roční"})`
+    : "International Office & Pořadatelé · tarif Starter (Zdarma)";
+
+  const pb = $("plan-status-badge");
+  pb.className = `b ${isCampus ? "ok" : "part"}`;
+  pb.textContent = isCampus ? "Aktivní: Campus" : "Tarif: Starter (Zdarma)";
+
+  $("sub-bar-txt").innerHTML = isCampus
+    ? `<strong>Campus (${billTxt})</strong>${acc.renewsAt ? ` · obnova ${fmt1(acc.renewsAt)}` : ""}${acc.ico ? ` · IČO ${esc(acc.ico)}` : ""}`
+    : `<strong>Starter Free (0 €)</strong> · CI analýza, embed a digest zamčeny`;
+  const mbtn = $("manage-sub-btn");
+  mbtn.textContent = isCampus ? "Spravovat tarif" : "Přejít na Campus";
+  mbtn.className = isCampus ? "smbtn" : "smbtn boost";
+  const cbtn = $("campus-tier-btn");
+  cbtn.textContent = isCampus ? "✓ Aktivní" : "Aktivovat";
+  cbtn.className = isCampus ? "smbtn" : "smbtn boost";
+
+  $("ci-card").classList.toggle("locked", !isCampus);
+  $("ci-plan-badge").textContent = isCampus ? "Aktivní" : "🔒 Campus";
+  $("digest-card").classList.toggle("locked", !isCampus);
+  $("embed-card").classList.toggle("locked", !isCampus);
+  $("digest-badge").textContent = isCampus ? "Každé pondělí" : "🔒 Campus";
+  $("embed-badge").textContent = isCampus ? "Aktivní" : "🔒 Campus";
+}
+
+function renderUni(){
+  ALL_EV = [...BASE_EV, ...customEvents].sort((a, b) => a.start.localeCompare(b.start));
+  const acc = getAcc();
+  const isCampus = acc.plan === "campus";
+  const mine = ALL_EV.filter(e => e.uni === currentUni);
+  const sample = mine[0] || {};
+  $("uni-title").textContent = currentUni || "Vyberte univerzitu";
+  $("uni-sub").textContent = `${sample.city ? sample.city + ", " + sample.country + " · " : ""}${isCampus ? "Tarif Campus aktivní · Správa akcí, zvýraznění na mapě a exporty pro katedry." : "Tarif Starter (Zdarma) · Základní publikace akcí v katalogu. Pro embed a digest přejděte na Campus."}`;
+
+  const stats = mine.map(e => ({e, ...evStats(e)}));
+  const featCnt = stats.filter(x => x.isF).length;
+  const totalViews = stats.reduce((s, x) => s + x.views, 0);
+  const totalSaves = stats.reduce((s, x) => s + x.saves, 0);
+  $("k-mine").textContent = mine.length;
+  $("mine-cnt-pill").textContent = akceLabel(mine.length);
+  $("k-mine-sub").textContent = featCnt ? `${featCnt}× zvýrazněno na mapě (★)` : "všechny zveřejněny zdarma";
+  $("k-views").textContent = totalViews.toLocaleString("cs-CZ");
+  $("k-saves").textContent = totalSaves.toLocaleString("cs-CZ");
+  $("csv-cnt").textContent = ALL_EV.length;
+
+  const list = $("evlist");
+  if (!mine.length) {
+    list.innerHTML = `<p style="color:var(--muted);margin:0">Tato univerzita zatím nemá žádnou akci — klikněte nahoře na <b>+ Přidat akci</b> a publikujte první termín zdarma.</p>`;
+  } else {
+    list.innerHTML = stats.map(({e, views, saves, clicks, isF}) => {
+      const isC = customEvents.some(x => x.id === e.id);
+      const vst = (e.verify && e.verify.status) || "ověřeno";
+      return `<div class="evrow${isF ? " feat" : ""}">
+        <div class="evrow-top">
+          <div>
+            <h4>${esc(e.event_name)}</h4>
+            <div class="evmeta">${fmt(e.start, e.end)} · ${esc(e.city)}${e.deadline ? ` · uzávěrka ${fmt1(e.deadline)}` : ""}${e.fee_eur != null ? ` · ${e.fee_eur === 0 ? "zdarma" : e.fee_eur + " €"}` : ""}</div>
+          </div>
+          <div class="badges">
+            ${isF ? `<span class="b feat">★ Doporučeno na mapě</span>` : ""}
+            ${isC ? `<span class="b custom">Nově přidaná</span>` : ""}
+            <span class="b ${verClass(vst)}">${esc(vst)}</span>
+          </div>
+        </div>
+        <div class="ev-stats">
+          <span>Zobrazení: <strong>${views}</strong></span>
+          <span>Uloženo v ★: <strong>${saves}</strong></span>
+          <span>Prokliky na registraci: <strong>${clicks}</strong></span>
+        </div>
+        <div class="ev-btns">
+          ${isF
+            ? `<button type="button" class="smbtn" data-unboost="${e.id}">Zrušit zvýraznění</button>`
+            : `<button type="button" class="smbtn boost" data-boost="${e.id}">★ Zvýraznit na mapě (2 kredity)</button>`}
+          <a class="smbtn" href="index.html?role=participant&akce=${encodeURIComponent(e.id)}">Otevřít na mapě ↗</a>
+          ${isC ? `<button type="button" class="smbtn danger" data-del="${e.id}">Smazat demo akci</button>` : ""}
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  const slug = slugify(sample.uni_short || currentUni);
+  $("embed-code").textContent = `<iframe\n  src="https://viktorstech.github.io/weekscout/?partner=${slug}&theme=auto"\n  width="100%" height="640"\n  style="border:0;border-radius:20px"\n  loading="lazy"\n></iframe>`;
+
+  lastDigest = ALL_EV.filter(e => e.deadline && e.deadline >= TODAY).sort((a, b) => a.deadline.localeCompare(b.deadline)).slice(0, 5);
+  $("digest").innerHTML = `<strong>Nadcházející uzávěrky (ukázka pondělního e-mailu):</strong>` + lastDigest.map(e =>
+    `<div class="digest-item"><span class="digest-title" title="${esc((e.uni_short || e.uni) + " – " + e.event_name)}"><b>${esc(e.uni_short || e.uni)}</b> (${esc(e.country_iso)}) – ${esc(e.event_name)}</span><span class="digest-date">${fmt1(e.deadline)}</span></div>`
+  ).join("");
+  renderCI(mine);
+  renderSubscription();
+  renderCredits();
+}
+
+function renderCI(mine){
+  const MONTHS = [
+    ["2026-12","pro","prosinci"],["2027-01","led","lednu"],["2027-02","úno","únoru"],
+    ["2027-03","bře","březnu"],["2027-04","dub","dubnu"],["2027-05","kvě","květnu"],
+    ["2027-06","čvn","červnu"],["2027-07","čvc","červenci"],["2027-08","srp","srpnu"]
+  ];
+  const counts = Object.fromEntries(MONTHS.map(([k]) => [k, 0]));
+  ALL_EV.forEach(e => {
+    const m1 = (e.start || "").slice(0, 7); if (m1 in counts) counts[m1]++;
+    const m2 = (e.start2 || "").slice(0, 7); if (m2 && m2 !== m1 && m2 in counts) counts[m2]++;
+  });
+  const mineMonths = new Set(mine.flatMap(e => [e.start, e.start2].filter(Boolean).map(s => s.slice(0, 7))));
+  const maxC = Math.max(1, ...Object.values(counts));
+  const peak = MONTHS.reduce((a, b) => counts[b[0]] > counts[a[0]] ? b : a, MONTHS[0]);
+  const low = MONTHS.filter(([k]) => k >= "2027-01" && k <= "2027-07").reduce((a, b) => counts[b[0]] < counts[a[0]] ? b : a, MONTHS[1]);
+  $("ci-data-badge").textContent = `Živá data · ${ALL_EV.length} akcí · ${new Set(ALL_EV.map(e => e.uni)).size} škol`;
+  $("ci-peak-badge").textContent = `Špička: ${peak[1]} (${counts[peak[0]]})`;
+  $("ci-bars").innerHTML = MONTHS.map(([k, lbl]) => {
+    const c = counts[k];
+    const h = Math.max(8, Math.round((c / maxC) * 86));
+    const isPeak = k === peak[0], isMine = mineMonths.has(k);
+    return `<div class="ci-col${isMine ? " is-mine" : ""}" title="${lbl}: ${c} akcí${isMine ? " (vaše akce)" : ""}">
+      <span class="ci-val">${c}</span>
+      <div class="ci-bar${isPeak ? " peak" : ""}${isMine ? " mine" : ""}" style="height:${h}px"></div>
+      <span class="ci-mon">${lbl}</span>
+    </div>`;
+  }).join("");
+  $("ci-season-note").innerHTML = `Největší přetlak v Evropě je v <strong>${peak[2]} (${counts[peak[0]]} akcí)</strong>. Nejvolnější okno pro nový termín je v <strong>${low[2]} (${counts[low[0]]} akcí)</strong>.`;
+
+  /* Term collisions (±4 days against other European HEIs) */
+  const DAY = 864e5;
+  const colsEl = $("ci-collisions");
+  if (!mine.length) {
+    colsEl.innerHTML = `<div class="ci-crow" style="cursor:default"><div class="ci-crow-hd"><b>Doporučení pro první termín</b><span class="b ok">Bez kolizí</span></div><div class="ci-crow-sub">Tato škola zatím nemá akci v katalogu. Pro nejnižší konkurenci v Evropě doporučujeme vypsat termín v <b>${low[2]}</b> nebo začátkem března.</div></div>`;
+  } else {
+    colsEl.innerHTML = mine.map(me => {
+      const sA = d(me.start).getTime() - 4 * DAY, eA = d(me.end || me.start).getTime() + 4 * DAY;
+      const comps = ALL_EV.filter(o => o.uni !== me.uni && d(o.start).getTime() <= eA && d(o.end || o.start).getTime() >= sA)
+        .sort((x, y) => Math.abs(d(x.start).getTime() - d(me.start).getTime()) - Math.abs(d(y.start).getTime() - d(me.start).getTime()));
+      const sameMob = comps.filter(o => (o.mobility || []).some(m => (me.mobility || []).includes(m)));
+      const level = comps.length <= 2 ? ["ok", "Nízký přetlak"] : (comps.length <= 7 ? ["part", "Střední přetlak"] : ["warn", "Vysoký přetlak"]);
+      const topNames = [...new Set(comps.map(o => `${o.uni_short || o.uni} (${o.country_iso})`))].slice(0, 3).join(", ");
+      return `<div class="ci-crow" data-col-id="${esc(me.id)}" role="button" tabindex="0" title="Kliknutím zobrazíte detail všech ${comps.length} kolizí">
+        <div class="ci-crow-hd"><b title="${esc(me.event_name)}">${esc(me.event_name)}</b><span class="b ${level[0]}">${comps.length}× · ${level[1]}</span></div>
+        <div class="ci-crow-sub">${fmt(me.start, me.end)} · <strong>${sameMob.length}</strong> ve stejném typu mobility${topNames ? `<br>Souběžně např.: ${esc(topNames)}${comps.length > 3 ? "…" : ""}` : "<br>Žádná přímá kolize v Evropě."}</div>
+        <div class="ci-crow-act">
+          <span class="ci-open-link">Zobrazit detail kolizí (${comps.length}) ↗</span>
+          <span style="font-size:11px;color:var(--muted);font-weight:600">±4 dny</span>
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  /* Fee & mobility benchmark across Europe */
+  const knownFees = ALL_EV.filter(e => e.fee_eur != null);
+  const freeCnt = knownFees.filter(e => e.fee_eur === 0).length;
+  const paid = knownFees.filter(e => e.fee_eur > 0).map(e => e.fee_eur).sort((a, b) => a - b);
+  const freePct = knownFees.length ? Math.round(freeCnt / knownFees.length * 100) : 0;
+  const avgPaid = paid.length ? Math.round(paid.reduce((s, x) => s + x, 0) / paid.length) : 0;
+  const medPaid = paid.length ? paid[Math.floor(paid.length / 2)] : 0;
+  $("ci-fees").innerHTML = `
+    <div class="ci-m"><span>Zdarma v Evropě</span><b>${freePct} %</b><small>${freeCnt} ze ${knownFees.length} s cenou</small></div>
+    <div class="ci-m"><span>Placené (medián)</span><b>${medPaid} €</b><small>průměr ${avgPaid} €</small></div>`;
+
+  const tot = ALL_EV.length || 1;
+  const mTr = Math.round(ALL_EV.filter(e => (e.mobility || []).includes("training")).length / tot * 100);
+  const mTe = Math.round(ALL_EV.filter(e => (e.mobility || []).includes("teaching")).length / tot * 100);
+  const mSt = Math.round(ALL_EV.filter(e => (e.mobility || []).includes("studying")).length / tot * 100);
+  $("ci-mix").innerHTML = [
+    ["Školení", mTr, "var(--teal)"],
+    ["Výuka", mTe, "var(--violet)"],
+    ["Studenti BIP", mSt, "var(--coral)"]
+  ].map(([lbl, pct, col]) => `<div class="ci-mix-row"><span>${lbl}</span><div class="ci-mix-track"><i style="width:${pct}%;background:${col}"></i></div><span style="text-align:right">${pct} %</span></div>`).join("");
+
+  const myFees = mine.filter(e => e.fee_eur != null).map(e => e.fee_eur);
+  $("ci-fee-note").innerHTML = !myFees.length
+    ? `U vašich akcí není uveden poplatek — v Evropě je <strong>${freePct} %</strong> akcí zdarma, doplnění ceny zvyšuje konverzi přihlášek.`
+    : (Math.max(...myFees) === 0
+      ? `Vaše akce jsou <strong>zdarma</strong> — silná konkurenční výhoda oproti placeným akcím (medián ${medPaid} €).`
+      : `Váš nejvyšší poplatek je <strong>${Math.max(...myFees)} €</strong> (${Math.max(...myFees) <= medPaid ? "pod / na úrovni" : "nad"} evropským mediánem placených akcí ${medPaid} €).`);
+}
+
+$("evlist").addEventListener("click", ev => {
+  const b = ev.target.closest("[data-boost]");
+  if (b) {
+    const c = getAcc().credits || 0;
+    if (c < 2) {
+      toast("Nedostatek kreditů (potřeba 2) — dokup balíček nebo aktivuj Campus.");
+      $("cred-btn").click();
+      return;
+    }
+    syncAccount({credits: c - 2}); featured.add(b.dataset.boost); saveState(); renderUni();
+    toast("Akce zvýrazněna (★ Doporučeno) — je hned vidět i na mapě!");
+    return;
+  }
+  const u = ev.target.closest("[data-unboost]");
+  if (u) { featured.delete(u.dataset.unboost); saveState(); renderUni(); toast("Zvýraznění zrušeno."); return; }
+  const del = ev.target.closest("[data-del]");
+  if (del) {
+    customEvents = customEvents.filter(x => x.id !== del.dataset.del);
+    featured.delete(del.dataset.del); saveState(); renderUni(); toast("Demo akce odstraněna.");
+  }
+});
+
+document.querySelectorAll("[data-buy]").forEach(btn => btn.addEventListener("click", () => {
+  const add = +btn.dataset.buy;
+  syncAccount({credits: (getAcc().credits || 0) + add});
+  renderCredits();
+  toast(`Připsáno +${add} Scout Credits (demo nákup).`);
+}));
+$("cred-btn").addEventListener("click", () => {
+  const card = $("tarify-card");
+  if (!card) return;
+  const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  card.scrollIntoView({behavior: reduce ? "auto" : "smooth", block: "center"});
+  card.classList.add("hl");
+  setTimeout(() => card.classList.remove("hl"), 1400);
+});
+$("copy-embed").addEventListener("click", () => {
+  if (getAcc().plan !== "campus") { openSubModal(); return; }
+  const txt = $("embed-code").textContent;
+  if (navigator.clipboard) navigator.clipboard.writeText(txt).then(() => toast("Embed kód zkopírován do schránky ✓"));
+});
+$("copy-digest").addEventListener("click", () => {
+  if (getAcc().plan !== "campus") { openSubModal(); return; }
+  const lines = [
+    `WeekScout – Nadcházející Erasmus+ uzávěrky (${currentUni})`,
+    "",
+    ...lastDigest.map(e => `• ${e.uni_short || e.uni} (${e.country_iso}) – ${e.event_name} | uzávěrka ${fmt1(e.deadline)}`),
+    "",
+    "Kompletní interaktivní mapa: https://viktorstech.github.io/weekscout/"
+  ].join("\n");
+  if (navigator.clipboard) navigator.clipboard.writeText(lines).then(() => toast("Text týdenního digestu zkopírován ✓"));
+});
+$("export-csv").addEventListener("click", () => {
+  if (getAcc().plan !== "campus") { openSubModal(); return; }
+  const cols = ["uni", "country", "city", "event_name", "start", "end", "deadline", "fee_eur", "event_url"];
+  const escCsv = v => `"${String(v == null ? "" : v).replace(/"/g, '""')}"`;
+  const csv = "\ufeff" + [cols.join(","), ...ALL_EV.map(e => cols.map(c => escCsv(e[c])).join(","))].join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+  a.download = "weekscout-2027-export.csv"; a.click();
+  toast(`Exportováno ${ALL_EV.length} akcí do CSV ✓`);
+});
+
+/* Subscription Upgrade / Management Modal */
+const subMdl = $("sub-mdl");
+let subBill = "yearly", subPay = "invoice";
+function syncSubModal(){
+  const isCampus = getAcc().plan === "campus";
+  $("sub-mdl-title").textContent = isCampus ? "Správa předplatného Campus" : "Aktivace tarifu Campus";
+  $("sb-yearly").setAttribute("aria-pressed", String(subBill === "yearly"));
+  $("sb-monthly").setAttribute("aria-pressed", String(subBill === "monthly"));
+  $("sub-price-pill").textContent = subBill === "yearly" ? "790 € / rok" : "79 € / měsíc";
+  document.querySelectorAll("[data-sp]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.sp === subPay)));
+  $("sub-ico-wrap").hidden = subPay !== "invoice";
+  $("sub-downgrade").hidden = !isCampus;
+  $("sub-submit").textContent = isCampus ? "Uložit změnu tarifu ✓" : "Aktivovat Campus (+15 kr.) →";
+}
+function openSubModal(){
+  const acc = getAcc();
+  subBill = acc.billing === "monthly" ? "monthly" : "yearly";
+  subPay = acc.payMethod === "card" ? "card" : "invoice";
+  $("sub-ico").value = acc.ico || "";
+  syncSubModal();
+  subMdl.showModal();
+}
+document.querySelectorAll("[data-open-sub]").forEach(b => b.addEventListener("click", openSubModal));
+document.querySelectorAll("[data-sb]").forEach(b => b.addEventListener("click", () => { subBill = b.dataset.sb; syncSubModal(); }));
+document.querySelectorAll("[data-sp]").forEach(b => b.addEventListener("click", () => { subPay = b.dataset.sp; syncSubModal(); }));
+$("sub-close").addEventListener("click", () => subMdl.close());
+$("sub-cancel").addEventListener("click", () => subMdl.close());
+subMdl.addEventListener("click", ev => { if (ev.target === subMdl) subMdl.close(); });
+$("sub-downgrade").addEventListener("click", () => {
+  syncAccount({plan:"free", billing:"none", renewsAt:null});
+  subMdl.close(); renderUni();
+  toast("Přepnuto na tarif Starter Free (prémiové funkce zamčeny).");
+});
+$("sub-form").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const acc = getAcc();
+  const wasFree = acc.plan !== "campus";
+  const next = new Date();
+  if (subBill === "yearly") next.setFullYear(next.getFullYear() + 1); else next.setMonth(next.getMonth() + 1);
+  syncAccount({
+    plan: "campus", billing: subBill, payMethod: subPay,
+    ico: subPay === "invoice" ? $("sub-ico").value.trim() : "",
+    renewsAt: next.toISOString().slice(0, 10),
+    credits: (acc.credits || 0) + (wasFree ? 15 : 0)
+  });
+  subMdl.close(); renderUni();
+  toast(wasFree ? "Tarif Campus aktivován! Vše odemčeno + 15 Scout Credits ✓" : "Nastavení předplatného uloženo ✓");
+});
+
+const addMdl = $("add-mdl");
+$("a-field").addEventListener("change", () => {
+  const show = $("a-field").value === "jine";
+  $("a-field-custom-wrap").hidden = !show;
+  if (show) $("a-field-custom").focus();
+});
+$("add-ev-btn").addEventListener("click", () => { $("a-field-custom-wrap").hidden = $("a-field").value !== "jine"; addMdl.showModal(); });
+$("add-close").addEventListener("click", () => addMdl.close());
+$("add-cancel").addEventListener("click", () => addMdl.close());
+addMdl.addEventListener("click", ev => { if (ev.target === addMdl) addMdl.close(); });
+$("add-form").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const ref = BASE_EV.find(e => e.uni === currentUni) || {uni:currentUni, uni_short:currentUni.slice(0, 22), country_iso:"CZ", country:"Česko", city:"Praha", lat:50.0842, lng:14.4414};
+  const fee = Number($("a-fee").value || 0);
+  const id = "demo-" + Date.now();
+  const isCampus = getAcc().plan === "campus";
+  const fieldVal = $("a-field").value;
+  const fieldCustom = fieldVal === "jine" ? ($("a-field-custom").value.trim() || null) : null;
+  customEvents.push({
+    id, uni: ref.uni, uni_short: ref.uni_short || ref.uni, country_iso: ref.country_iso, country: ref.country, city: ref.city,
+    lat: +(ref.lat + 0.008).toFixed(4), lng: +(ref.lng + 0.008).toFixed(4), erasmus_code: ref.erasmus_code || null,
+    event_name: $("a-name").value.trim(), start: $("a-start").value, end: $("a-end").value, start2: null, end2: null,
+    deadline: $("a-dl").value || null, deadline_note: null, mobility: $("a-mob").value.split(","), fields: [fieldVal], field_custom: fieldCustom,
+    topic: $("a-topic").value.trim(), audience: ["Akademičtí a administrativní pracovníci i studenti partnerských VŠ"],
+    program: ["Publikováno přes WeekScout Campus portál (demo záznam)"], language: "angličtina",
+    fee_eur: fee, fee_text: fee === 0 ? "zdarma" : `${fee} €`, capacity: "30 účastníků",
+    registration_url: null, registration_url2: null, event_url: null, source_urls: ["https://viktorstech.github.io/weekscout/"],
+    source_type: "official", contacts: [], notes: "Přidáno přes WeekScout Campus (demo pro univerzity).",
+    verify: {status:"ověřeno", note:"Vloženo přímo přes ověřený účet pořadatele (WeekScout Campus).", checked:TODAY}
+  });
+  if (isCampus) featured.add(id);
+  saveState(); addMdl.close(); $("add-form").reset(); $("a-field-custom-wrap").hidden = true; renderUni();
+  toast(isCampus ? "Akce publikována a zvýrazněna na mapě ✓" : "Akce zdarma publikována na mapu ✓");
+});
+
+/* Collision Details Modal & Filtering */
+const flag = iso => {
+  if (!iso || iso.length !== 2) return "🌍";
+  const cp = [...iso.toUpperCase()].map(c => 127397 + c.charCodeAt(0));
+  return String.fromCodePoint(...cp);
+};
+const MOB_NAMES = {
+  training: "Školení (STT)",
+  teaching: "Výuka (STA)",
+  studying: "Studenti (BIP)"
+};
+const mobLabel = m => MOB_NAMES[m] || m;
+const FIELD_NAMES = {
+  zdravi: "Zdravotnictví",
+  pedag: "Pedagogika",
+  design: "Design & umění",
+  human: "Humanitní vědy",
+  tech: "Technika",
+  it: "Informatika & AI",
+  ekon: "Ekonomie & management",
+  prir: "Přírodní vědy",
+  intl: "Správa VŠ",
+  jine: "Jiné"
+};
+const fieldLabel = f => FIELD_NAMES[f] || f;
+
+let activeColMe = null, activeColComps = [], activeColTab = "all", activeColQuery = "";
+const colMdl = $("col-mdl");
+
+function openCollisionModal(eventId){
+  const me = ALL_EV.find(e => e.id === eventId);
+  if (!me) return;
+  activeColMe = me;
+  activeColTab = "all";
+  activeColQuery = "";
+  $("col-search").value = "";
+
+  const DAY = 864e5;
+  const sA = d(me.start).getTime() - 4 * DAY, eA = d(me.end || me.start).getTime() + 4 * DAY;
+  activeColComps = ALL_EV.filter(o => o.uni !== me.uni && d(o.start).getTime() <= eA && d(o.end || o.start).getTime() >= sA)
+    .sort((x, y) => {
+      const xSame = (x.mobility || []).some(m => (me.mobility || []).includes(m));
+      const ySame = (y.mobility || []).some(m => (me.mobility || []).includes(m));
+      if (xSame !== ySame) return xSame ? -1 : 1;
+      return Math.abs(d(x.start).getTime() - d(me.start).getTime()) - Math.abs(d(y.start).getTime() - d(me.start).getTime());
+    });
+
+  renderCollisionModal();
+  colMdl.showModal();
+}
+
+function renderCollisionModal(){
+  if (!activeColMe) return;
+  const me = activeColMe;
+  const comps = activeColComps;
+  const sameMob = comps.filter(o => (o.mobility || []).some(m => (me.mobility || []).includes(m)));
+  const countries = new Set(comps.map(o => o.country));
+  const freeComps = comps.filter(o => o.fee_eur === 0);
+  const paidComps = comps.filter(o => o.fee_eur != null && o.fee_eur > 0);
+  const paidSorted = paidComps.map(o => o.fee_eur).sort((a, b) => a - b);
+  const compMedian = paidSorted.length ? paidSorted[Math.floor(paidSorted.length / 2)] : 0;
+  const level = comps.length <= 2 ? ["ok", "Nízký přetlak"] : (comps.length <= 7 ? ["part", "Střední přetlak"] : ["warn", "Vysoký přetlak"]);
+
+  $("col-title").textContent = me.event_name;
+  const bd = $("col-badge");
+  bd.className = `b ${level[0]}`;
+  bd.textContent = `${comps.length}× · ${level[1]}`;
+  $("col-sub").innerHTML = `📅 <strong>${fmt(me.start, me.end)}</strong> · 🏛️ ${esc(me.uni_short || me.uni)} (${esc(me.city)}, ${esc(me.country)}) · Srovnávací okno ±4 dny v Evropě`;
+
+  let advice = "";
+  if (comps.length === 0) {
+    advice = `🎉 <strong>Žádné termínové kolize:</strong> V okně ±4 dny nepořádá žádná jiná evropská vysoká škola v katalogu svoji akci. Váš termín má 100% volnost a nulovou konkurenci.`;
+  } else if (comps.length <= 2) {
+    advice = `✅ <strong>Nízká konkurence (${comps.length} souběžné akce):</strong> Velmi příznivé termínové okno. Účastníci a vyučující mají minimální alternativy, což zaručuje vysokou pravděpodobnost úspěchu přihlášek.`;
+  } else if (comps.length <= 7) {
+    advice = `⚖️ <strong>Střední konkurence (${comps.length} souběžných akcí):</strong> Termín je středně obsazený (${sameMob.length} akcí má stejný typ mobility). ${me.fee_eur === 0 ? "Vaše akce je zdarma, což představuje klíčovou konkurenční výhodu." : (me.fee_eur != null && me.fee_eur <= compMedian ? `Váš poplatek ${me.fee_eur} € je pod mediánem konkurence (${compMedian} €).` : "Doporučujeme zdůraznit specifický program a odborné zaměření.")}`;
+  } else {
+    advice = `⚠️ <strong>Vysoký přetlak v Evropě (${comps.length} souběžných akcí):</strong> Tento měsíc pořádá International Weeks nejvíce univerzit v Evropě. <strong>${sameMob.length} akcí</strong> přímo soupeří o stejný profil účastníků (${(me.mobility || []).map(mobLabel).join(", ")}). Doporučujeme zdůraznit prestiž univerzity, včas spustit propagaci a využít <em>★ Zvýraznění na mapě</em> pro upoutání zájemců.`;
+  }
+
+  $("col-summary").innerHTML = `
+    <div class="col-summary-chips">
+      <div class="col-chip"><span>Souběžné akce</span><b>${comps.length}</b><small>v okně ±4 dny</small></div>
+      <div class="col-chip"><span>Přímá konkurence</span><b>${sameMob.length}</b><small>ve stejné mobilitě</small></div>
+      <div class="col-chip"><span>Zasažené země</span><b>${countries.size}</b><small>států Evropy</small></div>
+      <div class="col-chip"><span>Ceny konkurence</span><b>${freeComps.length} zdarma</b><small>${paidComps.length} placených (med. ${compMedian} €)</small></div>
+    </div>
+    <div class="col-advice">${advice}</div>
+  `;
+
+  const tabs = [
+    {id: "all", label: `Všechny kolize (${comps.length})`},
+    {id: "same", label: `⚡ Jen stejná mobilita (${sameMob.length})`},
+    {id: "free", label: `Zdarma (${freeComps.length})`},
+    {id: "paid", label: `Placené (${paidComps.length})`}
+  ];
+  $("col-tabs").innerHTML = tabs.map(t =>
+    `<button type="button" class="col-tab${activeColTab === t.id ? " active" : ""}" data-col-tab="${t.id}">${esc(t.label)}</button>`
+  ).join("");
+
+  renderCollisionList();
+}
+
+function renderCollisionList(){
+  const me = activeColMe;
+  if (!me) return;
+  let items = activeColComps.slice();
+
+  if (activeColTab === "same") {
+    items = items.filter(o => (o.mobility || []).some(m => (me.mobility || []).includes(m)));
+  } else if (activeColTab === "free") {
+    items = items.filter(o => o.fee_eur === 0);
+  } else if (activeColTab === "paid") {
+    items = items.filter(o => o.fee_eur != null && o.fee_eur > 0);
+  }
+
+  const q = activeColQuery.trim().toLowerCase();
+  if (q) {
+    items = items.filter(o =>
+      (o.event_name && o.event_name.toLowerCase().includes(q)) ||
+      (o.uni && o.uni.toLowerCase().includes(q)) ||
+      (o.uni_short && o.uni_short.toLowerCase().includes(q)) ||
+      (o.city && o.city.toLowerCase().includes(q)) ||
+      (o.country && o.country.toLowerCase().includes(q)) ||
+      (o.country_iso && o.country_iso.toLowerCase().includes(q))
+    );
+  }
+
+  const listEl = $("col-list");
+  if (!items.length) {
+    listEl.innerHTML = `<div style="text-align:center;padding:32px 16px;color:var(--muted);"><b style="display:block;font-size:15px;color:var(--ink);margin-bottom:4px">Žádné akce neodpovídají zvolenému filtru</b>Zkuste přepnout záložku výše nebo smazat hledaný výraz.</div>`;
+    return;
+  }
+
+  listEl.innerHTML = items.map(c => {
+    const isSameMob = (c.mobility || []).some(m => (me.mobility || []).includes(m));
+    const feeBadge = c.fee_eur === 0
+      ? `<span class="b ok">Zdarma</span>`
+      : (c.fee_eur != null ? `<span class="b part">${c.fee_eur} €</span>` : `<span class="b" style="color:var(--muted)">Cena neuvedena</span>`);
+    const webUrl = c.event_url || c.registration_url || (c.source_urls && c.source_urls[0]) || null;
+    return `<div class="col-item${isSameMob ? " is-same" : ""}">
+      <div class="col-item-hd">
+        <div style="min-width:0">
+          <div class="col-uni">
+            <span class="col-flag">${flag(c.country_iso)}</span>
+            <strong>${esc(c.uni_short || c.uni)}</strong>
+            <span class="col-loc">${esc(c.city)}, ${esc(c.country)}</span>
+            ${isSameMob ? `<span class="b warn" style="font-size:10.5px;padding:2px 7px">⚡ Stejná mobilita</span>` : ""}
+          </div>
+          <h4 class="col-ev-title">${esc(c.event_name)}</h4>
+        </div>
+        <div class="col-item-meta">
+          ${feeBadge}
+          <span class="col-dates">📅 ${fmt(c.start, c.end)}</span>
+        </div>
+      </div>
+      ${c.topic ? `<p class="col-topic">${esc(c.topic)}</p>` : ""}
+      <div class="col-item-ft">
+        <div class="col-mobs">
+          ${(c.mobility || []).map(m => {
+            const match = (me.mobility || []).includes(m);
+            return `<span class="b${match ? " feat" : ""}">${esc(mobLabel(m))}</span>`;
+          }).join("")}
+          ${(c.fields || []).slice(0, 2).map(f => `<span class="b">${esc(fieldLabel(f))}</span>`).join("")}
+          ${c.deadline ? `<span class="b" style="color:var(--muted)">Uzávěrka: ${fmt1(c.deadline)}</span>` : ""}
+        </div>
+        <div class="col-item-acts">
+          <a class="smbtn" href="index.html?role=participant&akce=${encodeURIComponent(c.id)}" target="_blank" rel="noopener">Otevřít na mapě ↗</a>
+          ${webUrl ? `<a class="smbtn" href="${esc(webUrl)}" target="_blank" rel="noopener">Web akce ↗</a>` : ""}
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+$("ci-collisions").addEventListener("click", ev => {
+  const row = ev.target.closest("[data-col-id]");
+  if (row) openCollisionModal(row.dataset.colId);
+});
+$("ci-collisions").addEventListener("keydown", ev => {
+  if (ev.key === "Enter" || ev.key === " ") {
+    const row = ev.target.closest("[data-col-id]");
+    if (row) { ev.preventDefault(); openCollisionModal(row.dataset.colId); }
+  }
+});
+$("col-tabs").addEventListener("click", ev => {
+  const btn = ev.target.closest("[data-col-tab]");
+  if (!btn) return;
+  activeColTab = btn.dataset.colTab;
+  document.querySelectorAll(".col-tab").forEach(b => b.classList.toggle("active", b.dataset.colTab === activeColTab));
+  renderCollisionList();
+});
+$("col-search").addEventListener("input", ev => {
+  activeColQuery = ev.target.value;
+  renderCollisionList();
+});
+$("col-close").addEventListener("click", () => colMdl.close());
+$("col-cancel").addEventListener("click", () => colMdl.close());
+colMdl.addEventListener("click", ev => { if (ev.target === colMdl) colMdl.close(); });
+
+fetch("data.json", {cache:"no-cache"}).then(r => r.json()).then(data => {
+  BASE_EV = (data.events || data).filter(e => e && e.start);
+  const unis = [...new Set(BASE_EV.map(e => e.uni))].sort((a, b) => a.localeCompare(b, "cs"));
+  const sel = $("uni-select");
+  unis.forEach(u => sel.insertAdjacentHTML("beforeend", `<option value="${esc(u)}">${esc(u)} (${BASE_EV.filter(e => e.uni === u).length})</option>`));
+  const accUni = getAcc().uni;
+  if (accUni) { ensureUniOption(accUni); currentUni = accUni; }
+  else { currentUni = unis.find(u => /Prague University of Economics/i.test(u)) || unis[0] || ""; }
+  sel.value = currentUni;
+  sel.addEventListener("change", () => { currentUni = sel.value; renderUni(); });
+  renderUni();
+});
+</script>
+</body>
+</html>

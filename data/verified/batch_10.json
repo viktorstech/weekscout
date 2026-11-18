@@ -1,0 +1,337 @@
+{
+  "batch": "batch_10",
+  "checked": "2026-11-18",
+  "results": [
+    {
+      "id": "iaelyon-2027",
+      "status": "ověřeno",
+      "note": "Termín (1. termín 6.–8. 1. 2027, 2. termín 11.–13. 1. 2027), uzávěrka (15. 5. 2026), odměna za výuku (~900 € za 18h kurz) i kontakt plně ověřeny na oficiálním webu iaelyon School of Management.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "ubb-human-relationships-digital-era-2027",
+      "status": "částečně",
+      "note": "Termín prezenční části (18.–22. 1. 2027, online 11.–12. 1. 2027) i ohodnocení 3 ECTS potvrzeny z více partnerských univerzit (SWU Blagoevgrad, University of Bialystok, St. Pölten UAS); přímá stránka pořadatele na ubbcluj.ro chybí a uzávěrka závisí na vysílající instituci.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "source_urls": [
+          "https://erasmus.swu.bg/2026/06/03/6793/",
+          "https://bip.ustp.at/outgoing-bips/2027",
+          "https://kulturoznawstwo.uwb.edu.pl/aktualnosci/erasmus-bip-szesc-programow-intensywnych-w-rumunii-ruszaja-zgloszenia-349.html"
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "dcu-fintech-innovation-challenge-2027",
+      "status": "ověřeno",
+      "note": "Termín (8. 2. – 5. 3. 2027), uzávěrka přihlášek (10. 1. 2027), 5 ECTS, kapacita 35 studentů i vyučující potvrzeni na oficiálním portálu aliance ECIU University pořadatelské Dublin City University.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "event_url": "https://engage.eciu.eu/learning-opportunity/6e4cffae-a9b7-4ce8-a466-98a6757dc7f0/financial-technology-and-innovation-challenge",
+        "source_urls": [
+          "https://engage.eciu.eu/learning-opportunity/6e4cffae-a9b7-4ce8-a466-98a6757dc7f0/financial-technology-and-innovation-challenge",
+          "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/"
+        ],
+        "source_type": "official",
+        "capacity": "35 účastníků",
+        "contacts": [
+          {
+            "name": "Aref Mahdavi Ardekani",
+            "role": "Vyučující / Teacher",
+            "email": null,
+            "phone": null,
+            "source": "https://engage.eciu.eu/learning-opportunity/6e4cffae-a9b7-4ce8-a466-98a6757dc7f0/financial-technology-and-innovation-challenge"
+          }
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "ubb-conflict-resolution-2027",
+      "status": "částečně",
+      "note": "Termín prezenční části (15.–19. 2. 2027, virtuální část 9.–10. 2. 2027) a ohodnocení 3 ECTS potvrzeny v oficiálním infolistu partnerské Uni Osnabrück i na webech SWU a St. Pölten UAS; přímá stránka akce na doméně ubbcluj.ro chybí.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "deadline": "2026-11-03",
+        "deadline_note": "Uzávěrka přihlášek u partnerské univerzity (Uni Osnabrück 3. 11. 2026; liší se dle domovské školy)",
+        "source_urls": [
+          "https://erasmus.swu.bg/2026/06/03/6793/",
+          "https://www.uni-osnabrueck.de/fileadmin/sozialwissenschaften/Dateien/Auslandsstudium/BIP_2027/Infosheet_Application_BIP_Cluj_2027.pdf",
+          "https://bip.ustp.at/outgoing-bips/2027"
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "hmu-entrepreneurship-tech-transfer-2027",
+      "status": "neověřeno",
+      "note": "Termín akce (15.–19. 2. 2027) ani podrobnosti se nepodařilo v předložených důkazech potvrdit (stažená stránka portálu aliance ATHENA obsahuje pouze obecnou navigaci a chybí text s vyhlášením tohoto BIP). Akce se nevyřazuje, zůstává neověřena.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "artevelde-education-2027",
+      "status": "částečně",
+      "note": "Termín (23.–25. 2. 2027) a pořadatel Artevelde UAS v Gentu potvrzeny na oficiálním webu asociace Comenius; přímá stránka akce na doméně arteveldehogeschool.be, uzávěrka, poplatek a kontakty chybí.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "viko-vilnius-2027",
+      "status": "ověřeno",
+      "note": "Termín (1.–5. 3. 2027), uzávěrka (15. 12. 2026 v textu výzvy, v záhlaví IMOTION byl překlep 2027), nulový poplatek, kapacita 100 osob i kontakty plně ověřeny na oficiálním webu iw.viko.lt i na portálu IMOTION.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "contacts": [
+          {
+            "name": "Sigita Leistrumienė",
+            "role": "Project manager, International Relations and Projects department",
+            "email": "s.leistrumiene@viko.lt",
+            "phone": null,
+            "source": "http://staffmobility.eu/staffweek/international-teaching-week2027"
+          },
+          {
+            "name": "VIKO IW team",
+            "role": "Organizační tým",
+            "email": "international@viko.lt",
+            "phone": null,
+            "source": "https://iw.viko.lt/"
+          }
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "utwente-humanitarian-engineering-2027",
+      "status": "ověřeno",
+      "note": "Termín (8.–26. 3. 2027), uzávěrka (1. 12. 2026), kreditové ohodnocení 3 ECTS i bezplatná účast pro studenty plně potvrzeny na oficiálním webu University of Twente.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "ehu-bilbao-2027",
+      "status": "ověřeno",
+      "note": "Termín (8.–12. 3. 2027), uzávěrka (15. 1. 2027), bezplatná účast, kapacita (max. 25 účastníků), pracovní jazyk angličtina i kontakt na proděkanku plně ověřeny na oficiálním webu Fakulty pedagogické UPV/EHU v Bilbau.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "artevelde-social-education-2027",
+      "status": "částečně",
+      "note": "Termín (9.–11. 3. 2027) a téma Participation and Inclusion na kampusu Sint-Amandsberg v Gentu potvrzeny v oficiálním zvacím letáku Artevelde UAS a na webu asociace Comenius; akce je určena pro vyučující a výzkumníky (rozšířena mobilita o teaching); přímá webová stránka s uzávěrkou a poplatkem chybí.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "mobility": [
+          "teaching",
+          "training"
+        ],
+        "source_urls": [
+          "https://www.comeniusassociation.org/international-weeks-for-staff",
+          "https://www.uvic.cat/sites/default/files/INT%20DAYS%20INVITE%20March%209%20to%2011%202027%20Artevelde%20UAS%20Ghent%20Belgium.pdf"
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "ubb-empowered-leadership-2027",
+      "status": "částečně",
+      "note": "Termín prezenční části (15.–19. 3. 2027, online 9.–10. 3. 2027) a zisk 3 ECTS potvrzeny ze zpráv partnerských univerzit (Univerzita Palackého v Olomouci, SWU Blagoevgrad, St. Pölten UAS); přímá stránka pořadatele na ubbcluj.ro chybí a uzávěrka závisí na vysílající univerzitě.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "source_urls": [
+          "https://erasmus.swu.bg/2026/06/03/6793/",
+          "https://bip.ustp.at/outgoing-bips/2027",
+          "https://kems.upol.cz/nc/zprava/clanek/vyberove-rizeni-bip-empowered-leadership-v-rumunsku/"
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "elte-budapest-2027",
+      "status": "ověřeno",
+      "note": "Termín (5.–9. 4. 2027), uzávěrka (3. 1. 2027), poplatek 380 €, kapacita 25 účastníků i kontakt na koordinátorku plně ověřeny v detailu IMOTION a v oficiálním dokumentu GDPR na doméně pedagogické fakulty ELTE (ppk.elte.hu).",
+      "checked": "2026-11-18",
+      "fixes": {
+        "fee_eur": 380,
+        "fee_text": "380 € (zahrnuje materiály a program, ubytování nezahrnuto)",
+        "capacity": "max. 25 účastníků",
+        "event_url": "http://staffmobility.eu/staffweek/bridging-cultures-higher-education-0",
+        "source_urls": [
+          "http://staffmobility.eu/staffweek/bridging-cultures-higher-education-0",
+          "https://ppk.elte.hu/en/dstore/document/360447/Privacy%20notice_Erasmus%20staff%20week_ELTE_Bridging%20Cultures.pdf"
+        ],
+        "source_type": "official",
+        "contacts": [
+          {
+            "name": "Eszter Hámori-Szabó",
+            "role": "International coordinator for Faculty staff weeks",
+            "email": "erasmus@ppk.elte.hu",
+            "phone": "+36 30 423 5740",
+            "source": "https://ppk.elte.hu/en/dstore/document/360447/Privacy%20notice_Erasmus%20staff%20week_ELTE_Bridging%20Cultures.pdf"
+          }
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "univr-verona-2027-04",
+      "status": "ověřeno",
+      "note": "Termín (5.–9. 4. 2027), uzávěrka přihlášek (30. 11. 2026), bezplatná účast, kapacita (20 osob, max. 2 z jedné instituce) i kontakty na organizátory z univerzitní knihovny plně ověřeny v detailu IMOTION vloženém University of Verona.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "vilnius-tech-2027",
+      "status": "ověřeno",
+      "note": "Termín (5.–9. 4. 2027), uzávěrka (1. 2. 2027), nulový poplatek, kapacitní limit (max. 2 zástupci za instituci), obě formy mobility (teaching i training) i kontakt plně ověřeny v detailu IMOTION a partnerském oznámení MENDELU.",
+      "checked": "2026-11-18",
+      "fixes": {},
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "ubb-health4media-2027",
+      "status": "částečně",
+      "note": "Termín prezenční části (19.–23. 4. 2027, online 1.–2. 4. 2027) a cílová skupina (žurnalistika, psychologie, komunikace) potvrzeny z oficiálního plakátu na webu Univerzy v Mariboru a ze stránek SWU, UWB a St. Pölten UAS; oficiální stránka přímo na webu UBB chybí.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "source_urls": [
+          "https://erasmus.swu.bg/2026/06/03/6793/",
+          "https://kulturoznawstwo.uwb.edu.pl/aktualnosci/erasmus-bip-szesc-programow-intensywnych-w-rumunii-ruszaja-zgloszenia-349.html",
+          "https://bip.ustp.at/outgoing-bips/2027",
+          "https://www.erasmusplus.um.si/wp-content/uploads/2026/09/Afis-promovare-health4media-2027.pdf"
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "ubb-cybersecurity-ai-2027",
+      "status": "částečně",
+      "note": "Termín prezenční části (10.–14. 5. 2027, online 27.–28. 4. 2027) a 3 ECTS potvrzeny v oficiálních infolistech partnerských univerzit JKU Linz a Uniwersytet Kaliski; akce je otevřena pro studenty i pro zaměstnance v rámci školení (training); přímá stránka pořadatele na ubbcluj.ro chybí.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "mobility": [
+          "training",
+          "studying"
+        ],
+        "contacts": [
+          {
+            "name": "Prof. Dr. Ioana Vasiu",
+            "role": "Academic Coordinator, Faculty of Law",
+            "email": null,
+            "phone": null,
+            "source": "https://www.jku.at/fileadmin/gruppen/50/_BIP_Cybersecurity_2027.pdf"
+          }
+        ],
+        "source_urls": [
+          "https://erasmus.swu.bg/2026/06/03/6793/",
+          "https://www.jku.at/fileadmin/gruppen/50/_BIP_Cybersecurity_2027.pdf",
+          "https://uniwersytetkaliski.edu.pl/wp-content/uploads/2026/06/BIP-Cyber-2027.pdf"
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "xamk-nature-based-wellbeing-2027",
+      "status": "ověřeno",
+      "note": "Termín prezenční části (24.–28. 5. 2027 v Savonlinně), 3 ECTS, kapacita 25 míst i kontakty na akademické koordinátorky XAMK plně ověřeny na oficiálním portálu aliance INGENIUM.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "city": "Savonlinna",
+        "capacity": "25 míst celkem (2–5 studentů na partnerskou univerzitu)",
+        "event_url": "https://ingenium-university.eu/event/bip-nature-based-wellbeing-experience/",
+        "source_urls": [
+          "https://ingenium-university.eu/event/bip-nature-based-wellbeing-experience/",
+          "https://ingenium-university.eu/available-programmes/nature-based-wellbeing-experience/",
+          "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+        ],
+        "source_type": "official",
+        "contacts": [
+          {
+            "name": "Anna-Kaisa Hokkanen",
+            "role": "Academic Coordinator, XAMK",
+            "email": "anna-kaisa.hokkanen@xamk.fi",
+            "phone": null,
+            "source": "https://ingenium-university.eu/event/bip-nature-based-wellbeing-experience/"
+          },
+          {
+            "name": "Piia Soikkeli",
+            "role": "Academic Coordinator, XAMK",
+            "email": "piia.soikkeli@xamk.fi",
+            "phone": null,
+            "source": "https://ingenium-university.eu/event/bip-nature-based-wellbeing-experience/"
+          }
+        ]
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "uni-rijeka-2027",
+      "status": "ověřeno",
+      "note": "Termín (24.–28. 5. 2027 v Opatiji) plně potvrzen přímo na oficiálním webu Fakulty za menadžment u turizmu i ugostiteljstvu University of Rijeka; uzávěrka (15. 1. 2027) potvrzena partnerskou Uni Passau.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "event_url": "https://fthm.uniri.hr/en/international-affairs/student-mobility/incoming-mobility/staff/international-week/",
+        "source_urls": [
+          "https://fthm.uniri.hr/en/international-affairs/student-mobility/incoming-mobility/staff/international-week/",
+          "https://www.uni-passau.de/en/international/going-abroad-as-academics-or-university-staff/current-calls-staff-weeks"
+        ],
+        "source_type": "official"
+      },
+      "remove": false,
+      "reason": null
+    },
+    {
+      "id": "university-of-galway-prof-2027",
+      "status": "ověřeno",
+      "note": "Termín (4.–9. 7. 2027), uzávěrka (7. 5. 2027), poplatek 495 €, kapacita 15 účastníků na třídu i kontakt na manažerku ELC Dr. Maeve Egan plně ověřeny v detailu IMOTION i na webu English Language Centre University of Galway.",
+      "checked": "2026-11-18",
+      "fixes": {
+        "fee_eur": 495,
+        "fee_text": "495 € (zahrnuje 15 h výuky a kulturní program; ubytování v kampusu k dispozici za 65 €/noc)",
+        "capacity": "15 účastníků na třídu",
+        "event_url": "http://www.universityofgalway.ie/englishlanguage",
+        "source_urls": [
+          "http://www.universityofgalway.ie/englishlanguage",
+          "http://staffmobility.eu/staff-Week-search"
+        ],
+        "source_type": "official",
+        "contacts": [
+          {
+            "name": "Dr Maeve Egan",
+            "role": "Manager, English Language Centre",
+            "email": "maeve.m.egan@universityofgalway.ie",
+            "phone": null,
+            "source": "http://staffmobility.eu/staffweek/erasmus-higher-education-staff-mobility-10"
+          }
+        ]
+      },
+      "remove": false,
+      "reason": null
+    }
+  ]
+}

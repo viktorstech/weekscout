@@ -1,0 +1,233 @@
+[
+  {
+    "id": "vse-fis-iweek-2027-01",
+    "status": "ověřeno",
+    "note": "Termín (18.–21. 1. 2027) i uzávěrka registrace (6. 12. 2026) plně potvrzeny na oficiálním webu FIS VŠE Praha.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vsb-tuo-project-mgmt-2027-01",
+    "status": "částečně",
+    "note": "Termín prezenční části (25.–29. 1. 2027) a zisk 5 ECTS ověřeny na oficiální stránce VŠB-TUO pro BIP programy; termín uzávěrky přihlášek zatím nebyl zveřejněn.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "jmu-wuerzburg-2027-02",
+    "status": "ověřeno",
+    "note": "BIP program v rámci 6th GoTEd+ Week (prezenční část 22.–26. 2. 2027) potvrzen na oficiálním webu JMU Würzburg (PSE) i partnerské PdF UHK. Doplněny oficiální URL a kontakt.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_type": "official",
+      "event_url": "https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/erasmus-blended-intensive-programme/",
+      "source_urls": [
+        "https://www.uni-wuerzburg.de/en/news-and-events/einblick/single/news/erasmus-blended-intensive-programme/",
+        "https://www.uni-wuerzburg.de/pse/international/internationalisierungsprojekt-goted/news-archiv/",
+        "https://www.uhk.cz/cs/pedagogicka-fakulta/zahranici/oznameni/blended-intensive-programme-bip-nemecko-bip"
+      ],
+      "contacts": [
+        {
+          "name": "Maike Madera",
+          "role": "Koordinátorka Erasmus+ a GoTEd+ na PSE JMU",
+          "email": "pse@uni-wuerzburg.de",
+          "phone": "+49 931 31-83214",
+          "source": "https://www.uni-wuerzburg.de/pse/international/internationalisierungsprojekt-goted/news-archiv/"
+        },
+        {
+          "name": "Lucie Martinková",
+          "role": "Koordinátorka přihlášek na PdF UHK",
+          "email": "lucie.martinkova@uhk.cz",
+          "phone": null,
+          "source": "https://www.uhk.cz/cs/pedagogicka-fakulta/zahranici/oznameni/blended-intensive-programme-bip-nemecko-bip"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "wwu-muenster-2027-03",
+    "status": "ověřeno",
+    "note": "Termín fyzické části (8.–12. 3. 2027) i uzávěrka přihlášek (1. 12. 2026) plně potvrzeny na oficiálním portálu univerzitní aliance Ulysseus a v popisu BIP pořádaného Universität Münster.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_type": "official",
+      "event_url": "https://ulysseus.eu/other-activities/bip-multilingualism-and-intercultural-competences/",
+      "source_urls": [
+        "https://ulysseus.eu/other-activities/bip-multilingualism-and-intercultural-competences/",
+        "https://ulysseus.eu/wp-content/uploads/2026/10/Munster-Multilingualism-and-intercultural-competences_BIP-8-12March2027.pdf",
+        "https://erasmus.tuke.sk/call-for-a-bip-mobility-for-non-academic-staff-munster-germany/"
+      ],
+      "deadline": "2026-12-01",
+      "deadline_note": "Registrace v portálu aliance Ulysseus do 1. 12. 2026 (nominace partnerských VŠ do 15. 12. 2026; interní uzávěrka na TUKE byla 15. 11. 2026)",
+      "capacity": "25 účastníků (3–5 míst na členskou univerzitu aliance Ulysseus)"
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "angewandte-vienna-2027-03",
+    "status": "částečně",
+    "note": "Termín (15.–20. 3. 2027) a parametry BIP ověřeny z oficiální výzvy partnerské FaVU VUT; přímá veřejná webová stránka na hostitelské Die Angewandte není veřejně dostupná.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "windesheim-zwolle-2027-03",
+    "status": "částečně",
+    "note": "Termín (15.–19. 3. 2027) i zaměření potvrzeny z výzev partnerských institucí (FSpS MU a Høgskolen i Østfold). Zjištěn kontakt na hlavní koordinátorku na Windesheim UAS a upřesněna cílová skupina (studenti i zaměstnanci).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "mobility": [
+        "training",
+        "studying"
+      ],
+      "contacts": [
+        {
+          "name": "Corine Visser",
+          "role": "Koordinátorka BIP na Windesheim UAS",
+          "email": "cbj.visser@windesheim.nl",
+          "phone": null,
+          "source": "https://www.hiof.no/studier/utveksling/slik-reiser-du-pa-utveksling/for-du-reiser/blended-intensive-programmes/bip---trauma-and-the-body.html"
+        }
+      ],
+      "source_urls": [
+        "https://www.fsps.muni.cz/studenti/studium-a-staze-v-zahranici/aktualni-nabidky/4th-international-bip-week-at-windesheim-university-of-applied-sciences",
+        "https://www.hiof.no/studier/utveksling/slik-reiser-du-pa-utveksling/for-du-reiser/blended-intensive-programmes/bip---trauma-and-the-body.html"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upol-olomouc-2027-04",
+    "status": "částečně",
+    "note": "Jarní termín akce (5.–9. 4. 2027) potvrzen přímo na oficiální stránce FTK Univerzity Palackého v Olomouci. Přihlašování probíhá průběžně kontaktováním koordinátorky, formální uzávěrka není vypsána.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vilnius-tech-2027-04-2",
+    "status": "ověřeno",
+    "note": "Termín (5.–9. 4. 2027), uzávěrka (1. 2. 2027) i nulový poplatek potvrzeny na IMOTION přímo od pořadatele VILNIUS TECH i z partnerské výzvy Széchenyi István University.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/internationalisation-360deg-0",
+        "https://ipc.sze.hu/vilnius-tech-international-staff-week-5-9-april-2027"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "cuni-prague-libraries-2027-04",
+    "status": "ověřeno",
+    "note": "Termín (12.–16. 4. 2027), uzávěrka (1. 2. 2027), poplatek (200 €) i kapacita (15) plně ověřeny na oficiálním webu Ústřední knihovny Univerzity Karlovy a na IMOTION.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vsb-tuo-urban-phoenix-2027-04",
+    "status": "částečně",
+    "note": "Termín prezenční části (18.–23. 4. 2027) i virtuální části potvrzen na oficiálním webu VŠB-TUO pro BIP programy. Doplněn chybějící e-mail administrativní koordinátorky. Uzávěrka přihlášek zatím nebyla zveřejněna.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "contacts": [
+        {
+          "name": "Tereza Majstríková",
+          "role": "BIP Academic Coordinator",
+          "email": "tereza.majstrikova@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        },
+        {
+          "name": "Marcela Maturová",
+          "role": "Erasmus Administrative Coordinator",
+          "email": "marcela.maturova@vsb.cz",
+          "phone": null,
+          "source": "https://www.vsb.cz/mobility/en/students/erasmus/BIP-blended-intensive-programmes/BIP-at-vsb-tuo/"
+        }
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "vse-ozs-staff-week-2027-05",
+    "status": "částečně",
+    "note": "Termín 15. ročníku akce (17.–21. 5. 2027) potvrzen na oficiálním webu OZS VŠE v Praze; podrobnosti k programu a uzávěrce přihlášek budou teprve vyhlášeny.",
+    "checked": "2026-11-17",
+    "fixes": {},
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "upr-izola-2027-05",
+    "status": "částečně",
+    "note": "Termín (17.–21. 5. 2027) a parametry BIP ověřeny ze dvou nezávislých partnerských univerzit (UK Bratislava a Sveučilište u Zagrebu). Pořádá Univerza na Primorskem (Fakulteta za vede o zdravju v Izole). Rozšířena mobilita na výuku i studium (studenti a učitelé).",
+    "checked": "2026-11-17",
+    "fixes": {
+      "mobility": [
+        "teaching",
+        "studying"
+      ],
+      "source_urls": [
+        "https://fsport.uniba.sk/detail-aktuality/back_to_page/fakulta-telesnej-vychovy-a-sportu-uk/article/call-for-applications-bip-2027-in-slovenia/calendar_date/2026/may/",
+        "https://www.kif.unizg.hr/_news/19472/Natjecaj%20za%20sudjelovanje%20u%20Erasmus%20%20BIP%20programu%202026.pdf"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  },
+  {
+    "id": "uporto-porto-2027-05",
+    "status": "ověřeno",
+    "note": "Termín (31. 5. – 4. 6. 2027), uzávěrka (31. 1. 2027), poplatek (400 €) i kapacita (50) plně ověřeny na oficiálním webu Staff Weeku FEUP a na IMOTION. Zjištěny oficiální kontakty pořadatele a registrační formulář.",
+    "checked": "2026-11-17",
+    "fixes": {
+      "source_type": "official",
+      "event_url": "https://fe.up.pt/staffweek/",
+      "registration_url": "https://forms.gle/bTJ8QeGtVGnrvXkH6",
+      "deadline": "2027-01-31",
+      "deadline_note": "Přihlášky (projevení zájmu) do 31. 1. 2027",
+      "fee_eur": 400,
+      "fee_text": "400 € (zahrnuje pracovní program, materiály a kulturní program; nezahrnuje ubytování)",
+      "capacity": "50 účastníků (max. 2 z jedné instituce; minimum 40)",
+      "contacts": [
+        {
+          "name": "Álvaro Paralta",
+          "role": "Talent Unit",
+          "email": "staff.week@fe.up.pt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem"
+        },
+        {
+          "name": "Sara Cristóvão",
+          "role": "Cooperation Unit",
+          "email": "staff.week@fe.up.pt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem"
+        }
+      ],
+      "source_urls": [
+        "https://fe.up.pt/staffweek/",
+        "http://staffmobility.eu/staffweek/campus-without-borders-promoting-stem",
+        "https://www.vut.cz/spoluprace/zahranicni/aktuality-f163562/porto-communication-staff-week-2027-d377165"
+      ]
+    },
+    "remove": false,
+    "reason": null
+  }
+]

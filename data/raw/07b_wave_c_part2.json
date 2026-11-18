@@ -1,0 +1,553 @@
+{
+  "events": [
+    {
+      "id": "univr-verona-2027-04",
+      "uni": "University of Verona",
+      "uni_short": "Univr Verona",
+      "country_iso": "IT",
+      "country": "Itálie",
+      "city": "Verona",
+      "lat": 45.4384,
+      "lng": 10.9916,
+      "erasmus_code": null,
+      "event_name": "From Collections to Connections: the evolving Academic Library. The Academic Library as a place where people and knowledge come together.",
+      "start": "2027-04-05",
+      "end": "2027-04-09",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-11-30",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "human",
+        "it",
+        "intl"
+      ],
+      "topic": "Druhý ročník knihovnického týdne na univerzitě ve Veroně věnovaný transformaci akademických knihoven, rozvoji dovedností knihovníků, informační gramotnosti v éře AI a tvorbě inkluzivních a udržitelných studijních prostor.",
+      "audience": [
+        "Knihovníci a zaměstnanci akademických knihoven z vysokoškolských institucí v programových a partnerských zemích Erasmus+"
+      ],
+      "program": [
+        "Přednášky a diskuse o roli knihoven v éře umělé inteligence a informační gramotnosti",
+        "Prezentace osvědčených postupů účastníků (15–20 minut)",
+        "Prohlídky univerzitních knihoven a společenský i kulturní program ve Veroně"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Zdarma",
+      "capacity": "20 (max. 2 účastníci z jedné instituce)",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/collections-connections-evolving",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/collections-connections-evolving"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Tiziana Di Cerbo",
+          "role": null,
+          "email": "tiziana.dicerbo@univr.it",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/collections-connections-evolving"
+        },
+        {
+          "name": "Elisabetta Guerra",
+          "role": null,
+          "email": "elisabetta.guerra@univr.it",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/collections-connections-evolving"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "umfst-targu-mures-2027-05",
+      "uni": "George Emil Palade University of Medicine, Pharmacy, Science, and Technology of Targu Mures",
+      "uni_short": "UMFST Târgu Mureș",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Târgu Mureș",
+      "lat": 46.5456,
+      "lng": 24.5625,
+      "erasmus_code": null,
+      "event_name": "BEYOND BOOKS: Libraries as Spaces for Well-Being, Focus and Belonging",
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-05-03",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "zdravi",
+        "human",
+        "intl"
+      ],
+      "topic": "Pátý ročník knihovnického týdne zaměřený na proměnu akademických knihoven v inkluzivní prostory podporující pohodu a soustředění studentů, moderní služby a využití AI.",
+      "audience": [
+        "Pracovníci akademických knihoven a souvisejících univerzitních služeb z celé Evropy"
+      ],
+      "program": [
+        "Interaktivní workshopy a výměna osvědčených postupů v oblasti studentského wellbeingu a inkluze",
+        "Prezentace inovativních služeb, digitálních nástrojů a technologií s asistencí AI v knihovnách",
+        "Návštěvy univerzitních a místních knihoven včetně nového Multikulturního centra",
+        "Kulturní aktivity a seznámení s městem Târgu Mureș a okolím"
+      ],
+      "language": "Romanian",
+      "fee_eur": 0,
+      "fee_text": "Zdarma (bez poplatku)",
+      "capacity": "12",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Anamaria Helgiu",
+          "role": "Head of Library Services",
+          "email": "anamaria.helgiu@umfst.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+        },
+        {
+          "name": "Andreea Albert",
+          "role": "Librarian",
+          "email": "andreea.albert@umfst.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+        },
+        {
+          "name": "Dîrstar Greta",
+          "role": "Librarian",
+          "email": "greta.dirstar@umfst.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/beyond-books-libraries-spaces-well-being"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "urca-reims-2027-04",
+      "uni": "University of Reims Champagne-Ardenne",
+      "uni_short": "URCA Reims",
+      "country_iso": "FR",
+      "country": "Francie",
+      "city": "Reims",
+      "lat": 49.2583,
+      "lng": 4.0317,
+      "erasmus_code": null,
+      "event_name": "How to help them focus? Sharing library practices for concentration, wellbeing and inclusion",
+      "start": "2027-04-12",
+      "end": "2027-04-16",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-18",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "pedag",
+        "human",
+        "intl"
+      ],
+      "topic": "Třetí ročník knihovnického týdne na Univerzitě v Remeši zaměřený na metody podpory soustředění a duševního zdraví studentů, inkluzi a adaptaci knihovních prostor.",
+      "audience": [
+        "Pracovníci univerzitních a akademických knihoven"
+      ],
+      "program": [
+        "Hledání rovnováhy mezi digitálními technologiemi a potřebou odpojení pro podporu koncentrace",
+        "Inovace v knihovních službách a UX designu, aktivní učení a vzdělávací hry",
+        "Podpora inkluze a přizpůsobení prostor studentům se specifickými potřebami",
+        "Workshopy sofrologie, animoterapie a relaxační zóny v knihovně"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Zdarma",
+      "capacity": "16",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/how-help-them-focus-sharing-library",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/how-help-them-focus-sharing-library"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": null,
+          "role": "Library Staff Week Team",
+          "email": "lsw@univ-reims.fr",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/how-help-them-focus-sharing-library"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "muni-brno-2027-06-libraries",
+      "uni": "Masaryk University",
+      "uni_short": "MUNI Brno",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Brno",
+      "lat": 49.1951,
+      "lng": 16.6068,
+      "erasmus_code": null,
+      "event_name": "Masaryk University Staff Training Week 2026 Libraries",
+      "start": "2027-06-14",
+      "end": "2027-06-18",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-02-21",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "human",
+        "it",
+        "intl"
+      ],
+      "topic": "Knihovnický týden MUST Week na Masarykově univerzitě zaměřený na podporu vědy a výzkumu, využití umělé inteligence v knihovnách a inovativní knihovní služby.",
+      "audience": [
+        "Pracovníci akademických knihoven vysokoškolských institucí"
+      ],
+      "program": [
+        "Přednášky a workshopy k implementaci AI v knihovnických službách",
+        "Podpora výzkumu (predátorské časopisy, citační analýzy, systematické rešerše)",
+        "Netradiční a inovativní služby knihoven Masarykovy univerzity",
+        "Individuální konzultace v knihovnách MUNI a prezentace účastníků"
+      ],
+      "language": "English",
+      "fee_eur": null,
+      "fee_text": "3 060 Kč bez DPH pro občany EU hrazené vysílající institucí / 3 700 Kč vč. DPH pro ostatní (platba v hotovosti na místě)",
+      "capacity": "20",
+      "registration_url": "https://mustlib.muni.cz",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-23",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-23",
+        "https://mustlib.muni.cz"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Lukáš Plch",
+          "role": null,
+          "email": "plch@ukb.muni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/masaryk-university-staff-training-week-23"
+        }
+      ],
+      "notes": "V názvu na portálu IMOTION je uveden rok 2026, text i termín akce však specifikují ročník MUST Week 2027.",
+      "verify": null
+    },
+    {
+      "id": "ugent-ghent-2027-04",
+      "uni": "Ghent University",
+      "uni_short": "UGent",
+      "country_iso": "BE",
+      "country": "Belgie",
+      "city": "Gent",
+      "lat": 51.0538,
+      "lng": 3.725,
+      "erasmus_code": null,
+      "event_name": "Future-proofing library expertise (Libraries and the Changing Information Landscape)",
+      "start": "2027-04-19",
+      "end": "2027-04-23",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-15",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "human",
+        "it",
+        "intl"
+      ],
+      "topic": "Mezinárodní týden Univerzity v Gentu pro pracovníky knihoven zaměřený na nástroje pro důvěryhodný výzkum literatury, Diamond Open Access, otevřené dědictví, bibliometrii a budoucnost akademických knihoven.",
+      "audience": [
+        "Pracovníci univerzitních knihoven a informační specialisté z celé Evropy"
+      ],
+      "program": [
+        "Nástroje a strategie pro důvěryhodný výzkum literatury a vliv nových technologií včetně AI na vyhledávání vědeckých informací",
+        "Role knihoven při podpoře a udržitelnosti publikačního modelu Diamond Open Access",
+        "Zpřístupňování a propojování kulturních a historických sbírek digitální cestou",
+        "Využití bibliometrie k pochopení dopadu vědeckých výstupů a trendů v akademické komunikaci",
+        "Transformace knihoven na širší vzdělávací a znalostní centra"
+      ],
+      "language": "English",
+      "fee_eur": 150,
+      "fee_text": "150 €",
+      "capacity": "16",
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/future-proofing-library-expertise",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/future-proofing-library-expertise"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Annelise Vandermeulen",
+          "role": null,
+          "email": "annelise.vandermeulen@ugent.be",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/future-proofing-library-expertise"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "ug-gdansk-2027-06-ai",
+      "uni": "University of Gdańsk",
+      "uni_short": "UG Gdańsk",
+      "country_iso": "PL",
+      "country": "Polsko",
+      "city": "Gdańsk",
+      "lat": 54.3986,
+      "lng": 18.5744,
+      "erasmus_code": null,
+      "event_name": "Trust by Design: Responsible AI in Universities – Algorithms & Academia / AI with Integrity",
+      "start": "2027-06-14",
+      "end": "2027-06-18",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-05-21",
+      "deadline_note": null,
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fields": [
+        "it",
+        "ekon",
+        "intl"
+      ],
+      "topic": "Čtvrtý ročník týdne na Univerzitě v Gdaňsku věnovaný etice, právním aspektům a správě umělé inteligence na vysokých školách včetně souladu s Aktem o AI (EU AI Act).",
+      "audience": [
+        "Vyučující, výzkumníci a administrativní pracovníci vysokých škol (oddělení mezinárodních vztahů, IT, knihovny, právní a akreditační útvary)"
+      ],
+      "program": [
+        "Akt o umělé inteligenci (EU AI Act) na vysokých školách: povinnosti, vysoce rizikové využití a praktická implementace",
+        "Ochrana osobních údajů, soukromí a duševní vlastnictví ve výuce a výzkumu využívajícím AI",
+        "Akademická integrita: AI v hodnocení, autorství a etice výzkumu",
+        "Institucionální správa AI: politiky, směrnice, nákup technologií a řízení rizik",
+        "Kulturní program v historickém Gdaňsku a na baltském pobřeží"
+      ],
+      "language": "English",
+      "fee_eur": 350,
+      "fee_text": "350 €",
+      "capacity": "30",
+      "registration_url": "https://forms.office.com/e/g7jnyYJjQb",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities",
+        "https://forms.office.com/e/g7jnyYJjQb"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": null,
+          "role": "Staff Week Team",
+          "email": "staffweek@ug.edu.pl",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/trust-design-responsible-ai-universities"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "muni-brno-2027-07-summer-lab",
+      "uni": "Masaryk University",
+      "uni_short": "MUNI CJV",
+      "country_iso": "CZ",
+      "country": "Česko",
+      "city": "Brno",
+      "lat": 49.1951,
+      "lng": 16.6068,
+      "erasmus_code": null,
+      "event_name": "Teaching with AI Summer Lab II",
+      "start": "2027-07-19",
+      "end": "2027-07-23",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-05-20",
+      "deadline_note": null,
+      "mobility": [
+        "training"
+      ],
+      "fields": [
+        "pedag",
+        "it"
+      ],
+      "topic": "Praktická letní škola Centra jazykového vzdělávání Masarykovy univerzity zaměřená na využití AI nástrojů při tvorbě interaktivních výukových materiálů a proměnu hodnocení ve vysokoškolské výuce.",
+      "audience": [
+        "Vysokoškolští pedagogové všech oborů začínající i mírně pokročilí v používání umělé inteligence"
+      ],
+      "program": [
+        "Tvorba interaktivních aktivit a vzdělávacích her bez programování",
+        "Převod studijních textů do interaktivních studijních materiálů",
+        "Nastavení AI asistenta pro podporu studentů mezi výukovými bloky",
+        "Nové přístupy k hodnocení vědomostí v prostředí běžně dostupných AI nástrojů"
+      ],
+      "language": "English",
+      "fee_eur": 490,
+      "fee_text": "490 €",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/teaching-ai-summer-lab-ii",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/teaching-ai-summer-lab-ii"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": null,
+          "role": "Language Centre Summer School Team",
+          "email": "summerschools@cjv.muni.cz",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/teaching-ai-summer-lab-ii"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    },
+    {
+      "id": "uvt-timisoara-2027-04-teaching",
+      "uni": "West University of Timisoara",
+      "uni_short": "UVT Timișoara",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Timișoara",
+      "lat": 45.7489,
+      "lng": 21.2272,
+      "erasmus_code": null,
+      "event_name": "Erasmus International Teaching Week, 3rd edition - 5-9 April 2027",
+      "start": "2027-04-05",
+      "end": "2027-04-09",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-31",
+      "deadline_note": null,
+      "mobility": [
+        "teaching"
+      ],
+      "fields": [
+        "human",
+        "ekon",
+        "tech"
+      ],
+      "topic": "Třetí ročník mezinárodního výukového týdne na Západní univerzitě v Temešváru určený pro akademické pracovníky partnerských univerzit se zájmem o výuku a navázání mezinárodní spolupráce.",
+      "audience": [
+        "Akademičtí a vyučující pracovníci z partnerských vysokých škol a aliance UNITA"
+      ],
+      "program": [
+        "Výuka a přednášky pro studenty na dvanácti fakultách Západní univerzity v Temešváru",
+        "Sdílení inovativních pedagogických metod a přístupů",
+        "Výměna zkušeností a rozvoj projektové spolupráce v rámci evropské aliance UNITA i mimo ni",
+        "Kulturní a společenský program v Temešváru"
+      ],
+      "language": "English",
+      "fee_eur": null,
+      "fee_text": null,
+      "capacity": "50",
+      "registration_url": "https://forms.gle/kcG3ditbG1ZXqGR6A",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/erasmus-international-teaching-week-3rd",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/erasmus-international-teaching-week-3rd",
+        "https://forms.gle/kcG3ditbG1ZXqGR6A"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Flavia Miruna Seres",
+          "role": null,
+          "email": "erasmus.staff@e-uvt.ro",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/erasmus-international-teaching-week-3rd"
+        }
+      ],
+      "notes": "V textu anotace na portálu IMOTION je uzávěrka přihlášek uvedena jako 31.12.2027 (chyba v roce), v parametrické hlavičce záznamu je správně 31. 12. 2026.",
+      "verify": null
+    },
+    {
+      "id": "svako-siauliai-isw-2027-05",
+      "uni": "Šiaulių valstybinė kolegija / Higher Education Institution",
+      "uni_short": "ŠVK Šiauliai",
+      "country_iso": "LT",
+      "country": "Litva",
+      "city": "Šiauliai",
+      "lat": 55.9333,
+      "lng": 23.3167,
+      "erasmus_code": "LT SIAULIA03",
+      "event_name": "International Staff Week'27: \"EXPERIENCE CAN'T BE GENERATED BY AI\"",
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-03-31",
+      "deadline_note": null,
+      "mobility": [
+        "teaching",
+        "training"
+      ],
+      "fields": [
+        "pedag",
+        "it",
+        "intl"
+      ],
+      "topic": "Jedenáctý mezinárodní týden na Státní vysoké škole v Šiauliai s mottem o nenahraditelnosti lidské zkušenosti umělou inteligencí, zaměřený na sdílení dobré praxe a vědeckou konferenci.",
+      "audience": [
+        "Akademičtí i administrativní pracovníci zahraničních partnerských vysokoškolských institucí"
+      ],
+      "program": [
+        "Prezentace vysílajících institucí a seznámení s fakultami ŠVK",
+        "Odborné workshopy a tematické diskuse k mobilitám a inovacím",
+        "Účast na vědecké konferenci",
+        "Kulturní akce a seznámení s litevskými tradicemi"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Zdarma (bez registračního poplatku)",
+      "capacity": "50",
+      "registration_url": "https://forms.gle/ttMXGxGBSq2CqPYe8",
+      "registration_url2": null,
+      "event_url": "http://staffmobility.eu/staffweek/international-staff-week27-experience",
+      "source_urls": [
+        "http://staffmobility.eu/staffweek/international-staff-week27-experience",
+        "https://forms.gle/ttMXGxGBSq2CqPYe8"
+      ],
+      "source_type": "imotion",
+      "contacts": [
+        {
+          "name": "Guoda Augulienė",
+          "role": "International Relations Coordinator",
+          "email": "iro@svako.lt",
+          "phone": null,
+          "source": "http://staffmobility.eu/staffweek/international-staff-week27-experience"
+        }
+      ],
+      "notes": null,
+      "verify": null
+    }
+  ]
+}

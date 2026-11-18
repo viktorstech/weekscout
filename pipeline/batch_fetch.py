@@ -144,6 +144,78 @@ GAPS_QUERIES: dict[str, tuple[int, list[dict[str, Any]]]] = {
 }
 
 
+WAVE_A_QUERIES: dict[str, tuple[int, list[dict[str, Any]]]] = {
+    "05_wave_a_czsk": (
+        1,
+        [
+            {
+                "query": '"International Week" OR "Staff Week" OR "Teaching Week" OR "Staff Training Week" 2027',
+                "includeDomains": ["cvut.cz", "vut.cz", "upol.cz", "czu.cz", "vsb.cz", "tul.cz", "jcu.cz", "uhk.cz", "upce.cz", "ujep.cz", "vscht.cz"],
+                "numResults": 15,
+            },
+            {
+                "query": '"Blended Intensive Programme" OR "BIP" 2027 Erasmus',
+                "includeDomains": ["cvut.cz", "vut.cz", "upol.cz", "czu.cz", "vsb.cz", "tul.cz", "jcu.cz", "uhk.cz", "upce.cz", "ujep.cz", "vscht.cz", "vse.cz", "cuni.cz", "muni.cz"],
+                "numResults": 15,
+            },
+            {
+                "query": '"International Week" OR "Staff Week" OR "Teaching Week" OR "BIP" 2027',
+                "includeDomains": ["uniba.sk", "euba.sk", "tuke.sk", "uniza.sk", "upjs.sk", "umb.sk", "ukf.sk", "uniag.sk", "stuba.sk"],
+                "numResults": 15,
+            },
+            {
+                "query": '"International Staff Week" OR "International Week" OR "Staff Training Week" 2027 "Czech Republic" OR "Czechia" OR "Slovakia" university',
+                "numResults": 12,
+            },
+        ],
+    ),
+}
+
+
+WAVE_BC_QUERIES: dict[str, tuple[int, list[dict[str, Any]]]] = {
+    "06_wave_b_bips": (
+        3,
+        [
+            {
+                "query": "Blended Intensive Programme BIP 2027 course apply deadline",
+                "includeDomains": ["civis.eu"],
+                "numResults": 15,
+            },
+            {
+                "query": '"Blended Intensive Programme" OR "BIP" 2027 EUGLOH OR ENHANCE OR "Una Europa" OR Arqus OR ECIU OR EPICUR OR FORTHEM OR YUFE',
+                "numResults": 15,
+            },
+            {
+                "query": '"Blended Intensive Programme" 2027 ECTS students application deadline university Europe',
+                "numResults": 15,
+            },
+        ],
+    ),
+    "07_wave_c_europe": (
+        3,
+        [
+            {
+                "query": '"International Staff Week" OR "International Week" OR "Teaching Week" 2027 university Sweden OR Norway OR Netherlands OR Luxembourg OR Iceland',
+                "numResults": 15,
+            },
+            {
+                "query": '"Semaine Internationale" OR "International Staff Week" OR "International Week" 2027 university France OR Italy OR Switzerland OR Belgium OR Austria',
+                "numResults": 15,
+            },
+            {
+                "query": '"International Week" OR "Staff Week" OR "BIP" 2027 university Estonia OR Serbia OR "North Macedonia" OR Greece OR Romania OR Bulgaria OR Hungary',
+                "numResults": 15,
+            },
+            {
+                "query": "2027 Teaching OR Library OR AI OR Sustainability OR Inclusion",
+                "includeDomains": ["staffmobility.eu"],
+                "numResults": 15,
+            },
+        ],
+    ),
+}
+
+
 def _cost(resp: dict[str, Any]) -> float:
     cd = resp.get("costDollars")
     if isinstance(cd, dict):
@@ -155,7 +227,14 @@ def _cost(resp: dict[str, Any]) -> float:
 
 def cmd_collect(args: argparse.Namespace) -> int:
     total_cost = 0.0
-    source_map = GAPS_QUERIES if args.mode == "gaps" else PILOT_QUERIES
+    if args.mode == "gaps":
+        source_map = GAPS_QUERIES
+    elif args.mode == "wave_a":
+        source_map = WAVE_A_QUERIES
+    elif args.mode == "wave_bc":
+        source_map = WAVE_BC_QUERIES
+    else:
+        source_map = PILOT_QUERIES
     for agent_name, (key_slot, base_queries) in source_map.items():
         queries = list(base_queries)
         if args.mode == "full":
@@ -403,7 +482,7 @@ def build_parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     cl = sub.add_parser("collect", help="Stáhne vyhledávání pro Agenty 1–3 přes klíče #1, #2, #3.")
-    cl.add_argument("--mode", default="pilot", choices=["pilot", "full", "gaps"], help="pilot = malá dávka, full = plný sběr, gaps = chybějící země.")
+    cl.add_argument("--mode", default="pilot", choices=["pilot", "full", "gaps", "wave_a", "wave_bc"], help="pilot / full / gaps / wave_a / wave_bc.")
     cl.add_argument("--max-chars", type=int, default=4500, help="Max znaků textu na stránku.")
     cl.add_argument("--no-cache", action="store_true")
     cl.set_defaults(func=cmd_collect)

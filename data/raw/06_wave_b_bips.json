@@ -1,0 +1,643 @@
+{
+  "events": [
+    {
+      "id": "unibo-baes-winter-school-2027",
+      "uni": "Alma Mater Studiorum - University of Bologna",
+      "uni_short": "University of Bologna",
+      "country_iso": "IT",
+      "country": "Itálie",
+      "city": "Bologna",
+      "lat": 44.4925,
+      "lng": 11.3537,
+      "erasmus_code": null,
+      "event_name": "BAES Winter School 2027: “The EU between War and Peace”",
+      "start": "2027-02-08",
+      "end": "2027-02-12",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-11-23",
+      "deadline_note": "Uzávěrka přihlášek pro studenty programu BAES je 23. listopadu 2026 ve 12:00.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "human"
+      ],
+      "topic": "Analýza úlohy Evropské unie v současných mezinárodních konfliktech, bezpečnostních hrozbách a mírových procesech z multidisciplinární perspektivy.",
+      "audience": [
+        "Studenti bakalářského programu European Studies (BAES) na partnerských univerzitách aliance Una Europa"
+      ],
+      "program": [
+        "Přednášky a panelové diskuse o roli EU v mezinárodních vztazích",
+        "Simulace rozhodovacího procesu v instituci EU s hypotetickým zahraničněpolitickým scénářem",
+        "Výzkumně orientované semináře a cvičení"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez účastnického poplatku; výuka a účast jsou plně hrazeny v rámci programu Erasmus+.",
+      "capacity": "60 studentů (20 z hostitelské univerzity, 40 z partnerských univerzit)",
+      "registration_url": "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace",
+      "registration_url2": null,
+      "event_url": "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace",
+      "source_urls": [
+        "https://site.unibo.it/una-europa/en/summer-and-winter-school/the-eu-between-war-and-peace/call-for-applications/@@download/file/Rep.282_CALL%20for%20Applications_BAES_Winter%20School_REV%20del%2021.10.pdf"
+      ],
+      "source_type": "official",
+      "contacts": null,
+      "notes": "Virtuální část probíhá 5. února 2027, prezenční část od 8. do 12. února 2027 v Palazzo Hercolani v Bologni. Úspěšní absolventi získají 3 ECTS kredity.",
+      "verify": null
+    },
+    {
+      "id": "utwente-humanitarian-engineering-2027",
+      "uni": "University of Twente",
+      "uni_short": "UTwente",
+      "country_iso": "NL",
+      "country": "Nizozemsko",
+      "city": "Enschede",
+      "lat": 52.2408,
+      "lng": 6.853,
+      "erasmus_code": null,
+      "event_name": "Humanitarian engineering for inclusive and resilient communities",
+      "start": "2027-03-08",
+      "end": "2027-03-26",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-01",
+      "deadline_note": "Uzávěrka podání přihlášek je 1. prosince 2026.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "tech",
+        "human"
+      ],
+      "topic": "Inženýrská řešení a technologie pro podporu inkluzivních a odolných komunit v humanitárním kontextu.",
+      "audience": [
+        "Studenti bakalářského a navazujícího studia, případně doktorandi a zaměstnanci univerzit sítě ECIU"
+      ],
+      "program": null,
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; možnost získání stipendia Erasmus+ na pokrytí cestovních nákladů a ubytování.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/",
+      "source_urls": [
+        "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/"
+      ],
+      "source_type": "official",
+      "contacts": null,
+      "notes": "BIP je organizován v rámci konsorcia ECIU University s ohodnocením 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "dcu-fintech-innovation-challenge-2027",
+      "uni": "Dublin City University",
+      "uni_short": "DCU",
+      "country_iso": "IE",
+      "country": "Irsko",
+      "city": "Dublin",
+      "lat": 53.3854,
+      "lng": -6.2573,
+      "erasmus_code": null,
+      "event_name": "Financial Technology and Innovation Challenge",
+      "start": "2027-02-08",
+      "end": "2027-03-05",
+      "start2": null,
+      "end2": null,
+      "deadline": "2027-01-10",
+      "deadline_note": "Uzávěrka přihlášek je 10. ledna 2027.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon",
+        "it"
+      ],
+      "topic": "Inovační výzva zaměřená na moderní finanční technologie (FinTech) a vývoj inovativních řešení pro finanční sektor.",
+      "audience": [
+        "Studenti bakalářských a magisterských oborů v rámci aliance ECIU University"
+      ],
+      "program": null,
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; účastníci mohou čerpat grant Erasmus+ na krátkodobou mobilitu.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/",
+      "source_urls": [
+        "https://www.utwente.nl/en/education/electives/study-abroad/options/bips/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Program je ohodnocen 5 ECTS kredity a probíhá v rámci sítě ECIU University.",
+      "verify": null
+    },
+    {
+      "id": "hmu-entrepreneurship-tech-transfer-2027",
+      "uni": "Hellenic Mediterranean University",
+      "uni_short": "HMU Crete",
+      "country_iso": "GR",
+      "country": "Řecko",
+      "city": "Heraklion",
+      "lat": 35.3167,
+      "lng": 25.1013,
+      "erasmus_code": null,
+      "event_name": "Entrepreneurship & Technology Transfer Principles",
+      "start": "2027-02-15",
+      "end": "2027-02-19",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-18",
+      "deadline_note": "Uzávěrka přihlášek je 18. prosince 2026.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon",
+        "tech"
+      ],
+      "topic": "Praktický průvodce převodem podnikatelského a technologického nápadu do podoby životaschopného podniku včetně ochrany duševního vlastnictví.",
+      "audience": [
+        "Studenti všech oborů a studijních úrovní z partnerských univerzit aliance ATHENA"
+      ],
+      "program": [
+        "Zákaznický průzkum a ověření tržního potenciálu",
+        "Transfer technologií a ochrana duševního vlastnictví",
+        "Příprava a prezentace před investory (pitching)"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku pro studenty z univerzit aliance ATHENA.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://athenauni.eu/mobility/students-2/blended-intensive-programmes-2/",
+      "source_urls": [
+        "https://athenauni.eu/mobility/students-2/blended-intensive-programmes-2/"
+      ],
+      "source_type": "official",
+      "contacts": [
+        {
+          "name": "Prof. Konstantinos Petridis",
+          "role": "Koordinátor BIP, HMU",
+          "email": "c.petridischania@gmail.com",
+          "phone": null,
+          "source": "https://athenauni.eu/mobility/students-2/blended-intensive-programmes-2/"
+        }
+      ],
+      "notes": "BIP kód: 2025-1-EL01-KA131-HED-000318176-4. Virtuální část probíhá od 11. ledna do 8. února 2027, prezenční týden 15.–19. února 2027 na Krétě. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "lsu-sport-management-2027",
+      "uni": "Lithuanian Sports University",
+      "uni_short": "LSU Kaunas",
+      "country_iso": "LT",
+      "country": "Litva",
+      "city": "Kaunas",
+      "lat": 54.8986,
+      "lng": 23.9352,
+      "erasmus_code": null,
+      "event_name": "SPORT MANAGEMENT 4.0: Digital Tools, Data & Engagement",
+      "start": "2027-04-26",
+      "end": "2027-04-30",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-12-03",
+      "deadline_note": "Uzávěrka podání přihlášek pro studenty partnerské fakulty WZ UW je 3. prosince 2026 v 15:00.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon",
+        "it"
+      ],
+      "topic": "Využití moderních digitálních technologií, datové analytiky a nástrojů zapojení fanoušků i partnerů ve sportovním managementu.",
+      "audience": [
+        "Studenti bakalářského studia managementu, sportovního marketingu a příbuzných oborů"
+      ],
+      "program": null,
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; studenti obdrží stipendium Erasmus+ na pokrytí krátkodobé mobility.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://wz.uw.edu.pl/wydzial/aktualnosci/rekrutacja-studentow-wz-uw-do-programu-erasmus-bip-w-kownie-litwa/",
+      "source_urls": [
+        "https://wz.uw.edu.pl/wydzial/aktualnosci/rekrutacja-studentow-wz-uw-do-programu-erasmus-bip-w-kownie-litwa/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Online příprava probíhá 4. února – 15. dubna 2027, prezenční výuka v Kaunasu 26.–30. dubna 2027.",
+      "verify": null
+    },
+    {
+      "id": "angewandte-the-digital-body-2027",
+      "uni": "University of Applied Arts Vienna",
+      "uni_short": "Angewandte Wien",
+      "country_iso": "AT",
+      "country": "Rakousko",
+      "city": "Vídeň",
+      "lat": 48.2078,
+      "lng": 16.3817,
+      "erasmus_code": null,
+      "event_name": "The Digital Body",
+      "start": "2027-03-15",
+      "end": "2027-03-20",
+      "start2": null,
+      "end2": null,
+      "deadline": "2026-09-30",
+      "deadline_note": "Uzávěrka elektronických přihlášek pro studenty FaVU VUT je 30. září 2026.",
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "design",
+        "it"
+      ],
+      "topic": "Prozkoumávání vztahu mezi lidským tělem a digitálními systémy formou propojení digitálního umění, multimédií a performativní praxe.",
+      "audience": [
+        "Studenti uměleckých a multimediálních oborů se zájmem o digitální umění, nová média a performanci"
+      ],
+      "program": [
+        "Tři online přípravné semináře na podzim 2026",
+        "Týmová ateliérová práce v mezioborových skupinách ve Vídni",
+        "Závěrečná veřejná prezentace a výstava Open Lab"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku; účast je podpořena stipendiem Erasmus+ a pořadatel poskytuje jízdenku na vídeňskou MHD.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://www.favu.vut.cz/en/faculty/structure/international-department/ffa-international-office-news-f26634/call-for-applications-erasmus-bip-the-digital-body-deadline-30-sep-2026-d360239",
+      "source_urls": [
+        "https://www.favu.vut.cz/en/faculty/structure/international-department/ffa-international-office-news-f26634/call-for-applications-erasmus-bip-the-digital-body-deadline-30-sep-2026-d360239"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Online setkání probíhají 19. října, 16. listopadu a 7. prosince 2026. Prezenční rezidence ve Vídni se koná 15.–20. března 2027. Ohodnocení: 4 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "ubb-conflict-resolution-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Conflict Resolution: From Theory to Practice",
+      "start": "2027-02-15",
+      "end": "2027-02-19",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "human"
+      ],
+      "topic": "Teoretické i praktické strategie řešení konfliktů, krizová komunikace a procesy usmíření po násilných střetech.",
+      "audience": [
+        "Vysokoškolští studenti se znalostí angličtiny minimálně na úrovni B1"
+      ],
+      "program": [
+        "Strategie řízení a řešení konfliktů",
+        "Krizová komunikace a řízení zúčastněných stran",
+        "Rozšiřování EU a preventivní politiky",
+        "Usmíření po násilných a dlouhotrvajících konfliktech"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za výuku; účastníkům je přiznán grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část probíhá 9.–10. února 2027, prezenční část 15.–19. února 2027 v Kluži. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "ubb-cybersecurity-ai-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Cybersecurity Strategies in the Era of Artificial Intelligence (4th Edition)",
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "it"
+      ],
+      "topic": "Strategie kybernetické bezpečnosti v kontextu rozvoje umělé inteligence, prevence kyberkriminality a zabezpečení cloudových a IoT systémů.",
+      "audience": [
+        "Vysokoškolští studenti se zájmem o IT, kybernetickou bezpečnost a AI (úroveň AJ alespoň B1)"
+      ],
+      "program": [
+        "Umělá inteligence v kybernetické bezpečnosti",
+        "Prevence kybernetické kriminality a detekce hrozeb",
+        "IoT, blockchain, cloudové technologie a kryptoměny",
+        "Digitální hrozby, dezinformační kampaně a kyberšikana"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; vybraní studenti obdrží stipendium Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část probíhá 27.–28. dubna 2027, prezenční týden 10.–14. května 2027 v Kluži. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "ubb-empowered-leadership-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Empowered Leadership: Managing People & Business Skills",
+      "start": "2027-03-15",
+      "end": "2027-03-19",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "ekon"
+      ],
+      "topic": "Rozvoj vůdčích osobnostních schopností, mezinárodní řízení lidských zdrojů a podpora diverzity a inkluze v byznysu.",
+      "audience": [
+        "Studenti ekonomických a manažerských oborů (angličtina na úrovni alespoň B1)"
+      ],
+      "program": [
+        "Vedení lidí a rozvoj měkkých dovedností",
+        "Globální trendy v řízení lidských zdrojů",
+        "Získávání a udržení talentovaných pracovníků",
+        "Řízení výkonu a zapojení zaměstnanců",
+        "Diverzita, rovnost a inkluze na pracovišti"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za výuku; účastníkům náleží grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální setkání se konají 9.–10. března 2027, prezenční část 15.–19. března 2027 v Kluži. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "ubb-promoting-equity-inclusion-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Promoting Equity and Inclusive Practices, Supporting Multiculturalism and Social Diversity in HEI (4th Edition)",
+      "start": "2027-02-08",
+      "end": "2027-02-12",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "pedag",
+        "human"
+      ],
+      "topic": "Rozvoj inkluzivního prostředí, multikulturní komunikace a podpora studentů se specifickými potřebami ve vysokoškolském vzdělávání.",
+      "audience": [
+        "Studenti humanitních, pedagogických a společenskovědních oborů (angličtina B1)"
+      ],
+      "program": [
+        "Rovnost, diverzita a inkluze ve vysokém školství",
+        "Multikulturní komunikace a kulturní kompetence",
+        "Psychologické bezpečí v univerzitním prostředí",
+        "Inkluzivní přístup ke studentům se specifickými potřebami",
+        "Nenásilná komunikace a integrační strategie"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; účastníci obdrží grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část: 1.–3. února 2027, prezenční týden v Kluži: 8.–12. února 2027. Ohodnocení: 3 ECTS.",
+      "verify": null
+    },
+    {
+      "id": "ubb-health4media-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Health4Media",
+      "start": "2027-04-19",
+      "end": "2027-04-23",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "zdravi",
+        "design"
+      ],
+      "topic": "Péče o duševní zdraví, zvládání stresu a posilování psychické odolnosti pro studenty médií a novináře.",
+      "audience": [
+        "Studenti žurnalistiky, mediálních studií, komunikace a příbuzných oborů"
+      ],
+      "program": [
+        "Výzvy v oblasti duševního zdraví u pracovníků v médiích",
+        "Praktické strategie zvládání stresu a self-care",
+        "Budování emoční pohody a psychické odolnosti",
+        "Networking s mezinárodními odborníky a kolegy"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; studentům je poskytnut grant Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část: 1.–2. dubna 2027, prezenční část v Kluži: 19.–23. dubna 2027.",
+      "verify": null
+    },
+    {
+      "id": "ubb-human-relationships-digital-era-2027",
+      "uni": "Babeș-Bolyai University",
+      "uni_short": "Babeș-Bolyai University",
+      "country_iso": "RO",
+      "country": "Rumunsko",
+      "city": "Cluj-Napoca",
+      "lat": 46.7679,
+      "lng": 23.5898,
+      "erasmus_code": null,
+      "event_name": "Human Relationships in the Digital Era (2nd Edition)",
+      "start": "2027-01-18",
+      "end": "2027-01-22",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "human",
+        "design"
+      ],
+      "topic": "Vliv sociálních médií a digitálních technologií na mezilidské vztahy a intimitu s praktickým vyústěním v tvorbu dokumentárního divadla.",
+      "audience": [
+        "Vysokoškolští studenti společenských věd, psychologie, divadelních a mediálních oborů"
+      ],
+      "program": [
+        "Vliv sociálních sítí na mezilidské vazby",
+        "Komunikace a digitální technologie",
+        "Intimita a partnerské či rodinné vztahy v digitálním věku",
+        "Praktické workshopy tvorby dokumentárního divadla"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez poplatku za kurz; účastníkům náleží finanční podpora Erasmus+ ve výši 863–970 EUR.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.swu.bg/2026/06/03/6793/",
+      "source_urls": [
+        "https://erasmus.swu.bg/2026/06/03/6793/"
+      ],
+      "source_type": "partner",
+      "contacts": null,
+      "notes": "Virtuální část se koná 11.–12. ledna 2027, prezenční setkání v Kluži 18.–22. ledna 2027.",
+      "verify": null
+    },
+    {
+      "id": "xamk-nature-based-wellbeing-2027",
+      "uni": "South-Eastern Finland University of Applied Sciences",
+      "uni_short": "XAMK",
+      "country_iso": "FI",
+      "country": "Finsko",
+      "city": "Mikkeli",
+      "lat": 61.6888,
+      "lng": 27.2723,
+      "erasmus_code": null,
+      "event_name": "Nature-Based Wellbeing Experience",
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "start2": null,
+      "end2": null,
+      "deadline": null,
+      "deadline_note": null,
+      "mobility": [
+        "studying"
+      ],
+      "fields": [
+        "zdravi",
+        "prir"
+      ],
+      "topic": "Využití bohatství finské přírody pro tvorbu inovativních konceptů v oblasti podpory zdraví, udržitelnosti a zážitkového učení.",
+      "audience": [
+        "Studenti 1. a 2. cyklu (bakalářského a magisterského studia) v oborech sociální péče, ošetřovatelství, tělesná výchova, cestovní ruch a příbuzných oborech"
+      ],
+      "program": [
+        "Dvě online přípravná setkání zaměřená na metodiku a možnosti nature-based wellbeing",
+        "Zážitkový týden v čisté finské přírodě s multidisciplinární týmovou prací",
+        "Spolutvorba udržitelných produktů (např. vedené outdoorové aktivity, mindfulness v přírodě)"
+      ],
+      "language": "English",
+      "fee_eur": 0,
+      "fee_text": "Bez účastnického poplatku; výjezd je hrazen z grantu programu Erasmus+.",
+      "capacity": null,
+      "registration_url": null,
+      "registration_url2": null,
+      "event_url": "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf",
+      "source_urls": [
+        "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+      ],
+      "source_type": "partner",
+      "contacts": [
+        {
+          "name": "Maria Tamvaki",
+          "role": "International Relations, University of Crete",
+          "email": "bip-erasmus@uoc.gr",
+          "phone": "+30 28310 77724",
+          "source": "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+        },
+        {
+          "name": "Julia Stagaki",
+          "role": "International Relations, University of Crete",
+          "email": "intrelations@admin.uoc.gr",
+          "phone": "+30 28310 77725",
+          "source": "https://erasmus.uoc.gr/wp-content/uploads/2026/06/Call__finland_en-s.pdf"
+        }
+      ],
+      "notes": "Organizováno v rámci aliance INGENIUM. Ohodnocení: 3 ECTS. Virtuální příprava probíhá před prezenčním týdnem během jarního semestru 2027.",
+      "verify": null
+    }
+  ]
+}

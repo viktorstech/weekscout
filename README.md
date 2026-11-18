@@ -2,12 +2,12 @@
 
 Interaktivní mapa a časová osa Erasmus+ International Weeks, Staff Weeks, Teaching Weeks a BIP (Blended Intensive Programmes) na evropských vysokých školách v akademickém roce **2026/2027** (projekt týmu 17).
 
-- **Aktuální rozsah dat (k 2026-11-17):** **129 akcí** ze **100 institucí** ve **26 zemích** (`94 ověřeno`, `31 částečně`, `4 neověřeno`), termíny **2026-12-01 až 2027-08-31**.
+- **Aktuální rozsah dat (k 2026-11-18):** **153 akcí** ze **107 institucí** ve **26 zemích** (`105 ověřeno`, `43 částečně`, `5 neověřeno`), termíny **2026-12-01 až 2027-08-31**.
 - **Web bez build procesu (GitHub Pages):** čistý HTML/CSS/vanilla JS v `index.html` + `data.json` (Leaflet 1.9.4 + leaflet.markercluster 1.5.3 z CDN).
 
 ## Funkce aplikace
 - **Nekonečná interaktivní mapa:** podklady *Tmavá* (výchozí), *Mapa* (OSM), *Světlá* a *Satelit* (Esri), obousměrně propojené se světlým/tmavým režimem UI (`☀/☾`).
-- **Chytré štítky a výběr termínů:** štítky s názvem univerzity a datem s automatickou detekcí kolizí, podštítky měst u shluků a výběrové okno pro překrývající se akce na jedné univerzitě.
+- **Chytré štítky a výběr termínů:** štítky s názvem univerzity a datem s automatickou detekcí kolizí a výběrové okno pro překrývající se akce na jedné univerzitě.
 - **Filtry a vyhledávání:** typ mobility (*Chci učit / Chci se školit / Chci studovat*), fulltextové vyhledávání bez diakritiky, obor, země, poplatek, uzávěrky, měsíc konání, jen plně ověřené, rychlé skrytí prošlých uzávěrek a sbalitelná karta filtrů.
 - **Seznam, detail a časová osa:** řazení seznamu (podle termínu / nejbližší uzávěrky / ceny), detail akce se zdroji a sdílitelným odkazem (`?akce=<id>`), přepínatelná obrazovka časové osy (`#casova-osa`) s minimapou.
 
@@ -32,8 +32,24 @@ Pipeline běží nezávisle na webu v `pipeline/` a `agents/` (čistý Python 3 
 
 Podrobný návod ke spuštění celé pipeline je v [agents/README.md](agents/README.md).
 
+### Napojení na cyklus Competitive Intelligence (CI)
+
+| Fáze CI cyklu | Realizace ve WeekScout |
+|---|---|
+| **1. Plánování (KIT & KIQ)** | Vymezení rozsahu (vysoké školy EU/EHP + RS, MK, TR; sezóna 2026/27; 3 typy mobility; vyřazení komerčních firem). |
+| **2. Sběr (Collection)** | **Agenti 1–3** (portály IMOTION/BIP aliance, sever/západ Evropy, jih/střed-východ Evropy) přes Exa.ai API s diskovou cache. |
+| **3. Zpracování & Ověření** | **Agent 4** kontroluje slepé dávky bez historie sběru proti oficiálním webům škol a odhaluje rozpory i komerční agentury. |
+| **4. Analýza & Kurátorství** | **Agent 5** (`merge_validate.py`) deduplikuje, sjednocuje názvy 107 škol a validuje JSON schéma (0 chyb). |
+| **5. Diseminace & Rozhodování** | Veřejná mapa a časová osa pro účastníky + **B2B Campus portál (`uni.html`)** s manažerským **CI benchmarkem** (sezónní přetlak, kolize termínů ±4 dny, cenový medián Evropy), CSV exporty a pondělním digestem. |
+
+### Bezpečnost
+- Žádné API klíče nejsou v repozitáři ani v klientském JavaScriptu (klíče Exa.ai běží výhradně lokálně v Python pipeline přes ignorovaný soubor `.env`, vzor je v `.env.example`).
+- Každá akce obsahuje přímé odkazy na zdroje (`source_urls`) a stav/datum ověření (`verify`).
+
 ## Struktura repozitáře
-- `index.html` – statická webová aplikace (mapa, filtry, seznam, časová osa, detail)
+- `index.html` – hlavní statická webová aplikace pro účastníky (mapa, filtry, seznam, časová osa, detail, modal *O projektu*)
+- `uni.html` – WeekScout Campus B2B portál pro univerzity (správa akcí, Scout Credits, předplatné, CI benchmark, white-label embed, CSV export, týdenní digest)
+- `logo.svg` – sjednocené vektorové logo WeekScout
 - `data.json` – ověřená data akcí načítaná webem
 - `pipeline/` – `exa_client.py` (Exa API + rotace klíčů + cache + HTTP fallback), `batch_fetch.py`, `merge_validate.py`
 - `agents/` – specifikace všech 5 agentů (`01_portals.md` až `05_curator.md`)

@@ -3,332 +3,968 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4f6f9">
-<title>WeekScout – Erasmus International Weeks 2027</title>
-<meta name="description" content="WeekScout – mapa Erasmus+ International Weeks, Staff Weeks a BIP na evropských vysokých školách v akademickém roce 2026/2027.">
+<meta name="theme-color" content="#fdfbf7">
+<title>WeekScout – Vyraz na Erasmus+ v roce 2027</title>
+<meta name="description" content="WeekScout – studentský a akademický průvodce po Erasmus+ International Weeks, Staff Weeks a BIP po celé Evropě 2026/2027.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='100%25' stop-color='%23f97316'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='11' fill='url(%23g)'/%3E%3Cpath d='M5.8 13.4L10.9 23.8L16 14.8' stroke='%23fff' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round' opacity='.58'/%3E%3Cpath d='M16 14.8L21.1 23.8L26.2 13.4' stroke='%23fff' stroke-width='3.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z' fill='%23fde047'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-/* Layout: mapa přes celou obrazovku, karta s filtry vlevo nahoře, seznam jako panel, pod mapou časová osa */
+/* WeekScout v4 – Hravý studentský Erasmus brand (teplé barvy, pilulky, barevné role, přátelské UI) */
 :root{
-  --paper:#f4f6f9; --surface:#ffffff; --ink:#152033; --muted:#5b6678; --line:#d9dfe8;
-  --accent:#1f4fd1; --land:#e3e8ef; --land-edge:#c4ccd8; --sea:#f4f6f9;
-  --warn:#c2410c; --ok:#15803d; --part:#a16207;
-  --m12:#0e7490; --m1:#4d7c0f; --m2:#0f766e; --m3:#1f4fd1; --m4:#7c3aed; --m5:#c2410c; --m6:#b91c1c; --m7:#a16207; --m8:#be185d; --m9:#475569; --m10:#475569; --m11:#475569;
+  --paper:#fdfbf7;
+  --surface:#ffffff;
+  --soft:#f5f2ea;
+  --ink:#1e1b4b;
+  --muted:#646082;
+  --line:#e6e1d6;
+  --accent:#2563eb;
+  --coral:#f97316;
+  --violet:#7c3aed;
+  --teal:#0d9488;
+  --sun:#eab308;
+  --land:#ece8de;
+  --land-edge:#d6d0c4;
+  --sea:#fdfbf7;
+  --warn:#ea580c;
+  --warn-bg:#ffedd5;
+  --ok:#15803d;
+  --ok-bg:#dcfce7;
+  --part:#b45309;
+  --part-bg:#fef3c7;
+  --shadow-card:0 14px 36px -8px rgba(30,27,75,.16), 0 3px 0 rgba(30,27,75,.05);
+  --shadow-pop:0 22px 54px -10px rgba(30,27,75,.28);
+  --m12:#0891b2; --m1:#65a30d; --m2:#0d9488; --m3:#2563eb; --m4:#7c3aed; --m5:#f97316; --m6:#e11d48; --m7:#ca8a04; --m8:#db2777; --m9:#64748b; --m10:#64748b; --m11:#64748b;
   --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --body:"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#0e1420; --surface:#151d2c; --ink:#e7ecf4; --muted:#9aa6b8; --line:#2a3548;
-    --accent:#7aa2ff; --land:#1f2a3c; --land-edge:#33415a; --sea:#0e1420;
-    --warn:#fb923c; --ok:#4ade80; --part:#facc15;
-    --m12:#22d3ee; --m1:#a3e635; --m2:#2dd4bf; --m3:#7aa2ff; --m4:#c4a1ff; --m5:#fb923c; --m6:#f87171; --m7:#facc15; --m8:#f472b6; --m9:#94a3b8; --m10:#94a3b8; --m11:#94a3b8;
+    --paper:#121126;
+    --surface:#1b1a36;
+    --soft:#252348;
+    --ink:#f8f7ff;
+    --muted:#aba7ce;
+    --line:#34315e;
+    --accent:#60a5fa;
+    --coral:#fb923c;
+    --violet:#a78bfa;
+    --teal:#2dd4bf;
+    --sun:#fde047;
+    --land:#1a1934;
+    --land-edge:#2e2b54;
+    --sea:#121126;
+    --warn:#fb923c;
+    --warn-bg:rgba(251,146,60,.18);
+    --ok:#4ade80;
+    --ok-bg:rgba(74,222,128,.16);
+    --part:#fde047;
+    --part-bg:rgba(253,224,71,.16);
+    --shadow-card:0 18px 44px -8px rgba(4,3,18,.62), 0 3px 0 rgba(0,0,0,.25);
+    --shadow-pop:0 28px 66px -12px rgba(4,3,18,.78);
+    --m12:#22d3ee; --m1:#a3e635; --m2:#2dd4bf; --m3:#60a5fa; --m4:#c084fc; --m5:#fb923c; --m6:#fb7185; --m7:#fde047; --m8:#f472b6; --m9:#94a3b8; --m10:#94a3b8; --m11:#94a3b8;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#0e1420; --surface:#151d2c; --ink:#e7ecf4; --muted:#9aa6b8; --line:#2a3548;
-  --accent:#7aa2ff; --land:#1f2a3c; --land-edge:#33415a; --sea:#0e1420;
-  --warn:#fb923c; --ok:#4ade80; --part:#facc15;
-  --m12:#22d3ee; --m1:#a3e635; --m2:#2dd4bf; --m3:#7aa2ff; --m4:#c4a1ff; --m5:#fb923c; --m6:#f87171; --m7:#facc15; --m8:#f472b6; --m9:#94a3b8; --m10:#94a3b8; --m11:#94a3b8;
+  --paper:#121126;
+  --surface:#1b1a36;
+  --soft:#252348;
+  --ink:#f8f7ff;
+  --muted:#aba7ce;
+  --line:#34315e;
+  --accent:#60a5fa;
+  --coral:#fb923c;
+  --violet:#a78bfa;
+  --teal:#2dd4bf;
+  --sun:#fde047;
+  --land:#1a1934;
+  --land-edge:#2e2b54;
+  --sea:#121126;
+  --warn:#fb923c;
+  --warn-bg:rgba(251,146,60,.18);
+  --ok:#4ade80;
+  --ok-bg:rgba(74,222,128,.16);
+  --part:#fde047;
+  --part-bg:rgba(253,224,71,.16);
+  --shadow-card:0 18px 44px -8px rgba(4,3,18,.62), 0 3px 0 rgba(0,0,0,.25);
+  --shadow-pop:0 28px 66px -12px rgba(4,3,18,.78);
+  --m12:#22d3ee; --m1:#a3e635; --m2:#2dd4bf; --m3:#60a5fa; --m4:#c084fc; --m5:#fb923c; --m6:#fb7185; --m7:#fde047; --m8:#f472b6; --m9:#94a3b8; --m10:#94a3b8; --m11:#94a3b8;
   color-scheme: dark;
 }
+
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;overflow:hidden}
-body{background:var(--paper);color:var(--ink);font:15px/1.5 var(--body)}
-.wrap{max-width:1280px;margin:0 auto;padding:24px 20px 40px;display:grid;gap:20px}
-header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;justify-content:space-between}
-h1{font:700 clamp(24px,3.2vw,34px)/1.1 var(--display);margin:0;text-wrap:balance}
-.sub{color:var(--muted);margin:4px 0 0;max-width:62ch}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font:500 14px var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
-.chip:focus-visible,.ev:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:20px}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px}
-.hero{position:absolute;inset:0} /* bez z-indexu: nevytváří vrstvu, karta a minimapa tak mohou ležet nad časovou osou */
-.hero .leaflet-top{top:calc(env(safe-area-inset-top, 0px) + 28px)}
+body{background:var(--paper);color:var(--ink);font:14.5px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+
+::-webkit-scrollbar{width:7px;height:7px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--muted) 35%,transparent);border-radius:999px}
+
+.hero{position:absolute;inset:0}
+.hero .leaflet-top{top:calc(env(safe-area-inset-top, 0px) + 18px)}
+.hero .leaflet-right{right:16px}
+.hero .leaflet-bottom{bottom:18px}
 #map{position:absolute;inset:0}
+.leaflet-container{font-family:var(--body);background:var(--land)}
+
+/* Cheerful Floating Card */
 .ov{position:absolute;z-index:800;pointer-events:none}
-.ov.top{top:calc(env(safe-area-inset-top, 0px) + 28px);left:16px;right:200px}
-.titlecard{pointer-events:auto;display:inline-grid;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:0 4px 16px rgba(0,0,0,.18);max-width:560px}
-.titlecard h1{font-size:clamp(20px,2.4vw,26px)}
-.titlecard .sub{margin:0;font-size:13px}
-.tchd{display:flex;align-items:start;justify-content:space-between;gap:12px}
-.tcacts{display:flex;gap:6px;flex-shrink:0}
-.icobtn{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:700 15px/1 var(--body);cursor:pointer}
-.icobtn:hover{border-color:var(--accent);color:var(--accent)}
-.icobtn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.tcbody{display:grid;gap:8px}
-.titlecard.folded .tcbody{display:none}
-.basesel{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 10px 8px 14px;box-shadow:0 4px 16px rgba(0,0,0,.18);font:500 13px var(--body);color:var(--muted)}
-.leaflet-touch .basesel, .basesel.leaflet-bar{border:1px solid var(--line)}
-.basesel select{font:600 14px var(--body);padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}
-.basesel select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.more{font-size:13px}
-.more summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none;display:inline-flex;align-items:center;gap:6px;padding:2px 0}
-.more summary::-webkit-details-marker{display:none}
-.more summary::before{content:"▸";transition:transform .15s}
-.more[open] summary::before{transform:rotate(90deg)}
-.more summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-.fcount{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--accent);color:var(--surface);font-size:12px}
-.fcount[hidden]{display:none}
-.fgrid{display:grid;grid-template-columns:auto 1fr;gap:8px 10px;align-items:center;margin-top:8px;color:var(--muted)}
-.fgrid select{font:500 13px var(--body);padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer;min-width:0}
-.fgrid select:focus-visible,.chk input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.chk{display:flex;align-items:center;gap:8px;color:var(--ink);cursor:pointer}
-.chk input{accent-color:var(--accent);width:16px;height:16px}
-.reset{margin-top:10px;font:600 13px var(--body);background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
-.reset:hover{color:var(--ink)}
-.oborrow{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
-.oborrow select{font:500 13px var(--body);padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer;max-width:100%}
-.oborrow select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.searchrow input{width:100%;font:500 13.5px var(--body);padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
-.searchrow input::placeholder{color:var(--muted)}
-.searchrow input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;background:var(--surface)}
-.quickrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
-.quickchk{font-size:13px;color:var(--muted)}
-.favbtn{font:600 13px var(--body);border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:7px 11px;border-radius:8px;cursor:pointer}
-.favbtn[aria-pressed="true"]{background:var(--part);border-color:var(--part);color:#152033}
-.favbtn:focus-visible,.qreset:focus-visible,.legbtn:focus-visible,.star:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.qreset{font:600 12.5px var(--body);border:1px solid var(--warn);background:transparent;color:var(--warn);padding:6px 10px;border-radius:8px;cursor:pointer}
-.qreset:hover{background:var(--warn);color:#fff}
-.qreset[hidden]{display:none}
-.sub.filtered{color:var(--accent);font-weight:600}
-.ev-hd{display:flex;align-items:start;justify-content:space-between;gap:8px}
-.star{background:none;border:0;padding:0 2px;cursor:pointer;font-size:18px;line-height:1;color:var(--muted);flex-shrink:0}
-.star:hover{color:var(--part)}
-.star.on{color:var(--part)}
-.pstar{color:#ca8a04;font-size:11px;flex-shrink:0}
-.ev.past{opacity:.68}
-.row.past .bar{opacity:.4;filter:saturate(.35)}
-.tag.ob{border-style:dashed}
-
-.navbtn{position:fixed;z-index:850;left:50%;bottom:22px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;border:2px solid #fff;border-radius:999px;padding:12px 22px 12px 18px;font:700 15px var(--body);cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35);transition:transform .15s ease, box-shadow .15s ease}
-.navbtn:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.4)}
-.navbtn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.navbtn .ico{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.22);font-size:16px;line-height:1}
-.navbtn small{font-weight:500;opacity:.85;font-size:12.5px}
-.btn.back{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border-color:var(--accent);padding:7px 14px;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
-.btn.back:hover{filter:brightness(1.08)}
-.tlhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
-.tlhead-l{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.tlhead h2{margin:0}
-.btn.sm{padding:5px 12px;font-size:13px;background:transparent;cursor:pointer;font-family:inherit}
-@media (min-width:701px){
-  .ov.top{position:fixed}
-  body.mini #map{position:fixed;inset:calc(env(safe-area-inset-top, 0px) + 16px) 16px auto auto;width:min(460px,40vw);height:320px;z-index:860;border-radius:12px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.3);overflow:hidden}
-  body.mini .basesel, body.mini .leaflet-control-scale, body.mini .fitctl{display:none}
+.ov.top{top:calc(env(safe-area-inset-top, 0px) + 16px);left:16px;right:310px}
+.titlecard{
+  pointer-events:auto;
+  display:inline-grid;gap:10px;
+  background:var(--surface);
+  border:2px solid var(--line);
+  border-radius:22px;
+  padding:13px 15px;
+  box-shadow:var(--shadow-card);
+  max-width:440px;
+  width:min(440px, calc(100vw - 32px));
 }
-.listbtn{justify-self:start;font:600 14px var(--body);background:var(--accent);color:var(--surface);border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
-.listbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.listpanel{position:fixed;z-index:900;left:12px;top:200px;bottom:16px;width:400px;max-width:calc(100% - 24px);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-.listpanel[hidden]{display:none}
-.lph{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-right:10px}
-.lph .x{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:18px;cursor:pointer;flex-shrink:0}
-.lpsort{display:flex;align-items:center;gap:8px;padding:6px 12px 8px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-.lpsort select{font:500 12.5px var(--body);padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);cursor:pointer}
-.lpsort select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.btn{cursor:pointer;background:transparent;font-family:inherit}
-.listpanel .list{flex:1;max-height:none}
+.tchd{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none;color:inherit;border-radius:14px;cursor:pointer}
+.brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.brand-mark{
+  width:38px;height:38px;border-radius:13px;flex-shrink:0;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg, var(--accent), var(--coral));
+  box-shadow:0 6px 16px -4px color-mix(in srgb, var(--coral) 50%, transparent);
+  transform:rotate(-4deg);transition:transform .16s ease;
+}
+.brand:hover .brand-mark{transform:rotate(0deg) scale(1.05)}
+.brand:hover h1{color:var(--accent)}
+.brand-mark svg{width:24px;height:24px;transform:rotate(4deg)}
+.brand-txt{min-width:0}
+.brand-row{display:flex;align-items:center;gap:7px;flex-wrap:nowrap}
+.titlecard h1{font:800 20px/1.05 var(--display);letter-spacing:-.025em;margin:0;white-space:nowrap}
+.hello-pill{
+  font:700 10.5px/1 var(--body);padding:3px 8px;border-radius:999px;flex-shrink:0;
+  background:var(--warn-bg);color:var(--warn);
+}
+.sub{color:var(--muted);margin:3px 0 0;font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sub.filtered{color:var(--coral);font-weight:700}
 
-.mapbox{position:relative;overflow:hidden}
-.legend{position:absolute;right:56px;bottom:22px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:5px 8px;font-size:13px;color:var(--muted);box-shadow:0 4px 14px rgba(0,0,0,.18)}
-.leglbl{font-size:12px;margin-right:2px}
-.legbtn{display:inline-flex;align-items:center;gap:5px;border:1px solid transparent;background:transparent;color:var(--ink);font:500 12.5px var(--body);padding:3px 7px;border-radius:999px;cursor:pointer}
-.legbtn:hover{background:var(--paper);border-color:var(--line)}
-.legbtn.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.tcacts{display:flex;gap:5px;flex-shrink:0}
+.icobtn{
+  display:inline-grid;place-items:center;width:32px;height:32px;border-radius:999px;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+  font:700 14px/1 var(--body);cursor:pointer;
+  transition:transform .14s, border-color .14s, background .14s;
+}
+.icobtn:hover{border-color:var(--coral);transform:scale(1.06)}
+.icobtn:active{transform:scale(.94)}
+.icobtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.tcbody{display:grid;gap:9px}
+.titlecard.folded{gap:0}
+.titlecard.folded .tcbody{display:none}
+
+/* Color-Coded Friendly Mobility Chips (single crisp 4-column row) */
+.chips{display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:5px}
+.chip{
+  display:inline-flex;align-items:center;justify-content:center;gap:4px;
+  font:700 12.5px/1.2 var(--body);
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+  padding:7px 6px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  transition:transform .14s, background .14s, border-color .14s, color .14s, box-shadow .14s;
+}
+.chip:hover{transform:translateY(-1px);border-color:var(--accent)}
+.chip:active{transform:translateY(0)}
+.chip .ci{font-size:14px;line-height:1}
+.chip[data-f="all"][aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 5px 14px -4px color-mix(in srgb, var(--accent) 60%, transparent)}
+.chip[data-f="teaching"][aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:#fff;box-shadow:0 5px 14px -4px color-mix(in srgb, var(--violet) 60%, transparent)}
+.chip[data-f="training"][aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 5px 14px -4px color-mix(in srgb, var(--teal) 60%, transparent)}
+.chip[data-f="studying"][aria-pressed="true"]{background:var(--coral);border-color:var(--coral);color:#fff;box-shadow:0 5px 14px -4px color-mix(in srgb, var(--coral) 60%, transparent)}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Friendly Rounded Search */
+.searchwrap{position:relative;display:flex;align-items:center}
+.searchwrap svg{position:absolute;left:13px;width:16px;height:16px;color:var(--muted);pointer-events:none}
+.searchrow input{
+  width:100%;font:500 13.5px var(--body);padding:9px 14px 9px 38px;
+  border:2px solid var(--line);border-radius:999px;background:var(--soft);color:var(--ink);
+  transition:border-color .15s, background .15s;
+}
+.searchrow input::placeholder{color:var(--muted)}
+.searchrow input:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+
+.oborrow{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.oborrow select{
+  flex:1;min-width:0;font:600 13px var(--body);padding:7px 12px;
+  border:2px solid var(--line);border-radius:14px;background:var(--soft);color:var(--ink);cursor:pointer;
+}
+.oborrow select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+select option{background:var(--surface);color:var(--ink)}
+
+/* Expandable More Filters */
+.more{font-size:13px}
+.more summary{
+  cursor:pointer;color:var(--accent);font-weight:700;list-style:none;
+  display:inline-flex;align-items:center;gap:6px;padding:3px 0;
+}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"▸";transition:transform .16s}
+.more[open] summary::before{transform:rotate(90deg)}
+.more summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.fcount{
+  display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;
+  border-radius:999px;background:var(--coral);color:#fff;font:700 11.5px/1 var(--body);
+}
+.fcount[hidden]{display:none}
+.fgrid{
+  display:grid;grid-template-columns:72px 1fr;gap:6px 10px;align-items:center;
+  margin-top:8px;padding-top:8px;border-top:1.5px dashed var(--line);color:var(--muted);font-weight:600;
+}
+.fgrid select{
+  font:500 12.5px var(--body);padding:5px 10px;border:2px solid var(--line);border-radius:11px;
+  background:var(--soft);color:var(--ink);cursor:pointer;min-width:0;
+}
+.fgrid select:focus-visible,.chk input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.fmore-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chk{display:inline-flex;align-items:center;gap:7px;color:var(--ink);cursor:pointer;font-weight:600}
+.chk input{accent-color:var(--coral);width:15px;height:15px;cursor:pointer}
+.reset{
+  margin-top:0;font:700 12px var(--body);background:var(--soft);color:var(--muted);
+  border:2px solid var(--line);border-radius:999px;padding:4px 11px;cursor:pointer;
+}
+.reset:hover{color:var(--ink);border-color:var(--coral)}
+
+/* Quick Actions */
+.quickrow{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.listbtn{
+  display:inline-flex;align-items:center;gap:7px;font:700 13px var(--body);
+  background:linear-gradient(135deg, var(--accent), var(--violet));
+  color:#fff;border:0;border-radius:999px;padding:8px 15px;cursor:pointer;
+  box-shadow:0 6px 16px -4px color-mix(in srgb, var(--accent) 55%, transparent);
+  transition:transform .14s, filter .14s;
+}
+.listbtn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.listbtn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.favbtn{
+  font:700 12.5px var(--body);border:2px solid var(--line);background:var(--soft);color:var(--ink);
+  padding:7px 13px;border-radius:999px;cursor:pointer;transition:transform .12s, background .14s;
+}
+.favbtn:hover{border-color:var(--sun)}
+.favbtn[aria-pressed="true"]{background:var(--sun);border-color:var(--sun);color:#1e1b4b}
+.favbtn:focus-visible,.qreset:focus-visible,.legbtn:focus-visible,.star:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.qreset{
+  font:700 12px var(--body);border:2px solid var(--coral);background:var(--warn-bg);color:var(--warn);
+  padding:6px 12px;border-radius:999px;cursor:pointer;
+}
+.qreset:hover{background:var(--coral);color:#fff}
+.qreset[hidden]{display:none}
+.quickchk{font-size:12.5px;color:var(--muted)}
+
+/* Unified Top-Right Dock (Pro univerzity + Podklad + Spotlight — zero overlap) */
+.topright-dock{
+  position:fixed;z-index:810;top:calc(env(safe-area-inset-top, 0px) + 16px);right:16px;
+  display:grid;gap:10px;justify-items:end;pointer-events:none;
+}
+body.view-tl .topright-dock{display:none}
+.tr-bar{display:flex;align-items:center;gap:8px;pointer-events:auto}
+.basesel{
+  display:flex;align-items:center;gap:7px;background:var(--surface);border:2px solid var(--line);
+  border-radius:999px;padding:4px 6px 4px 12px;box-shadow:var(--shadow-card);font:600 12px var(--body);color:var(--muted);
+}
+.basesel select{font:700 12.5px var(--body);padding:4px 9px;border:1.5px solid var(--line);border-radius:999px;background:var(--soft);color:var(--ink);cursor:pointer}
+.fitctl, .leaflet-control-zoom{
+  border:2px solid var(--line)!important;border-radius:16px!important;
+  background:var(--surface)!important;box-shadow:var(--shadow-card)!important;overflow:hidden;
+}
+.leaflet-control-zoom a, .fitbtn{
+  display:grid!important;place-items:center!important;width:36px!important;height:36px!important;line-height:1!important;
+  background:transparent!important;color:var(--ink)!important;border:0!important;font:700 18px var(--body)!important;cursor:pointer;
+}
+.leaflet-control-zoom a:first-child{border-bottom:2px solid var(--line)!important}
+.leaflet-control-zoom a:hover, .fitbtn:hover{background:var(--soft)!important;color:var(--coral)!important}
+.leaflet-control-scale-line{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--muted)!important;border-radius:6px}
+.leaflet-control-attribution{background:color-mix(in srgb, var(--surface) 85%, transparent)!important;color:var(--muted)!important;border-radius:10px 0 0 0;font-size:10.5px!important}
+.leaflet-control-attribution a{color:var(--accent)!important}
+
+/* Legend Pill Bar (bottom-right above attribution — zero collision with List or Leaflet attribution) */
+.legend{
+  position:absolute;z-index:800;right:66px;bottom:28px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:2px;
+  background:var(--surface);border:2px solid var(--line);border-radius:999px;
+  padding:4px 8px 4px 11px;font-size:12px;color:var(--muted);box-shadow:var(--shadow-card);
+}
+.leglbl{font-size:11.5px;font-weight:700;margin-right:3px}
+.legbtn{
+  display:inline-flex;align-items:center;gap:4px;border:1.5px solid transparent;background:transparent;
+  color:var(--ink);font:600 11.5px var(--body);padding:3px 7px;border-radius:999px;cursor:pointer;
+}
+@media (max-width:1180px){.leglbl{display:none}}
+.legbtn:hover{background:var(--soft);border-color:var(--line)}
+.legbtn.on{background:var(--coral);border-color:var(--coral);color:#fff}
 .legbtn.on .dot{box-shadow:0 0 0 1.5px #fff}
 .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-.list{max-height:560px;overflow-y:auto;padding:8px}
-.ev{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:12px;border-radius:10px;cursor:pointer;border:1px solid transparent}
-.ev:hover,.ev.on{background:var(--paper);border-color:var(--line)}
-.date{font:700 15px/1.15 var(--display);font-variant-numeric:tabular-nums;border-left:4px solid var(--c);padding-left:8px}
-.date small{display:block;font:500 12px var(--body);color:var(--muted)}
-.ev h3{margin:0;font:600 15px/1.3 var(--body)}
-.ev .uni{color:var(--muted);font-size:13px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.tag{font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
-.tag.dl{border-color:currentColor}
-.tag.soon{color:var(--warn);font-weight:600}
-.tag.past{text-decoration:line-through}
-.tag.ok{color:var(--ok)} .tag.part{color:var(--part)}
-.ev a{color:var(--accent);font-size:13px}
-.tl{padding:14px 16px 12px}
-.tl h2,.listh{font:700 18px var(--display);margin:0 0 10px}
-.tlhead h2{margin:0}
-.tlsort{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
-.tlsort select{font:500 13px var(--body);padding:4px 8px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);cursor:pointer}
-.tlsort select:focus-visible,.tlbtn:focus-visible,.fitbtn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.listh{padding:12px 12px 0}
-.tlgrid{position:relative;overflow:auto;max-height:calc(100vh - var(--tl-top, 24px) - 120px);min-height:240px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
-.tlinner{min-width:660px;position:relative}
-.tlsticky{position:sticky;top:0;z-index:8;background:var(--surface);border-bottom:1px solid var(--line);padding:6px 0 2px}
-.months{display:grid;grid-template-columns:260px 1fr;font-size:12px;font-weight:600;color:var(--muted)}
-.mrow{position:relative;height:20px}
-.mrow span{position:absolute;top:0;transform:translateX(2px)}
-.row[data-id]{cursor:pointer}
-.row[data-id]:hover{background:var(--paper)}
-.row.on{background:var(--paper);box-shadow:inset 4px 0 0 var(--c)}
-.row.on .lbl-uni{font-weight:700}
-.row{display:grid;grid-template-columns:260px 1fr;align-items:center;min-height:40px;border-top:1px solid var(--line)}
-.row .lbl{padding:4px 8px 4px 10px;min-width:0;display:grid;gap:1px}
-.lbl-top{display:flex;align-items:center;gap:5px;min-width:0}
-.lbl-iso{font:700 10.5px/1.2 var(--body);padding:1px 4px;border-radius:4px;background:var(--paper);border:1px solid var(--line);color:var(--muted);flex-shrink:0}
-.lbl-uni{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lbl-ev{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tlbtn{margin-left:auto;font:600 11px var(--body);padding:2px 6px;border-radius:6px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);cursor:pointer;opacity:0;transition:opacity .12s;flex-shrink:0}
-.row[data-id]:hover .tlbtn,.row.on .tlbtn,.tlbtn:focus-visible{opacity:1}
-.tlbtn:hover{background:var(--accent);color:#fff}
-.track{position:relative;height:40px}
-.bar{position:absolute;top:13px;height:14px;border-radius:4px;background:var(--c);min-width:6px;z-index:2}
-.dlcon{position:absolute;top:19px;height:2px;background:var(--c);opacity:.32;z-index:1}
-.dlm{position:absolute;top:14px;width:12px;height:12px;transform:translateX(-6px) rotate(45deg);border:2px solid var(--c);background:var(--surface);z-index:3}
-.vline{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--line)}
-.today{border-left:2px solid var(--warn);z-index:2}
-.todaylbl{position:absolute;top:1px;font-size:11px;color:var(--warn);font-weight:600;transform:translateX(4px);white-space:nowrap}
-.tlleg{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--muted);margin-top:8px}
-.tlleg i{display:inline-block;vertical-align:middle;margin-right:6px}
-.fitctl{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.22);overflow:hidden}
-.fitbtn{display:grid;place-items:center;width:34px;height:34px;border:0;background:var(--surface);color:var(--ink);font-size:18px;line-height:1;cursor:pointer}
-.fitbtn:hover{background:var(--paper);color:var(--accent)}
-.kont a{color:var(--accent);text-decoration:none}
-.kont a:hover{text-decoration:underline}
-footer{color:var(--muted);font-size:12.5px;max-width:90ch}
-.dlg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-.leaflet-container{font-family:var(--body);background:var(--land)}
-.legend{z-index:800}
-dialog.dlg{z-index:2000}
-.ev .more{background:none;border:0;padding:0;cursor:pointer;font-family:inherit;font-size:13px;color:var(--accent);font-weight:600;margin-right:12px}
-dialog.dlg{border:1px solid var(--line);border-radius:14px;padding:0;max-width:720px;width:calc(100% - 32px);background:var(--surface);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
-dialog.dlg::backdrop{background:rgba(10,15,25,.55)}
-.dlg .hd{padding:20px 22px 14px;border-left:6px solid var(--c);display:grid;gap:4px;position:relative}
-.dlg .hd h2{font:700 22px/1.2 var(--display);margin:0;padding-right:40px;text-wrap:balance}
-.dlg .hd .uni{color:var(--muted)}
-.dlg .x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:18px;cursor:pointer}
-.dlg .bd{padding:4px 22px 22px;display:grid;gap:18px;max-height:70vh;overflow-y:auto}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.fact{background:var(--paper);border-radius:8px;padding:8px 10px}
-.fact b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
-.fact span{font-variant-numeric:tabular-nums}
-.dlg h3{font:700 15px var(--display);margin:0 0 6px}
-.dlg p,.dlg ul{margin:0}
-.dlg ul{padding-left:20px}
-.dlg li{margin:2px 0}
-.kont{display:grid;gap:8px}
-.kont div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14px}
-.kont small{color:var(--muted)}
-.btns{display:flex;flex-wrap:wrap;gap:8px}
-.btn{display:inline-block;padding:8px 14px;border-radius:8px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600;font-size:14px}
-.btn.pri{background:var(--accent);color:var(--surface)}
-.note{font-size:13px;color:var(--muted);background:var(--paper);border-radius:8px;padding:8px 10px}
-.src{font-size:12.5px;word-break:break-all}
-.src a{color:var(--accent)}
-.hide{display:none!important}
-@media (max-width:700px){.navbtn{padding:10px 16px 10px 12px;font-size:14px}.navbtn small{display:none}.ov.top{right:12px}.titlecard{max-width:none}.legend{display:none}.listpanel{left:8px;right:8px;width:auto;top:auto;bottom:56px;height:60%}.months,.row{grid-template-columns:185px 1fr}.tlgrid{max-height:calc(100vh - 180px)}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
+/* Playful Timeline Pill CTA */
+.navbtn{
+  position:fixed;z-index:870;left:50%;bottom:20px;transform:translateX(-50%);
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg, var(--coral), #ec4899);
+  color:#fff;border:3px solid var(--surface);border-radius:999px;
+  padding:11px 22px 11px 14px;font:800 14.5px var(--body);cursor:pointer;
+  box-shadow:0 12px 28px -6px rgba(249,115,22,.55);
+  transition:transform .16s ease, box-shadow .16s ease;
+}
+.navbtn:hover{transform:translateX(-50%) translateY(-3px) scale(1.02);box-shadow:0 16px 34px -6px rgba(249,115,22,.65)}
+.navbtn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.navbtn .ico{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.25);font-size:16px;line-height:1}
+.navbtn small{font-weight:600;opacity:.9;font-size:12px}
+
+/* Slide-out Event List (exact 440px alignment with filter card, clear of 500km scale bar) */
+.listpanel{
+  position:fixed;z-index:900;left:16px;top:240px;bottom:42px;
+  width:440px;max-width:calc(100% - 32px);
+  display:flex;flex-direction:column;background:var(--surface);border:2px solid var(--line);
+  border-radius:22px;box-shadow:var(--shadow-pop);overflow:hidden;
+}
+.listpanel[hidden]{display:none}
+.lph{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 14px 8px 18px}
+.listh{font:800 18px var(--display);margin:0}
+.lph .x{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);background:var(--soft);color:var(--ink);font-size:18px;cursor:pointer}
+.lph .x:hover{border-color:var(--coral);color:var(--coral)}
+.lpsort{display:flex;align-items:center;gap:8px;padding:6px 18px 10px;border-bottom:2px solid var(--line);font-size:12.5px;font-weight:600;color:var(--muted)}
+.lpsort select{font:600 12.5px var(--body);padding:4px 10px;border:2px solid var(--line);border-radius:999px;background:var(--soft);color:var(--ink);cursor:pointer}
+.list{flex:1;overflow-y:auto;padding:10px;display:grid;gap:8px;align-content:start}
+.ev{
+  display:grid;grid-template-columns:80px 1fr;gap:12px;padding:12px 13px;border-radius:16px;cursor:pointer;
+  border:1.5px solid transparent;background:var(--soft);
+  transition:transform .14s, border-color .14s, background .14s;
+}
+.ev:hover{border-color:var(--line);transform:translateY(-1px)}
+.ev.on{background:var(--surface);border-color:var(--accent);box-shadow:0 6px 18px -6px color-mix(in srgb, var(--accent) 30%, transparent)}
+.ev:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ev.past{opacity:.66}
+.date{font:800 13.5px/1.2 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap;border-left:4px solid var(--c);padding-left:8px;align-self:start;margin-top:2px}
+.date small{display:block;font:600 11px var(--body);color:var(--muted);margin-top:2px}
+.ev-hd{display:flex;align-items:start;justify-content:space-between;gap:8px}
+.ev h3{margin:0;font:700 14.5px/1.3 var(--body)}
+.ev .uni{color:var(--muted);font-size:12.5px;font-weight:500;margin-top:2px}
+.star{background:none;border:0;padding:0 2px;cursor:pointer;font-size:19px;line-height:1;color:var(--muted);flex-shrink:0;transition:transform .14s}
+.star:hover{transform:scale(1.2);color:var(--sun)}
+.star.on{color:var(--sun)}
+.pstar{color:#eab308;font-size:12px;flex-shrink:0}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.tag{font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted)}
+.tag.soon{color:var(--warn);background:var(--warn-bg);border-color:transparent}
+.tag.past{text-decoration:line-through}
+.tag.ok{color:var(--ok);background:var(--ok-bg);border-color:transparent}
+.tag.part{color:var(--part);background:var(--part-bg);border-color:transparent}
+.tag.ob{border:1px solid color-mix(in srgb, var(--muted) 32%, transparent);background:transparent}
+.ev-acts{display:flex;align-items:center;gap:12px;margin-top:8px}
+.ev .more{background:none;border:0;padding:0;cursor:pointer;font:700 13px var(--body);color:var(--accent)}
+.ev .more:hover{text-decoration:underline}
+.ev a{color:var(--coral);font-size:12.5px;font-weight:600;text-decoration:none}
+.ev a:hover{text-decoration:underline}
+
+/* Cheerful Map Pins, Pill Labels & Calmer Clusters */
 .evm{background:none;border:0}
-.evm .pin{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--c);border:2px solid #fff;opacity:.45;box-shadow:0 1px 3px rgba(0,0,0,.35);transition:opacity .15s}
-.evm:hover .pin{opacity:.85}
-.evm.sel .pin{left:-12px;top:-12px;width:24px;height:24px;opacity:1;border-width:3px;box-shadow:0 2px 10px rgba(0,0,0,.45)}
-.evm .plbl{position:absolute;left:12px;top:-11px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;font:600 12px var(--body);background:#fff;color:#152033;border:1px solid #c4ccd8;border-left:4px solid var(--c);border-radius:4px;padding:1px 6px;box-shadow:0 1px 3px rgba(0,0,0,.25);opacity:.55;cursor:pointer;transition:opacity .15s}
-.evm .pname{overflow:hidden;text-overflow:ellipsis;max-width:130px}
-.evm .pdate{color:#475569;font-weight:500;flex-shrink:0}
-.evm.sel .plbl{left:16px;opacity:1;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.35)}
-.evm.sel .pname{max-width:185px}
+.evm .pin{
+  position:absolute;left:-7.5px;top:-7.5px;width:15px;height:15px;border-radius:50%;
+  background:var(--c);border:2.5px solid rgba(255,255,255,.9);opacity:.78;
+  box-shadow:0 2px 7px rgba(10,8,30,.36);
+  transition:opacity .15s, transform .18s cubic-bezier(.34,1.56,.64,1);
+}
+.evm:hover .pin{opacity:1;transform:scale(1.24)}
+.evm.sel .pin{
+  left:-12px;top:-12px;width:24px;height:24px;opacity:1;border-width:3px;
+  box-shadow:0 0 0 5px color-mix(in srgb, var(--c) 38%, transparent), 0 5px 14px rgba(10,8,30,.45);
+}
+.evm .plbl{
+  position:absolute;left:13px;top:-12px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+  font:700 11.5px/1.35 var(--body);
+  background:rgba(27,26,54,.92);color:#f8f7ff;
+  border:1.5px solid rgba(255,255,255,.2);border-left:4px solid var(--c);
+  border-radius:999px;padding:2px 9px 2px 7px;
+  box-shadow:0 4px 12px rgba(4,3,18,.38);opacity:.9;cursor:pointer;
+  transition:opacity .15s, transform .14s;
+}
+.evm .pname{overflow:hidden;text-overflow:ellipsis;max-width:128px}
+.evm .pdate{color:#aba7ce;font-weight:600;flex-shrink:0}
+.evm.sel .plbl{left:17px;opacity:1;border-color:var(--c);box-shadow:0 8px 20px rgba(4,3,18,.48)}
+.evm.sel .pname{max-width:180px}
 .evm .plbl.col-hide{display:none}
+#map.lbls-off .evm:not(.sel):not(.feat):not(:hover) .plbl{display:none}
 .evm:hover{z-index:950!important}
-.evm:hover .plbl{opacity:1}
+.evm:hover .plbl{opacity:1;transform:translateY(-1px)}
 .evm:hover .plbl.col-hide{display:inline-flex}
 body.mini .evm .plbl{display:none!important}
 .evm.sel{z-index:1000!important}
-.evm.past .pin{border-style:dashed;filter:saturate(.35);opacity:.38}
-.evm.past:hover .pin{opacity:.8}
-.evm.past.sel .pin{opacity:1;border-style:dashed}
-.evm.past .plbl{border-style:dashed;color:#64748b}
-.clu{background:none}
-.clu .ccirc{display:grid;place-items:center;width:40px;height:40px;margin:4px auto 0;border-radius:50%;background:var(--accent);color:#fff;font:700 14px var(--body);border:3px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.35);opacity:.85}
-.clu.big .ccirc{width:48px;height:48px;margin:0;font-size:15px}
-.clu.has-sel .ccirc{opacity:1;outline:3px solid var(--warn);outline-offset:1px}
-.clu .clbl{position:absolute;left:50%;top:46px;transform:translateX(-50%);background:#fff;color:#152033;border:1px solid #c4ccd8;border-radius:4px;padding:0 5px;font:600 11px/1.45 var(--body);white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.3);pointer-events:none}
-.clu.big .clbl{top:50px}
-body.mini .clu .clbl{display:none!important}
-#map.light-base .evm .pin{border-color:#152033}
-#map.light-base .evm.sel .pin{border-color:#152033}
-#map.light-base .evm .plbl{border:1.5px solid #152033;border-left:4px solid var(--c)}
-#map.light-base .evm.past .plbl{border-style:dashed;border-left:4px solid var(--c)}
-#map.light-base .clu .ccirc{border-color:#152033}
-#map.light-base .clu .clbl{border:1.5px solid #152033}
-.cpick-item.past{opacity:.65}
-.cpick-past{color:var(--warn);font-weight:600;margin-left:4px}
-.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.3)}
-.leaflet-popup-content-wrapper{border-radius:12px;padding:0}
-.leaflet-popup-content{margin:0;min-width:260px;max-width:340px}
-.leaflet-popup-close-button{color:var(--muted)!important;padding:6px 8px 0 0!important}
-.cpick-hd{padding:10px 30px 8px 12px;border-bottom:1px solid var(--line);font:700 13px var(--body);color:var(--muted)}
-.cpick-list{max-height:280px;overflow-y:auto;padding:4px 0}
-.cpick-item{display:grid;grid-template-columns:10px 1fr;gap:0 10px;align-items:start;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);padding:8px 12px;cursor:pointer;color:var(--ink);font:13.5px/1.35 var(--body)}
-.cpick-item:last-child{border-bottom:0}
-.cpick-item:hover,.cpick-item:focus-visible{background:var(--paper);outline:none}
-.cpick-item.on{background:color-mix(in srgb,var(--accent) 12%,var(--surface))}
-.cpick-dot{width:10px;height:10px;border-radius:50%;background:var(--c);margin-top:4px}
-.cpick-date{font-weight:700;color:var(--c);font-size:12.5px}
-.cpick-name{font-weight:600;color:var(--ink)}
-.cpick-uni{font-size:12px;color:var(--muted)}
-.tlwrap{max-height:none}
-.cnt{color:var(--muted);font-weight:500;font-size:13px;margin-left:6px}
-.loading{position:absolute;inset:0;display:grid;place-items:center;z-index:700;color:var(--muted);font:600 15px var(--body);pointer-events:none}
+.evm.past .pin{filter:saturate(.32);opacity:.44}
+.evm.past:hover .pin{opacity:.9}
+.evm.past.sel .pin{opacity:1;filter:saturate(.55)}
+.evm.past .plbl{color:#9d99be}
+.evm .ppast{font:700 9.5px/1.3 var(--body);color:#fb923c;background:rgba(251,146,60,.18);border-radius:999px;padding:1px 5px;flex-shrink:0}
 
-/* Dvě obrazovky bez posouvání stránky: mapa a časová osa, přepínané jedním tlačítkem */
-.tlview{position:fixed;inset:0;z-index:840;overflow-y:auto;background:var(--paper);max-width:none;margin:0;padding:16px 16px 28px}
+.clu{background:none}
+.clu .ccirc{
+  display:grid;place-items:center;width:34px;height:34px;margin:4px auto 0;border-radius:50%;
+  background:linear-gradient(135deg, #3b82f6, #6366f1);
+  color:#fff;font:800 13px var(--display);
+  border:2px solid rgba(255,255,255,.82);box-shadow:0 4px 12px rgba(10,8,30,.36);
+  opacity:.92;transition:transform .18s cubic-bezier(.34,1.56,.64,1);
+}
+.clu:hover .ccirc{transform:scale(1.12);opacity:1}
+.clu.big .ccirc{width:42px;height:42px;margin:0;font-size:14.5px}
+.clu.has-sel .ccirc{opacity:1;outline:2.5px solid #fff;outline-offset:2px}
+#map.light-base .evm .pin{border-color:#1e1b4b}
+#map.light-base .evm.sel .pin{border-color:#1e1b4b}
+#map.light-base .evm .plbl{background:rgba(255,255,255,.95);color:#1e1b4b;border:1.5px solid #1e1b4b;border-left:4px solid var(--c);box-shadow:0 3px 10px rgba(30,27,75,.16)}
+#map.light-base .evm .pdate{color:#646082}
+#map.light-base .evm.past .plbl{color:#7c7897}
+#map.light-base .evm .ppast{color:#c2410c;background:#ffedd5}
+#map.light-base .clu .ccirc{border-color:#1e1b4b}
+#map.light-base .clu.has-sel .ccirc{outline-color:#1e1b4b}
+
+/* Cluster Picker Popup */
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--surface)!important;color:var(--ink)!important;border:2px solid var(--line);box-shadow:var(--shadow-pop)!important}
+.leaflet-popup-content-wrapper{border-radius:20px!important;padding:0!important;overflow:hidden}
+.leaflet-popup-content{margin:0!important;min-width:270px;max-width:345px}
+.leaflet-popup-close-button{color:var(--muted)!important;padding:8px 11px 0 0!important;font-size:18px!important}
+.cpick-hd{padding:12px 32px 10px 15px;border-bottom:2px solid var(--line);font:800 13.5px var(--display);color:var(--ink)}
+.cpick-list{max-height:280px;overflow-y:auto;padding:7px;display:grid;gap:4px}
+.cpick-item{display:grid;grid-template-columns:12px 1fr;gap:0 10px;align-items:start;width:100%;text-align:left;background:var(--soft);border:1.5px solid transparent;border-radius:14px;padding:9px 11px;cursor:pointer;color:var(--ink);font:13px/1.35 var(--body)}
+.cpick-item:hover,.cpick-item:focus-visible{border-color:var(--accent);outline:none}
+.cpick-item.on{border-color:var(--coral);background:var(--surface)}
+.cpick-item.past{opacity:.65}
+.cpick-past{color:var(--warn);font-weight:700;margin-left:5px;font-size:11.5px}
+.cpick-dot{width:11px;height:11px;border-radius:50%;background:var(--c);margin-top:4px}
+.cpick-date{font-weight:800;color:var(--c);font-size:12.5px}
+.cpick-name{font-weight:700;color:var(--ink);margin-top:1px}
+.cpick-uni{font-size:12px;color:var(--muted)}
+
+.leaflet-tooltip{background:var(--surface)!important;color:var(--ink)!important;border:2px solid var(--line)!important;border-radius:14px!important;padding:8px 12px!important;box-shadow:var(--shadow-card)!important;font:12.5px/1.4 var(--body)!important}
+.leaflet-tooltip-top:before{border-top-color:var(--surface)!important}
+
+/* Detail Modal */
+dialog.dlg{
+  z-index:2000;border:2px solid var(--line);border-radius:26px;padding:0;
+  max-width:740px;width:calc(100% - 28px);background:var(--surface);color:var(--ink);
+  box-shadow:var(--shadow-pop);overflow:hidden;
+}
+dialog.dlg::backdrop{background:rgba(18,17,38,.56);backdrop-filter:blur(6px)}
+.dlg button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.dlg .hd{
+  padding:22px 24px 16px;
+  background:linear-gradient(135deg, color-mix(in srgb, var(--c) 14%, var(--surface)), var(--surface));
+  border-bottom:2px solid var(--line);display:grid;gap:6px;position:relative;
+}
+.dlg .hd h2{font:800 23px/1.18 var(--display);margin:0;padding-right:44px;text-wrap:balance}
+.dlg .hd .uni{color:var(--muted);font-weight:600;font-size:13.5px}
+.dlg .x{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;border:2px solid var(--line);background:var(--surface);color:var(--ink);font-size:19px;cursor:pointer}
+.dlg .x:hover{border-color:var(--coral);color:var(--coral)}
+.dlg .bd{padding:18px 24px 24px;display:grid;gap:18px;max-height:70vh;overflow-y:auto}
+.facts{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:10px;align-items:stretch}
+@media (max-width:560px){.facts{grid-template-columns:repeat(2, minmax(0, 1fr))}}
+.fact{background:var(--soft);border-radius:16px;padding:11px 13px;border:1.5px solid var(--line)}
+.fact b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;margin-bottom:3px}
+.fact span{font-size:13.5px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.35}
+.dl-note{margin-top:-8px;font-size:12.5px;color:var(--part);background:var(--part-bg);border:1.5px solid color-mix(in srgb, var(--sun) 40%, transparent);border-radius:14px;padding:8px 12px;line-height:1.45}
+.dlg h3{font:800 15.5px var(--display);margin:0 0 6px}
+.dlg p,.dlg ul{margin:0;font-size:14px;line-height:1.55}
+.dlg ul{padding-left:20px}
+.dlg li{margin:3px 0}
+.kont{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:9px}
+.kont div{border:1.5px solid var(--line);background:var(--soft);border-radius:16px;padding:10px 13px;font-size:13.5px}
+.kont small{color:var(--muted)}
+.kont a{color:var(--accent);font-weight:600;text-decoration:none}
+.kont a:hover{text-decoration:underline}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;padding:9px 17px;border-radius:999px;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);text-decoration:none;font:700 13.5px var(--body);cursor:pointer;
+  transition:transform .12s, border-color .14s;
+}
+.btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+.btn.pri{background:linear-gradient(135deg, var(--coral), #ec4899);background-origin:border-box;border-color:transparent;color:#fff;box-shadow:0 8px 20px -5px rgba(249,115,22,.55)}
+.btn.pri:hover{filter:brightness(1.06);color:#fff}
+.note{font-size:13px;color:var(--muted);background:var(--soft);border-radius:15px;padding:10px 14px;border:1.5px solid var(--line)}
+.src{font-size:12px;color:var(--muted);display:grid;gap:7px}
+.src-list{display:flex;flex-wrap:wrap;gap:6px}
+.src a{
+  display:inline-flex;align-items:center;gap:4px;max-width:100%;
+  padding:4px 10px;border-radius:999px;border:1.5px solid var(--line);background:var(--soft);
+  color:var(--accent);text-decoration:none;font:600 11.5px var(--body);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.src a:hover{border-color:var(--accent);text-decoration:none}
+
+/* Timeline Screen */
+.wrap{max-width:none;margin:0;padding:16px;display:grid;gap:12px}
+.panel{background:var(--surface);border:2px solid var(--line);border-radius:22px;box-shadow:var(--shadow-card)}
+.tlview{position:fixed;inset:0;z-index:840;overflow-y:auto;background:var(--paper);max-width:none;margin:0;padding:16px 16px 16px;transition:padding-left .2s ease}
 .tlview[hidden]{display:none}
-.tlview > *{max-width:1280px;width:100%;margin-left:auto;margin-right:auto}
-#viewbtn{z-index:870}
+.tlview > *{max-width:none;width:100%;margin-left:0;margin-right:0}
+.tl{padding:14px 16px 12px}
+.tlhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.tlhead-l{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tlhead h2{font:800 20px var(--display);margin:0}
+.cnt{color:var(--coral);font-weight:700;font-size:13.5px;margin-left:6px;padding:3px 10px;border-radius:999px;background:var(--warn-bg)}
+.btn.back{background:linear-gradient(135deg, var(--accent), var(--violet));border:0;color:#fff;padding:8px 16px}
+.btn.back:hover{color:#fff}
+.tlsort{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.tlsort select{font:600 13px var(--body);padding:5px 12px;border:2px solid var(--line);border-radius:999px;background:var(--soft);color:var(--ink);cursor:pointer}
+.tlgrid{position:relative;overflow:auto;max-height:calc(100vh - var(--tl-top, 24px) - 160px);min-height:180px;border:2px solid var(--line);border-radius:16px;background:var(--surface)}
+.tlinner{min-width:680px;position:relative}
+.tlsticky{position:sticky;top:0;z-index:8;background:var(--soft);border-bottom:2px solid var(--line);padding:8px 0 4px}
+.months{display:grid;grid-template-columns:270px 1fr;font-size:12px;font-weight:700;color:var(--muted)}
+.mrow{position:relative;height:20px}
+.mrow span{position:absolute;top:0;transform:translateX(3px)}
+.row{display:grid;grid-template-columns:270px 1fr;align-items:center;min-height:44px;border-top:1.5px solid var(--line)}
+.row[data-id]{cursor:pointer}
+.row[data-id]:hover{background:var(--soft)}
+.row.on{background:color-mix(in srgb, var(--coral) 10%, var(--surface));box-shadow:inset 5px 0 0 var(--c)}
+.row.on .lbl-uni{font-weight:800}
+.row.past .bar{opacity:.38;filter:saturate(.35)}
+.row .lbl{padding:5px 10px 5px 12px;min-width:0;display:grid;gap:1px}
+.lbl-top{display:flex;align-items:center;gap:6px;min-width:0}
+.lbl-iso{font:700 10.5px/1.2 var(--body);padding:2px 6px;border-radius:999px;background:var(--soft);border:1.5px solid var(--line);color:var(--muted);flex-shrink:0}
+.lbl-uni{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lbl-ev{font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tlbtn{margin-left:auto;font:700 11px var(--body);padding:3px 9px;border-radius:999px;border:0;background:var(--coral);color:#fff;cursor:pointer;opacity:0;transition:opacity .12s;flex-shrink:0}
+.row[data-id]:hover .tlbtn,.row.on .tlbtn,.tlbtn:focus-visible{opacity:1}
+.track{position:relative;height:44px;overflow:hidden}
+.bar{position:absolute;top:14px;height:16px;border-radius:999px;background:var(--c);min-width:9px;z-index:2}
+.dlcon{position:absolute;top:21px;height:2.5px;background:var(--c);opacity:.3;z-index:1;border-radius:999px}
+.dlm{position:absolute;top:15px;width:13px;height:13px;transform:translateX(-6.5px) rotate(45deg);border:2.5px solid var(--c);background:var(--surface);border-radius:3px;z-index:3}
+.vline{position:absolute;top:0;bottom:0;width:0;border-left:1.5px dashed var(--line)}
+.today{border-left:2.5px solid var(--coral);z-index:2}
+.todaylbl{position:absolute;top:0;font-size:11px;color:#fff;background:var(--coral);font-weight:700;padding:1px 8px;border-radius:999px;transform:translateX(4px);white-space:nowrap}
+.tlleg{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--muted);margin-top:8px;font-weight:500}
+.tlleg i{display:inline-block;vertical-align:middle;margin-right:6px}
+footer{color:var(--muted);font-size:11.5px;line-height:1.4;max-width:none;padding:0 4px}
+.loading{position:absolute;inset:0;display:grid;place-items:center;z-index:700;color:var(--muted);font:700 16px var(--display);pointer-events:none}
+
 body.view-tl .legend, body.view-tl #viewbtn{display:none}
+.mini-back-bar{display:none}
 @media (min-width:701px){
+  .ov.top{position:fixed}
   body.view-tl .ov.top{z-index:880}
+  body.view-tl .listpanel{bottom:16px}
+  body.view-tl.left-tall .tlview{padding-left:472px}
+  body.mini #map{
+    position:fixed;inset:calc(env(safe-area-inset-top, 0px) + 16px) 16px auto 472px;
+    width:auto;height:224px;z-index:860;
+    border-radius:22px;border:2px solid var(--line);box-shadow:var(--shadow-pop);overflow:hidden;
+  }
+  body.mini.view-tl .mini-back-bar{
+    position:fixed;left:488px;top:calc(env(safe-area-inset-top, 0px) + 28px);z-index:870;
+    display:block;pointer-events:none;
+  }
+  .mini-back-bar .btn.back{
+    pointer-events:auto;background:color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter:blur(10px);border:2px solid var(--line);color:var(--ink);
+    box-shadow:var(--shadow-pop);padding:6px 14px;font-size:12.5px;border-radius:999px;
+    cursor:pointer;transition:transform .12s, border-color .14s, color .14s;
+  }
+  .mini-back-bar .btn.back:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-1px)}
+  body.mini .basesel, body.mini .leaflet-control-scale{display:none}
 }
 @media (max-width:700px){
-  .ov.top{position:fixed}
+  .ov.top{position:fixed;top:10px;left:10px;right:10px}
+  .titlecard{width:100%;max-width:none;border-radius:20px;padding:12px 14px}
+  .navbtn{padding:10px 16px 10px 12px;font-size:13.5px;bottom:14px}
+  .navbtn small{display:none}
+  .legend{display:none}
+  .listpanel{left:10px;right:10px;width:auto;top:auto;bottom:64px;height:58%;border-radius:22px}
+  .months,.row{grid-template-columns:180px 1fr}
+  .tlgrid{max-height:calc(100vh - 180px)}
   body.view-tl .ov.top, body.view-tl .listpanel{display:none}
-  #viewbtn{left:50%;right:auto;transform:translateX(-50%)}
 }
+/* Playful Erasmus Splash Loadup */
+.splash{
+  position:fixed;inset:0;z-index:3000;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--coral) 14%, var(--paper)), var(--paper) 64%);
+  transition:opacity .42s ease, transform .42s ease;
+}
+.splash.out{opacity:0;transform:scale(1.03);pointer-events:none}
+.splash-box{display:grid;justify-items:center;gap:14px;text-align:center}
+.splash-mark{
+  width:76px;height:76px;border-radius:24px;display:grid;place-items:center;
+  background:linear-gradient(135deg, var(--accent), var(--coral));
+  box-shadow:0 18px 40px -8px color-mix(in srgb, var(--coral) 55%, transparent);
+  animation:ws-pop .5s cubic-bezier(.34,1.56,.64,1) both;
+}
+.splash-mark svg{width:48px;height:48px}
+.splash-mark .ws-l{stroke-dasharray:28;stroke-dashoffset:28;animation:ws-draw .54s cubic-bezier(.4,0,.2,1) .14s forwards}
+.splash-mark .ws-r{stroke-dasharray:28;stroke-dashoffset:28;animation:ws-draw .54s cubic-bezier(.4,0,.2,1) .38s forwards}
+.splash-mark .ws-star{transform-origin:16px 7.2px;transform:scale(0) rotate(-45deg);animation:ws-star .54s cubic-bezier(.34,1.56,.64,1) .62s forwards}
+.splash-name{font:800 26px/1 var(--display);letter-spacing:-.025em;color:var(--ink);animation:ws-up .4s ease .14s both}
+.splash-sub{font:600 13px var(--body);color:var(--muted);margin-top:-6px;animation:ws-up .4s ease .22s both}
+.splash-bar{width:140px;height:5px;border-radius:999px;background:var(--soft);overflow:hidden;position:relative}
+.splash-bar::after{content:"";position:absolute;inset:0;width:46%;border-radius:999px;background:linear-gradient(90deg, var(--accent), var(--coral));animation:ws-bar .9s ease-in-out infinite}
+@keyframes ws-pop{from{opacity:0;transform:scale(.75) rotate(-10deg)}to{opacity:1;transform:scale(1) rotate(-3deg)}}
+@keyframes ws-draw{to{stroke-dashoffset:0}}
+@keyframes ws-star{to{transform:scale(1) rotate(0deg)}}
+@keyframes ws-up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ws-bar{0%{transform:translateX(-110%)}100%{transform:translateX(240%)}}
 
+/* Startup Role & Login Gate (v4 Erasmus brand) */
+.authgate{
+  position:fixed;inset:0;z-index:2600;display:grid;place-items:center;padding:16px;
+  background:color-mix(in srgb, var(--paper) 74%, transparent);
+  backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);
+}
+.authgate[hidden]{display:none}
+.authcard{
+  position:relative;
+  width:min(580px, 100%);max-height:calc(100vh - 32px);overflow-y:auto;
+  border-radius:28px;padding:22px 24px;display:grid;gap:14px;
+  background:var(--surface);border:2px solid var(--line);box-shadow:var(--shadow-pop);
+}
+.auth-x{
+  position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+  font-size:20px;line-height:1;display:grid;place-items:center;cursor:pointer;
+  transition:border-color .14s, color .14s, transform .12s;
+}
+.auth-x:hover{border-color:var(--coral);color:var(--coral);transform:scale(1.05)}
+.auth-x:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.auth-hd{display:flex;align-items:center;gap:13px;padding-right:42px}
+.auth-hd h2{font:800 24px/1.1 var(--display);letter-spacing:-.025em;margin:0}
+.auth-hd p{margin:3px 0 0;font-size:13px;color:var(--muted);font-weight:500}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.role-grid{grid-template-columns:1fr}}
+.role-opt{
+  text-align:left;padding:13px 14px;border-radius:20px;cursor:pointer;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+  display:grid;gap:5px;align-content:start;transition:transform .14s, border-color .14s, background .14s, box-shadow .14s;
+}
+.role-opt:hover{transform:translateY(-2px);border-color:var(--accent)}
+.role-opt[aria-pressed="true"]{
+  border-color:var(--coral);background:var(--surface);
+  box-shadow:0 10px 24px -8px color-mix(in srgb, var(--coral) 40%, transparent);
+}
+.role-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font:800 15px/1.2 var(--display)}
+.role-top span:first-child{white-space:nowrap}
+.role-tag{font:700 10.5px/1 var(--body);padding:4px 8px;border-radius:999px;background:var(--ok-bg);color:var(--ok);flex-shrink:0}
+.role-tag.b2b{background:var(--warn-bg);color:var(--warn)}
+.role-desc{font-size:12px;color:var(--muted);line-height:1.45;font-weight:500}
+.auth-tabs{
+  display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;
+  border-radius:999px;background:var(--soft);border:1.5px solid var(--line);
+}
+.auth-tabs[hidden]{display:none}
+.auth-tab{
+  font:700 12.5px var(--body);padding:7px 12px;border-radius:999px;border:0;
+  background:transparent;color:var(--muted);cursor:pointer;transition:background .14s, color .14s;
+}
+.auth-tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 2px 8px rgba(18,17,38,.12)}
+.auth-form{display:grid;gap:10px}
+.auth-form[hidden]{display:none}
+.auth-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:480px){.auth-row{grid-template-columns:1fr}}
+.afld{display:grid;gap:4px}
+.afld[hidden]{display:none}
+.afld label{font:700 12px var(--body);color:var(--muted)}
+.afld input{
+  width:100%;font:600 13px var(--body);padding:8px 13px;border-radius:14px;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);
+}
+.afld input::placeholder{color:var(--muted);opacity:.72;font-weight:500}
+.afld input:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+.demo-bar{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.demo-lbl{font:700 11.5px var(--body);color:var(--muted)}
+.demo-pill{
+  font:700 11.5px var(--body);padding:4px 10px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--line);background:var(--soft);color:var(--ink);
+  transition:border-color .14s, background .14s;
+}
+.demo-pill:hover{border-color:var(--coral);background:var(--surface)}
+.demo-pill small{color:var(--muted);font-weight:600;margin-left:3px}
+.reg-sec-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.reg-sec-hd span{font:700 12px var(--body);color:var(--muted)}
+.bill-sw{display:inline-flex;gap:3px;padding:3px;border-radius:999px;background:var(--soft);border:1.5px solid var(--line)}
+.bill-sw button{
+  font:700 11px var(--body);padding:4px 10px;border-radius:999px;border:0;
+  background:transparent;color:var(--muted);cursor:pointer;
+}
+.bill-sw button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.plan-pick{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:480px){.plan-pick{grid-template-columns:1fr}}
+.pp-opt{
+  text-align:left;padding:11px 13px;border-radius:16px;cursor:pointer;
+  border:2px solid var(--line);background:var(--soft);color:var(--ink);display:grid;gap:4px;
+  transition:border-color .14s, background .14s;
+}
+.pp-opt:hover{border-color:var(--accent)}
+.pp-opt[aria-pressed="true"]{border-color:var(--coral);background:var(--surface)}
+.pp-top{display:flex;align-items:center;justify-content:space-between;gap:6px;font:800 14px var(--display)}
+.pp-price{font:800 14px var(--display);color:var(--coral)}
+.pp-desc{font-size:11.5px;color:var(--muted);line-height:1.4;font-weight:500}
+.pay-box{display:grid;gap:8px;padding:10px 12px;border-radius:16px;background:var(--soft);border:1.5px solid var(--line)}
+.pay-box[hidden]{display:none}
+.pay-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:480px){.pay-opts{grid-template-columns:1fr}}
+.pay-opt{
+  font:700 12px var(--body);padding:8px 10px;border-radius:12px;cursor:pointer;
+  border:1.5px solid var(--line);background:var(--surface);color:var(--ink);text-align:left;
+}
+.pay-opt[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.auth-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:2px}
+.auth-hint{font-size:12px;color:var(--muted);font-weight:500}
+.auth-hint code{font-family:ui-monospace,Consolas,monospace;background:var(--soft);border:1px solid var(--line);padding:2px 7px;border-radius:999px;color:var(--ink);font-weight:700}
+.auth-err{font-size:12.5px;font-weight:700;color:var(--warn);min-height:16px}
+.auth-submit{
+  font:800 13.5px var(--body);padding:10px 20px;border-radius:999px;border:0;cursor:pointer;white-space:nowrap;
+  background:linear-gradient(135deg, var(--coral), #ec4899);color:#fff;
+  box-shadow:0 8px 20px -5px rgba(249,115,22,.55);transition:transform .12s, filter .14s;
+}
+.auth-submit:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.unilink,.acctpill{
+  display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border-radius:999px;
+  border:2px solid var(--line);
+  background:var(--surface);color:var(--ink);font:700 12.5px var(--body);text-decoration:none;white-space:nowrap;
+  box-shadow:var(--shadow-card);cursor:pointer;
+  transition:border-color .14s, color .14s, transform .12s;
+}
+.unilink:hover,.acctpill:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-1px)}
+.acctpill:focus-visible,.unilink:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.acctpill .u-sep{color:var(--muted);font-weight:500}
+@media (max-width:780px){.unilink{display:none}}
+@media (max-width:600px){.acctpill .u-name,.acctpill .u-sep{display:none}}
+/* About / 5-Agent Modal */
+.about-kpis{display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:10px}
+@media (max-width:600px){.about-kpis{grid-template-columns:repeat(2, minmax(0, 1fr))}}
+.akpi{background:var(--soft);border:1.5px solid var(--line);border-radius:16px;padding:11px 13px;display:grid;gap:2px}
+.akpi b{font:800 22px/1.1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.akpi span{font:700 11px var(--body);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.akpi small{font-size:11.5px;color:var(--ok);font-weight:700}
+.agents-list{display:grid;gap:8px}
+.ag-step{
+  display:grid;grid-template-columns:30px 1fr;gap:11px;align-items:start;
+  padding:10px 13px;border-radius:16px;background:var(--soft);border:1.5px solid var(--line);
+}
+.ag-num{
+  width:30px;height:30px;border-radius:10px;display:grid;place-items:center;
+  font:800 13px var(--display);color:#fff;background:linear-gradient(135deg, var(--accent), var(--violet));
+}
+.ag-step.ver .ag-num{background:linear-gradient(135deg, var(--teal), var(--accent))}
+.ag-step.cur .ag-num{background:linear-gradient(135deg, var(--coral), #ec4899)}
+.ag-step h4{margin:0;font:800 13.5px/1.25 var(--body);color:var(--ink);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ci-phase{font:700 10px/1.2 var(--body);padding:2px 7px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--accent);text-transform:uppercase;letter-spacing:.03em}
+.ag-step p{margin:2px 0 0;font-size:12.5px;line-height:1.45;color:var(--muted)}
+.ver-bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+.ver-bar i{display:block;height:100%}
+.ver-leg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);margin-top:6px;font-weight:600}
+.ver-leg span{display:inline-flex;align-items:center;gap:5px}
+.ver-leg em{width:9px;height:9px;border-radius:50%;display:inline-block}
+.tag.feat{color:var(--part);background:var(--part-bg);border-color:color-mix(in srgb, var(--sun) 45%, transparent);font-weight:700}
+.ev.feat{border-color:color-mix(in srgb, var(--sun) 48%, var(--line));background:linear-gradient(135deg, var(--part-bg), var(--soft))}
+/* 1. Cluster gold badge & popup featured highlight */
+.clu.has-feat .ccirc{background:linear-gradient(135deg, #f59e0b, #ea580c);box-shadow:0 0 0 3px rgba(250,204,21,.45), 0 4px 14px rgba(10,8,30,.42)}
+.clu .cfeat{
+  position:absolute;top:-2px;right:-1px;width:18px;height:18px;border-radius:50%;
+  display:grid;place-items:center;font-size:10.5px;line-height:1;
+  background:linear-gradient(135deg, #fde047, #f59e0b);color:#1e1b4b;
+  border:2px solid #fff;box-shadow:0 2px 6px rgba(10,8,30,.4);pointer-events:none;
+}
+.cpick-item.feat{border-color:#fbbf24;background:linear-gradient(135deg, var(--part-bg), var(--surface))}
+.cpick-feat{display:inline-block;font:800 10px/1.2 var(--body);color:#b45309;background:#fef3c7;border-radius:999px;padding:1px 6px;margin-right:5px}
+/* 2. Featured pin prominence when zoomed out */
+.evm.feat{z-index:500!important}
+.evm.feat .pin{left:-10px;top:-10px;width:20px;height:20px;opacity:1;border-color:#fff;box-shadow:0 0 0 4px rgba(250,204,21,.5), 0 4px 12px rgba(10,8,30,.4)}
+.evm.feat.sel .pin{left:-12px;top:-12px;width:24px;height:24px}
+.evm.feat .plbl{opacity:1;border-color:rgba(250,204,21,.75);box-shadow:0 0 0 2px rgba(250,204,21,.22), 0 6px 16px rgba(4,3,18,.4)}
+.evm .pfeat{font:800 10px/1.2 var(--body);color:#b45309;background:#fef3c7;border-radius:999px;padding:1px 5px;flex-shrink:0}
+/* 3. Floating Spotlight card (sits cleanly inside .topright-dock — zero overlap!) */
+.spotlight{
+  pointer-events:auto;
+  width:264px;background:var(--surface);border:1.5px solid color-mix(in srgb, var(--sun) 48%, var(--line));border-radius:18px;
+  box-shadow:var(--shadow-card);overflow:hidden;display:grid;
+}
+.spotlight.folded{width:auto;border-radius:999px}
+.spotlight.folded .sp-hd{border-bottom:0;padding:6px 8px 6px 13px;cursor:pointer}
+.spotlight.folded .sp-list,.spotlight.folded #sp-next{display:none}
+.spotlight[hidden]{display:none}
+@media (max-width:780px){.spotlight{display:none}}
+@media (max-width:700px){.topright-dock{top:auto;bottom:64px;right:10px}}
+.sp-hd{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:8px 9px 7px 13px;background:linear-gradient(135deg, var(--part-bg), var(--surface));
+  border-bottom:1.5px solid var(--line);
+}
+.sp-hd b{font:800 12px var(--display);color:var(--ink);display:inline-flex;align-items:center;gap:5px}
+.sp-acts{display:inline-flex;align-items:center;gap:4px}
+.sp-hd button{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font-size:13px;line-height:1;cursor:pointer}
+.sp-hd button[hidden]{display:none}
+.sp-hd button:hover{border-color:var(--coral);color:var(--coral)}
+.sp-list{padding:6px;display:grid;gap:5px;max-height:276px;overflow-y:auto}
+.sp-item{
+  text-align:left;width:100%;border:1.5px solid transparent;border-radius:12px;padding:7px 9px;
+  background:var(--soft);color:var(--ink);cursor:pointer;display:grid;gap:2px;font-family:inherit;
+  transition:border-color .14s, transform .12s;
+}
+.sp-item:hover{border-color:var(--sun);transform:translateY(-1px)}
+.sp-top{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10.5px;font-weight:700;color:var(--warn)}
+.sp-name{font:700 12px/1.28 var(--body);color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sp-meta{font-size:10.5px;color:var(--muted);font-weight:500}
+/* 5. Timeline featured row */
+.row.feat{background:linear-gradient(90deg, var(--part-bg), transparent 55%)}
+.row.feat .lbl-iso{background:var(--part-bg);border-color:color-mix(in srgb, var(--sun) 45%, transparent);color:var(--part)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.splash-mark .ws-l,.splash-mark .ws-r{stroke-dashoffset:0}.splash-mark .ws-star{transform:none}}
 </style>
 </head>
 <body>
+<div class="splash" id="splash" role="status" aria-live="polite">
+  <div class="splash-box">
+    <div class="splash-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path class="ws-l" d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/>
+        <path class="ws-r" d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="ws-star" d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/>
+      </svg>
+    </div>
+    <div class="splash-name">WeekScout</div>
+    <div class="splash-sub" id="splash-sub">Chystám mapu Evropy 2026/27…</div>
+    <div class="splash-bar" aria-hidden="true"></div>
+  </div>
+</div>
+
+<div class="authgate" id="authgate" hidden role="dialog" aria-modal="true" aria-labelledby="auth-title">
+  <div class="authcard">
+    <button type="button" class="auth-x" id="auth-close" title="Zavřít a prohlížet mapu bez přihlášení" aria-label="Zavřít přihlášení">×</button>
+    <div class="auth-hd">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/>
+          <path d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/>
+        </svg>
+      </div>
+      <div>
+        <h2 id="auth-title">Vítej ve WeekScout!</h2>
+        <p>Vyber si režim a přihlas se do dema</p>
+      </div>
+    </div>
+
+    <div class="role-grid" role="group" aria-label="Výběr režimu">
+      <button type="button" class="role-opt" id="role-participant" data-role="participant" aria-pressed="true">
+        <div class="role-top"><span>🌍 Pro účastníky</span><span class="role-tag">Zdarma</span></div>
+        <div class="role-desc">Studenti, vyučující &amp; zaměstnanci VŠ — mapa, filtry a časová osa akcí 2026/27.</div>
+      </button>
+      <button type="button" class="role-opt" id="role-university" data-role="university" aria-pressed="false">
+        <div class="role-top"><span>🏛️ Pro univerzity</span><span class="role-tag b2b">Campus</span></div>
+        <div class="role-desc">International Office &amp; pořadatelé — správa akcí, Scout Credits, embed a exporty.</div>
+      </button>
+    </div>
+
+    <div class="auth-tabs" id="auth-tabs" role="tablist" hidden>
+      <button type="button" class="auth-tab" id="tab-login" role="tab" aria-selected="true">Přihlášení</button>
+      <button type="button" class="auth-tab" id="tab-reg" role="tab" aria-selected="false">Registrace školy</button>
+    </div>
+
+    <form class="auth-form" id="auth-form">
+      <div class="auth-row">
+        <div class="afld"><label for="auth-user">Uživatelské jméno</label><input id="auth-user" autocomplete="username" placeholder="student" value="student" required></div>
+        <div class="afld"><label for="auth-pass">Heslo</label><input id="auth-pass" type="password" autocomplete="current-password" placeholder="student" value="student" required></div>
+      </div>
+      <div class="demo-bar" id="demo-pills"></div>
+      <div class="auth-err" id="auth-err"></div>
+      <div class="auth-foot">
+        <span class="auth-hint" id="auth-hint">Klikni na účet pro předvyplnění</span>
+        <button type="submit" class="auth-submit" id="auth-submit">Vstoupit jako účastník →</button>
+      </div>
+    </form>
+
+    <form class="auth-form" id="reg-form" hidden>
+      <div class="auth-row">
+        <div class="afld">
+          <label for="reg-uni">Univerzita / vysoká škola *</label>
+          <input id="reg-uni" list="reg-uni-list" placeholder="Vyber školu nebo napiš novou…" required>
+          <datalist id="reg-uni-list"></datalist>
+        </div>
+        <div class="afld"><label for="reg-email">Pracovní e-mail OZS *</label><input id="reg-email" type="email" placeholder="erasmus@univerzita.cz" required></div>
+      </div>
+      <div class="auth-row">
+        <div class="afld"><label for="reg-user">Uživatelské jméno *</label><input id="reg-user" placeholder="např. cuni_ozs" autocomplete="username" required></div>
+        <div class="afld"><label for="reg-pass">Heslo *</label><input id="reg-pass" type="password" placeholder="min. 4 znaky" autocomplete="new-password" required></div>
+      </div>
+      <div class="reg-sec-hd">
+        <span>Vyber předplatné pro univerzitu</span>
+        <div class="bill-sw" role="group" aria-label="Fakturační období">
+          <button type="button" id="rb-yearly" data-bill="yearly" aria-pressed="true">Ročně (−17 %)</button>
+          <button type="button" id="rb-monthly" data-bill="monthly" aria-pressed="false">Měsíčně</button>
+        </div>
+      </div>
+      <div class="plan-pick" role="group" aria-label="Výběr tarifu">
+        <button type="button" class="pp-opt" data-plan="free" aria-pressed="false">
+          <div class="pp-top"><span>Starter</span><span class="pp-price">0 €</span></div>
+          <div class="pp-desc">Správa vlastních akcí zdarma, 0 kreditů. Bez embedu, CSV a digestu.</div>
+        </button>
+        <button type="button" class="pp-opt" data-plan="campus" aria-pressed="true">
+          <div class="pp-top"><span>Campus ★</span><span class="pp-price" id="reg-campus-price">790 € / rok</span></div>
+          <div class="pp-desc">White-label mapa, CSV export, týdenní digest + <b>15 Scout Credits</b> v ceně.</div>
+        </button>
+      </div>
+      <div class="pay-box" id="reg-pay-box">
+        <div class="pay-opts" role="group" aria-label="Způsob aktivace">
+          <button type="button" class="pay-opt" data-pay="invoice" aria-pressed="true">📄 Faktura na IČO (objednávka VŠ)</button>
+          <button type="button" class="pay-opt" data-pay="card" aria-pressed="false">💳 Demo platební karta (•••• 4242)</button>
+        </div>
+        <div class="afld" id="reg-ico-wrap"><label for="reg-ico">IČO univerzity (volitelné v demu)</label><input id="reg-ico" placeholder="např. 61384399"></div>
+      </div>
+      <div class="auth-err" id="reg-err"></div>
+      <div class="auth-foot">
+        <span class="auth-hint">Demo · bez reálné platby</span>
+        <button type="submit" class="auth-submit" id="reg-submit">Aktivovat Campus a vstoupit →</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <section class="hero" aria-label="Mapa akcí">
   <div id="map" role="region" aria-label="Mapa Evropy s akcemi"></div>
-  <div class="loading" id="loading">Načítám akce…</div>
+  <div class="loading" id="loading">Načítám evropské akce…</div>
 
   <div class="ov top">
     <div class="titlecard" id="titlecard">
       <div class="tchd">
-        <div>
-          <h1>WeekScout</h1>
-          <p class="sub" id="subline">Načítám…</p>
-        </div>
+        <a class="brand" id="brand-home" href="index.html?role=participant" title="Zpět na hlavní mapu (reset filtrů a pohledu)">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M5.8 13.4L10.9 23.8L16 14.8" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" opacity=".58"/>
+              <path d="M16 14.8L21.1 23.8L26.2 13.4" stroke="#fff" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 4L17 6.2L19.2 7.2L17 8.2L16 10.4L15 8.2L12.8 7.2L15 6.2Z" fill="#fde047"/>
+            </svg>
+          </div>
+          <div class="brand-txt">
+            <div class="brand-row"><h1>WeekScout</h1><span class="hello-pill">2026/27</span></div>
+            <p class="sub" id="subline">Načítám…</p>
+          </div>
+        </a>
         <div class="tcacts">
+          <button type="button" class="icobtn" id="aboutbtn" title="O projektu & 5 AI agentů" aria-label="O projektu a 5 AI agentech">ⓘ</button>
           <button type="button" class="icobtn" id="themebtn" title="Přepnout světlý / tmavý režim" aria-label="Přepnout světlý nebo tmavý režim">☾</button>
           <button type="button" class="icobtn" id="foldbtn" title="Sbalit filtry" aria-label="Sbalit nebo rozbalit filtry" aria-expanded="true">−</button>
         </div>
       </div>
+
       <div class="tcbody" id="tcbody">
         <div class="chips" role="group" aria-label="Filtr podle typu mobility">
-          <button class="chip" id="f-all" data-f="all" aria-pressed="true">Vše</button>
-          <button class="chip" id="f-teaching" data-f="teaching" aria-pressed="false">Chci učit</button>
-          <button class="chip" id="f-training" data-f="training" aria-pressed="false">Chci se školit</button>
-          <button class="chip" id="f-studying" data-f="studying" aria-pressed="false">Chci studovat</button>
+          <button class="chip" id="f-all" data-f="all" aria-pressed="true"><span class="ci" aria-hidden="true">🌍</span>Vše</button>
+          <button class="chip" id="f-teaching" data-f="teaching" aria-pressed="false"><span class="ci" aria-hidden="true">🎓</span>Učit</button>
+          <button class="chip" id="f-training" data-f="training" aria-pressed="false"><span class="ci" aria-hidden="true">✨</span>Školit se</button>
+          <button class="chip" id="f-studying" data-f="studying" aria-pressed="false"><span class="ci" aria-hidden="true">🎒</span>Studovat</button>
         </div>
-        <div class="searchrow"><input type="search" id="q" placeholder="Hledat školu, město, téma… (např. AI, Brno)" aria-label="Hledat akce"></div>
+
+        <div class="searchrow">
+          <div class="searchwrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input type="search" id="q" placeholder="Hledej školu, město nebo téma… (AI, Málaga, Brno)" aria-label="Hledat akce">
+          </div>
+        </div>
+
         <div class="oborrow"><label for="obor-select">Obor</label><select id="obor-select"><option value="all">Všechny obory</option></select></div>
+
         <details class="more" id="more">
           <summary>Další filtry <span class="fcount" id="fcount" hidden></span></summary>
           <div class="fgrid">
@@ -338,15 +974,18 @@ body.view-tl .legend, body.view-tl #viewbtn{display:none}
             <label for="f-dl">Přihlášky</label><select id="f-dl">
               <option value="all">Všechny</option><option value="open">Ještě otevřené</option><option value="soon">Uzávěrka do 30 dní</option></select>
             <label for="f-mes">Konání</label><select id="f-mes"><option value="all">Kdykoli</option></select>
-            <span></span><label class="chk"><input type="checkbox" id="f-ver"> Jen plně ověřené údaje</label>
           </div>
-          <button type="button" class="reset" id="f-reset">Zrušit všechny filtry</button>
+          <div class="fmore-foot">
+            <label class="chk"><input type="checkbox" id="f-ver"> Jen plně ověřené</label>
+            <button type="button" class="reset" id="f-reset">Zrušit filtry</button>
+          </div>
         </details>
+
         <div class="quickrow">
           <button class="listbtn" id="listbtn" aria-expanded="false" aria-controls="listpanel">☰ Seznam akcí <span id="listcount"></span></button>
           <button type="button" class="favbtn" id="f-favs" aria-pressed="false">★ Uložené <span id="favcount">(0)</span></button>
-          <button type="button" class="qreset" id="q-reset" hidden>✕ Zrušit filtry</button>
-          <label class="chk quickchk"><input type="checkbox" id="f-hide-past"> Skrýt prošlé uzávěrky</label>
+          <button type="button" class="qreset" id="q-reset" hidden>✕ Zrušit</button>
+          <label class="chk quickchk"><input type="checkbox" id="f-hide-past"> Skrýt prošlé</label>
         </div>
       </div>
     </div>
@@ -358,9 +997,23 @@ body.view-tl .legend, body.view-tl #viewbtn{display:none}
     <div class="list" id="list"></div>
   </aside>
 
+  <div class="topright-dock" id="topright-dock">
+    <div class="tr-bar">
+      <a class="unilink" href="uni.html" title="Přepnout do portálu pro univerzity">🏛️ Pro univerzity ↗</a>
+      <div class="basesel"><label for="base-select">Podklad</label><select id="base-select"></select></div>
+      <button type="button" class="acctpill" id="logoutbtn" title="Odhlásit se nebo přepnout účet">👤 <span class="u-name" id="acct-name">student</span><span class="u-sep" id="acct-sep">·</span><span id="acct-act">Odhlásit</span></button>
+    </div>
+    <div class="spotlight" id="spotlight" hidden aria-label="Doporučené akce">
+      <div class="sp-hd" id="sp-hd"><b>★ Doporučujeme <span id="sp-cnt"></span></b><span class="sp-acts"><button type="button" id="sp-next" hidden title="Zobrazit další doporučené" aria-label="Zobrazit další doporučené">↻</button><button type="button" id="sp-close" title="Minimalizovat doporučené" aria-label="Minimalizovat nebo rozbalit doporučené" aria-expanded="true">−</button></span></div>
+      <div class="sp-list" id="sp-list"></div>
+    </div>
+  </div>
+
   <div class="legend" id="legend"></div>
 </section>
+
 <button type="button" class="navbtn" id="viewbtn" aria-controls="casova-osa"><span class="ico" aria-hidden="true">→</span><span id="viewlbl">Časová osa</span> <small id="viewsub">kdy se co koná</small></button>
+<div class="mini-back-bar" id="mini-back-bar"><button type="button" class="btn back" id="minibackbtn">← Zpět na mapu</button></div>
 
 <div class="wrap tlview" id="tlview" hidden>
   <section class="panel tl" id="casova-osa">
@@ -372,37 +1025,33 @@ body.view-tl .legend, body.view-tl #viewbtn{display:none}
       <div class="tlsort"><label for="tl-sort">Řadit:</label><select id="tl-sort"><option value="start">Podle termínu</option><option value="deadline">Nejbližší uzávěrka</option><option value="country">Podle země</option></select></div>
     </div>
     <div class="tlgrid"><div class="tlinner" id="tl"></div></div>
-    <div class="tlleg"><span><i class="dot" style="background:var(--muted);border-radius:3px;width:18px;height:10px"></i>termín akce</span><span><i style="width:10px;height:10px;border:2px solid var(--muted);transform:rotate(45deg)"></i>uzávěrka přihlášek</span><span><i style="width:0;height:12px;border-left:2px solid var(--warn)"></i>dnes</span></div>
+    <div class="tlleg"><span><i class="dot" style="background:var(--muted);border-radius:999px;width:18px;height:10px"></i>termín akce</span><span><i style="width:10px;height:10px;border:2px solid var(--muted);border-radius:2px;transform:rotate(45deg)"></i>uzávěrka přihlášek</span><span><i style="width:0;height:12px;border-left:2.5px solid var(--coral)"></i>dnes</span></div>
   </section>
 
-
-  <footer>Mapové podklady: OpenStreetMap, Esri. Zdroje dat: oficiální stránky vysokých škol, databáze IMOTION (staffmobility.eu) a stránky partnerských univerzit; ke každé akci je v detailu uveden zdroj a stav ověření. „Částečně ověřeno“ znamená, že část údajů pochází z IMOTION nebo ze stránky partnera. Souřadnice jsou přibližné. Před přihlášením si uzávěrku vždy ověřte u pořadatele.</footer>
+  <footer>Mapové podklady: OpenStreetMap, Esri. Zdroje dat: oficiální stránky vysokých škol, databáze IMOTION (staffmobility.eu) a stránky partnerských univerzit; ke každé akci je v detailu uveden zdroj a stav ověření. Souřadnice jsou přibližné. Před přihlášením si uzávěrku vždy ověřte u pořadatele.</footer>
 </div>
 
 <dialog class="dlg" id="dlg" aria-labelledby="dlg-title"><div id="dlg-body"></div></dialog>
+<dialog class="dlg" id="about-dlg" aria-labelledby="about-title"><div id="about-body"></div></dialog>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
 "use strict";
-/* Erasmus International Weeks – mapa. Data: data.json (pole záznamů, viz README). */
 const TODAY = new Date().toISOString().slice(0, 10) < "2026-11-13" ? "2026-11-13" : new Date().toISOString().slice(0, 10);
 const MON = ["led","úno","bře","dub","kvě","čvn","čvc","srp","zář","říj","lis","pro"];
 const MESNAZ = ["leden","únor","březen","duben","květen","červen","červenec","srpen","září","říjen","listopad","prosinec"];
 const MOBCZ = {teaching:"učit", training:"školit se", studying:"studovat"};
-const OBORY = {zdravi:"Zdravotnictví a sociální práce", pedag:"Pedagogika a vzdělávání", design:"Design, umění a média", human:"Humanitní a sociální vědy", tech:"Technika", it:"Informatika a AI", ekon:"Ekonomie, právo a management", prir:"Přírodní vědy a životní prostředí", intl:"Správa VŠ a internacionalizace"};
-const FOCUS_ZOOM = 6; // maximální přiblížení při výběru
+const OBORY = {zdravi:"Zdravotnictví a sociální práce", pedag:"Pedagogika a vzdělávání", design:"Design, umění a média", human:"Humanitní a sociální vědy", tech:"Technika", it:"Informatika a AI", ekon:"Ekonomie, právo a management", prir:"Přírodní vědy a životní prostředí", intl:"Správa VŠ a internacionalizace", jine:"Jiné"};
+const oborLabel = (e, o) => o === "jine" && e.field_custom ? `Jiné: ${e.field_custom}` : (OBORY[o] || "");
+const FOCUS_ZOOM = 6;
 
 let EV = [], META = {}, BASE_SUB = "";
-let filter = "all", obor = "all", query = "", hidePast = false, onlyFavs = false, sortBy = "start", tlSort = "start";
+let filter = "all", obor = "all", query = "", hidePast = false, onlyFavs = false, sortBy = "start", tlSort = "start", spotClosed = false;
 const FAV_KEY = "eiw-favs";
 const favs = new Set((() => { try { const a = JSON.parse(localStorage.getItem(FAV_KEY) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } })());
 function saveFavs(){ try { localStorage.setItem(FAV_KEY, JSON.stringify([...favs])); } catch (e) {} }
-function toggleFav(id){
-  if (favs.has(id)) favs.delete(id); else favs.add(id);
-  saveFavs();
-  renderAll();
-}
+function toggleFav(id){ if (favs.has(id)) favs.delete(id); else favs.add(id); saveFavs(); renderAll(); }
 const X = {zeme:"all", fee:"all", dl:"all", ver:false};
 const selMes = new Set();
 let map = null, cluster = null, markers = {}, selectedId = null, savedView = null;
@@ -412,7 +1061,6 @@ const d = s => new Date(s + "T00:00:00");
 const dayDiff = (a, b) => Math.round((d(b) - d(a)) / 864e5);
 const fmt = (a, b) => { const A = d(a), B = d(b || a); return A.getMonth() === B.getMonth() ? (A.getDate() === B.getDate() ? `${A.getDate()}. ${A.getMonth()+1}.` : `${A.getDate()}.–${B.getDate()}. ${A.getMonth()+1}.`) : `${A.getDate()}. ${A.getMonth()+1}.–${B.getDate()}. ${B.getMonth()+1}.`; };
 const fmt1 = a => { const A = d(a); return `${A.getDate()}. ${A.getMonth()+1}. ${A.getFullYear()}`; };
-const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const mcol = e => `var(--m${d(e.start).getMonth()+1})`;
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : null;
@@ -422,7 +1070,6 @@ const norm = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "
 const isPast = e => !!(e.deadline && dayDiff(TODAY, e.deadline) < 0);
 const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ---------- filtry ---------- */
 function feeOk(e){ const f = e.fee_eur;
   if (X.fee === "all") return true; if (X.fee === "na") return f == null; if (f == null) return false;
   return X.fee === "free" ? f === 0 : X.fee === "low" ? f > 0 && f <= 200 : f > 200; }
@@ -430,7 +1077,7 @@ function dlOk(e){ if (X.dl === "all") return true; if (!e.deadline) return false
   return (X.dl === "open" && n >= 0) || (X.dl === "soon" && n >= 0 && n <= 30); }
 function queryOk(e){
   if (!query) return true;
-  if (e._hay == null) e._hay = norm([e.event_name, e.uni, e.uni_short, e.city, e.country, e.topic, e.notes, e.erasmus_code].filter(Boolean).join(" "));
+  if (e._hay == null) e._hay = norm([e.event_name, e.uni, e.uni_short, e.city, e.country, e.topic, e.notes, e.erasmus_code, e.field_custom].filter(Boolean).join(" "));
   return e._hay.includes(query);
 }
 function visible(){
@@ -446,12 +1093,26 @@ function hasActiveFilters(){
     || X.zeme !== "all" || X.fee !== "all" || X.dl !== "all" || selMes.size > 0 || X.ver;
 }
 
-/* ---------- seznam ---------- */
 function dlTag(e){
-  if (!e.deadline) return `<span class="tag dl">uzávěrka ${e.deadline_note ? esc(e.deadline_note) : "neuvedena"}</span>`;
-  const n = dayDiff(TODAY, e.deadline); const note = e.deadline_note ? ` (${esc(e.deadline_note)})` : "";
-  if (n < 0) return `<span class="tag dl past">uzávěrka ${fmt1(e.deadline)} prošla${note}</span>`;
-  return `<span class="${n <= 30 ? "tag dl soon" : "tag dl"}">přihláška do ${fmt1(e.deadline)} · ${n} dní${note}</span>`;
+  if (!e.deadline) {
+    const note = e.deadline_note && e.deadline_note.length <= 28 ? esc(e.deadline_note) : "neuvedena";
+    return `<span class="tag dl">uzávěrka ${note}</span>`;
+  }
+  const n = dayDiff(TODAY, e.deadline);
+  if (n < 0) return `<span class="tag dl past">uzávěrka ${fmt1(e.deadline)} prošla</span>`;
+  return `<span class="${n <= 30 ? "tag dl soon" : "tag dl"}">do ${fmt1(e.deadline)} · ${n} dní</span>`;
+}
+function interleaveFeatured(sorted, topN = 3, gap = 5){
+  const feat = [], org = [];
+  sorted.forEach(e => (featuredIds.has(e.id) ? feat : org).push(e));
+  if (!feat.length) return sorted;
+  const out = feat.splice(0, topN);
+  let i = 0;
+  while (i < org.length || feat.length) {
+    for (let k = 0; k < gap && i < org.length; k++) out.push(org[i++]);
+    if (feat.length) out.push(feat.shift());
+  }
+  return out;
 }
 function sortedList(arr){
   const a = [...arr];
@@ -461,83 +1122,102 @@ function sortedList(arr){
   } else if (sortBy === "fee") {
     const f = e => e.fee_eur == null ? 1e9 : e.fee_eur;
     a.sort((x, y) => f(x) - f(y) || x.start.localeCompare(y.start));
+  } else {
+    a.sort((x, y) => x.start.localeCompare(y.start));
   }
-  return a;
+  return interleaveFeatured(a, 3, 5);
 }
 function renderList(){
   const L = $("list"), vis = sortedList(visible());
-  if (!vis.length){ L.innerHTML = `<p style="padding:12px;color:var(--muted)">Žádná akce neodpovídá filtrům.</p>`; return; }
+  L.scrollTop = 0;
+  if (!vis.length){ L.innerHTML = `<p style="padding:18px;color:var(--muted);text-align:center">Těmhle filtrům teď nic neodpovídá — zkus něco povolit!</p>`; return; }
   L.innerHTML = vis.map(e => `
-    <div class="ev${isPast(e) ? " past" : ""}" tabindex="0" data-id="${e.id}" style="--c:${mcol(e)}">
+    <div class="ev${isPast(e) ? " past" : ""}${featuredIds.has(e.id) ? " feat" : ""}" tabindex="0" data-id="${e.id}" style="--c:${mcol(e)}">
       <div class="date">${fmt(e.start, e.end)}<small>${d(e.start).getFullYear()}</small></div>
       <div>
         <div class="ev-hd"><h3>${esc(e.event_name)}</h3><button type="button" class="star${favs.has(e.id) ? " on" : ""}" data-star="${e.id}" aria-pressed="${favs.has(e.id)}" title="${favs.has(e.id) ? "Odebrat z uložených" : "Uložit do oblíbených"}">${favs.has(e.id) ? "★" : "☆"}</button></div>
         <div class="uni">${esc(e.uni_short || e.uni)} · ${esc(e.city)}, ${esc(e.country)}</div>
         <div class="tags">
+          ${featuredIds.has(e.id) ? `<span class="tag feat">★ Doporučeno</span>` : ""}
           ${e.mobility.map(m => `<span class="tag">${MOBCZ[m] || m}</span>`).join("")}
           ${dlTag(e)}
-          ${e.fee_text ? `<span class="tag">${esc(e.fee_text.length > 40 ? (e.fee_eur === 0 ? "zdarma" : e.fee_eur != null ? e.fee_eur + " €" : "poplatek: viz detail") : e.fee_text)}</span>` : ""}
-          ${(e.fields || []).map(o => OBORY[o] ? `<span class="tag ob">${OBORY[o]}</span>` : "").join("")}
+          ${e.fee_text ? `<span class="tag">${esc(e.fee_text.length > 36 ? (e.fee_eur === 0 ? "zdarma" : e.fee_eur != null ? e.fee_eur + " €" : "poplatek: viz detail") : e.fee_text)}</span>` : ""}
+          ${(e.fields || []).map(o => oborLabel(e, o) ? `<span class="tag ob">${esc(oborLabel(e, o))}</span>` : "").join("")}
           <span class="tag ${st(e) === "ověřeno" ? "ok" : "part"}">${st(e)}</span>
         </div>
-        <button type="button" class="more">Zobrazit detail →</button>${safeUrl(e.event_url) ? `<a href="${esc(e.event_url)}" target="_blank" rel="noopener">Stránka akce ↗</a>` : ""}
+        <div class="ev-acts"><button type="button" class="more">Zobrazit detail →</button>${safeUrl(e.event_url) ? `<a href="${esc(e.event_url)}" target="_blank" rel="noopener">Web akce ↗</a>` : ""}</div>
       </div>
     </div>`).join("");
 }
 $("list").addEventListener("click", ev => {
-  const sb = ev.target.closest("[data-star]");
-  if (sb) { ev.stopPropagation(); toggleFav(sb.dataset.star); return; }
+  const sb = ev.target.closest("[data-star]"); if (sb) { ev.stopPropagation(); toggleFav(sb.dataset.star); return; }
   if (ev.target.closest("a")) return;
   const el = ev.target.closest(".ev"); if (!el) return;
   if (ev.target.closest(".more")) { openDetail(el.dataset.id); return; }
   pick(el.dataset.id);
 });
-$("list").addEventListener("keydown", ev => {
-  const el = ev.target.closest(".ev"); if (!el || (ev.key !== "Enter" && ev.key !== " ")) return;
-  ev.preventDefault(); pick(el.dataset.id);
-});
+$("list").addEventListener("keydown", ev => { const el = ev.target.closest(".ev"); if (!el || (ev.key !== "Enter" && ev.key !== " ")) return; ev.preventDefault(); pick(el.dataset.id); });
 function pick(id){ if (selectedId === id) openDetail(id); else focusEv(id); }
 
-/* ---------- detail ---------- */
+function fmtSrc(u){
+  try {
+    const p = new URL(u);
+    const host = p.hostname.replace(/^www\./, "");
+    const path = decodeURIComponent(p.pathname || "/");
+    if (/\.pdf$/i.test(path)) return `${host} · PDF ↗`;
+    const seg = path.split("/").filter(Boolean).slice(-1)[0] || "";
+    const shortSeg = seg.length > 26 ? seg.slice(0, 24) + "…" : seg;
+    return shortSeg ? `${host} / ${shortSeg} ↗` : `${host} ↗`;
+  } catch (e) { return u; }
+}
 function openDetail(id){
   const e = EV.find(x => x.id === id); if (!e) return;
   const dlg = $("dlg");
   const dlTxt = e.deadline ? (dayDiff(TODAY, e.deadline) < 0 ? `${fmt1(e.deadline)} (prošla)` : `${fmt1(e.deadline)} (za ${dayDiff(TODAY, e.deadline)} dní)`) : "neuvedena";
+  const shortDlNote = e.deadline_note && e.deadline_note.length <= 28 ? `<br><small>${esc(e.deadline_note)}</small>` : "";
+  const longDlNote = e.deadline_note && e.deadline_note.length > 28 ? `<div class="dl-note"><b>K uzávěrce:</b> ${esc(e.deadline_note)}</div>` : "";
   const second = e.start2 ? `<div class="fact"><b>2. termín</b><span>${fmt(e.start2, e.end2)} ${d(e.start2).getFullYear()}</span></div>` : "";
   const li = arr => (arr && arr.length) ? `<ul>${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p style="color:var(--muted)">neuvedeno</p>`;
   const fmtEmails = raw => raw ? raw.split(/[;,]\s*/).filter(Boolean).map(em => em.includes("@") ? `<a href="mailto:${esc(em.trim())}">${esc(em.trim())}</a>` : esc(em)).join("; ") : "";
   const kont = (e.contacts || []).length ? e.contacts.map(k => `<div><b>${esc(k.name || "Tým")}</b>${k.role ? `<br><small>${esc(k.role)}</small>` : ""}<br>${fmtEmails(k.email)}${k.phone ? ` · ${esc(k.phone)}` : ""}</div>`).join("") : `<p style="color:var(--muted)">neuvedeno</p>`;
   const v = e.verify || {};
+  const hasReg = safeUrl(e.registration_url) || safeUrl(e.registration_url2);
+  const srcs = (e.source_urls || []).filter(safeUrl);
+  const isDlPassed = e.deadline && dayDiff(TODAY, e.deadline) < 0;
+  const regBtnClass = isDlPassed ? "btn" : "btn pri";
+  const regBtnTxt = isDlPassed ? "Registrace (po uzávěrce) ↗" : "Chci se přihlásit ↗";
+  const eventBtnClass = (!hasReg || isDlPassed) ? "btn pri" : "btn";
   $("dlg-body").innerHTML = `
    <div class="hd" style="--c:${mcol(e)}">
      <h2 id="dlg-title">${esc(e.event_name)}</h2>
      <div class="uni">${esc(e.uni)} · ${esc(e.city)}, ${esc(e.country)}</div>
-     <div class="tags">${e.mobility.map(m => `<span class="tag">${MOBCZ[m] || m}</span>`).join("")}${(e.fields || []).map(o => OBORY[o] ? `<span class="tag ob">${OBORY[o]}</span>` : "").join("")}<span class="tag ${st(e) === "ověřeno" ? "ok" : "part"}">${st(e)}</span></div>
+     <div class="tags">${featuredIds.has(e.id) ? `<span class="tag feat">★ Doporučeno · Ověřený pořadatel</span>` : ""}${e.mobility.map(m => `<span class="tag">${MOBCZ[m] || m}</span>`).join("")}${(e.fields || []).map(o => oborLabel(e, o) ? `<span class="tag ob">${esc(oborLabel(e, o))}</span>` : "").join("")}<span class="tag ${st(e) === "ověřeno" ? "ok" : "part"}">${st(e)}</span></div>
      <button class="x" id="dlg-x" aria-label="Zavřít detail">×</button>
    </div>
    <div class="bd">
      <div class="facts">
        <div class="fact"><b>Termín</b><span>${fmt(e.start, e.end)} ${d(e.start).getFullYear()}</span></div>${second}
-       <div class="fact"><b>Uzávěrka</b><span>${dlTxt}${e.deadline_note ? `<br><small>${esc(e.deadline_note)}</small>` : ""}</span></div>
+       <div class="fact"><b>Uzávěrka</b><span>${dlTxt}${shortDlNote}</span></div>
        <div class="fact"><b>Poplatek</b><span>${esc(e.fee_text || (e.fee_eur === 0 ? "zdarma" : e.fee_eur != null ? e.fee_eur + " €" : "neuvedeno"))}</span></div>
        <div class="fact"><b>Kapacita</b><span>${esc(e.capacity || "neuvedeno")}</span></div>
        <div class="fact"><b>Jazyk</b><span>${esc(e.language || "neuvedeno")}</span></div>
        ${e.erasmus_code ? `<div class="fact"><b>Erasmus kód</b><span>${esc(e.erasmus_code)}</span></div>` : ""}
      </div>
-     <div><h3>Téma</h3><p>${esc(e.topic || "neuvedeno")}</p></div>
+     ${longDlNote}
+     <div><h3>O čem to je</h3><p>${esc(e.topic || "neuvedeno")}</p></div>
      <div><h3>Pro koho</h3>${li(e.audience)}</div>
-     <div><h3>Program</h3>${li(e.program)}</div>
-     <div><h3>Organizátoři</h3><div class="kont">${kont}</div></div>
+     <div><h3>Na co se těšit (program)</h3>${li(e.program)}</div>
+     <div><h3>Kontakt na organizátory</h3><div class="kont">${kont}</div></div>
      <div class="btns">
-       ${safeUrl(e.registration_url) ? `<a class="btn pri" href="${esc(e.registration_url)}" target="_blank" rel="noopener">Registrace ↗</a>` : ""}
-       ${safeUrl(e.registration_url2) ? `<a class="btn pri" href="${esc(e.registration_url2)}" target="_blank" rel="noopener">Registrace – 2. termín ↗</a>` : ""}
-       ${safeUrl(e.event_url) ? `<a class="btn" href="${esc(e.event_url)}" target="_blank" rel="noopener">Stránka akce ↗</a>` : ""}
+       ${safeUrl(e.registration_url) ? `<a class="${regBtnClass}" href="${esc(e.registration_url)}" target="_blank" rel="noopener">${regBtnTxt}</a>` : ""}
+       ${safeUrl(e.registration_url2) ? `<a class="${regBtnClass}" href="${esc(e.registration_url2)}" target="_blank" rel="noopener">Přihláška – 2. termín ↗</a>` : ""}
+       ${safeUrl(e.event_url) ? `<a class="${eventBtnClass}" href="${esc(e.event_url)}" target="_blank" rel="noopener">Stránka akce ↗</a>` : ""}
        <button type="button" class="btn" id="dlg-star" aria-pressed="${favs.has(id)}">${favs.has(id) ? "★ Uloženo" : "☆ Uložit"}</button>
-       <button type="button" class="btn" id="dlg-copy">Kopírovat odkaz</button>
+       <button type="button" class="btn" id="dlg-copy">Sdílet odkaz</button>
      </div>
      ${e.notes ? `<div class="note"><b>Poznámka:</b> ${esc(e.notes)}</div>` : ""}
      <div class="note"><b>Ověření${v.checked ? ` (${fmt1(v.checked)})` : ""}:</b> ${esc(st(e))}${v.note ? ` – ${esc(v.note)}` : ""}</div>
-     <div class="src"><b>Zdroje:</b><br>${(e.source_urls || []).filter(safeUrl).map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join("<br>") || "neuvedeno"}</div>
+     <div class="src"><b>Zdroje:</b><div class="src-list">${srcs.length ? srcs.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener" title="${esc(u)}">${esc(fmtSrc(u))}</a>`).join("") : "<span>neuvedeno</span>"}</div></div>
    </div>`;
   $("dlg-x").addEventListener("click", () => dlg.close());
   $("dlg-star").addEventListener("click", () => {
@@ -548,26 +1228,21 @@ function openDetail(id){
   $("dlg-copy").addEventListener("click", () => {
     const u = new URL(location.href); u.searchParams.set("akce", id); u.hash = "";
     const txt = u.toString();
-    const done = () => { const b = $("dlg-copy"); if (b) { b.textContent = "Odkaz zkopírován ✓"; setTimeout(() => { if ($("dlg-copy")) $("dlg-copy").textContent = "Kopírovat odkaz"; }, 2000); } };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(txt).then(done).catch(() => { prompt("Zkopírujte odkaz:", txt); });
-    } else {
-      const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select();
-      try { document.execCommand("copy"); done(); } catch (err) { prompt("Zkopírujte odkaz:", txt); }
-      ta.remove();
-    }
+    const done = () => { const b = $("dlg-copy"); if (b) { b.textContent = "Zkopírováno ✓"; setTimeout(() => { if ($("dlg-copy")) $("dlg-copy").textContent = "Sdílet odkaz"; }, 2000); } };
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done).catch(() => { prompt("Zkopírujte odkaz:", txt); }); }
+    else { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); done(); } catch (err) { prompt("Zkopírujte odkaz:", txt); } ta.remove(); }
   });
   if (typeof dlg.showModal === "function") { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute("open", "");
+  const bd = $("dlg-body").querySelector(".bd"); if (bd) bd.scrollTop = 0;
   focusEv(id, true);
 }
 $("dlg").addEventListener("click", ev => { if (ev.target.id === "dlg") ev.target.close(); });
 
-/* ---------- mapa ---------- */
 const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
 const BASES = {
-  "Tmavá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false})]),
-  "Mapa": () => L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, noWrap:false, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}),
   "Světlá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false})]),
+  "Mapa": () => L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom:19, noWrap:false, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}),
+  "Tmavá": () => L.layerGroup([L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false, attribution:"Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap"}), L.tileLayer(ESRI + "Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}", {maxZoom:16, noWrap:false})]),
   "Satelit": () => L.tileLayer(ESRI + "World_Imagery/MapServer/tile/{z}/{y}/{x}", {maxZoom:19, noWrap:false, attribution:"Tiles &copy; Esri, Maxar, Earthstar Geographics"})
 };
 function updateMinZoom(){
@@ -578,52 +1253,48 @@ function updateMinZoom(){
   if (map.getZoom() < mz) map.setZoom(mz);
 }
 function icon(e, sel){
-  return L.divIcon({className: "evm" + (sel ? " sel" : "") + (isPast(e) ? " past" : ""), iconSize: [0, 0],
-    html: `<span class="pin" style="--c:${mcol(e)}"></span><span class="plbl" style="--c:${mcol(e)}">${favs.has(e.id) ? `<span class="pstar">★</span>` : ""}<span class="pname">${esc(e.uni_short || e.uni)}</span><span class="pdate">${fmt(e.start, e.end)}</span></span>`});
+  const past = isPast(e);
+  const feat = featuredIds.has(e.id);
+  return L.divIcon({className: "evm" + (sel ? " sel" : "") + (past ? " past" : "") + (feat ? " feat" : ""), iconSize: [0, 0],
+    html: `<span class="pin" style="--c:${mcol(e)}"></span><span class="plbl" style="--c:${mcol(e)}">${feat ? `<span class="pfeat">★</span>` : ""}${favs.has(e.id) ? `<span class="pstar">★</span>` : ""}<span class="pname">${esc(e.uni_short || e.uni)}</span><span class="pdate">${fmt(e.start, e.end)}</span>${past ? `<span class="ppast">po uzávěrce</span>` : ""}</span>`});
 }
 let _lblRaf = 0;
-function scheduleDeconflict(){
-  if (_lblRaf) cancelAnimationFrame(_lblRaf);
-  _lblRaf = requestAnimationFrame(deconflictLabels);
-}
+function scheduleDeconflict(){ if (_lblRaf) cancelAnimationFrame(_lblRaf); _lblRaf = requestAnimationFrame(deconflictLabels); }
 function deconflictLabels(){
   _lblRaf = 0;
   if (!map || document.body.classList.contains("mini")) return;
-  const boxes = [];
-  const pad = 4;
-  document.querySelectorAll("#map .clu .ccirc, #map .clu .clbl").forEach(c => {
-    const r = c.getBoundingClientRect();
-    if (r.width && r.height) boxes.push({l:r.left-pad, r:r.right+pad, t:r.top-pad, b:r.bottom+pad});
-  });
+  const boxes = [], pad = 4;
+  document.querySelectorAll("#map .clu .ccirc").forEach(c => { const r = c.getBoundingClientRect(); if (r.width && r.height) boxes.push({l:r.left-pad, r:r.right+pad, t:r.top-pad, b:r.bottom+pad}); });
   const pins = [...document.querySelectorAll("#map .evm")];
   pins.forEach(p => {
-    const d = p.querySelector(".pin");
-    if (d) { const r = d.getBoundingClientRect(); if (r.width && r.height) boxes.push({l:r.left-2, r:r.right+2, t:r.top-2, b:r.bottom+2, owner:p}); }
-    const l = p.querySelector(".plbl");
-    if (l) l.classList.remove("col-hide");
+    const d = p.querySelector(".pin"); if (d) { const r = d.getBoundingClientRect(); if (r.width && r.height) boxes.push({l:r.left-2, r:r.right+2, t:r.top-2, b:r.bottom+2, owner:p}); }
+    const l = p.querySelector(".plbl"); if (l) l.classList.remove("col-hide");
   });
-  pins.sort((a, b) => (b.classList.contains("sel") ? 1 : 0) - (a.classList.contains("sel") ? 1 : 0));
+  const prio = p => p.classList.contains("sel") ? 2 : (p.classList.contains("feat") ? 1 : 0);
+  pins.sort((a, b) => prio(b) - prio(a));
   for (const p of pins) {
-    const lbl = p.querySelector(".plbl");
-    if (!lbl) continue;
+    const lbl = p.querySelector(".plbl"); if (!lbl) continue;
     const isSel = p.classList.contains("sel");
-    const r = lbl.getBoundingClientRect();
-    if (!r.width || !r.height) continue;
+    const r = lbl.getBoundingClientRect(); if (!r.width || !r.height) continue;
     const box = {l:r.left-pad, r:r.right+pad, t:r.top-pad, b:r.bottom+pad};
     const hits = !isSel && boxes.some(o => o.owner !== p && box.l < o.r && box.r > o.l && box.t < o.b && box.b > o.t);
-    if (hits) lbl.classList.add("col-hide");
-    else boxes.push(box);
+    if (hits) lbl.classList.add("col-hide"); else boxes.push(box);
   }
 }
 let setBase = null;
 function initMap(){
   const el = $("map");
-  if (!window.L) { el.innerHTML = `<p style="padding:24px;color:var(--muted)">Mapu se nepodařilo načíst. Akce najdete v seznamu a na časové ose.</p>`; return; }
-  map = L.map(el, {zoomControl:false, worldCopyJump:true, maxBounds:[[-85, -1800], [85, 1800]], maxBoundsViscosity:1.0}).fitBounds([[35, -11], [64, 32]]);
+  if (!window.L) { el.innerHTML = `<p style="padding:24px;color:var(--muted)">Mapu se nepodařilo načíst.</p>`; return; }
+  map = L.map(el, {zoomControl:false, worldCopyJump:true, maxBounds:[[-85, -1800], [85, 1800]], maxBoundsViscosity:1.0});
+  const fitOpts = innerWidth > 900 ? {paddingTopLeft:[440, 24], paddingBottomRight:[270, 54]} : {padding:[24, 24]};
+  map.fitBounds([[35, -10], [63, 30]], fitOpts);
   updateMinZoom();
+  const syncLblZoom = () => el.classList.toggle("lbls-off", map.getZoom() < 6);
+  syncLblZoom();
+  map.on("zoomend", syncLblZoom);
   const layers = {}; for (const k in BASES) layers[k] = BASES[k]();
   const applyBaseTheme = k => el.classList.toggle("light-base", k === "Světlá" || k === "Mapa");
-  let start = "Tmavá"; try { const s = localStorage.getItem("eiw-base-v2"); if (s && layers[s]) start = s; } catch (e) {}
+  let start = "Světlá"; try { const s = localStorage.getItem("eiw-base-v4"); if (s && layers[s]) start = s; } catch (e) {}
   let current = layers[start].addTo(map);
   applyBaseTheme(start);
   applyTheme(start === "Tmavá" || start === "Satelit" ? "dark" : "light");
@@ -633,24 +1304,20 @@ function initMap(){
     current = layers[k].addTo(map);
     applyBaseTheme(k);
     const sel = $("base-select"); if (sel) sel.value = k;
-    try { localStorage.setItem("eiw-base-v2", k); } catch (e) {}
+    try { localStorage.setItem("eiw-base-v4", k); } catch (e) {}
     if (syncTheme) {
       const th = (k === "Tmavá" || k === "Satelit") ? "dark" : "light";
-      applyTheme(th);
-      try { localStorage.setItem("eiw-theme", th); } catch (e) {}
+      applyTheme(th); try { localStorage.setItem("eiw-theme-v4", th); } catch (e) {}
     }
   };
-  const Sel = L.Control.extend({options:{position:"topright"}, onAdd(){
-    const box = L.DomUtil.create("div", "basesel");
-    box.innerHTML = `<label for="base-select">Podklad</label><select id="base-select">${Object.keys(layers).map(k => `<option value="${k}"${k === start ? " selected" : ""}>${k}</option>`).join("")}</select>`;
-    L.DomEvent.disableClickPropagation(box); L.DomEvent.disableScrollPropagation(box);
-    box.querySelector("select").addEventListener("change", ev => setBase(ev.target.value));
-    return box;
-  }});
-  new Sel().addTo(map);
+  const bsel = $("base-select");
+  if (bsel) {
+    bsel.innerHTML = Object.keys(layers).map(k => `<option value="${k}"${k === start ? " selected" : ""}>${k}</option>`).join("");
+    bsel.addEventListener("change", ev => setBase(ev.target.value));
+  }
   const Fit = L.Control.extend({options:{position:"bottomright"}, onAdd(){
     const box = L.DomUtil.create("div", "fitctl");
-    box.innerHTML = `<button type="button" class="fitbtn" title="Vycentrovat na všechny viditelné akce" aria-label="Vycentrovat mapu na všechny viditelné akce">⌖</button>`;
+    box.innerHTML = `<button type="button" class="fitbtn" title="Vycentrovat na všechny viditelné akce" aria-label="Vycentrovat mapu">⌖</button>`;
     L.DomEvent.disableClickPropagation(box);
     box.querySelector("button").addEventListener("click", () => fitAll());
     return box;
@@ -659,48 +1326,39 @@ function initMap(){
   L.control.zoom({position:"bottomright"}).addTo(map);
   L.control.scale({imperial:false, position:"bottomleft"}).addTo(map);
   const hasCluster = typeof L.markerClusterGroup === "function";
-  cluster = hasCluster ? L.markerClusterGroup({showCoverageOnHover:false, maxClusterRadius:38, zoomToBoundsOnClick:false, spiderfyOnMaxZoom:false,
+  cluster = hasCluster ? L.markerClusterGroup({showCoverageOnHover:false, maxClusterRadius:54, zoomToBoundsOnClick:false, spiderfyOnMaxZoom:false,
     iconCreateFunction: c => {
       const ch = c.getAllChildMarkers(); const n = ch.length;
       const sel = ch.some(m => m.options.evId === selectedId);
-      const evs = ch.map(m => EV.find(x => x.id === m.options.evId)).filter(Boolean);
-      const cities = [...new Set(evs.map(e => e.city).filter(Boolean))];
-      const cityLbl = cities.length === 1 ? `<span class="clbl">${esc(cities[0])}</span>` : "";
-      return L.divIcon({html:`<div class="ccirc">${n}</div>${cityLbl}`, className:"clu" + (n >= 10 ? " big" : "") + (sel ? " has-sel" : ""), iconSize:[48, 48]});
+      const hasFeat = ch.some(m => featuredIds.has(m.options.evId));
+      return L.divIcon({html:`<div class="ccirc">${n}</div>${hasFeat ? `<span class="cfeat" aria-hidden="true">★</span>` : ""}`, className:"clu" + (n >= 10 ? " big" : "") + (sel ? " has-sel" : "") + (hasFeat ? " has-feat" : ""), iconSize:[42, 42]});
     }}) : L.layerGroup();
   if (hasCluster) {
     cluster.on("clusterclick", a => {
       const ch = a.layer.getAllChildMarkers();
       const b = a.layer.getBounds();
-      const spanM = b.getSouthWest().distanceTo(b.getNorthEast());
-      if (spanM >= 5000 && map.getZoom() < 10) {
-        map.fitBounds(b, {padding:[50, 50], maxZoom:10});
-        return;
-      }
+      if (b.getSouthWest().distanceTo(b.getNorthEast()) >= 5000 && map.getZoom() < 10) { map.fitBounds(b, {padding:[50, 50], maxZoom:10}); return; }
       const evs = ch.map(m => EV.find(x => x.id === m.options.evId)).filter(Boolean)
-        .sort((x, y) => x.start.localeCompare(y.start));
+        .sort((x, y) => (featuredIds.has(y.id) ? 1 : 0) - (featuredIds.has(x.id) ? 1 : 0) || x.start.localeCompare(y.start));
       const cities = [...new Set(evs.map(e => e.city).filter(Boolean))];
       const title = cities.length === 1 ? `${cities[0]} · ${evs.length} akcí` : `${evs.length} akcí v tomto místě`;
       const box = document.createElement("div");
-      box.innerHTML = `<div class="cpick-hd">${esc(title)}</div><div class="cpick-list">${evs.map(e =>
-        `<button type="button" class="cpick-item${e.id === selectedId ? " on" : ""}${isPast(e) ? " past" : ""}" data-id="${e.id}" style="--c:${mcol(e)}">` +
-        `<span class="cpick-dot"></span><span><div class="cpick-date">${fmt(e.start, e.end)} ${d(e.start).getFullYear()}${isPast(e) ? `<span class="cpick-past">(uzávěrka prošla)</span>` : ""}</div>` +
+      box.innerHTML = `<div class="cpick-hd">${esc(title)}</div><div class="cpick-list">${evs.map(e => {
+        const isF = featuredIds.has(e.id);
+        return `<button type="button" class="cpick-item${e.id === selectedId ? " on" : ""}${isPast(e) ? " past" : ""}${isF ? " feat" : ""}" data-id="${e.id}" style="--c:${mcol(e)}">` +
+        `<span class="cpick-dot"></span><span><div class="cpick-date">${isF ? `<span class="cpick-feat">★ Doporučeno</span>` : ""}${fmt(e.start, e.end)} ${d(e.start).getFullYear()}${isPast(e) ? `<span class="cpick-past">(po uzávěrce)</span>` : ""}</div>` +
         `<div class="cpick-name">${esc(e.event_name)}</div>` +
-        `<div class="cpick-uni">${esc(e.uni_short || e.uni)} · ${e.mobility.map(m => MOBCZ[m] || m).join(", ")}</div></span></button>`
-      ).join("")}</div>`;
+        `<div class="cpick-uni">${esc(e.uni_short || e.uni)} · ${e.mobility.map(m => MOBCZ[m] || m).join(", ")}</div></span></button>`;
+      }).join("")}</div>`;
       box.addEventListener("click", ev => {
-        const btn = ev.target.closest(".cpick-item[data-id]");
-        if (!btn) return;
-        const id = btn.dataset.id;
-        map.closePopup();
-        openDetail(id);
-        const li = document.querySelector(`.ev[data-id="${id}"]`);
-        if (li) li.scrollIntoView({block:"nearest", behavior:"smooth"});
+        const btn = ev.target.closest(".cpick-item[data-id]"); if (!btn) return;
+        map.closePopup(); openDetail(btn.dataset.id);
+        const li = document.querySelector(`.ev[data-id="${btn.dataset.id}"]`); if (li) li.scrollIntoView({block:"nearest", behavior:"smooth"});
       });
-      L.popup({maxWidth:340, offset:[0, -14]}).setLatLng(a.layer.getLatLng()).setContent(box).openOn(map);
+      L.popup({maxWidth:345, offset:[0, -14]}).setLatLng(a.layer.getLatLng()).setContent(box).openOn(map);
     });
+    cluster.on("animationend", scheduleDeconflict);
   }
-  if (hasCluster) cluster.on("animationend", scheduleDeconflict);
   cluster.addTo(map);
   map.on("zoomend moveend", scheduleDeconflict);
 }
@@ -708,8 +1366,8 @@ function renderMap(){
   if (!map) return;
   cluster.clearLayers(); markers = {};
   const ms = visible().map(e => {
-    const m = L.marker([e.lat, e.lng], {icon: icon(e, e.id === selectedId), evId: e.id, keyboard: true, title: e.uni_short || e.uni, riseOnHover: true});
-    m.bindTooltip(() => `<b>${esc(e.uni_short || e.uni)}</b><br>${esc(e.event_name)}<br>${fmt(e.start, e.end)} ${d(e.start).getFullYear()}${e.deadline ? `<br>přihláška do ${fmt1(e.deadline)}` : ""}<br><i>${selectedId === e.id ? "klikněte pro detail" : "klikněte pro výběr, znovu pro detail"}</i>`, {direction:"top", offset:[0, -10]});
+    const m = L.marker([e.lat, e.lng], {icon: icon(e, e.id === selectedId), evId: e.id, keyboard: true, title: e.uni_short || e.uni, riseOnHover: true, zIndexOffset: e.id === selectedId ? 1000 : (featuredIds.has(e.id) ? 500 : 0)});
+    m.bindTooltip(() => `${featuredIds.has(e.id) ? `<span style="color:#b45309;font-weight:800">★ Doporučeno</span><br>` : ""}<b>${esc(e.uni_short || e.uni)}</b><br>${esc(e.event_name)}<br>${fmt(e.start, e.end)} ${d(e.start).getFullYear()}${e.deadline ? `<br>přihláška do ${fmt1(e.deadline)}` : ""}<br><i>${selectedId === e.id ? "klikni pro detail" : "klikni pro výběr, znovu pro detail"}</i>`, {direction:"top", offset:[0, -10]});
     m.on("click", () => { if (selectedId === e.id) { openDetail(e.id); return; } focusEv(e.id, true); const li = document.querySelector(`.ev[data-id="${e.id}"]`); if (li) li.scrollIntoView({block:"nearest", behavior:"smooth"}); });
     markers[e.id] = m; return m;
   });
@@ -718,70 +1376,62 @@ function renderMap(){
 }
 function applySel(prev){
   document.querySelectorAll(".ev,.row[data-id]").forEach(x => x.classList.toggle("on", x.dataset.id === selectedId));
-  [prev, selectedId].forEach(id => { const m = markers[id]; if (!m) return; const e = EV.find(x => x.id === id); m.setIcon(icon(e, id === selectedId)); m.setZIndexOffset(id === selectedId ? 1000 : 0); });
+  [prev, selectedId].forEach(id => { const m = markers[id]; if (!m) return; const e = EV.find(x => x.id === id); m.setIcon(icon(e, id === selectedId)); m.setZIndexOffset(id === selectedId ? 1000 : (featuredIds.has(id) ? 500 : 0)); });
   if (cluster && cluster.refreshClusters) cluster.refreshClusters();
   scheduleDeconflict();
 }
 function zoomTo(id){
-  // Přiblíží jen tolik, aby byla vybraná akce uprostřed a byli vidět i její 2 nejbližší sousedé.
   const ll = markers[id].getLatLng();
-  const others = Object.keys(markers).filter(k => k !== id).map(k => markers[k].getLatLng())
-    .filter(o => o.distanceTo(ll) > 500).sort((a, b) => ll.distanceTo(a) - ll.distanceTo(b)).slice(0, 2);
+  const others = Object.keys(markers).filter(k => k !== id).map(k => markers[k].getLatLng()).filter(o => o.distanceTo(ll) > 500).sort((a, b) => ll.distanceTo(a) - ll.distanceTo(b)).slice(0, 2);
   let z = FOCUS_ZOOM;
-  if (others.length) {
-    const pts = [ll]; others.forEach(o => { pts.push(o); pts.push(L.latLng(2 * ll.lat - o.lat, 2 * ll.lng - o.lng)); });
-    z = Math.min(FOCUS_ZOOM, map.getBoundsZoom(L.latLngBounds(pts).pad(0.15)));
-  }
+  if (others.length) { const pts = [ll]; others.forEach(o => { pts.push(o); pts.push(L.latLng(2 * ll.lat - o.lat, 2 * ll.lng - o.lng)); }); z = Math.min(FOCUS_ZOOM, map.getBoundsZoom(L.latLngBounds(pts).pad(0.15))); }
   z = Math.max(z, 4);
-  if (reduceMotion()) map.setView(ll, z, {animate:false});
-  else map.flyTo(ll, z, {duration:1.0});
+  if (reduceMotion()) map.setView(ll, z, {animate:false}); else map.flyTo(ll, z, {duration:1.0});
 }
 function fitAll(){
   if (!map) return; const pts = visible().map(e => [e.lat, e.lng]); if (!pts.length) return;
-  map.fitBounds(L.latLngBounds(pts), {padding:[28, 28], maxZoom:6, animate:true});
+  if (document.body.classList.contains("mini")) {
+    map.fitBounds(L.latLngBounds(pts), {padding:[12, 12], maxZoom:5, animate:false});
+    if (map.getZoom() < 4) map.setView([50.2, 14.5], 4, {animate:false});
+    return;
+  }
+  const opts = innerWidth > 900
+    ? {paddingTopLeft:[440, 24], paddingBottomRight:[270, 54], maxZoom:6, animate:true}
+    : {padding:[28, 28], maxZoom:6, animate:true};
+  map.fitBounds(L.latLngBounds(pts), opts);
 }
 function setMini(on){
   if (!map || on === document.body.classList.contains("mini")) return;
   if (on) savedView = {c: map.getCenter(), z: map.getZoom()};
   document.body.classList.toggle("mini", on);
-  map.invalidateSize();
-  updateMinZoom();
+  map.invalidateSize(); updateMinZoom();
   if (on) fitAll(); else if (savedView) map.setView(savedView.c, savedView.z, {animate:false});
 }
 function focusEv(id, noZoom){
   const prev = selectedId; selectedId = id; applySel(prev);
-  if (!noZoom && map && markers[id] && !document.body.classList.contains("mini")) zoomTo(id);
+  if (noZoom || !map || !markers[id]) return;
+  if (document.body.classList.contains("mini")) {
+    const ll = markers[id].getLatLng();
+    const z = Math.max(map.getZoom(), 5);
+    if (reduceMotion()) map.setView(ll, z, {animate:false}); else map.flyTo(ll, z, {duration:0.6});
+  } else {
+    zoomTo(id);
+  }
 }
 
-/* ---------- legenda, časová osa ---------- */
 function syncMesSelect(){
-  const s = $("f-mes");
-  let multi = s.querySelector('option[value="__multi__"]');
-  if (selMes.size > 1) {
-    if (!multi) { multi = document.createElement("option"); multi.value = "__multi__"; s.insertBefore(multi, s.children[1]); }
-    multi.textContent = `Vybráno měsíců: ${selMes.size}`;
-    s.value = "__multi__";
-  } else {
-    if (multi) multi.remove();
-    s.value = selMes.size === 1 ? [...selMes][0] : "all";
-  }
+  const s = $("f-mes"); let multi = s.querySelector('option[value="__multi__"]');
+  if (selMes.size > 1) { if (!multi) { multi = document.createElement("option"); multi.value = "__multi__"; s.insertBefore(multi, s.children[1]); } multi.textContent = `Vybráno měsíců: ${selMes.size}`; s.value = "__multi__"; }
+  else { if (multi) multi.remove(); s.value = selMes.size === 1 ? [...selMes][0] : "all"; }
 }
 function renderLegend(){
   const ms = [...new Set(EV.flatMap(months))].sort();
-  $("legend").innerHTML = `<span class="leglbl">Měsíce:</span>` + ms.map(k => {
-    const m = +k.slice(5, 7) - 1;
-    const on = selMes.has(k);
+  $("legend").innerHTML = `<span class="leglbl">Měsíce</span>` + ms.map(k => {
+    const m = +k.slice(5, 7) - 1, on = selMes.has(k);
     return `<button type="button" class="legbtn${on ? " on" : ""}" data-mes="${k}" aria-pressed="${on}" title="Přidat/odebrat ${MESNAZ[m]} ${k.slice(0, 4)}"><i class="dot" style="background:var(--m${m + 1})"></i>${MON[m]}</button>`;
   }).join("");
 }
-$("legend").addEventListener("click", ev => {
-  const b = ev.target.closest(".legbtn[data-mes]");
-  if (!b) return;
-  const k = b.dataset.mes;
-  if (selMes.has(k)) selMes.delete(k); else selMes.add(k);
-  syncMesSelect();
-  renderAll(); updCount();
-});
+$("legend").addEventListener("click", ev => { const b = ev.target.closest(".legbtn[data-mes]"); if (!b) return; const k = b.dataset.mes; if (selMes.has(k)) selMes.delete(k); else selMes.add(k); syncMesSelect(); renderAll(); updCount(); });
 function sortedTimeline(arr){
   const a = [...arr];
   if (tlSort === "deadline") {
@@ -789,76 +1439,95 @@ function sortedTimeline(arr){
     a.sort((x, y) => { const rx = rank(x), ry = rank(y); return rx[0] - ry[0] || rx[1].localeCompare(ry[1]) || x.start.localeCompare(y.start); });
   } else if (tlSort === "country") {
     a.sort((x, y) => (x.country || "").localeCompare(y.country || "", "cs") || x.start.localeCompare(y.start));
+  } else {
+    a.sort((x, y) => x.start.localeCompare(y.start));
   }
-  return a;
+  return interleaveFeatured(a, 3, 5);
 }
+let spotOffset = 0;
+function renderSpotlight(){
+  const box = $("spotlight"), list = $("sp-list"), nextBtn = $("sp-next");
+  if (!box || !list) return;
+  const allFeats = visible().filter(e => featuredIds.has(e.id));
+  if (!allFeats.length) { box.hidden = true; return; }
+  box.hidden = false;
+  const total = allFeats.length;
+  const shown = total <= 3 ? allFeats : Array.from({length: 3}, (_, k) => allFeats[(spotOffset + k) % total]);
+  const cnt = $("sp-cnt");
+  if (cnt) cnt.textContent = total > 3 ? `(3 z ${total})` : `(${total})`;
+  if (nextBtn) nextBtn.hidden = total <= 3;
+  list.scrollTop = 0;
+  list.innerHTML = shown.map(e => {
+    const dl = e.deadline ? (dayDiff(TODAY, e.deadline) >= 0 ? `do ${fmt1(e.deadline)}` : "po uzávěrce") : "";
+    return `<button type="button" class="sp-item" data-id="${e.id}">
+      <div class="sp-top"><span>${esc(e.uni_short || e.uni)} · ${esc(e.country_iso || "")}</span><span>${fmt(e.start, e.end)}</span></div>
+      <div class="sp-name">${esc(e.event_name)}</div>
+      <div class="sp-meta">${esc(e.city)}${dl ? ` · ${dl}` : ""}</div>
+    </button>`;
+  }).join("");
+}
+$("sp-next").addEventListener("click", ev => { ev.stopPropagation(); spotOffset += 1; renderSpotlight(); });
+$("sp-list").addEventListener("click", ev => {
+  const b = ev.target.closest(".sp-item[data-id]"); if (!b) return;
+  const id = b.dataset.id;
+  if (selectedId === id) openDetail(id); else focusEv(id);
+});
+function toggleSpotlight(){
+  const box = $("spotlight"), btn = $("sp-close");
+  spotClosed = box.classList.toggle("folded");
+  btn.textContent = spotClosed ? "+" : "−";
+  btn.title = spotClosed ? "Rozbalit doporučené" : "Minimalizovat doporučené";
+  btn.setAttribute("aria-expanded", String(!spotClosed));
+}
+$("sp-close").addEventListener("click", ev => { ev.stopPropagation(); toggleSpotlight(); });
+$("sp-hd").addEventListener("click", () => { if ($("spotlight").classList.contains("folded")) toggleSpotlight(); });
 function renderTimeline(){
-  const vis = sortedTimeline(visible());
-  const startD = "2026-11-01";
+  const vis = sortedTimeline(visible()), startD = "2026-11-01";
   const lastEnd = EV.reduce((m, e) => (e.end2 || e.end) > m ? (e.end2 || e.end) : m, "2027-06-30");
   const endD = lastEnd.slice(0, 7) + "-" + String(new Date(+lastEnd.slice(0, 4), +lastEnd.slice(5, 7), 0).getDate()).padStart(2, "0");
-  const span = dayDiff(startD, endD);
-  const pos = s => Math.max(0, Math.min(100, dayDiff(startD, s) / span * 100));
+  const span = dayDiff(startD, endD), pos = s => Math.max(0, Math.min(100, dayDiff(startD, s) / span * 100));
   const mlist = []; for (let y = 2026, m = 10; `${y}-${String(m + 1).padStart(2, "0")}` <= endD.slice(0, 7); ) { mlist.push([y, m]); m++; if (m === 12) { m = 0; y++; } }
   const ms = ([y, m]) => `${y}-${String(m + 1).padStart(2, "0")}-01`;
   const grid = mlist.map(x => `<div class="vline" style="left:${pos(ms(x))}%"></div>`).join("") + `<div class="vline today" style="left:${pos(TODAY)}%"></div>`;
   let h = `<div class="tlsticky"><div class="months"><div></div><div class="mrow">${mlist.map(([y, m]) => `<span style="left:${pos(ms([y, m]))}%">${MON[m]}${m === 0 || (y === 2026 && m === 10) ? " " + y : ""}</span>`).join("")}</div></div>`
-    + `<div class="row" style="border-top:0;min-height:18px"><div></div><div class="track" style="height:18px">${grid}<span class="todaylbl" style="left:${pos(TODAY)}%">dnes ${fmt(TODAY)}</span></div></div></div>`;
+    + `<div class="row" style="border-top:0;min-height:20px"><div></div><div class="track" style="height:20px">${grid}<span class="todaylbl" style="left:${pos(TODAY)}%">dnes ${fmt(TODAY)}</span></div></div></div>`;
   h += vis.map(e => {
     const pS = pos(e.start), pE = pos(e.end);
     const bars = `<div class="bar" title="${fmt(e.start, e.end)} ${d(e.start).getFullYear()}" style="left:${pS}%;width:${Math.max(0.5, pE - pS)}%"></div>` + (e.start2 ? `<div class="bar" title="${fmt(e.start2, e.end2)} ${d(e.start2).getFullYear()}" style="left:${pos(e.start2)}%;width:${Math.max(0.5, pos(e.end2) - pos(e.start2))}%"></div>` : "");
-    const pDl = e.deadline ? pos(e.deadline) : null;
+    const pDl = e.deadline ? Math.max(1.1, pos(e.deadline)) : null;
     const con = (pDl !== null && pDl < pS) ? `<div class="dlcon" style="left:${pDl}%;width:${pS - pDl}%"></div>` : "";
     const dl = e.deadline ? `<div class="dlm" title="uzávěrka ${fmt1(e.deadline)}" style="left:${pDl}%"></div>` : "";
-    return `<div class="row${e.id === selectedId ? " on" : ""}${isPast(e) ? " past" : ""}" data-id="${e.id}" tabindex="0" style="--c:${mcol(e)}">`
-      + `<div class="lbl" title="${esc(e.uni_short || e.uni)} – ${esc(e.event_name)}"><div class="lbl-top"><span class="lbl-iso">${esc(e.country_iso || "")}</span>${favs.has(e.id) ? `<span class="pstar">★</span>` : ""}<span class="lbl-uni">${esc(e.uni_short || e.uni)}</span><button type="button" class="tlbtn" data-detail="${e.id}">Detail</button></div><div class="lbl-ev">${esc(e.event_name)}</div></div>`
+    const isF = featuredIds.has(e.id);
+    return `<div class="row${e.id === selectedId ? " on" : ""}${isPast(e) ? " past" : ""}${isF ? " feat" : ""}" data-id="${e.id}" tabindex="0" style="--c:${mcol(e)}">`
+      + `<div class="lbl" title="${esc(e.uni_short || e.uni)} – ${esc(e.event_name)}"><div class="lbl-top"><span class="lbl-iso">${isF ? "★ " : ""}${esc(e.country_iso || "")}</span>${favs.has(e.id) ? `<span class="pstar">★</span>` : ""}<span class="lbl-uni">${esc(e.uni_short || e.uni)}</span><button type="button" class="tlbtn" data-detail="${e.id}">Detail</button></div><div class="lbl-ev">${esc(e.event_name)}</div></div>`
       + `<div class="track">${grid}${con}${bars}${dl}</div></div>`;
   }).join("");
-  $("tl").innerHTML = h;
-  $("tlcount").textContent = `${vis.length} akcí`;
+  $("tl").innerHTML = h; $("tlcount").textContent = `${vis.length} akcí`;
+  const tg = document.querySelector(".tlgrid"); if (tg) { tg.scrollTop = 0; tg.scrollLeft = 0; }
 }
-$("tl").addEventListener("click", ev => {
-  const db = ev.target.closest(".tlbtn[data-detail]");
-  if (db) { ev.stopPropagation(); openDetail(db.dataset.detail); return; }
-  const r = ev.target.closest(".row[data-id]"); if (r) pick(r.dataset.id);
-});
+$("tl").addEventListener("click", ev => { const db = ev.target.closest(".tlbtn[data-detail]"); if (db) { ev.stopPropagation(); openDetail(db.dataset.detail); return; } const r = ev.target.closest(".row[data-id]"); if (r) pick(r.dataset.id); });
 $("tl").addEventListener("keydown", ev => { const r = ev.target.closest(".row[data-id]"); if (!r || (ev.key !== "Enter" && ev.key !== " ")) return; ev.preventDefault(); pick(r.dataset.id); });
 
-/* ---------- vykreslení ---------- */
 function renderAll(){
   const vis = visible();
   $("listcount").textContent = `(${vis.length})`;
-  const favCnt = EV.filter(e => favs.has(e.id)).length;
-  $("favcount").textContent = `(${favCnt})`;
+  $("favcount").textContent = `(${EV.filter(e => favs.has(e.id)).length})`;
   const active = hasActiveFilters();
   $("q-reset").hidden = !active;
   const sub = $("subline");
-  if (BASE_SUB) {
-    sub.textContent = active ? `Zobrazeno ${vis.length} ze ${EV.length} akcí · filtr aktivní` : BASE_SUB;
-    sub.classList.toggle("filtered", active);
-  }
-  if (!vis.some(e => e.id === selectedId)) selectedId = (vis.find(e => e.deadline && e.deadline >= TODAY) || vis[0] || {}).id || null;
-  renderLegend(); renderList(); renderMap(); renderTimeline(); applySel(null);
+  if (BASE_SUB) { sub.textContent = active ? `Zobrazeno ${vis.length} ze ${EV.length} akcí · filtr aktivní` : BASE_SUB; sub.classList.toggle("filtered", active); }
+  if (selectedId && !vis.some(e => e.id === selectedId)) selectedId = null;
+  renderLegend(); renderList(); renderMap(); renderTimeline(); renderSpotlight(); applySel(null);
   if (document.body.classList.contains("mini")) setTimeout(fitAll, 0);
 }
 
-/* ---------- ovládání ---------- */
-document.querySelectorAll(".chips .chip").forEach(b => b.addEventListener("click", () => {
-  filter = b.dataset.f;
-  document.querySelectorAll(".chips .chip").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
-  renderAll(); updCount();
-}));
-function updCount(){
-  const n = ["zeme", "fee", "dl"].filter(k => X[k] !== "all").length + (selMes.size > 0 ? 1 : 0) + (X.ver ? 1 : 0);
-  $("fcount").hidden = !n; $("fcount").textContent = n;
-}
+document.querySelectorAll(".chips .chip").forEach(b => b.addEventListener("click", () => { filter = b.dataset.f; document.querySelectorAll(".chips .chip").forEach(x => x.setAttribute("aria-pressed", String(x === b))); renderAll(); updCount(); }));
+function updCount(){ const n = ["zeme", "fee", "dl"].filter(k => X[k] !== "all").length + (selMes.size > 0 ? 1 : 0) + (X.ver ? 1 : 0); $("fcount").hidden = !n; $("fcount").textContent = n; }
 function resetAllFilters(){
-  Object.assign(X, {zeme:"all", fee:"all", dl:"all", ver:false});
-  selMes.clear(); syncMesSelect();
+  Object.assign(X, {zeme:"all", fee:"all", dl:"all", ver:false}); selMes.clear(); syncMesSelect();
   ["f-zeme", "f-fee", "f-dl", "obor-select"].forEach(id => $(id).value = "all"); $("f-ver").checked = false;
   $("q").value = ""; query = ""; $("f-hide-past").checked = false; hidePast = false;
-  onlyFavs = false; $("f-favs").setAttribute("aria-pressed", "false");
-  obor = "all"; filter = "all";
+  onlyFavs = false; $("f-favs").setAttribute("aria-pressed", "false"); obor = "all"; filter = "all";
   document.querySelectorAll(".chips .chip").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.f === "all")));
   renderAll(); updCount();
 }
@@ -874,109 +1543,345 @@ function initFilters(){
   $("sort-select").addEventListener("change", ev => { sortBy = ev.target.value; renderList(); applySel(null); });
   $("tl-sort").addEventListener("change", ev => { tlSort = ev.target.value; renderTimeline(); applySel(null); });
   [["f-zeme", "zeme"], ["f-fee", "fee"], ["f-dl", "dl"]].forEach(([id, k]) => $(id).addEventListener("change", ev => { X[k] = ev.target.value; renderAll(); updCount(); }));
-  $("f-mes").addEventListener("change", ev => {
-    const v = ev.target.value;
-    if (v === "__multi__") return;
-    selMes.clear();
-    if (v !== "all") selMes.add(v);
-    syncMesSelect(); renderAll(); updCount();
-  });
+  $("f-mes").addEventListener("change", ev => { const v = ev.target.value; if (v === "__multi__") return; selMes.clear(); if (v !== "all") selMes.add(v); syncMesSelect(); renderAll(); updCount(); });
   $("f-ver").addEventListener("change", ev => { X.ver = ev.target.checked; renderAll(); updCount(); });
   $("f-reset").addEventListener("click", resetAllFilters);
   $("q-reset").addEventListener("click", resetAllFilters);
 }
 function applyTheme(t){
   document.documentElement.setAttribute("data-theme", t);
-  const mc = document.querySelector('meta[name="theme-color"]');
-  if (mc) mc.setAttribute("content", t === "dark" ? "#0e1420" : "#f4f6f9");
-  const tb = $("themebtn");
-  if (tb) { tb.textContent = t === "dark" ? "☀" : "☾"; tb.title = t === "dark" ? "Přepnout na světlý režim" : "Přepnout na tmavý režim"; }
+  const mc = document.querySelector('meta[name="theme-color"]'); if (mc) mc.setAttribute("content", t === "dark" ? "#121126" : "#fdfbf7");
+  const tb = $("themebtn"); if (tb) { tb.textContent = t === "dark" ? "☀" : "☾"; tb.title = t === "dark" ? "Přepnout na světlý režim" : "Přepnout na tmavý režim"; }
 }
 (function initThemeAndFold(){
-  let t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  try { const s = localStorage.getItem("eiw-theme"); if (s === "dark" || s === "light") t = s; } catch (e) {}
+  let t = "light";
+  try { const s = localStorage.getItem("eiw-theme-v4"); if (s === "dark" || s === "light") t = s; } catch (e) {}
   applyTheme(t);
   $("themebtn").addEventListener("click", () => {
     const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    applyTheme(next);
-    if (setBase) setBase(next === "dark" ? "Tmavá" : "Světlá", false);
-    try { localStorage.setItem("eiw-theme", next); } catch (e) {}
+    applyTheme(next); if (setBase) setBase(next === "dark" ? "Tmavá" : "Světlá", false);
+    try { localStorage.setItem("eiw-theme-v4", next); } catch (e) {}
   });
   $("foldbtn").addEventListener("click", () => {
-    const card = $("titlecard");
-    const folded = card.classList.toggle("folded");
-    $("foldbtn").textContent = folded ? "+" : "−";
-    $("foldbtn").title = folded ? "Rozbalit filtry" : "Sbalit filtry";
+    const folded = $("titlecard").classList.toggle("folded");
+    $("foldbtn").textContent = folded ? "+" : "−"; $("foldbtn").title = folded ? "Rozbalit filtry" : "Sbalit filtry";
     $("foldbtn").setAttribute("aria-expanded", String(!folded));
-    if (!lp.hidden) placePanel();
-    padTimeline();
+    if (!lp.hidden) placePanel(); padTimeline();
   });
 })();
 const lp = $("listpanel"), lb = $("listbtn");
-function placePanel(){ if (innerWidth > 700) { const r = document.querySelector(".titlecard").getBoundingClientRect(); lp.style.top = Math.max(16, r.bottom + 8) + "px"; } else lp.style.top = ""; }
+function placePanel(){
+  if (innerWidth > 700) {
+    const r = document.querySelector(".titlecard").getBoundingClientRect();
+    lp.style.top = Math.max(16, r.bottom + 8) + "px";
+  } else {
+    lp.style.top = "";
+  }
+}
 function setList(open){
-  lp.hidden = !open; lb.setAttribute("aria-expanded", String(open));
-  if (open) { placePanel(); const s = document.querySelector(".ev.on"); if (s) s.scrollIntoView({block:"nearest"}); }
+  lp.hidden = !open;
+  document.body.classList.toggle("list-open", open);
+  lb.setAttribute("aria-expanded", String(open));
+  if (open) {
+    if ($("more") && $("more").open) $("more").open = false;
+    placePanel();
+    $("list").scrollTop = 0;
+  }
+  padTimeline();
 }
 lb.addEventListener("click", () => setList(lp.hidden));
 $("listclose").addEventListener("click", () => setList(false));
 $("more").addEventListener("toggle", () => { if (!lp.hidden) placePanel(); padTimeline(); });
 window.addEventListener("resize", () => { if (!lp.hidden) placePanel(); padTimeline(); setMini(view === "tl" && innerWidth > 700); updateMinZoom(); scheduleDeconflict(); });
 
-/* ---------- přepínání obrazovek: mapa ⟷ časová osa ---------- */
 let view = "map";
 function padTimeline(){
-  // časová osa začíná pod kartou s filtry a pod minimapou (na počítači), aby ji nic nezakrývalo
   const tv = $("tlview");
-  if (innerWidth <= 700) { tv.style.paddingTop = "16px"; tv.style.setProperty("--tl-top", "16px"); return; }
+  const tallLeft = innerWidth > 900 && ($("more").open || !lp.hidden);
+  document.body.classList.toggle("left-tall", tallLeft);
+  if (innerWidth <= 700) { tv.style.paddingTop = "14px"; tv.style.setProperty("--tl-top", "14px"); return; }
   const card = document.querySelector(".titlecard").getBoundingClientRect().bottom;
-  const mini = document.body.classList.contains("mini") ? $("map").getBoundingClientRect().bottom : 0;
-  const topPx = Math.round(Math.max(card, mini) + 20);
-  tv.style.paddingTop = topPx + "px";
-  tv.style.setProperty("--tl-top", topPx + "px");
+  const miniMap = document.body.classList.contains("mini") ? $("map").getBoundingClientRect().bottom : 0;
+  const miniBar = document.body.classList.contains("mini") && $("mini-back-bar") ? $("mini-back-bar").getBoundingClientRect().bottom : 0;
+  const mini = Math.max(miniMap, miniBar);
+  const topPx = Math.round((tallLeft ? Math.max(mini, 16) : Math.max(card, mini)) + 14);
+  tv.style.paddingTop = topPx + "px"; tv.style.setProperty("--tl-top", topPx + "px");
 }
 function setView(v, fromHash){
-  const wasTl = view === "tl";
-  view = v;
-  const tl = v === "tl";
-  document.body.classList.toggle("view-tl", tl);
-  $("tlview").hidden = !tl;
+  const wasTl = view === "tl"; view = v; const tl = v === "tl";
+  if (tl) {
+    setList(false);
+    if ($("more") && $("more").open) $("more").open = false;
+  }
+  document.body.classList.toggle("view-tl", tl); $("tlview").hidden = !tl;
   $("viewlbl").textContent = tl ? "Zpět na mapu" : "Časová osa";
   $("viewsub").textContent = tl ? "" : "kdy se co koná";
   document.querySelector("#viewbtn .ico").textContent = tl ? "←" : "→";
   $("viewbtn").setAttribute("aria-controls", tl ? "map" : "casova-osa");
-  setMini(tl && innerWidth > 700);
-  padTimeline();
-  if (tl) { $("tlview").scrollTop = 0; const r = document.querySelector(".row.on"); if (r) r.scrollIntoView({block:"nearest"}); }
-  else if (map && wasTl) { setTimeout(() => { map.invalidateSize(); if (selectedId && markers[selectedId]) zoomTo(selectedId); }, 50); }
+  setMini(tl && innerWidth > 700); padTimeline();
+  if (tl) { $("tlview").scrollTop = 0; const tg = document.querySelector(".tlgrid"); if (tg) { tg.scrollTop = 0; tg.scrollLeft = 0; } }
+  else if (map && wasTl) {
+    setTimeout(() => {
+      map.invalidateSize();
+      if (savedView) map.setView(savedView.c, savedView.z, {animate: false});
+      else fitAll();
+    }, 60);
+  }
   if (!fromHash) { try { history.pushState(null, "", tl ? "#casova-osa" : location.pathname + location.search); } catch (e) {} }
 }
 $("viewbtn").addEventListener("click", () => setView(view === "tl" ? "map" : "tl"));
 $("backbtn").addEventListener("click", () => setView("map"));
+$("minibackbtn").addEventListener("click", () => setView("map"));
+$("brand-home").addEventListener("click", ev => {
+  if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+  ev.preventDefault();
+  if ($("dlg").open) $("dlg").close();
+  if ($("about-dlg").open) $("about-dlg").close();
+  setList(false);
+  $("more").open = false;
+  if ($("titlecard").classList.contains("folded")) $("foldbtn").click();
+  if (view === "tl") setView("map");
+  selectedId = null;
+  if (hasActiveFilters()) resetAllFilters(); else { applySel(null); }
+  setTimeout(() => { if (map) { map.closePopup(); fitAll(); } }, 60);
+});
 window.addEventListener("popstate", () => setView(location.hash === "#casova-osa" ? "tl" : "map", true));
-document.addEventListener("keydown", ev => { if (ev.key === "Escape" && view === "tl" && !$("dlg").open) setView("map"); });
+document.addEventListener("keydown", ev => {
+  if (ev.key !== "Escape") return;
+  if (!$("authgate").hidden) { $("authgate").hidden = true; return; }
+  if (view === "tl" && !$("dlg").open && !$("about-dlg").open) setView("map");
+});
 
-/* ---------- start ---------- */
+/* ---------- demo auth + testovací účty + registrace školy ---------- */
+const featuredIds = new Set((() => { try { const a = JSON.parse(localStorage.getItem("ws-featured") || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } })());
+const customCampusEvents = (() => { try { const a = JSON.parse(localStorage.getItem("ws-custom-events") || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } })();
+
+const DEFAULT_ACCOUNTS = {
+  student: {user:"student", pass:"student", role:"participant", label:"Účastník (Zdarma)"},
+  admin: {user:"admin", pass:"admin", role:"university", uni:"Prague University of Economics and Business (VŠE)", email:"ozs@vse.cz", plan:"campus", billing:"yearly", payMethod:"invoice", ico:"61384399", credits:12, renewsAt:"2027-11-18"},
+  free: {user:"free", pass:"free", role:"university", uni:"Masaryk University", email:"czs@muni.cz", plan:"free", billing:"none", payMethod:"none", ico:"", credits:0, renewsAt:null}
+};
+function loadAccounts(){
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem("ws-accounts-v1") || "{}"); } catch (e) {}
+  return Object.assign({}, DEFAULT_ACCOUNTS, saved && typeof saved === "object" ? saved : {});
+}
+function saveAccounts(accs){ try { localStorage.setItem("ws-accounts-v1", JSON.stringify(accs)); } catch (e) {} }
+
+(function initAuthGate(){
+  const gate = $("authgate");
+  let selRole = "participant", authMode = "login", regPlan = "campus", regBill = "yearly", regPay = "invoice";
+  const qs = new URLSearchParams(location.search);
+  const hasSession = (() => {
+    try { const s = JSON.parse(sessionStorage.getItem("ws-session") || "null"); return !!(s && s.user); } catch (e) { return false; }
+  })();
+  if (qs.get("auth") === "register" || (!hasSession && qs.get("role") !== "participant")) gate.hidden = false;
+
+  function renderDemoPills(){
+    const accs = Object.values(loadAccounts());
+    const pills = selRole === "participant"
+      ? [accs.find(a => a.user === "student"), accs.find(a => a.user === "admin")].filter(Boolean)
+      : accs.filter(a => a.role === "university");
+    $("demo-pills").innerHTML = `<span class="demo-lbl">Testovací účty:</span>` + pills.map(a => {
+      const tag = a.role === "participant" ? "Zdarma" : (a.plan === "campus" ? "Campus" : "Free");
+      return `<button type="button" class="demo-pill" data-u="${esc(a.user)}" data-p="${esc(a.pass)}">${esc(a.user)}<small>${tag}</small></button>`;
+    }).join("");
+  }
+  function syncAuthUI(){
+    document.querySelectorAll(".role-opt").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.role === selRole)));
+    const isUni = selRole === "university";
+    $("auth-tabs").hidden = !isUni;
+    if (!isUni) authMode = "login";
+    $("tab-login").setAttribute("aria-selected", String(authMode === "login"));
+    $("tab-reg").setAttribute("aria-selected", String(authMode === "register"));
+    $("auth-form").hidden = authMode !== "login";
+    $("reg-form").hidden = authMode !== "register";
+    $("auth-submit").textContent = isUni ? "Vstoupit do Campus portálu →" : "Vstoupit jako účastník →";
+    const curU = $("auth-user").value.trim();
+    if (isUni && (curU === "student" || !curU)) { $("auth-user").value = "admin"; $("auth-pass").value = "admin"; }
+    if (!isUni && (curU === "free" || curU === "admin" || !curU)) { $("auth-user").value = "student"; $("auth-pass").value = "student"; }
+    $("auth-err").textContent = ""; $("reg-err").textContent = "";
+    renderDemoPills();
+  }
+  function syncRegUI(){
+    $("rb-yearly").setAttribute("aria-pressed", String(regBill === "yearly"));
+    $("rb-monthly").setAttribute("aria-pressed", String(regBill === "monthly"));
+    $("reg-campus-price").textContent = regBill === "yearly" ? "790 € / rok" : "79 € / měs.";
+    document.querySelectorAll(".pp-opt").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.plan === regPlan)));
+    $("reg-pay-box").hidden = regPlan !== "campus";
+    document.querySelectorAll(".pay-opt").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.pay === regPay)));
+    $("reg-ico-wrap").hidden = regPay !== "invoice";
+    $("reg-submit").textContent = regPlan === "campus" ? "Aktivovat Campus a vstoupit →" : "Vytvořit bezplatný účet →";
+  }
+
+  document.querySelectorAll(".role-opt").forEach(btn => btn.addEventListener("click", () => { selRole = btn.dataset.role; syncAuthUI(); }));
+  $("tab-login").addEventListener("click", () => { authMode = "login"; syncAuthUI(); });
+  $("tab-reg").addEventListener("click", () => { authMode = "register"; syncAuthUI(); syncRegUI(); });
+  $("demo-pills").addEventListener("click", ev => {
+    const p = ev.target.closest(".demo-pill"); if (!p) return;
+    $("auth-user").value = p.dataset.u; $("auth-pass").value = p.dataset.p; $("auth-err").textContent = "";
+  });
+  document.querySelectorAll(".bill-sw button").forEach(b => b.addEventListener("click", () => { regBill = b.dataset.bill; syncRegUI(); }));
+  document.querySelectorAll(".pp-opt").forEach(b => b.addEventListener("click", () => { regPlan = b.dataset.plan; syncRegUI(); }));
+  document.querySelectorAll(".pay-opt").forEach(b => b.addEventListener("click", () => { regPay = b.dataset.pay; syncRegUI(); }));
+
+  function updateAcctPill(){
+    let s = null;
+    try { s = JSON.parse(sessionStorage.getItem("ws-session") || "null"); } catch (e) {}
+    const nm = $("acct-name"), sep = $("acct-sep"), act = $("acct-act");
+    if (!nm || !sep || !act) return;
+    if (s && s.user) {
+      nm.textContent = s.user; nm.hidden = false; sep.hidden = false; act.textContent = "Odhlásit";
+    } else {
+      nm.textContent = ""; nm.hidden = true; sep.hidden = true; act.textContent = "Přihlásit se";
+    }
+  }
+
+  $("auth-form").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const u = $("auth-user").value.trim(), p = $("auth-pass").value;
+    const accs = loadAccounts(), acc = accs[u];
+    if (!acc || acc.pass !== p) {
+      $("auth-err").textContent = "Neplatné přihlášení — klikni na některý z testovacích účtů výše.";
+      return;
+    }
+    if (selRole === "university" && acc.role !== "university") {
+      $("auth-err").textContent = "Tento účet je studentský — pro univerzitu vyber admin, free nebo zaregistruj školu.";
+      return;
+    }
+    try { sessionStorage.setItem("ws-session", JSON.stringify({user:acc.user, role:selRole})); } catch (e) {}
+    $("auth-err").textContent = "";
+    if (selRole === "university") { location.href = "uni.html"; return; }
+    gate.hidden = true; updateAcctPill();
+  });
+
+  $("reg-form").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const uni = $("reg-uni").value.trim(), email = $("reg-email").value.trim();
+    const user = $("reg-user").value.trim().toLowerCase().replace(/[^a-z0-9_.-]/g, "");
+    const pass = $("reg-pass").value;
+    if (!uni || !email || user.length < 3 || pass.length < 4) {
+      $("reg-err").textContent = "Vyplň školu, e-mail, uživatelské jméno (min. 3 znaky) a heslo (min. 4 znaky).";
+      return;
+    }
+    const accs = loadAccounts();
+    if (accs[user]) { $("reg-err").textContent = `Účet „${user}“ už existuje — zvol jiné jméno nebo se přihlas.`; return; }
+    const nextYear = new Date(); nextYear.setFullYear(nextYear.getFullYear() + 1);
+    const nextMonth = new Date(); nextMonth.setMonth(nextMonth.getMonth() + 1);
+    const renewsAt = regPlan === "campus" ? (regBill === "yearly" ? nextYear : nextMonth).toISOString().slice(0, 10) : null;
+    accs[user] = {
+      user, pass, role:"university", uni, email,
+      plan: regPlan, billing: regPlan === "campus" ? regBill : "none",
+      payMethod: regPlan === "campus" ? regPay : "none",
+      ico: regPlan === "campus" && regPay === "invoice" ? $("reg-ico").value.trim() : "",
+      credits: regPlan === "campus" ? 15 : 0, renewsAt
+    };
+    saveAccounts(accs);
+    try { sessionStorage.setItem("ws-session", JSON.stringify({user, role:"university"})); } catch (e) {}
+    location.href = "uni.html";
+  });
+
+  $("logoutbtn").addEventListener("click", () => {
+    try { sessionStorage.removeItem("ws-session"); } catch (e) {}
+    updateAcctPill(); gate.hidden = false; syncAuthUI();
+    $("auth-user").focus();
+  });
+  function closeAuthGate(){ gate.hidden = true; updateAcctPill(); }
+  $("auth-close").addEventListener("click", closeAuthGate);
+  gate.addEventListener("click", ev => { if (ev.target === gate) closeAuthGate(); });
+
+  if (qs.get("auth") === "register") { selRole = "university"; authMode = "register"; }
+  syncAuthUI(); syncRegUI(); updateAcctPill();
+})();
+
+/* ---------- modal O projektu & 5 AI agentů ---------- */
+function openAbout(){
+  const dlg = $("about-dlg");
+  const total = EV.length || 0;
+  const unis = new Set(EV.map(e => e.uni)).size;
+  const countries = new Set(EV.map(e => e.country)).size;
+  const nOk = EV.filter(e => st(e) === "ověřeno").length;
+  const nPart = EV.filter(e => st(e) === "částečně").length;
+  const nUnv = Math.max(0, total - nOk - nPart);
+  const pOk = total ? Math.round(nOk / total * 100) : 0;
+  const pPart = total ? Math.round(nPart / total * 100) : 0;
+  const pUnv = Math.max(0, 100 - pOk - pPart);
+  const upd = META.updated ? fmt1(META.updated) : fmt1(TODAY);
+  $("about-body").innerHTML = `
+   <div class="hd" style="--c:var(--accent)">
+     <h2 id="about-title">O projektu WeekScout</h2>
+     <div class="uni">Multiagentní mapa Erasmus+ International Weeks, Staff Weeks &amp; BIP 2026/27 · Tým 17</div>
+     <button class="x" id="about-x" aria-label="Zavřít">×</button>
+   </div>
+   <div class="bd">
+     <div class="about-kpis">
+       <div class="akpi"><span>Akcí 2026/27</span><b>${total}</b></div>
+       <div class="akpi"><span>Vysokých škol</span><b>${unis}</b></div>
+       <div class="akpi"><span>Zemí Evropy</span><b>${countries}</b></div>
+       <div class="akpi"><span>Plně ověřeno</span><b>${nOk}</b><small>${pOk} % katalogu</small></div>
+     </div>
+     <div>
+       <h3>Stav ověření dat</h3>
+       <div class="ver-bar" aria-label="Podíl ověřených akcí">
+         <i style="width:${pOk}%;background:var(--ok)"></i>
+         <i style="width:${pPart}%;background:var(--sun)"></i>
+         <i style="width:${pUnv}%;background:var(--warn)"></i>
+       </div>
+       <div class="ver-leg">
+         <span><em style="background:var(--ok)"></em>Ověřeno: ${nOk} (${pOk} %)</span>
+         <span><em style="background:var(--sun)"></em>Částečně: ${nPart} (${pPart} %)</span>
+         <span><em style="background:var(--warn)"></em>Neověřeno: ${nUnv}</span>
+       </div>
+     </div>
+     <div>
+       <h3>5 AI agentů v cyklu Competitive Intelligence (CI)</h3>
+       <div class="agents-list">
+         <div class="ag-step"><div class="ag-num">1</div><div><h4>Agent 1 – Portály &amp; BIP aliance <span class="ci-phase">CI: Sběr</span></h4><p>Prohledává databázi IMOTION (staffmobility.eu) a katalogy evropských univerzitních aliancí (Una Europa, CIVIS, EUGLOH, ENHANCE) včetně studentských BIP.</p></div></div>
+         <div class="ag-step"><div class="ag-num">2</div><div><h4>Agent 2 – Sever &amp; Západ Evropy <span class="ci-phase">CI: Sběr</span></h4><p>Mapuje oficiální stránky vysokých škol ve Skandinávii, DACH regionu, Beneluxu, Irsku a Francii přes Exa.ai API.</p></div></div>
+         <div class="ag-step"><div class="ag-num">3</div><div><h4>Agent 3 – Jih &amp; Střed/Východ Evropy <span class="ci-phase">CI: Sběr</span></h4><p>Sbírá výzvy z Česka, Slovenska, Polska, Španělska, Itálie, Portugalska, Pobaltí a jihovýchodní Evropy.</p></div></div>
+         <div class="ag-step ver"><div class="ag-num">4</div><div><h4>Agent 4 – Nezávislý ověřovatel <span class="ci-phase">CI: Zpracování &amp; Ověření</span></h4><p>Dostává slepé dávky bez historie sběru — otevírá oficiální stránky pořadatelů, ověřuje termíny, uzávěrky, poplatky a vyřazuje komerční školicí agentury.</p></div></div>
+         <div class="ag-step cur"><div class="ag-num">5</div><div><h4>Agent 5 – Kurátor &amp; Diseminace <span class="ci-phase">CI: Analýza &amp; Diseminace</span></h4><p>Deduplikuje a sjednocuje instituce, validuje schéma (0 chyb) a publikuje <code>data.json</code> pro veřejnou mapu i B2B <b>Campus portál</b> s manažerským CI benchmarkem kolizí a cen.</p></div></div>
+       </div>
+     </div>
+     <div class="note"><b>Důvěryhodnost &amp; bezpečnost:</b> Každá akce má přímý odkaz na zdroj (<code>source_urls</code>) a datum kontroly; komerční agentury jsou vyloučeny. Žádné API klíče neběží v prohlížeči ani nejsou v repozitáři (pipeline běží lokálně přes <code>.env</code>). Poslední aktualizace dat: <b>${upd}</b>.</div>
+     <div class="btns">
+       <a class="btn pri" href="uni.html">🏛️ Portál pro univerzity ↗</a>
+       <a class="btn" href="https://github.com/viktorstech/weekscout" target="_blank" rel="noopener">GitHub repozitář ↗</a>
+     </div>
+   </div>`;
+  $("about-x").addEventListener("click", () => dlg.close());
+  if (typeof dlg.showModal === "function") { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute("open", "");
+  const bd = $("about-body").querySelector(".bd"); if (bd) bd.scrollTop = 0;
+}
+$("aboutbtn").addEventListener("click", openAbout);
+$("about-dlg").addEventListener("click", ev => { if (ev.target.id === "about-dlg") ev.target.close(); });
+
+const T0 = performance.now();
+function hideSplash(){
+  const s = $("splash"); if (!s) return;
+  const wait = reduceMotion() ? 0 : Math.max(0, 1300 - (performance.now() - T0));
+  setTimeout(() => { s.classList.add("out"); setTimeout(() => s.remove(), 440); }, wait);
+}
 initMap();
 fetch("data.json", {cache: "no-cache"}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(data => {
-  META = data.meta || {}; EV = (data.events || data).filter(e => e && e.start && e.lat != null).sort((a, b) => a.start.localeCompare(b.start) || (a.uni_short || "").localeCompare(b.uni_short || ""));
+  META = data.meta || {};
+  EV = [...(data.events || data), ...customCampusEvents].filter(e => e && e.start && e.lat != null).sort((a, b) => a.start.localeCompare(b.start) || (a.uni_short || "").localeCompare(b.uni_short || ""));
+  const dl = $("reg-uni-list");
+  if (dl) [...new Set(EV.map(e => e.uni))].sort((a, b) => a.localeCompare(b, "cs")).forEach(u => dl.insertAdjacentHTML("beforeend", `<option value="${esc(u)}">`));
   const unis = new Set(EV.map(e => e.uni)).size, cs = new Set(EV.map(e => e.country)).size;
-  BASE_SUB = `${EV.length} akcí · ${unis} institucí · ${cs} zemí · údaje k ${META.updated ? fmt1(META.updated) : "–"}`;
+  BASE_SUB = `${EV.length} akcí · ${unis} škol · ${cs} zemí`;
   $("subline").textContent = BASE_SUB;
   const ld = $("loading"); if (ld) ld.remove();
   initFilters(); renderLegend(); renderAll(); updCount();
   setView(location.hash === "#casova-osa" ? "tl" : "map", true);
+  hideSplash();
   const reqId = new URLSearchParams(location.search).get("akce");
   if (reqId && EV.some(e => e.id === reqId)) {
     selectedId = reqId; applySel(null);
     if (map && markers[reqId] && view === "map") zoomTo(reqId);
     openDetail(reqId);
   }
-}).catch(err => {
-  const ld = $("loading"); if (ld) ld.textContent = "Data se nepodařilo načíst (data.json). Zkuste stránku obnovit.";
-  console.error(err);
-});
-
+}).catch(err => { const ld = $("loading"); if (ld) ld.textContent = "Data se nepodařilo načíst (data.json). Zkuste stránku obnovit."; const ss = $("splash-sub"); if (ss) ss.textContent = "Data se nepodařilo načíst (data.json). Zkuste stránku obnovit."; console.error(err); });
 </script>
 </body>
 </html>
