@@ -16,3 +16,10 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Interní AI kontext a podklady k obhajobě (zůstávají pouze lokálně na PC)
+GEMINI.md
+.gemini/
+scenar.txt
+*.pdf
+WeekScout_odkazy.txt
