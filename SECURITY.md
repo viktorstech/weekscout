@@ -7,7 +7,7 @@ Projekt **WeekScout – Erasmus International Weeks 2027** (Tým 17, 4IT529 Comp
 ## 1. Nahlášení bezpečnostní zranitelnosti (Vulnerability Reporting)
 
 Pokud v projektu WeekScout objevíte bezpečnostní zranitelnost, neplatný údaj či potenciální bezpečnostní riziko, kontaktujte autorský tým:
-- **E-mail pro hlášení zranitelností:** `matejka.jiri@vse.cz` / `viktor.stech@vse.cz`
+- **E-mail pro hlášení zranitelností:** `matj36@vse.cz` / `stev29@vse.cz`
 - **GitHub:** Založením privátního security advisory nebo issue v repozitáři [viktorstech/weekscout](https://github.com/viktorstech/weekscout)
 
 Zranitelnost prověříme a vyřešíme v souladu s pravidly Responsible Disclosure do 48 hodin.
